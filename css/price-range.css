@@ -80,7 +80,7 @@
 .slider-track {
   position: absolute;
   cursor: pointer;
-  background-color: #f7f7f7;
+  background-color: #75A3FF;
   background-image: -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f9f9f9));
   background-image: -webkit-linear-gradient(top, #f5f5f5, #f9f9f9);
@@ -98,7 +98,7 @@
 
 .slider-selection {
   -moz-box-sizing: border-box;
-  background: none repeat scroll 0 0 #FE980F;
+  background: none repeat scroll 0 0 #75A3FF;
   border-radius: 15px;
   box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset;
   position: absolute;
