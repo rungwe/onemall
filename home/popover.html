@@ -1,0 +1,19 @@
+<div class="container">
+  <h3>Popover Example</h3>
+  <span style="cursor:pointer;" data-toggle="popover" title="Popover Header" data-content="<div style='width:700px;'>Some content inside the popover</div>" data-placement="bottom" data-container=".container" data-html="true">Toggle popover</span>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+
+});
+</script>
+
+<style>
+.popover{
+    width:500px;
+    height:250px;
+    max-width:800px;    
+}
+</style>
