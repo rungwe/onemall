@@ -53,7 +53,7 @@ function like(postID, likedObject){
 			}
 		  }
 		  
-	xmlHttp.open("POST","http://localhost/Client.php?like_broadcasts=true&postID="+postID,true);
+	xmlHttp.open("POST",url+"?like_broadcasts=true&postID="+postID,true);
 	xmlHttp.send();
 	
 }	
@@ -96,7 +96,7 @@ function unlike(postID, unlikedObject){
 			}
 		  }
 		  
-	xmlHttp.open("POST","http://localhost/Client.php?unlike_broadcasts=true&postID="+postID,true);
+	xmlHttp.open("POST",url+"?unlike_broadcasts=true&postID="+postID,true);
 	xmlHttp.send();
 	
 }

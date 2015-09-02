@@ -67,7 +67,7 @@ function post_ad(){
 		  }
 		  
 	//name: create_ad, name: pic1, name:pic2, name:pic3, name:title, name:category, name:product_info
-	xmlhttp.open("POST","http://localhost/Client.php",true);
+	xmlhttp.open("POST",url+"",true);
 	xmlhttp.send(formData);
 }
 	
@@ -185,7 +185,7 @@ function readURL(input,id) {
 		  }
 	//SEND => name: num_ads 
 	//RECEIVE => name: ads_num  
-	xmlhttp.open("POST","http://localhost/Client.php?num_ads=true",true);
+	xmlhttp.open("POST",url+"?num_ads=true",true);
 	xmlhttp.send();
 		  
 	

@@ -45,7 +45,7 @@ function pull_comments(postID, commentObj){
 		  
 	//SEND => name: postID , name: pull_comments = 'true'
 	//RECEIVE => commenter_name , commenter_picture , comment_txt , comment_time ;
-	xmlhttp.open("POST","http://localhost/Client.php?pull_comments=true&postID="+postID,true);
+	xmlhttp.open("POST",url+"?pull_comments=true&postID="+postID,true);
 	xmlhttp.send();
 	
 	
@@ -116,7 +116,7 @@ function comment_broadcast(postID,comment,obj){
 		  } 
 		  
 	
-	xmlhttp.open("POST","http://localhost/Client.php?put_comment=true&postID="+postID+"&comment_txt="+comment,true);
+	xmlhttp.open("POST",url+"?put_comment=true&postID="+postID+"&comment_txt="+comment,true);
 	xmlhttp.send();
 	
 }

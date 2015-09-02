@@ -81,7 +81,7 @@ function pull_suggestions(num){
 			}
 		  }
 		  
-	xmlhttp_sug.open("POST","http://localhost/Client.php?request_suggestions=true&number_suggestions="+num,true);
+	xmlhttp_sug.open("POST",url+"?request_suggestions=true&number_suggestions="+num,true);
 	xmlhttp_sug.send();
 		  
 }

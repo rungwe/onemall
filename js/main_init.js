@@ -6,6 +6,7 @@ Content: Library for client side scripts for My Shops
 
 **/
 var drawer="off"
+url = "http://localhost:8080/Client.php";
 
 function main_init(){
 		pull_broadcasts(6);

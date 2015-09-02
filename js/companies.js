@@ -112,7 +112,7 @@ function pull_companies(num,category,header,footer){
 	}
 		  
 		  
-	xmlhttp.open("POST","http://localhost/Client.php?request_companies=true&number_companies="+num+"&category="+category,true);
+	xmlhttp.open("POST",url+"?request_companies=true&number_companies="+num+"&category="+category,true);
 	xmlhttp.send();
 	
 }
@@ -143,7 +143,7 @@ function companies_num(){
 		  }
 	//SEND => name: num_following;
 	//RECEIVE => name: followers_num;  
-	xmlhttp.open("POST","http://localhost/Client.php?num_following=true",true);
+	xmlhttp.open("POST",url+"?num_following=true",true);
 	xmlhttp.send();
 		  
 	
@@ -183,7 +183,7 @@ function pull_companies_followed(){
 	//SEND => name: pull_followers
 	//RECEIVE => name: shop_name , shop_profile_picture , shop_wall_picture, shopID , num_followers;
 		  
-	xmlhttp.open("POST","http://localhost/Client.php?pull_followers=true",true);
+	xmlhttp.open("POST",url+"?pull_followers=true",true);
 	xmlhttp.send();
 	
 }
