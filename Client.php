@@ -1,4 +1,5 @@
 <?php
+
 	header('Access-Control-Allow-Origin: *');
 	$broadcasts = array(
 	 array("shop_name"=>"Mr Price","shop_profile_pic"=>"img/mrlog.jpg","poster"=>"img/mrpost.jpg","post_info"=>"hurry for the summer specials","num_likes"=>"12", "liked"=>"liked", "num_comments"=>"18", "time"=>"@30min" , "postID"=>"1234"),
@@ -13,7 +14,7 @@
 	 //SEND => name: postID , name: pull_comments = 'true'
 	//RECEIVE => commenter_name , commenter_picture , comment_txt , comment_time ;
 	 $comments = array( 
-	  array("commenter_name" => "Patience", "commenter_picture" => "img/Patience.png", "comment_txt"=>"hello are there shoes in this special, I wanted to buy as soon as possibly","comment_time"=>"11min")
+	  array("commenter_name" => "Rebecca", "commenter_picture" => "img/babe.jpg", "comment_txt"=>"hello are there shoes in this special, I wanted to buy as soon as possibly","comment_time"=>"11min")
 	 );
 	//var id= shop_data["shop_id"], shop_pic = shop_data["shop_wall_picture"], shop_name=shop_data["shop_name"], followers=shop_data["num_followers"];
 	 $popular =array(
@@ -55,8 +56,15 @@
 		array("shop_id"=>"131415", "shop_wall_picture"=>"img/nedbank.jpg","shop_name"=>"Nedbank","num_followers"=>"234")
 	 );
 	 
+	 //SEND => name: pull_friends, name: user_id
+	 //RECEIVE => name: profile_pic,user_name,user_id, num_following, num_ads, num_mutual_friends;
+	 $friends= array(
+		array("profile_pic"=>"img/babe.jpg","user_name"=>"Chaddy","user_id"=>"12oe34","num_following"=>"172","num_ads"=>"12","num_mutual_friends"=>"29"),
+		array("profile_pic"=>"img/Koala.jpg","user_name"=>"Dejan","user_id"=>"78yda89","num_following"=>"212","num_ads"=>"16","num_mutual_friends"=>"60")
+	 );
 	 
-	if (!empty($_REQUEST["request_companies"]) or !empty($_REQUEST["put_comment"]) or !empty($_REQUEST["pull_comments"]) or !empty($_REQUEST["request_suggestions"]) or !empty($_REQUEST["pull_broadcasts"]) or !empty($_REQUEST["like_broadcasts"]) or !empty($_REQUEST["unlike_broadcasts"]) ){
+	 
+	if (!empty($_REQUEST["pull_friends"]) or !empty($_REQUEST["pull_followers"]) or !empty($_REQUEST["num_ads"]) or !empty($_REQUEST["num_following"]) or !empty($_REQUEST["num_friends"]) or !empty($_REQUEST["create_ad"]) or !empty($_REQUEST["request_companies"]) or !empty($_REQUEST["put_comment"]) or !empty($_REQUEST["pull_comments"]) or !empty($_REQUEST["request_suggestions"]) or !empty($_REQUEST["pull_broadcasts"]) or !empty($_REQUEST["like_broadcasts"]) or !empty($_REQUEST["unlike_broadcasts"]) ){
 		
 		
 
@@ -74,6 +82,26 @@
 		
 		else if(!empty($_REQUEST["request_suggestions"])){
 			echo json_encode($suggestions);
+		}
+		
+		else if(!empty($_REQUEST["pull_friends"])){
+			echo json_encode($friends);
+		}
+		
+		else if(!empty($_REQUEST["pull_followers"])){
+			echo json_encode($recommended);
+		}
+		
+		else if(!empty($_REQUEST["num_friends"])){
+			echo 29;
+		}
+		
+		else if(!empty($_REQUEST["num_following"])){
+			echo 50;
+		}
+		
+		else if(!empty($_REQUEST["num_ads"])){
+			echo 15;
 		}
 		
 		else if(!empty($_REQUEST["pull_comments"])){
@@ -107,7 +135,26 @@
 			else if( $_REQUEST["category"]=="banks"){
 				echo json_encode($banks);
 			}
+			
 		}
+		
+		else if( !empty($_REQUEST["create_ad"]) ){
+				echo "success";
+				//echo $_POST["title"]."\n".$_POST["product_info"]."\n".$_POST["category"];
+				/* $pic= array("pic1","pic2","pic3");
+				$dir="C:/wamp/tmp/uploads/"."Testing/";
+				
+				for($i=0;$i<3;$i++){
+									// check whether the file has been uploaded
+									if(!empty($_FILES[$pic[$i]]["tmp_name"])){
+										if($_FILES[$pic[$i]]["size"]>0 and $_FILES[$pic[$i]]["size"]<100000000){
+											move_uploaded_file($_FILES[$pic[$i]]["tmp_name"],$dir.basename($_FILES[$pic[$i]]["name"]));
+										}
+										
+									}
+									
+								} */
+			}
 	}
 	else{
 		echo "no ajax call made";
