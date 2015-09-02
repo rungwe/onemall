@@ -52,7 +52,7 @@ function pull_friends(type){ // type can either be friends or suggested_friends
 	//SEND => name: pull_friends, name: user_id
 	//RECEIVE => name: profile_pic, user_id, num_following, num_ads, num_mutual_friends;
 		  
-	xmlhttp.open("POST","http://localhost/Client.php?pull_friends=true",true);
+	xmlhttp.open("POST",url+"?pull_friends=true",true);
 	xmlhttp.send();
 }
 
@@ -170,7 +170,7 @@ function friends_num(){
 		  }
 	//SEND => name: num_friends, name: user_id;
 	//RECEIVE => name: friends_num;	  
-	xmlhttp.open("POST","http://localhost/Client.php?num_friends=true",true);
+	xmlhttp.open("POST",url+"?num_friends=true",true);
 	xmlhttp.send();
 		  
 	
