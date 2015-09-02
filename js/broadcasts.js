@@ -101,7 +101,7 @@ function pull_broadcasts(num){
 			displayBroadcasts(data,mainID);
 			}
 		  } 	
-	xmlhttp_br.open("POST","http://localhost/Client.php?pull_broadcasts=true&number_broadcasts="+num,true);
+	xmlhttp_br.open("POST","Client.php?pull_broadcasts=true&number_broadcasts="+num,true);
 	xmlhttp_br.send();
 	
 	
