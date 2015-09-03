@@ -14,7 +14,7 @@
 	 //SEND => name: postID , name: pull_comments = 'true'
 	//RECEIVE => commenter_name , commenter_picture , comment_txt , comment_time ;
 	 $comments = array( 
-	  array("commenter_name" => "Rebecca", "commenter_picture" => "img/babe.jpg", "comment_txt"=>"hello are there shoes in this special, I wanted to buy as soon as possibly","comment_time"=>"11min")
+	  array("commenter_name" => "Sarah", "commenter_picture" => "img/babe.jpg", "comment_txt"=>"hello are there shoes in this special, I wanted to buy as soon as possibly","comment_time"=>"11min")
 	 );
 	//var id= shop_data["shop_id"], shop_pic = shop_data["shop_wall_picture"], shop_name=shop_data["shop_name"], followers=shop_data["num_followers"];
 	 $popular =array(
