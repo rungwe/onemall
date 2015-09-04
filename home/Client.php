@@ -1,5 +1,5 @@
 <?php
-
+	header('Access-Control-Allow-Origin: *');
 	
 	$broadcasts = array(
 	 array("shop_name"=>"Mr Price","shop_profile_pic"=>"img/mrlog.jpg","poster"=>"img/mrpost.jpg","post_info"=>"hurry for the summer specials","num_likes"=>"12", "liked"=>"liked", "num_comments"=>"18", "time"=>"@30min" , "postID"=>"1234"),
