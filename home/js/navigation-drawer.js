@@ -24,3 +24,12 @@ function close_drawer(){
 			$("#drawer").animate({"left":"-240px"},1000);
 		});
 }
+
+// navigation links
+
+$(document).ready(function(){
+	$("#homemenu").click(function(){
+		
+		window.location.href ="index.html";
+	});
+});
