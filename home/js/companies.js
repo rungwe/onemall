@@ -31,7 +31,7 @@ function buildCompany(shop_data){
 	//shop data instances  name: shop_name , shop_profile_picture , shop_wall_picture,  shop_id , num_followers;
 	var id= shop_data["shop_id"], shop_pic = shop_data["shop_wall_picture"], shop_name=shop_data["shop_name"], followers=shop_data["num_followers"];
 	var template='<div id="'+id+'" class="col-sm-3">'+
-						'<div class="fill highlight my_header" style="background-image:url(\''+shop_pic+'\');background-size:cover;height:34%;width:111%;margin-bottom:5px;">'+
+						'<div class="fill highlight my_header" style="background-image:url(\''+shop_pic+'\');background-size:cover;height:230px;width:240px;margin-bottom:5px;">'+
 										'<div class="row my_header-content">'+
 											'<div>'+shop_name+'</div>'+
 											'<div class="row">'+
