@@ -33,7 +33,7 @@
 					
 					<div class="col-sm-2">
 						<div class="col-sm-2">
-							<a href="companies.php"><img src="img/log3.png" height="50" width="50"/></a>
+							<a href="companies.php"><img src="img/log3.png" height="50" width="50"></a>
 						</div>
 					</div>
 					
