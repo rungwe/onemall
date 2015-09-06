@@ -51,9 +51,9 @@ function buildBroadcast(feed){
 		var template= '<div id="'+ID+'" class="panel panel-info">'+
 			  '				<div class="panel-heading">'+
 			  ' 					<div class="row">'+
-			  ' 						<a href="profile_page.html"><img class="col-sm-2" src="'+shop_profile_pic+'" height="53px" width="50px"/></a>'+
+			  ' 						<a href="profile_page.php"><img class="col-sm-2" src="'+shop_profile_pic+'" height="53px" width="50px"/></a>'+
 			  ' 						<div class="col-sm-5">'+
-			  ' 							<p><b><a href="profile_page.html">'+shop_name+'</a></b></p>'+
+			  ' 							<p><b><a href="profile_page.php">'+shop_name+'</a></b></p>'+
 			  '							<p style="color:grey">'+time+'</p>'+
 			  '						</div>'+
 			  '					</div>'+

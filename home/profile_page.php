@@ -24,13 +24,13 @@
 	
 	<!-- <body onload="main_init()" style="background-image:url(img/cloud.png);background-size:cover;background-repeat:no-repeat;background-attachment:fixed;">> -->
 		<body onload="main_init()" style="background-color:#F2F2F2;overflow-y:auto;">
-		<div id="nav" class="navbar-fixed-top" style="width:100%;margin:0px;padding:0px;background-color:white;border-bottom: 1px solid #004A6E;">
+		<div id="nav" class="navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="row">
 					
 					<div class="col-sm-2">
 						<div class="col-sm-2">
-							<a href="index.html"><img src="img/log3.png" height="50" width="50"/></a>
+							<a href="index.php"><img src="img/log3.png" height="50" width="50"/></a>
 						</div>
 					</div>
 					
@@ -53,11 +53,11 @@
 						<div id="nav_content" style="margin-right:3%;">
 						  <ul class="nav navbar-nav navbar-right style_font" >
 								
-							<li onclick="main_init()" style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-home" style="color:#004A6E"><label style="font-size:13px;">&nbsp;Home&nbsp;</label></span></li>
-							<li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-bell" style="color:#004A6E"><label style="font-size:13px;">&nbsp;Notifications&nbsp;</label></span></li>
+							<li onclick="main_init()" style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-home" ><label style="font-size:13px;">&nbsp;Home&nbsp;</label></span></li>
+							<li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-bell" ><label style="font-size:13px;">&nbsp;Notifications&nbsp;</label></span></li>
 							
 							<li style="cursor:pointer;"><span class="input-group" style="color:white;font-weight:900;font-size:150%;margin-top:15px;">
-																												<span class="glyphicon glyphicon-lock dropdown-toggle" style="color:#004A6E" id="account" data-toggle="dropdown" aria-expanded="true"><label style="font-size:13px;">&nbsp;Account</label></span>
+																												<span class="glyphicon glyphicon-lock dropdown-toggle"  id="account" data-toggle="dropdown" aria-expanded="true"><label style="font-size:13px;">&nbsp;Account</label></span>
 																													<ul class="dropdown-menu" role="menu" aria-labelledby="account">
 																														<li role="presentation" class="dropdown-header"><center>Chaddy<center></li>
 																														 <li role="presentation" class="divider"></li>
@@ -147,7 +147,7 @@
 								
 								
 							</div>
-							<center style="color:#008AB8;"><a href="shops.html">view more</a></center>
+							<center style="color:#008AB8;"><a href="shops.php">view more</a></center>
 					</div>
 					<div style="background-color:white;height:300px;width:100%;border-radius:5px;">
 		

@@ -5,7 +5,6 @@
 		<title> one mall</title>
 		<link rel="icon" href="img/log3.png"/>
 		<meta name="viewport" content="width=1024">
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/loader.css">
@@ -27,13 +26,13 @@
 	
 	<!-- <body onload="main_init()" style="background-image:url(img/cloud.png);background-size:cover;background-repeat:no-repeat;overflow:hidden;background-attachment:fixed;overflow-y:auto;"> -->
 		<body onload="main_init()" style="background-color:#F2F2F2;overflow-y:auto;">
-		<div id="nav" class="navbar-fixed-top" style="width:100%;height:55px;margin:0px;padding:0px;background-color:white;border-bottom: 1px solid #004A6E;">
+		<div id="nav" class="navbar-fixed-top" >
 			<div class="container-fluid">
 				<div class="row">
 					
 					<div class="col-sm-2">
 						<div class="col-sm-2">
-							<a href="companies.html"><img src="img/log3.png" height="50" width="50"/></a>
+							<a href="shops.php"><img src="img/log3.png" height="50" width="50"/></a>
 						</div>
 					</div>
 					
@@ -71,11 +70,11 @@
 						<div id="nav_content" style="margin-right:3%;">
 						  <ul class="nav navbar-nav navbar-right style_font" >
 								
-							<li onclick="Home()" style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-home" style="color:#004A6E"><label style="font-size:13px;">&nbsp;Home&nbsp;</label></span></li>
+							<li onclick="Home()" style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-home" ><label style="font-size:13px;">&nbsp;Home&nbsp;</label></span></li>
 							<li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-bell" style="color:#004A6E"><label style="font-size:13px;">&nbsp;Notifications&nbsp;</label></span></li>
 							
 							<li style="cursor:pointer;"><span class="input-group" style="color:white;font-weight:900;font-size:150%;margin-top:15px;">
-																												<span class="glyphicon glyphicon-lock dropdown-toggle" style="color:#004A6E" id="account" data-toggle="dropdown" aria-expanded="true"><label style="font-size:13px;">&nbsp;Account</label></span>
+																												<span class="glyphicon glyphicon-lock dropdown-toggle"  id="account" data-toggle="dropdown" aria-expanded="true"><label style="font-size:13px;">&nbsp;Account</label></span>
 																													<ul class="dropdown-menu" role="menu" aria-labelledby="account">
 																														<li role="presentation" class="dropdown-header"><center>Chaddy<center></li>
 																														 <li role="presentation" class="divider"></li>
@@ -100,7 +99,7 @@
 		
 		<div class="container pos" style="height:91%;margin-top:5%;">
 			<div id="drawer"class="row" style="position:fixed;z-index:3;left:0px;">
-			<div class="col-sm-4" id="drawer-content" style="border:2px solid #004A6E; width:250px;background-color:white;position:fixed;z-index:3;margin:0px;padding:0px;">
+			<div class="col-sm-4" id="drawer-content" style="border:2px solid #004A6E; width:250px;background-color:white;height:100%;position:fixed;z-index:3;margin:0px;padding:0px;">
 				<div style="background-image:url('img/bk-freeze-ga.jpg');height:150;width:100%;margin:0px;background-size:cover;">
 				
 				</div>
@@ -109,7 +108,7 @@
 						<img src="img/icons/Home.png" height="30" width="30">
 					</div>
 					<div class="col-sm-offset-2 col-sm-8">
-						<h4 id="homemenu">Home</h4>
+						<h4>Home</h4>
 					</div>
 					
 				</div>
@@ -203,8 +202,6 @@
 					</div>
 					
 				</div>
-				<br>
-				<br>
 			</div>
 			<div class="col-sm-2 pull-right" id="control" style="cursor:pointer;border:2px solid #004A6E;width:45px;height:45px;background-color:white;position:fixed;z-index:3;margin-left:250px;">
 				<span class="glyphicon glyphicon-align-justify  btn-lg" style="margin-left:-19px;color:#004A6E"></span>
@@ -427,25 +424,25 @@
 			  
 			</div><!-- /.modal -->
 				
-				<div id="content">
+				<div class="row" >
 					
-					<div id="left" class="col-sm-3">
+					<div id="left" class="col-sm-3 res" style="height:100%;width:300px;">
 					
-							<div style="background-color:white;margin-left:-50px;">
+							<div style="background-color:white;margin-right:10px;">
 								
-								<div style="background-color:#004A6E;height:150px;width:279px;border-radius:2px;z-index:1;position:absolute;">
+								<div style="background-color:#004A6E;height:25%;width:98%;border-radius:2px;z-index:1;position:absolute;">
 								
 								</div>
 								<div style="background-color:#004A6E;height:80px;width:80px;border-radius:2px;position:absolute;margin-top:60px;margin-left:40px;border-color:white;border-width:5px;border-style:solid;z-index:2;">
 									<img src="img/camera3.png" height="40" width="40" style="margin-left:15px;margin-top:15px;">
 								</div>
-								<div style="background-color:white;width:279px;border-radius:2px;z-index:1;position:absolute;margin-top:100px;">
+								<div style="background-color:white;width:98%;border-radius:2px;z-index:1;position:absolute;margin-top:100px;">
 									<label style="margin-left:50%;font-size:100%;"><b>Chaddy</b></label>
 									<br>
 									<br>
 									<div class="row" style="font-size:14px;margin-left:4px;color:#B3B3B3;">
 										<div class="col-sm-4" style="cursor:pointer;">
-											<p ><a href="followers.html" style="color:#B3B3B3;"> following <br><span id="num_followers" style="background-color:#19A3D1;" class="badge">17</span></a></p>
+											<p ><a href="followers.php" style="color:#B3B3B3;"> following <br><span id="num_followers" style="background-color:#19A3D1;" class="badge">17</span></a></p>
 										</div>
 										<div class="col-sm-4">
 											<p style="cursor:pointer;" onclick="show_friends()"> buddies <br><span id="num_buddies" style="background-color:#19A3D1;" class="badge"></span></p>
@@ -461,7 +458,7 @@
 								
 							</div>
 						   
-							<div id="dashboard" class="row" style="margin-top:200px;font-style:oblique;background-image:url('img/cloudbg61.png');background-size:cover;margin-left:-50px;width:280px;">
+							<div id="dashboard" class="row" style="margin-top:200px;font-style:oblique;background-image:url('img/cloudbg61.png');background-size:cover;margin-left:-11px;">
 						
 								<div class="col-sm-offset-3 col-sm-8 " style="margin-top:50px;font-weight:900;color:black;" >
 									
@@ -480,6 +477,10 @@
 										<div class="col-sm-10 btn-xs" style="margin-top:5px;">Notify me</div>
 									</div> -->
 									
+									<div class="row"  style="cursor:pointer;">
+										<div class="col-sm-2" style="background-image:url('img/icons/Star.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-10 btn-xs" style="margin-top:5px;">Favourites</div>
+									</div>
 								
 									<div class="row" style="cursor:pointer;" data-toggle="modal" data-target="#create_ad" onclick="setup_adCreate()" >
 										<div class="col-sm-2" style="background-image:url('img/icons/Pencil.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
@@ -488,7 +489,7 @@
 									
 									<div class="row" style="cursor:pointer;">
 										<div class="col-sm-2" style="background-image:url('img/icons/Building.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
-										<div class="col-sm-10 btn-xs" style="margin-top:5px"> <a href="shops.html" style="text-align:left;font-style:oblique;color:black;">Companies</a></div>
+										<div class="col-sm-10 btn-xs" style="margin-top:5px"> <a href="shops.php" style="text-align:left;font-style:oblique;color:black;">Companies</a></div>
 									</div>
 							
 								</div>
@@ -499,7 +500,7 @@
 							
 					</div>
 					
-					<div id="center" class="col-sm-6" >
+					<div id="center" class="col-sm-6" style="width:550px;" >
 						<div  id="center-main" style="margin-left:4%;" >
 							<!-- <div id="adcenter" style="margin-left:6px;margin-right:0px;">
 							<div class="row" style="margin:0px;">
@@ -580,7 +581,7 @@
 						
 					</div>
 					
-					<div id="right" class="col-sm-3" >
+					<div id="right" class="col-sm-3 res" style="width:300px;" >
 						
 						<div class="panel panel-primary" >
 							<div class="panel-heading" style="background-color:#004A6E;">Suggested companies to follow</div>
@@ -588,7 +589,7 @@
 								
 								
 							</div>
-							<center style="color:#008AB8;"><a href="shops.html">view more</a></center>
+							<center style="color:#008AB8;"><a href="shops.php">view more</a></center>
 						</div>
 					</div>
 					

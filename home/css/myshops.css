@@ -8,14 +8,15 @@
 
 }
 
-@media screen and (max-width: 768px){
-		.res{
-			display:none;
-		}
-		.pos{
-			margin-top:10%;
-		}
-	}
+#nav{
+	background-color:white;
+	border-bottom: 1px solid  #004A6E;
+	margin:0px;
+	padding:0px;
+}
+.glyphicon-home, .glyphicon-lock, .glyphicon-bell{
+	color:#004A6E;
+}
 .active_tab{
 	border-bottom: thick solid #004A6E;
 }

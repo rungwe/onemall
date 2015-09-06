@@ -59,7 +59,7 @@
 							<li><a class="scroll-link" href="#features">Features</a></li>
 							<li><a class="scroll-link" href="#how-it-works">How it works</a></li>
 							<li><a class="scroll-link" href="#testimonials">Testimonials</a></li>
-							<li><a class="btn btn-link-2" href="login.html">Login</a></li>
+							<li><a class="btn btn-link-2" href="login.php">Login</a></li>
 						</ul>
 					</div>
 				</div>
@@ -84,7 +84,7 @@
                             	</p>
                             </div>
                             <div class="top-big-link wow fadeInUp animated animated" style="visibility: visible; animation-name: fadeInUp;">
-                            	<a class="btn btn-link-1 " href="login.html">Login</a>
+                            	<a class="btn btn-link-1 " href="login.php">Login</a>
                             	<a class="btn btn-link-2 scroll-link" href="#features">Learn more</a>
                             </div>
                         </div>
@@ -350,7 +350,7 @@
 		                                	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
 		                                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
 		                                	Lorem ipsum dolor sit amet, consectetur..."<br>
-		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.html#">Lorem Ipsum, dolor.co.uk</a>
+		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">Lorem Ipsum, dolor.co.uk</a>
 		                                </p>
 	                                </div>
 	                			</div>
@@ -366,7 +366,7 @@
 		                                	"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
 		                                	ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
 		                                	lobortis nisl ut aliquip ex ea commodo consequat..."<br>
-		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.html#">Minim Veniam, nostrud.com</a>
+		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">Minim Veniam, nostrud.com</a>
 		                                </p>
 	                                </div>
 	                			</div>
@@ -382,7 +382,7 @@
 		                                	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
 		                                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
 		                                	Lorem ipsum dolor sit amet, consectetur..."<br>
-		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.html#">Lorem Ipsum, dolor.co.uk</a>
+		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">Lorem Ipsum, dolor.co.uk</a>
 		                                </p>
 	                                </div>
 	                			</div>
@@ -398,7 +398,7 @@
 		                                	"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
 		                                	ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
 		                                	lobortis nisl ut aliquip ex ea commodo consequat..."<br>
-		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.html#">Minim Veniam, nostrud.com</a>
+		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">Minim Veniam, nostrud.com</a>
 		                                </p>
 	                                </div>
 	                			</div>
@@ -459,7 +459,7 @@
 	                    	<li>Cloud Based</li>
 	                    </ul>
 	                    <p>
-	                    	Ut wisi enim ad minim veniam, <a href="http://azmind.com/premium/marco/v1-9/layout-1/index.html#">quis nostrud exerci tation</a> ullamcorper suscipit lobortis nisl ut aliquip ex ea 
+	                    	Ut wisi enim ad minim veniam, <a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">quis nostrud exerci tation</a> ullamcorper suscipit lobortis nisl ut aliquip ex ea 
 	                    	commodo consequat nostrud tation.
 	                    </p>
 	                    <h3>2. Sed do eiusmod</h3>
@@ -502,7 +502,7 @@
 	                    </p>
 	                    <h3>2. Ut wisi enim ad minim?</h3>
 	                    <p>
-	                    	Ut wisi enim ad minim veniam, <a href="http://azmind.com/premium/marco/v1-9/layout-1/index.html#">quis nostrud exerci tation</a> ullamcorper suscipit lobortis nisl ut aliquip ex ea 
+	                    	Ut wisi enim ad minim veniam, <a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">quis nostrud exerci tation</a> ullamcorper suscipit lobortis nisl ut aliquip ex ea 
 	                    	commodo consequat nostrud tation.
 	                    </p>
 	                    <h3>3. Sed do eiusmod tempor?</h3>

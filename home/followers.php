@@ -21,13 +21,13 @@
 	
 	<!-- <body onload ="followed_setup()" style="background-image:url(img/cloud.png);background-size:cover;background-repeat:no-repeat;background-attachment:fixed;overflow-y:auto;"> -->
 		<body onload ="followed_setup()" style="background-color:#F2F2F2;overflow-y:auto;">
-		<div id="nav" class="navbar-fixed-top" style="width:100%;margin:0px;padding:0px;background-color:white;border-bottom: 1px solid #004A6E">
+		<div id="nav" class="navbar-fixed-top" style="margin:0px;padding:0px;">
 			<div class="container-fluid">
 				<div class="row">
 					
 					<div class="col-sm-2">
 						<div class="col-sm-2">
-							<a href="index.html"><img src="img/log3.png" height="50" width="50"/></a>
+							<a href="index.php"><img src="img/log3.png" height="50" width="50"/></a>
 						</div>
 					</div>
 					
@@ -47,11 +47,11 @@
 					<div id="nav_content" style="margin-right:3%;" class="res">
 						  <ul class="nav navbar-nav navbar-right style_font" >
 								
-							<li><a href="index.html" style="color:white;font-weight:900;font-size:150%;"><span class="glyphicon glyphicon-home" style="color:#004A6E"><label style="font-size:13px;">&nbsp;Home&nbsp;</label></span></a></li>
-							<li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-bell" style="color:#004A6E"><label style="font-size:13px;">&nbsp;Notifications&nbsp;</label></span></li>
+							<li><a href="index.php" style="color:white;font-weight:900;font-size:150%;"><span class="glyphicon glyphicon-home" ><label style="font-size:13px;">&nbsp;Home&nbsp;</label></span></a></li>
+							<li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-bell" ><label style="font-size:13px;">&nbsp;Notifications&nbsp;</label></span></li>
 							
 							<li style="cursor:pointer;"><span class="input-group" style="color:white;font-weight:900;font-size:150%;margin-top:15px;">
-																												<span class="glyphicon glyphicon-lock dropdown-toggle" style="color:#004A6E" id="account" data-toggle="dropdown" aria-expanded="true"><label style="font-size:13px;">&nbsp;Account</label></span>
+																												<span class="glyphicon glyphicon-lock dropdown-toggle"  id="account" data-toggle="dropdown" aria-expanded="true"><label style="font-size:13px;">&nbsp;Account</label></span>
 																													<ul class="dropdown-menu" role="menu" aria-labelledby="account">
 																														<li role="presentation" class="dropdown-header"><center>Chaddy<center></li>
 																														 <li role="presentation" class="divider"></li>
@@ -186,7 +186,7 @@
 		</div>
 		<div class= "row" style="width:50%;margin-left:20%;position:fixed;z-index:2;">
 			<div class="col-sm-3 tab" >
-			<center style="cursor:pointer;"><a href="companies.html"><b> My companies</b></a></center>
+			<center style="cursor:pointer;"><a href="companies.php"><b> My companies</b></a></center>
 			</div>
 			<div class="col-sm-3 tab" >
 			<center>
@@ -235,7 +235,7 @@
 			</center>
 			</div>
 			<div class="col-sm-3 tab active_tab" >
-			<center style="cursor:pointer;"> <a href="followers.html"><b>Following</b></a></center>
+			<center style="cursor:pointer;"> <a href="followers.php"><b>Following</b></a></center>
 			</div>
 		</div>
 		<br>
