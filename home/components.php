@@ -1,8 +1,8 @@
 <?php
 
 function nav_drawer(){
-	$drawer_html = '<div id="drawer"class="row" style="position:fixed;z-index:3;">
-			<div class="col-sm-4" id="drawer-content" style="border:2px solid #004A6E; width:250px;background-color:white;height:100%;position:fixed;z-index:3;margin:0px;padding:0px;">
+	$drawer_html ='<div id="drawer"class="row" style="position:fixed;z-index:3;left:0px;">
+			<div class="col-sm-4" id="drawer-content" style="border:2px solid #004A6E; width:250px;background-color:white;position:fixed;z-index:3;margin:0px;padding:0px;">
 				<div style="background-image:url(\'img/bk-freeze-ga.jpg\');height:150;width:100%;margin:0px;background-size:cover;">
 				
 				</div>
@@ -11,7 +11,7 @@ function nav_drawer(){
 						<img src="img/icons/Home.png" height="30" width="30">
 					</div>
 					<div class="col-sm-offset-2 col-sm-8">
-						<h4 id="homemenu" >Home</h4>
+						<h4 id="homemenu">Home</h4>
 					</div>
 					
 				</div>
@@ -105,8 +105,10 @@ function nav_drawer(){
 					</div>
 					
 				</div>
+				<br>
+				<br>
 			</div>
-			<div class="col-sm-2 pull-right" id="control" style="border:2px solid #004A6E;width:45px;height:45px;background-color:white;position:fixed;z-index:3;margin-left:250px;">
+			<div class="col-sm-2 pull-right" id="control" style="cursor:pointer;border:2px solid #004A6E;width:45px;height:45px;background-color:white;position:fixed;z-index:3;margin-left:250px;">
 				<span class="glyphicon glyphicon-align-justify  btn-lg" style="margin-left:-19px;color:#004A6E"></span>
 			</div>
 		</div>';
