@@ -72,11 +72,7 @@
 						  <ul class="nav navbar-nav navbar-right style_font" >
 								
 							<li onclick="Home()" style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-home"><label style="font-size:13px;">&nbsp;Home&nbsp;</label></span></li>
-<<<<<<< HEAD
 							<!-- <li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-bell" ><label style="font-size:13px;">&nbsp;Notifications&nbsp;</label></span></li> -->
-=======
-							<li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-bell" ><label style="font-size:13px;">&nbsp;Notifications&nbsp;</label></span></li>
->>>>>>> 41c1b651a7bf64601cabd125dd69142f580668f8
 							
 							<li style="cursor:pointer;"><span class="input-group" style="color:white;font-weight:900;font-size:150%;margin-top:15px;">
 																												<span class="glyphicon glyphicon-lock dropdown-toggle" id="account" data-toggle="dropdown" aria-expanded="true"><label style="font-size:13px;">&nbsp;Account</label></span>
