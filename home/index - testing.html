@@ -1,0 +1,429 @@
+<html>
+
+	<head>
+		<title> Myshops</title>
+		<link rel="icon" href="img/icon2.png"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/loader.css">
+		<link href="css/myshops.css" rel="stylesheet">
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</head>
+	
+	<body onload="main_init()" style="background-image:url(img/clouds.jpg);background-size:cover;background-repeat:no-repeat;overflow:hidden;">
+	   
+		<div id="nav" class="navbar-fixed-top" style="width:100%;">
+			<div class="container-fluid">
+				<div class="row">
+					
+					<div class="col-sm-2">
+						<div class="col-sm-2">
+							<img src="img/icon2.png" height="50" width="50"/>
+						</div>
+					</div>
+					
+						
+						<div class="col-sm-offset-1 col-sm-4">
+							
+								<div class="input-group" style="margin-top:3%;width:150%;">
+								  <input type="text" class="form-control" placeholder="Search for Broadcasts or Ads">
+								  <span class="input-group-btn">
+									
+									<button class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" type="button">category&nbsp;<span class="caret"></span></button>
+									<div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+									<li role="presentation"><a href="#">clothing</a></li>
+									<li role="presentation"><a href="#">beauty and therapy</a></li>
+									<li role="presentation"><a href="#">sports and leisure</a></li>
+									<li role="presentation"><a href="#">jewellery</a></li>
+									<li role="presentation"><a href="#">home and garden</a></li>
+									<li role="presentation"><a href="#">baby and kids</a></li>
+									<li role="presentation"><a href="#">pets</a></li>
+									<li role="presentation"><a href="#">beauty and therapy</a></li>
+									<li role="presentation"><a href="#">mobile phones</a></li>
+									<li role="presentation"><a href="#">computers</a></li>
+									<li role="presentation"><a href="#">other electronic</a></li>
+									<li role="presentation"><a href="#">vehicles</a></li>
+									<li role="presentation"><a href="#">business equipment</a></li>
+									<li role="presentation"><a href="#">services</a></li>
+								  </div>
+								  </span>
+								  
+								  
+								</div><!-- /input-group -->
+							
+						</div>
+						
+						<div id="nav_content" class="collapse navbar-collapse">
+						  <ul class="nav navbar-nav navbar-right style_font" >
+							<li> 	
+							<li><a href="#" style="color:white;font-weight:900;font-size:150%;"><span class="glyphicon glyphicon-home"></span></a></li>
+							<li><a href="#" id="shop"  style="color:white;font-weight:900;font-size:150%;"><span class="glyphicon glyphicon-bell"></span></a></li>
+							</li>
+							<li><a href="#"  style="color:white;font-weight:900;font-size:150%;"> <span class="glyphicon glyphicon-lock"></span></a></li> 
+						  </ul>
+						</div>
+					
+							
+					
+				</div>
+			  
+			</div>
+			
+		</div>
+	  
+		<br><br><br>
+		
+		<div class="container pos" style="height:91%;overflow-y:auto;overflow-x: hidden;">
+			
+				<div class="row" >
+					
+					<div id="left" class="col-sm-3 res" style="height:100%;">
+					
+						
+						   
+							<div id="dashboard" class="row" style="font-style:oblique;width:290px;height:190px;background-image:url('img/cloudbg61.png');background-size:cover;">
+						
+								<div class="col-sm-offset-3 col-sm-8 " style="margin-top:50px;font-weight:900;color:black;" >
+									
+									<div class="row" style="cursor:pointer;">
+										<div class="col-sm-2" style="background-image:url('img/friends.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-10 btn-xs" style="margin-top:5px;">Find buddies</div>
+									</div>
+									
+									<div class="row" style="cursor:pointer;">
+										<div class="col-sm-2" style="background-image:url('img/edit.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-10 btn-xs" style="margin-top:5px;">Edit Account</div>
+									</div>
+									
+									<div class="row" style="cursor:pointer;">
+										<div class="col-sm-2" style="background-image:url('img/fav.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-10 btn-xs" style="margin-top:5px;">Favourites</div>
+									</div>
+								
+									<div class="row" style="cursor:pointer;">
+										<div class="col-sm-2" style="background-image:url('img/ads.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-10 btn-xs" style="margin-top:5px;">Create Ads</div>
+									</div>
+									
+									<div class="row" style="cursor:pointer;">
+										<div class="col-sm-2" style="background-image:url('img/shops.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-10 btn-xs" style="margin-top:5px"> shops</div>
+									</div>
+							
+								</div>
+							
+							</div>
+						   
+							<br>
+							<div class="col-sm-offset-1 col-sm-11 panel" style="width:190px;">
+									<div class="panel-body" style="color:#008AB8;font-weight:900;">
+										<p style="cursor:pointer;"> following 17</p>
+										<p style="cursor:pointer;"> buddies 28</p>
+										<p style="cursor:pointer;"> active Ads 1</p> 
+									</div>
+								</div>
+							
+							
+						
+					
+					</div>
+					
+					<div id="center-main" class="col-sm-5" style="width:50%;">
+						
+						<div id="loader" class="loader loader2 col-sm-offset-0" style="margin-top:43%;margin-right:20%;display:none;">
+						  <div class="cube">
+							<div class="side side1"></div>
+							<div class="side side2"></div>
+							<div class="side side3"></div>
+							<div class="side side4"></div>
+							<div class="side side5"></div>
+							<div class="side side6"></div>
+						  </div>
+						</div>
+						<center style="display:none;"> 
+							<div class= "row" style="width:50%;">
+								<div class="col-sm-6 tab active_tab" >
+								<center style="cursor:pointer;"> <h4>My buddies</h4></center>
+								</div>
+								<div class="col-sm-6 tab"  >
+								<center style="cursor:pointer;"><h4>Find buddies</h4> </center>
+								</div>
+							</div>
+						</center>
+						<br>
+						<div class="row" style="background-color:#F0F1F1; border-radius:5px">
+							<div class="col-sm-3">
+								<img src="" width="90px" height="100px" alt="avatar"/>
+							
+							</div>
+							<div class="col-sm-7">
+								<div class="row">
+									<div class="col-sm-4">
+										<p style="font-size:16px;font-weight:700;text-align:center;margin-top:5%;">Tariro</p>
+									</div>
+									<div class="col-sm-offset-4 col-sm-4">
+										<button class="btn btn-info btn-xs suggestionBtn" style="margin-top:5%;">+buddy</button>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-4">
+										<p>following</p>
+										<p>&nbsp;&nbsp;121</p>
+									</div>
+									<div class="col-sm-4">
+										<p>buddies</p>
+										<p>&nbsp;&nbsp;53</p>
+									</div>
+									<div class="col-sm-4">
+										<p>likes</p>
+										<p>&nbsp;&nbsp;26</p>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						<hr>
+					
+					
+					<div class="row">
+							<div class="col-sm-3">
+								<img src="" width="90px" height="100px" alt="avatar"/>
+							
+							</div>
+							<div class="col-sm-7">
+								<div class="row">
+									<div class="col-sm-4">
+										<p style="font-size:16px;font-weight:700;text-align:center;">Tariro</p>
+									</div>
+									<div class="col-sm-offset-4 col-sm-4">
+										<button class="btn btn-info btn-xs suggestionBtn">+buddy</button>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-4">
+										<p>following</p>
+										<p>&nbsp;&nbsp;121</p>
+									</div>
+									<div class="col-sm-4">
+										<p>buddies</p>
+										<p>&nbsp;&nbsp;53</p>
+									</div>
+									<div class="col-sm-4">
+										<p>likes</p>
+										<p>&nbsp;&nbsp;26</p>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						<hr>
+						
+						
+					<div class="row">
+							<div class="col-sm-3">
+								<img src="" width="90px" height="100px" alt="avatar"/>
+							
+							</div>
+							<div class="col-sm-7">
+								<div class="row">
+									<div class="col-sm-4">
+										<p style="font-size:16px;font-weight:700;text-align:center;">Tariro</p>
+									</div>
+									<div class="col-sm-offset-4 col-sm-4">
+										<button class="btn btn-info btn-xs suggestionBtn">+buddy</button>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-4">
+										<p>following</p>
+										<p>&nbsp;&nbsp;121</p>
+									</div>
+									<div class="col-sm-4">
+										<p>buddies</p>
+										<p>&nbsp;&nbsp;53</p>
+									</div>
+									<div class="col-sm-4">
+										<p>likes</p>
+										<p>&nbsp;&nbsp;26</p>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						<hr>
+
+							
+					<div class="row">
+							<div class="col-sm-3">
+								<img src="" width="90px" height="100px" alt="avatar"/>
+							
+							</div>
+							<div class="col-sm-7">
+								<div class="row">
+									<div class="col-sm-4">
+										<p style="font-size:16px;font-weight:700;text-align:center;">Tariro</p>
+									</div>
+									<div class="col-sm-offset-4 col-sm-4">
+										<button class="btn btn-info btn-xs suggestionBtn">+buddy</button>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-4">
+										<p>following</p>
+										<p>&nbsp;&nbsp;121</p>
+									</div>
+									<div class="col-sm-4">
+										<p>buddies</p>
+										<p>&nbsp;&nbsp;53</p>
+									</div>
+									<div class="col-sm-4">
+										<p>likes</p>
+										<p>&nbsp;&nbsp;26</p>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						<hr>
+
+
+					<div class="row">
+							<div class="col-sm-3">
+								<img src="" width="90px" height="100px" alt="avatar"/>
+							
+							</div>
+							<div class="col-sm-7">
+								<div class="row">
+									<div class="col-sm-4">
+										<p style="font-size:16px;font-weight:700;text-align:center;">Tariro</p>
+									</div>
+									<div class="col-sm-offset-4 col-sm-4">
+										<button class="btn btn-info btn-xs suggestionBtn">+buddy</button>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-4">
+										<p>following</p>
+										<p>&nbsp;&nbsp;121</p>
+									</div>
+									<div class="col-sm-4">
+										<p>buddies</p>
+										<p>&nbsp;&nbsp;53</p>
+									</div>
+									<div class="col-sm-4">
+										<p>likes</p>
+										<p>&nbsp;&nbsp;26</p>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						<hr>
+
+
+					<div class="row">
+							<div class="col-sm-3">
+								<img src="" width="90px" height="100px" alt="avatar"/>
+							
+							</div>
+							<div class="col-sm-7">
+								<div class="row">
+									<div class="col-sm-4">
+										<p style="font-size:16px;font-weight:700;text-align:center;">Tariro</p>
+									</div>
+									<div class="col-sm-offset-4 col-sm-4">
+										<button class="btn btn-info btn-xs suggestionBtn">+buddy</button>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-4">
+										<p>following</p>
+										<p>&nbsp;&nbsp;121</p>
+									</div>
+									<div class="col-sm-4">
+										<p>buddies</p>
+										<p>&nbsp;&nbsp;53</p>
+									</div>
+									<div class="col-sm-4">
+										<p>likes</p>
+										<p>&nbsp;&nbsp;26</p>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						<hr>
+
+
+					<div class="row">
+							<div class="col-sm-3">
+								<img src="" width="90px" height="100px" alt="avatar"/>
+							
+							</div>
+							<div class="col-sm-7">
+								<div class="row">
+									<div class="col-sm-4">
+										<p style="font-size:16px;font-weight:700;text-align:center;">Tariro</p>
+									</div>
+									<div class="col-sm-offset-4 col-sm-4">
+										<button class="btn btn-info btn-xs suggestionBtn">+buddy</button>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-4">
+										<p>following</p>
+										<p>&nbsp;&nbsp;121</p>
+									</div>
+									<div class="col-sm-4">
+										<p>buddies</p>
+										<p>&nbsp;&nbsp;53</p>
+									</div>
+									<div class="col-sm-4">
+										<p>likes</p>
+										<p>&nbsp;&nbsp;26</p>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						<hr>	
+					
+						
+					</div>
+					
+					<div id="right" class="col-sm-3 res" >
+						
+						<div class="panel panel-primary" style="position:fixed;">
+							<div class="panel-heading">Suggested shops to follow</div>
+							<div id="suggestions" class="panel-body">
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+		</div>
+	</body>
+	
+	<script src="js/myshops_library.js"></script>
+	<script>
+	$(document).ready(function(){
+    $(".tab").click(function(){
+		$(".tab").removeClass("active_tab");
+        $(this).addClass("active_tab");
+    });
+}); 
+</script>	
+	
+</html>

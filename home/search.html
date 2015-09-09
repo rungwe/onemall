@@ -1,0 +1,225 @@
+<html>
+
+<head>
+		<title> one mall</title>
+		<link rel="icon" href="img/log3.png"/>
+		<meta name="viewport" content="width=1024">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/loader.css">
+		<link href="css/myshops.css" rel="stylesheet">
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/like.js"></script>
+		<script type="text/javascript" src="js/broadcasts.js"></script>
+		<script type="text/javascript" src="js/suggestions.js"></script>
+		<script type="text/javascript" src="js/friends.js"></script>
+		<script type="text/javascript" src="js/comment.js"></script>
+		<script type="text/javascript" src="js/companies.js"></script>
+		<script type="text/javascript" src="js/navigation-drawer.js"></script>
+		<script type="text/javascript" src="js/main_init.js"></script>
+		<script type="text/javascript" src="js/create_ad.js"></script>
+	</head>
+	
+	
+	<body onload="main_init()" style="background-image:url(img/cloud.png);background-size:cover;background-repeat:no-repeat;overflow:hidden;background-attachment:fixed;overflow-y:auto;">
+		
+		<div id="nav" class="navbar-fixed-top" style="width:100%;height:55px;margin:0px;padding:0px;background-color:#004A6E;">
+			<div class="container-fluid">
+				<div class="row">
+					
+					<div class="col-sm-2">
+						<div class="col-sm-2">
+							<a href="shops.html"><img src="img/log3.png" height="50" width="50"/></a>
+						</div>
+					</div>
+					
+						
+						<div class="col-sm-offset-1 col-sm-4">
+							
+								<div class="input-group" style="margin-top:3%;width:150%;">
+								  <input type="text" class="form-control" placeholder="Search for Broadcasts or Ads">
+								  <span class="input-group-btn">
+									
+									<button class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" type="button">category&nbsp;<span class="caret"></span></button>
+									<div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+									<li role="presentation"><a >clothing</a></li>
+									<li role="presentation"><a >beauty and therapy</a></li>
+									<li role="presentation"><a >sports and leisure</a></li>
+									<li role="presentation"><a >jewellery</a></li>
+									<li role="presentation"><a >home and garden</a></li>
+									<li role="presentation"><a >baby and kids</a></li>
+									<li role="presentation"><a >pets</a></li>
+									<li role="presentation"><a >beauty and therapy</a></li>
+									<li role="presentation"><a >mobile phones</a></li>
+									<li role="presentation"><a >computers</a></li>
+									<li role="presentation"><a >other electronic</a></li>
+									<li role="presentation"><a >vehicles</a></li>
+									<li role="presentation"><a >business equipment</a></li>
+									<li role="presentation"><a >services</a></li>
+								  </div>
+								  </span>
+								  
+								  
+								</div><!-- /input-group -->
+							
+						</div>
+						
+						<div id="nav_content" style="margin-right:3%;">
+						  <ul class="nav navbar-nav navbar-right style_font" >
+								
+							<li onclick="Home()" style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-home"><label style="font-size:13px;">&nbsp;Home&nbsp;</label></span></li>
+							<li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-bell"><label style="font-size:13px;">&nbsp;Notifications&nbsp;</label></span></li>
+							
+							<li style="cursor:pointer;"><span class="input-group" style="color:white;font-weight:900;font-size:150%;margin-top:15px;">
+																												<span class="glyphicon glyphicon-lock dropdown-toggle" id="account" data-toggle="dropdown" aria-expanded="true"><label style="font-size:13px;">&nbsp;Account</label></span>
+																													<ul class="dropdown-menu" role="menu" aria-labelledby="account">
+																														<li role="presentation" class="dropdown-header"><center>Chaddy<center></li>
+																														 <li role="presentation" class="divider"></li>
+																														<li role="presentation" data-toggle="modal" data-target="#edit_ac"><a role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;settings</a></li>
+																														<li role="presentation"><a role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;logout</a></li>
+																														<li role="presentation"><a role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;about us</a></li>
+																														<li role="presentation"><a role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-question-sign"></span>&nbsp;&nbsp;help</a></li>
+																													 </ul>
+																												</span>
+																												
+																												</li> 
+						  </ul>
+						</div>
+					
+							
+					
+				</div>
+			  
+			</div>
+			
+		</div> <!-- navabar end -->
+		
+		<div class="col-sm-2" style="height:91%;margin-top:5%;">
+		
+		
+				<div id="drawer"class="row" style="position:fixed;z-index:3;left:0px;">
+					<div class="col-sm-4" id="drawer-content" style="border:2px solid #004A6E; width:250px;background-color:white;height:100%;position:fixed;z-index:3;margin:0px;padding:0px;">
+						<div style="background-image:url('img/bk-freeze-ga.jpg');height:150;width:100%;margin:0px;background-size:cover;">
+						
+						</div>
+						<div class="menu row">
+							<div class="col-sm-2">
+								<img src="img/icons/Home.png" height="30" width="30">
+							</div>
+							<div class="col-sm-offset-2 col-sm-8">
+								<h4>Home</h4>
+							</div>
+							
+						</div>
+						<div class="menu row">
+							<div class="col-sm-2">
+								<img src="img/icons/Paper-Money.png" height="30" width="30">
+							</div>
+							<div class="col-sm-offset-2 col-sm-8">
+								<h4>Create Ads </h4>
+							</div>
+							
+						</div>
+						<div class="menu row">
+							<div class="col-sm-2">
+								<img src="img/icons/Briefcase.png" height="30" width="30">
+							</div>
+							<div class="col-sm-offset-2 col-sm-8">
+								<h4>Manage Ads</h4>
+							</div>
+							
+						</div>
+						<div class="menu row">
+							<div class="col-sm-2">
+								<img src="img/icons/Credit-Card.png" height="30" width="30">
+							</div>
+							<div class="col-sm-offset-2 col-sm-8">
+								<h4>Payments</h4>
+							</div>
+							
+						</div>
+						<div class="menu row">
+							<div class="col-sm-2">
+								<img src="img/icons/Desktop.png" height="30" width="30">
+							</div>
+							<div class="col-sm-offset-2 col-sm-8">
+								<h4>Create Page</h4>
+							</div>
+							
+						</div>
+						<div class="menu row">
+							<div class="col-sm-2">
+								<img src="img/icons/Web Browser.png" height="30" width="30">
+							</div>
+							<div class="col-sm-offset-2 col-sm-8">
+								<h4>Manage Pages</h4>
+							</div>
+							
+						</div>
+						<div class="menu row">
+							<div class="col-sm-2">
+								<img src="img/icons/Graph.png" height="30" width="30">
+							</div>
+							<div class="col-sm-offset-2 col-sm-8">
+								<h4>My Statistics</h4>
+							</div>
+							
+						</div>
+						<div class="menu row">
+							<div class="col-sm-2">
+								<img src="img/icons/X.png" height="30" width="30">
+							</div>
+							<div class="col-sm-offset-2 col-sm-8">
+								<h4>Verify Account</h4>
+							</div>
+							
+						</div>
+						<div class="menu row">
+							<div class="col-sm-2">
+								<img src="img/icons/Gear.png" height="30" width="30">
+							</div>
+							<div class="col-sm-offset-2 col-sm-8">
+								<h4>Settings</h4>
+							</div>
+							
+						</div>
+						<div class="menu row">
+							<div class="col-sm-2">
+								<img src="img/icons/Support.png" height="30" width="30">
+							</div>
+							<div class="col-sm-offset-2 col-sm-8">
+								<h4>Support</h4>
+							</div>
+							
+						</div>
+						<div class="menu row">
+							<div class="col-sm-2">
+								<img src="img/icons/Lock.png" height="30" width="30">
+							</div>
+							<div class="col-sm-offset-2 col-sm-8">
+								<h4>Logout</h4>
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-sm-2 pull-right" id="control" style="cursor:pointer;border:2px solid #004A6E;width:45px;height:45px;background-color:white;position:fixed;z-index:3;margin-left:250px;">
+						<span class="glyphicon glyphicon-align-justify  btn-lg" style="margin-left:-19px;color:#004A6E"></span>
+					</div>
+				</div>
+				
+		</div>
+		
+		<div class="col-sm-8">
+		
+		</div>
+		<div class="col-sm-8">
+		
+		</div>
+		
+		
+	</body>
+
+
+
+</html>
