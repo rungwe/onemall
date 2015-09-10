@@ -2,7 +2,7 @@
 <html>
 
 	<head>
-		<title> Myshops</title>
+		<title> Mr Price</title>
 		<link rel="icon" href="img/log3.png"/>
 		<meta name="viewport" content="width=1024">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -156,8 +156,10 @@
 			</div>
 		
 		</div>
-		
-	
+		<?php
+			require 'components.php';
+			echo edit_account_modal();
+		?>
 	
 	</body>
 	
@@ -170,14 +172,6 @@
 				});
 			});
 			
-			/** $(window).scroll(function(){
-			   if ($(window).scrollTop() >= 400) {  // change target to number
-				  $("#header").css('position', '');
-			   }
-			   else{
-			   
-			   }
-			}); */
 	</script>
 
 </html>

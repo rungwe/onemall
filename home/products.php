@@ -102,7 +102,12 @@
 			</div>
 			
 		</div> <!-- navabar end -->
+	<?php
+		require "components.php";
+		echo create_ad();
+		echo edit_account_modal();
 	
+	?>
 	
 	
 	<section id="slider"><!--slider-->

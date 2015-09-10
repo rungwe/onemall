@@ -78,6 +78,8 @@
 		require 'components.php';
 		
 		echo nav_drawer();
+		echo create_ad();
+		echo edit_account_modal();
 		
 		?>
 		<div class= "row" style="width:50%;margin-left:20%;position:fixed;z-index:2;">
