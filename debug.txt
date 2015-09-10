@@ -1,0 +1,4 @@
+starting
+
+SESSION was already available and we are proceeding to home page
+*********************finished excuting*********************************

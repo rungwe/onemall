@@ -60,7 +60,7 @@ function signup_page(){
 							<li><a class="scroll-link" href="#features">Features</a></li>
 							<li><a class="scroll-link" href="#how-it-works">How it works</a></li>
 							<li><a class="scroll-link" href="#testimonials">Testimonials</a></li>
-							<li><a class="btn btn-link-2" href="login.php">Login</a></li>
+							<li><a class="btn btn-link-2" href="index.php">Login</a></li>
 						</ul>
 					</div>
 				</div>
@@ -85,7 +85,7 @@ function signup_page(){
                             	</p>
                             </div>
                             <div class="top-big-link wow fadeInUp animated animated" style="visibility: visible; animation-name: fadeInUp;">
-                            	<a class="btn btn-link-1 " href="login.php">Login</a>
+                            	<a class="btn btn-link-1 " href="index.php">Login</a>
                             	<a class="btn btn-link-2 scroll-link" href="#features">Learn more</a>
                             </div>
                         </div>
@@ -100,7 +100,8 @@ function signup_page(){
                         		</div>
                             </div>
                             <div class="form-bottom" style="background-color: rgba(5,4,2,0.1);">
-			                    <form role="form" action="home/index.php" method="post">
+			                    <form role="form" action="index.php" method="post">
+									<input type="hidden"  name="signup" value="true">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-first-name">First name</label>
 			                        	<input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
@@ -655,8 +656,8 @@ function signin_page(){
                         		</div>
                             </div>
                             <div class="form-bottom" style="background-color: rgba(5,4,2,0.1);">
-			                    <form role="form" action="home/index.php" method="post">
-			                    	
+			                    <form role="form" action="index.php" method="post">
+			                    	<input type="hidden"  name="login" value="true">
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-email">Email</label>
 			                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">

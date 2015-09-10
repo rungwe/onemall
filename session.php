@@ -67,31 +67,46 @@ SESSION data username, timestamp, token, name, ip_address
  define('SESSION_DURATION',3); // number of days
  require 'pages.php';
  require 'home/pages.php';
+
+ 
  
  
  function aunthenticate($page_html){
 	//1) check if there is an existing session.
-					start_session();
- 
+					//start_session();
+	$branch=0;
+	 $output ="starting\n";
+	$file =fopen("debug.txt","w");
+	try{
 					if (!is_session() ){
+						$output.="\n session variables are not set \ncurrent session id:".session_id();
+						
 						if ( empty($_POST) ){
 							//throw a sign up page, its most likely to be the first time the user has visited the page
-							echo signup_page();
-							return;
+							
+							$output .="\nthrow a sign up page, its most likely to be the first time the user has visited the page\n";
+							
+							$branch=1;
 						}
 						else{
+							$output .="\nPost data present _POST[signup]:\n ";
+							foreach( $_POST as $key => $val ){
+								$output.="\t".$key."\t".$val."\n";
+							}
 							if ( !empty($_POST['login']) ){  // if its a login query
 								$verify=verify_inputs();
 								$login_status = login_user();
-								if(login_status and $verify){
+								if($login_status and $verify){
 									create_session();
-									header("Location: home/index.php"); //go to home page
-									return;
+									$output .="\n data received from a login page, now proceeding to home page. SESSION created successfully"; 
+									$branch=3; //go to home page
+									
 								}
 								else{
 									//throw login page with an error msg
-									echo signin_page();
-									return;
+									$output .= "\n incorrect login details";
+									$branch=2;
+									
 								}
 							}
 								
@@ -101,44 +116,64 @@ SESSION data username, timestamp, token, name, ip_address
 								
 								if ($verify and $reg_status){
 									create_session();
-									header("Location: home/index.php"); //go to home page
-									return;
+									$output.="\nsign up details received, redirecting to home page";
+									$branch=3; //go to home page
+									
 								}
 								else{
 									//go back  to sign up page
-									echo signup_page();
-									return;
+									$branch=1;
+									
 								}
 								
 							}
 						}
-						return;
+						
 					}
 					
 						
 					else{
 						if (is_session_valid()){
 							update_session_time();
-							echo $page_html;
-							return;
+							$output .= "\nSESSION was already available and we are proceeding to home page"; 
+							//echo $page_html;
+							$branch=3; //go to home page
+							
 						}
 						else{
 							delete_session();
 							//throw the login page
-							echo signin_page();
-							return;
+							$output .= "\n was already available and had expired, redirecting to login page"; 
+							$branch=2;
+							
 						}
 					}
+	}
+	
+	catch(Exception $e){
+		fwrite($file,"\n".$e->getMessage());
+	}
+	$output.="\n*********************finished excuting*********************************";
+	fwrite($file, $output);
+	fclose($file);
 	//end of function
+	if($branch==1){
+		echo signup_page();
+	}
+	else if($branch==2){
+		echo signin_page();
+	}
+	else if ($branch=3){
+		header("Location: home/index.php");
+	}
+	
  }
  
  function create_session(){
 	 //SESSION data firstname, email, timestamp, token, name, ip_address
-	 session_start();
 	 update_session_time();
-	 $_SESSION['username']=$_POST['form-first-name'];
 	 $_SESSION['email'] = $_POST['form-email'];
-	 $_SESSION['lastname'] = $_POST['form-last-name'];
+	 
 		
  }
 
@@ -148,7 +183,7 @@ SESSION data username, timestamp, token, name, ip_address
 		$diff =date_diff($current,$session);
 		$value =$diff->format("%a");
 		$value = intval($value);
-		if (value<=SESSION_DURATION){
+		if ($value<=SESSION_DURATION){
 			return true;
 		}
 		else{
