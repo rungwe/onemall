@@ -66,7 +66,7 @@ SESSION data username, timestamp, token, name, ip_address
  // Global variables
  define('SESSION_DURATION',3); // number of days
  require 'pages.php';
- require 'home/pages.php';
+ require 'app-pages.php';
 
  
  
@@ -163,8 +163,8 @@ SESSION data username, timestamp, token, name, ip_address
 	else if($branch==2){
 		echo signin_page();
 	}
-	else if ($branch=3){
-		header("Location: home/index.php");
+	else if ($branch==3){
+		echo main_page();
 	}
 	
  }
