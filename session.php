@@ -164,7 +164,7 @@ SESSION data username, timestamp, token, name, ip_address
 		echo signin_page();
 	}
 	else if ($branch==3){
-		echo main_page();
+		echo $page_html;
 	}
 	
  }

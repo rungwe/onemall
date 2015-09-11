@@ -9,29 +9,29 @@ function main_page(){
 
 	<head>
 		<title> one mall</title>
-		<link rel="icon" href="img/log3.png"/>
+		<link rel="icon" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/img/log3.png"/>
 		<meta name="viewport" content="width=1024">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/loader.css">
-		<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/myshops.css" rel="stylesheet">
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/jquery-1.9.1.min.js"></script>
-		<<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/constants.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/like.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/broadcasts.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/suggestions.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/friends.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/comment.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/companies.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/navigation-drawer.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/main_init.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/create_ad.js"></script>
+		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/loader.css">
+		<link href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/myshops.css" rel="stylesheet">
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/jquery-1.9.1.min.js"></script>
+		<<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/constants.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/like.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/broadcasts.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/suggestions.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/friends.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/comment.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/companies.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/navigation-drawer.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/main_init.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/create_ad.js"></script>
 	</head>
 	
 	
-	<!-- <body onload="main_init()" style="background-image:url(img/cloud.png);background-size:cover;background-repeat:no-repeat;overflow:hidden;background-attachment:fixed;overflow-y:auto;"> -->
+	<!-- <body onload="main_init()" style="background-image:url(https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/cloud.png);background-size:cover;background-repeat:no-repeat;overflow:hidden;background-attachment:fixed;overflow-y:auto;"> -->
 		<body onload="main_init()" style="background-color:#F2F2F2;overflow-y:auto;">
 		<div id="nav" class="navbar-fixed-top" >
 			<div class="container-fluid">
@@ -39,7 +39,7 @@ function main_page(){
 					
 					<div class="col-sm-2">
 						<div class="col-sm-2">
-							<a href="companies.php"><img src="img/log3.png" height="50" width="50"></a>
+							<a href="companies.php"><img src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/log3.png" height="50" width="50"></a>
 						</div>
 					</div>
 					
@@ -118,7 +118,7 @@ function main_page(){
 								
 								</div>
 								<div style="background-color:#004A6E;height:80px;width:80px;border-radius:2px;position:absolute;margin-top:60px;margin-left:40px;border-color:white;border-width:5px;border-style:solid;z-index:2;">
-									<img src="img/camera3.png" height="40" width="40" style="margin-left:15px;margin-top:15px;">
+									<img src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/camera3.png" height="40" width="40" style="margin-left:15px;margin-top:15px;">
 								</div>
 								<div style="background-color:white;width:279px;border-radius:2px;z-index:1;position:absolute;margin-top:100px;">
 									<label style="margin-left:50%;font-size:100%;"><b>Chaddy</b></label>
@@ -142,34 +142,34 @@ function main_page(){
 								
 							</div>
 						   
-							<div id="dashboard" class="row" style="margin-top:200px;font-style:oblique;background-image:url(\'img/cloudbg61.png\');background-size:cover;margin-left:-50px;width:280px;">
+							<div id="dashboard" class="row" style="margin-top:200px;font-style:oblique;background-image:url(\'https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/cloudbg61.png\');background-size:cover;margin-left:-50px;width:280px;">
 						
 								<div class="col-sm-offset-3 col-sm-8 " style="margin-top:50px;font-weight:900;color:black;" >
 									
 									<div class="row" style="cursor:pointer;" onclick="Home()">
-										<div class="col-sm-2" style="background-image:url(\'img/icons/RSS.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-2" style="background-image:url(\'https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/icons/RSS.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
 										<div class="col-sm-10 btn-xs" style="margin-top:3px;">Broadcasts <span style="background-color:#19A3D1;" class="badge">2</span></div>
 									</div>
 									
 									<div class="row" onclick="show_friends()" style="cursor:pointer;">
-										<div class="col-sm-2" style="background-image:url(\'img/icons/Contacts.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-2" style="background-image:url(\'https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/icons/Contacts.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
 										<div class="col-sm-10 btn-xs" style="margin-top:5px;">Buddies</div>
 									</div>
 									
 									<!-- <div class="row" style="cursor:pointer;">
-										<div class="col-sm-2" style="background-image:url(\'img/notify.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-2" style="background-image:url(\'https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/notify.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
 										<div class="col-sm-10 btn-xs" style="margin-top:5px;">Notify me</div>
 									</div> -->
 									
 								
 									<div class="row" style="cursor:pointer;" data-toggle="modal" data-target="#create_ad" onclick="setup_adCreate()" >
-										<div class="col-sm-2" style="background-image:url(\'img/icons/Pencil.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-2" style="background-image:url(\'https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/icons/Pencil.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
 										<div class="col-sm-10 btn-xs" style="margin-top:5px;">Create Ads</div>
 									</div>
 									
 									<div class="row" style="cursor:pointer;">
-										<div class="col-sm-2" style="background-image:url(\'img/icons/Building.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
-										<div class="col-sm-10 btn-xs" style="margin-top:5px"> <a href="shops.php" style="text-align:left;font-style:oblique;color:black;">Companies</a></div>
+										<div class="col-sm-2" style="background-image:url(\'https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/icons/Building.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-10 btn-xs" style="margin-top:5px"> <a href="companies.php" style="text-align:left;font-style:oblique;color:black;">Companies</a></div>
 									</div>
 							
 								</div>
@@ -185,7 +185,7 @@ function main_page(){
 							<!-- <div id="adcenter" style="margin-left:6px;margin-right:0px;">
 							<div class="row" style="margin:0px;">
 								<div class="col-sm-2">
-									<img src="img/Koala.jpg" height="53" width="50" style="border:1px solid #004A6E;"/>
+									<img src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/Koala.jpg" height="53" width="50" style="border:1px solid #004A6E;"/>
 								</div>
 								<div class="col-sm-6">
 									<div class="panel" style="background-color:white;width:400px;left:0px">
@@ -207,7 +207,7 @@ function main_page(){
 											<p> 
 											I am selling Mercedes Benz C200,it is in a good condition, 2014 brand. It has full services history and It has been owned by 1 owner, I am selling it at a good price, its slightly negotiable.
 											</p>
-											<img src="img/benz.jpg" height="248" width="370"/>
+											<img src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/benz.jpg" height="248" width="370"/>
 											<p style="color:gray;"> category: automotive</p>
 											<div class="row">
 												<p class="col-sm-8" style="color:gray;"> tags: benz, C200, Mercedes</p>
@@ -269,7 +269,7 @@ function main_page(){
 								
 								
 							</div>
-							<center style="color:#008AB8;"><a href="shops.php">view more</a></center>
+							<center style="color:#008AB8;"><a href="companies.php">view more</a></center>
 						</div>
 					</div>
 					
@@ -303,22 +303,22 @@ function companies_page(){
 
 	<head>
 		<title> companies</title>
-		<link rel="icon" href="img/log3.png"/>
+		<link rel="icon" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/img/log3.png"/>
 		<meta name="viewport" content="width=1024">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/font-awesome.min.css">
-		<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/myshops.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/loader.css">
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/constants.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/navigation-drawer.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/companies.js"></script>
+		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/font-awesome.min.css">
+		<link href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/myshops.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/loader.css">
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/constants.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/navigation-drawer.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/companies.js"></script>
 		
 	</head>
 	
-	<!-- <body onload ="buildCompanyPage()" style="background-image:url(img/cloud.png);background-size:cover;background-repeat:no-repeat;background-attachment:fixed;overflow-y:auto;"> -->
+	<!-- <body onload ="buildCompanyPage()" style="background-image:url(https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/cloud.png);background-size:cover;background-repeat:no-repeat;background-attachment:fixed;overflow-y:auto;"> -->
 		<body onload ="buildCompanyPage()" style="background-color:#F2F2F2;">
 		<div id="nav" class="navbar-fixed-top" >
 			<div class="container-fluid">
@@ -326,7 +326,7 @@ function companies_page(){
 					
 					<div class="col-sm-2">
 						<div class="col-sm-2">
-							<a href="index.php"><img src="img/log3.png" height="50" width="50"/></a>
+							<a href="index.php"><img src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/log3.png" height="50" width="50"/></a>
 						</div>
 					</div>
 					
@@ -494,23 +494,23 @@ function following_page(){
 
 	<head>
 		<title> followed</title>
-		<link rel="icon" href="img/log3.png"/>
+		<link rel="icon" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/img/log3.png"/>
 		<meta name="viewport" content="width=1024">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">	
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/font-awesome.min.css">
-		<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/myshops.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/loader.css">
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/constants.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/navigation-drawer.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/companies.js"></script>
+		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/font-awesome.min.css">
+		<link href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/myshops.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/loader.css">
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/constants.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/navigation-drawer.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/companies.js"></script>
 		
 		
 	</head>
 	
-	<!-- <body onload ="followed_setup()" style="background-image:url(img/cloud.png);background-size:cover;background-repeat:no-repeat;background-attachment:fixed;overflow-y:auto;"> -->
+	<!-- <body onload ="followed_setup()" style="background-image:url(https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/cloud.png);background-size:cover;background-repeat:no-repeat;background-attachment:fixed;overflow-y:auto;"> -->
 		<body onload ="followed_setup()" style="background-color:#F2F2F2;overflow-y:auto;">
 		<div id="nav" class="navbar-fixed-top" style="margin:0px;padding:0px;">
 			<div class="container-fluid">
@@ -518,7 +518,7 @@ function following_page(){
 					
 					<div class="col-sm-2">
 						<div class="col-sm-2">
-							<a href="index.php"><img src="img/log3.png" height="50" width="50"/></a>
+							<a href="index.php"><img src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/log3.png" height="50" width="50"/></a>
 						</div>
 					</div>
 					
@@ -669,26 +669,26 @@ function profile_page(){
 
 	<head>
 		<title> Mr Price</title>
-		<link rel="icon" href="img/log3.png"/>
+		<link rel="icon" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/img/log3.png"/>
 		<meta name="viewport" content="width=1024">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/loader.css">
-		<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/myshops.css" rel="stylesheet">
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/constants.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/like.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/broadcasts.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/suggestions.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/friends.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/comment.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/companies.js"></script>
-		<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/js/main_init.js"></script>	
+		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/loader.css">
+		<link href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/myshops.css" rel="stylesheet">
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/constants.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/like.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/broadcasts.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/suggestions.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/friends.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/comment.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/companies.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/main_init.js"></script>	
 	</head>
 	
-	<!-- <body onload="main_init()" style="background-image:url(img/cloud.png);background-size:cover;background-repeat:no-repeat;background-attachment:fixed;">> -->
+	<!-- <body onload="main_init()" style="background-image:url(https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/cloud.png);background-size:cover;background-repeat:no-repeat;background-attachment:fixed;">> -->
 		<body onload="main_init()" style="background-color:#F2F2F2;overflow-y:auto;">
 		<div id="nav" class="navbar-fixed-top">
 			<div class="container-fluid">
@@ -696,7 +696,7 @@ function profile_page(){
 					
 					<div class="col-sm-2">
 						<div class="col-sm-2">
-							<a href="index.php"><img src="img/log3.png" height="50" width="50"/></a>
+							<a href="index.php"><img src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/log3.png" height="50" width="50"/></a>
 						</div>
 					</div>
 					
@@ -747,12 +747,12 @@ function profile_page(){
 		</div>
 		
 		
-		<div class="wall" style="background-image:url(\'img/mrpricewall.jpg\');z-index:1;position:absolute;">
+		<div class="wall" style="background-image:url(\'https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/mrpricewall.jpg\');z-index:1;position:absolute;">
 			
 		</div>
 		
 		<div style="background-color:#004A6E;height:170px;width:170px;border-radius:4px;margin-top:280px;position:absolute;margin-left:100px;border-color:white;border-width:5px;border-style:solid;z-index:2;">
-			<img src="img/mrlog1.jpg" height="160" width="160" />
+			<img src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/mrlog1.jpg" height="160" width="160" />
 		</div>
 		<div  id="header" style="height:50px;width:100%;position:absolute;z-index:1;margin-top:400px;background-color:white;">
 			<div >
@@ -813,7 +813,7 @@ function profile_page(){
 								
 								
 							</div>
-							<center style="color:#008AB8;"><a href="shops.php">view more</a></center>
+							<center style="color:#008AB8;"><a href="companies.php">view more</a></center>
 					</div>
 					<div style="background-color:white;height:300px;width:100%;border-radius:5px;">
 		
