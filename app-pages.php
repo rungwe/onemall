@@ -769,7 +769,7 @@ function profile_page(){
 					<center class="tab"><b>Live Community</b> </center>
 				</div>
 				<div class="col-sm-2">
-					<center class="tab"><button class="btn btn-info btn-md" style="margin-top:3px;">following</button></center>
+					<center><button class="btn btn-info btn-md" style="margin-top:3px;">following</button></center>
 				</div>
 			
 			</div>
@@ -778,12 +778,12 @@ function profile_page(){
 		<div id="content" style="width:100%;margin-top:400px;position:absolute;overflow-y:auto;">
 			<div  style="margin-top:5%;">
 				<div class="col-sm-4" id="left">
-					<div style="background-color:white;border-radius:5px;border: 2px solid #004A6E;;">
+					<div style="background-color:white;">
 					<center style="font-size:17px;font-style:oblique;color:black;font-weight:900;font-style:oblique;"><span class="" style="color:blue;"></span>&nbsp;<h4>Mr Price@mowbray</h4></center>
 					<br>
 					<p style="color:#336699;">"Passion, value and Partnership. Your satisfaction is our priority. Feel at Home our dear customers"</p>
 					<p style="margin-left:5px;font-style:oblique;color:#336699;"><b>category:</b>&nbsp; clothing and fashion</p>
-					<center><button class="btn btn-info btn-md" style="margin-left:5px;"><span class="glyphicon glyphicon-send"></span>&nbsp; post to Mr Price live chat</button></center>
+					<br>
 					<p style="margin-left:5px;font-size:15px;color:blue;cursor:pointer;"><span class="glyphicon glyphicon-link"></span>&nbsp;&nbsp;www.mr.co.za</p>
 					<p style="margin-left:5px;font-size:15px;color:blue;cursor:pointer;"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;&nbsp;+27 021 019 787 1264</p>
 					<p style="margin-left:5px;font-size:15px;color:blue;cursor:pointer;"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;info@mr.co.za</p>

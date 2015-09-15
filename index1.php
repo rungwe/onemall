@@ -7,16 +7,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Welcome</title>
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
-		<link src="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/typicons.css">
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/popup.css">
-		<link rel="stylesheet" href="css/form-elements.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/media-query.css">
+        <!-- https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css?family=Roboto:400,100,300,500">        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/bootstrap.min.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css"/>
+		<link src="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/font-awesome.min.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css" rel="stylesheet">
+        <link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/typicons.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css">
+        <link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/animate.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css">
+        <link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/popup.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css">
+		<link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/form-elements.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css">
+        <link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/style.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css">
+        <link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/media-query.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

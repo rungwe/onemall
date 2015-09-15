@@ -6,10 +6,10 @@
 		<link rel="icon" href="img/log3.png"/>
 		<meta name="viewport" content="width=1024">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">	
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="css/font-awesome.min.css">
-		<link href="css/myshops.css" rel="stylesheet">
-		<link rel="stylesheet" href="css/loader.css">
+		<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/bootstrap.min.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css" rel="stylesheet">
+		<link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/font-awesome.min.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css">
+		<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/myshops.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css" rel="stylesheet">
+		<link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/loader.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css">
 		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/constants.js"></script>

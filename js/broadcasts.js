@@ -19,7 +19,85 @@ feedsArr: is an array of key-value pair dictionary which contains Broadcasts
 
 Broadcasts are arranged in order of retrieval
 
-status: tested
+status: pending
+
+-------------------------------------------------------Broadcasts JSON Object------------------------------------------------------------------------
+
+BroadcastDTO
+{
+    "ID": 1,
+    "title": "sample string 2",
+    "details": "sample string 3",
+    "minutes": 1,
+    "hours": 1,
+    "date": "2015-09-02T00:41:26.6227784+02:00",
+    "number_of_views": 5,
+    "number_of_likes": 6,
+    "number_of_comments": 7,
+    "company": {
+      "ID": "sample string 1",
+      "name": {
+        "Id": 1
+      },
+      "wallpaper": {
+        "Id": 1
+      },
+      "profile_pic": "sample string 2"
+    },
+    "images": [
+      {
+        "Id": 1
+      },
+      {
+        "Id": 1
+      }
+    ],
+    "likes": [
+      {
+        "ID": 1,
+        "user": {
+          "Id": "sample string 1",
+          "name": "sample string 2"
+        }
+      },
+      {
+        "ID": 1,
+        "user": {
+          "Id": "sample string 1",
+          "name": "sample string 2"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ID": 1,
+        "comment": "sample string 2",
+        "minutes": 1,
+        "hours": 1,
+        "date": "2015-09-02T00:41:26.635779+02:00",
+        "user": {
+          "Id": "sample string 1",
+          "name": "sample string 2",
+          "profile_pic": "sample string 3"
+        }
+      },
+      {
+        "ID": 1,
+        "comment": "sample string 2",
+        "minutes": 1,
+        "hours": 1,
+        "date": "2015-09-02T00:41:26.635779+02:00",
+        "user": {
+          "Id": "sample string 1",
+          "name": "sample string 2",
+          "profile_pic": "sample string 3"
+        }
+      }
+    ]
+  }
+-------------------------------------------------------------------- End of JSON--------------------------------------------------------------------
+
+
 **/
 function displayBroadcasts(feedsArr,locationID){
 	
@@ -46,8 +124,8 @@ function displayBroadcasts(feedsArr,locationID){
 //tested
 function buildBroadcast(feed){
 	//feed properties shop_name,shop_profile_pic,poster,post_info,num_likes, liked, num_comments, time , postID ;
-		var shop_name=feed['shop_name'],shop_profile_pic=feed['shop_profile_pic'],poster=feed['poster'],post_info=feed['post_info'],likes=feed["num_likes"];
-		var liked=feed["liked"], comments=feed["num_comments"],time=feed["time"], ID=feed["postID"];
+		var shop_name=feed['shop_name'],shop_profile_pic=feed['company']['profile_pic'],poster=feed['images'][0]['id'],post_info=feed['details'],likes=feed["number_of_likes"];
+		var liked=feed["liked"], comments=feed["number_of_comments"],time=feed["minutes"], ID=feed["ID"];
 		var template= '<div id="'+ID+'" class="panel panel-info">'+
 			  '				<div class="panel-heading">'+
 			  ' 					<div class="row">'+

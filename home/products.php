@@ -6,15 +6,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Products</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/price-range.css" rel="stylesheet">
-	<link href="css/myshops.css" rel="stylesheet">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/bootstrap.min.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css" rel="stylesheet">
+    <link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/font-awesome.min.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css" rel="stylesheet">
+    <link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/prettyPhoto.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css" rel="stylesheet">
+    <link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/price-range.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css" rel="stylesheet">
+	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/myshops.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/font-awesome.min.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css" rel="stylesheet">
 
-	<link href="css/main.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet">
+	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/main.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css" rel="stylesheet">
+	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/responsive.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css" rel="stylesheet">
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/constants.js"></script>
     <!--[if lt IE 9]>
