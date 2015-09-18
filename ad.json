@@ -63,3 +63,79 @@
       }
     ]
 }
+
+-------------------------------------------------------Broadcasts JSON Object------------------------------------------------------------------------
+
+BroadcastDTO
+{
+    "ID": 1,
+    "title": "sample string 2",
+    "details": "sample string 3",
+    "minutes": 1,
+    "hours": 1,
+    "date": "2015-09-02T00:41:26.6227784+02:00",
+    "number_of_views": 5,
+    "number_of_likes": 6,
+    "number_of_comments": 7,
+    "company": {
+      "ID": "sample string 1",
+      "name": {
+        "Id": 1
+      },
+      "wallpaper": {
+        "Id": 1
+      },
+      "profile_pic": "sample string 2"
+    },
+    "images": [
+      {
+        "Id": 1
+      },
+      {
+        "Id": 1
+      }
+    ],
+    "likes": [
+      {
+        "ID": 1,
+        "user": {
+          "Id": "sample string 1",
+          "name": "sample string 2"
+        }
+      },
+      {
+        "ID": 1,
+        "user": {
+          "Id": "sample string 1",
+          "name": "sample string 2"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ID": 1,
+        "comment": "sample string 2",
+        "minutes": 1,
+        "hours": 1,
+        "date": "2015-09-02T00:41:26.635779+02:00",
+        "user": {
+          "Id": "sample string 1",
+          "name": "sample string 2",
+          "profile_pic": "sample string 3"
+        }
+      },
+      {
+        "ID": 1,
+        "comment": "sample string 2",
+        "minutes": 1,
+        "hours": 1,
+        "date": "2015-09-02T00:41:26.635779+02:00",
+        "user": {
+          "Id": "sample string 1",
+          "name": "sample string 2",
+          "profile_pic": "sample string 3"
+        }
+      }
+    ]
+  }
+-------------------------------------------------------------------- End of JSON--------------------------------------------------------------------

@@ -61,12 +61,13 @@ function buildBroadcast(feed){
 			  '				<div class="panel-body">'+
 			  '					'+post_info+	
 			  '					<div class="row">'+
-			  '						<div class="col-sm-offset-1 col-sm-10" style="height:215px;background-image:url(\''+poster+'\');background-size:cover;"></div>'+
+			  '						<div> <center><img src="'+poster+'" style="max-height:300px;min-height:200;max-width:100%;"></center></div>'+
 			  '					</div>'+
 			  '				</div>'+
 			  '				<div class="panel-footer">'+
-			  ' 				<div class="row">'+
-			  '  					<div class="col-sm-offset-2 col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-thumbs-up likes '+ liked+'">'+likes+'</span> </div>'+
+			  ' 				<div class="row" style="margin-left:15px;">'+
+			  '						<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-eye-open">'+53+'</span></div>'+
+			  '  					<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-thumbs-up likes '+ liked+'">'+likes+'</span> </div>'+
 			  '						<div class="col-sm-3" style="cursor:pointer;"> <span class="glyphicon glyphicon-comment comment">'+ comments+'</span></div>'+
 			  '						<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-share-alt"></span></div>'+
 			  '					</div>'+

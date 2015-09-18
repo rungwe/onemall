@@ -3,18 +3,18 @@
 
 	<head>
 		<title> companies</title>
-		<link rel="icon" href="img/log3.png"/>
+		<link rel="icon" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/img/log3.png"/>
 		<meta name="viewport" content="width=1024">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-		<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/bootstrap.min.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css" rel="stylesheet">
-		<link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/font-awesome.min.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css">
-		<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/myshops.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css" rel="stylesheet">
-		<link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/loader.https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css">
-		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/constants.js"></script>
-		<script type="text/javascript" src="js/navigation-drawer.js"></script>
-		<script type="text/javascript" src="js/companies.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/font-awesome.min.css">
+		<link href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/myshops.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/loader.css">
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/constants.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/navigation-drawer.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/companies.js"></script>
 		
 	</head>
 	

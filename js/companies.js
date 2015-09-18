@@ -29,13 +29,13 @@ function displayCompany(compArr,locationID){
 
 function buildCompany(shop_data){
 	//shop data instances  name: shop_name , shop_profile_picture , shop_wall_picture,  shop_id , num_followers;
-	var id= shop_data["shop_id"], shop_pic = shop_data["shop_wall_picture"], shop_name=shop_data["shop_name"], followers=shop_data["num_followers"];
-	var template='<div id="'+id+'" class="col-sm-3">'+
+	
+	var template='<div id="'+shop_data.ID+'" class="col-sm-3">'+
 						'<div class="fill highlight my_header" style="background-image:url(\''+shop_pic+'\');background-size:cover;height:34%;width:111%;margin-bottom:5px;">'+
 										'<div class="row my_header-content">'+
-											'<div>'+shop_name+'</div>'+
+											'<div>'+shop_data.name+'</div>'+
 											'<div class="row">'+
-												'<div class="col-sm-6" style="font-weight:400;color:white;">followers &nbsp;'+followers+'</div>'+
+												'<div class="col-sm-6" style="font-weight:400;color:white;">followers &nbsp;'+shop_data.number_of_followers+'</div>'+
 												'<div class="col-sm-4 " style="margin-bottom:5px;"> <button class="btn btn-info btn-xs">+follow</button></div>'+
 											'</div>'+
 										'</div>'+

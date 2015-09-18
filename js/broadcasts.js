@@ -122,30 +122,30 @@ function displayBroadcasts(feedsArr,locationID){
 
 
 //tested
-function buildBroadcast(feed){
-	//feed properties shop_name,shop_profile_pic,poster,post_info,num_likes, liked, num_comments, time , postID ;
-		var shop_name=feed['shop_name'],shop_profile_pic=feed['company']['profile_pic'],poster=feed['images'][0]['id'],post_info=feed['details'],likes=feed["number_of_likes"];
-		var liked=feed["liked"], comments=feed["number_of_comments"],time=feed["minutes"], ID=feed["ID"];
-		var template= '<div id="'+ID+'" class="panel panel-info">'+
+function buildBroadcast(broadcast){
+	//broadcast properties shop_name,shop_profile_pic,poster,post_info,num_likes, liked, num_comments, time , postID ;
+		
+		var template= '<div id="'+broadcast.ID+'" class="panel panel-info">'+
 			  '				<div class="panel-heading">'+
 			  ' 					<div class="row">'+
-			  ' 						<a href="profile_page.php"><img class="col-sm-2" src="'+shop_profile_pic+'" height="53px" width="50px"/></a>'+
+			  ' 						<a href="profile_page.php"><img class="col-sm-2 img_placeholder" id="'+broadcast.company.profile_pic.ID+'" src="" alt"'+broadcast.company.name+'" height="53px" width="50px"/></a>'+
 			  ' 						<div class="col-sm-5">'+
-			  ' 							<p><b><a href="profile_page.php">'+shop_name+'</a></b></p>'+
-			  '							<p style="color:grey">'+time+'</p>'+
+			  ' 							<p><b><a href="profile_page.php">'+broadcast.company.name+'</a></b></p>'+
+			  '							<p style="color:grey">'+broadcast.minutes+'</p>'+
 			  '						</div>'+
 			  '					</div>'+
 			  '				</div>'+
 			  '				<div class="panel-body">'+
-			  '					'+post_info+	
+			  '					'+broadcast.details+	
 			  '					<div class="row">'+
-			  '						<div class="col-sm-offset-1 col-sm-10" style="height:215px;background-image:url(\''+poster+'\');background-size:cover;"></div>'+
+			  '						<div> <center><img class="img_placeholder" id="'+broadcast.images[0].id+'" alt="poster" src="" style="max-height:300px;min-height:200;max-width:100%;"></center></div>'+
 			  '					</div>'+
 			  '				</div>'+
 			  '				<div class="panel-footer">'+
-			  ' 				<div class="row">'+
-			  '  					<div class="col-sm-offset-2 col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-thumbs-up likes '+ liked+'">'+likes+'</span> </div>'+
-			  '						<div class="col-sm-3" style="cursor:pointer;"> <span class="glyphicon glyphicon-comment comment">'+ comments+'</span></div>'+
+			  ' 				<div class="row" style="margin-left:15px;">'+
+			  '                     <div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-eye-open views">'+broadcast.number_of_views+'</span> </div>'+
+			  '  					<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-thumbs-up likes">'+broadcast.number_of_likes+'</span> </div>'+
+			  '						<div class="col-sm-3" style="cursor:pointer;"> <span class="glyphicon glyphicon-comment comment">'+ broadcast.number_of_comments+'</span></div>'+
 			  '						<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-share-alt"></span></div>'+
 			  '					</div>'+
 			  '				</div>'+			
