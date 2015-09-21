@@ -36,7 +36,7 @@
 					
 					<div class="col-sm-2">
 						<div class="col-sm-2">
-							<a href="shops.php"><img src="img/log3.png" height="50" width="50"/></a>
+							<a href="index.php"><img src="img/log3.png" height="50" width="50"/></a>
 						</div>
 					</div>
 					
@@ -74,7 +74,7 @@
 						<div id="nav_content" style="margin-right:3%;">
 						  <ul class="nav navbar-nav navbar-right style_font" >
 								
-							<li onclick="Home()" style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-home"><label style="font-size:13px;">&nbsp;Home&nbsp;</label></span></li>
+							<li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-home"><label style="font-size:13px;"><a href="index.html">&nbsp;Home&nbsp;</a></label></span></li>
 						<!--	<li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-bell"><label style="font-size:13px;">&nbsp;Notifications&nbsp;</label></span></li>
 					-->
 							
@@ -447,7 +447,7 @@
 								
 								
 							</div>
-							<center style="color:#008AB8;"><a href="shops.php">view more</a></center>
+							<center style="color:#008AB8;"><a href="companies.php">view more</a></center>
 					</div>
 					<div style="background-color:white;height:300px;width:100%;border-radius:5px;">
 		
