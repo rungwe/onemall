@@ -45,7 +45,8 @@ function pull_comments(postID, commentObj){
 		  
 	//SEND => name: postID , name: pull_comments = 'true'
 	//RECEIVE => commenter_name , commenter_picture , comment_txt , comment_time ;
-	xmlhttp.open("POST",url+"?pull_comments=true&postID="+postID,true);
+	xmlhttp.open("GET",url+"customer/get-comments-on-broadcast?broadId="+postID+"&page="+1+"&amount="+10,true);
+	xmlhttp.setRequestHeader("Authorisation",'Bearer ' + token);
 	xmlhttp.send();
 	
 	
@@ -67,11 +68,11 @@ function buildComment(data){
 	var profile_pic=data["commenter_picture"], name=data["commenter_name"], time=data["comment_time"],comment=data["comment_txt"];
 	var template='<div class="row">'+
 			'      <div class="col-sm-2">'+
-			'         <img src="'+profile_pic+'" height="45px" width="45px"/>'+
+			'         <img src="'+data.user.profile_pic+'" height="45px" width="45px"/>'+
 			'      </div>'+
 			'      <div class="col-sm-8" style="margin:0px; padding:0px;">'+
-			'         <p style="font-size:10px;color:grey"><b style="font-size:12px;color:#0099FF">'+name+'</b> &nbsp;&nbsp;&nbsp;&nbsp;'+time+'</p>'+
-			'		  <p style="font-size:11px;">'+comment+'</p>'+
+			'         <p style="font-size:10px;color:grey"><b style="font-size:12px;color:#0099FF">'+data.user.name+'</b> &nbsp;&nbsp;&nbsp;&nbsp;'+data.time+'</p>'+
+			'		  <p style="font-size:11px;">'+data.comment+'</p>'+
 			'      </div>'+
 			'   </div>'+
 			'   <hr style="margin:0px;padding:0px;">';
@@ -116,7 +117,8 @@ function comment_broadcast(postID,comment,obj){
 		  } 
 		  
 	
-	xmlhttp.open("POST",url+"?put_comment=true&postID="+postID+"&comment_txt="+comment,true);
+	xmlhttp.open("PUT",url+"customer/comment-on-broadcast?broadcastId="+postID+"&comment="+comment,true);
+	xmlhttp.setRequestHeader("Authorisation",'Bearer ' + token);
 	xmlhttp.send();
 	
 }

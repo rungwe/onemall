@@ -108,10 +108,14 @@ function displayBroadcasts(feedsArr,locationID){
 		document.getElementById(locationID).innerHTML=document.getElementById(locationID).innerHTML+broadcast;
 		
 	}
-	
-	sessionStorage.broadcasts=document.getElementById(locationID).innerHTML;
+	// bind like event
 	bindBroadcastLikeEvents();
+	
+	// bind comments functionality
 	bindBroadcastCommentEvents();
+	
+	//bind images to broadcasts
+	bindImage();
 
 }
 
@@ -179,7 +183,8 @@ function pull_broadcasts(num){
 			displayBroadcasts(data,mainID);
 			}
 		  } 	
-	xmlhttp_br.open("POST",url+"?pull_broadcasts=true&number_broadcasts="+num,true);
+	xmlhttp_br.open("GET",url+"customer/get-broadcast?amount=6&time=true&page="+num,true);
+	xmlhttp.setRequestHeader("Authorisation",'Bearer ' + token);
 	xmlhttp_br.send();
 	
 	

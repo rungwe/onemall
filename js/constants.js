@@ -3,7 +3,7 @@
 drawer="off"
 //url = "http://localhost:8080/Client.php";
 url ="Client.php"
-
+token ="avagsgdstdefddhjufkbfdssw";
 
 function retrieve_image(id ){
 	var xmlHttp;
@@ -24,7 +24,14 @@ function retrieve_image(id ){
 		  if (xmlHttp.readyState==4 && xmlHttp.status==200)
 			{
 				var url=xmlHttp.responseText;
-				document.getElementById(id).src=url;
+				
+				if( $("#"+id).hasClass("my_header") ){
+					document.getElementById(id).style.background-image="url("+url+")";	
+				}
+				else{
+					document.getElementById(id).src=url;
+				}
+				
 			}
 		  }
 	
@@ -42,4 +49,5 @@ function bindImage(){
 			});
 		});
 	}
+
 	

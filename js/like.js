@@ -53,7 +53,8 @@ function like(postID, likedObject){
 			}
 		  }
 		  
-	xmlHttp.open("POST",url+"?like_broadcasts=true&postID="+postID,true);
+	xmlHttp.open("PUT",url+"customer/like-broadcast?broadcastId="+postID,true);
+	xmlhttp.setRequestHeader("Authorisation",'Bearer ' + token);
 	xmlHttp.send();
 	
 }	
@@ -96,7 +97,8 @@ function unlike(postID, unlikedObject){
 			}
 		  }
 		  
-	xmlHttp.open("POST",url+"?unlike_broadcasts=true&postID="+postID,true);
+	xmlHttp.open("DELETE",url+"customer/unlike-broadcast?unlike_broadcast="+postID,true);
+	xmlhttp.setRequestHeader("Authorisation",'Bearer ' + token);
 	xmlHttp.send();
 	
 }

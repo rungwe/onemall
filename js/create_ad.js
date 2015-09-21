@@ -68,6 +68,7 @@ function post_ad(){
 		  
 	//name: create_ad, name: pic1, name:pic2, name:pic3, name:title, name:category, name:product_info
 	xmlhttp.open("POST",url+"",true);
+	xmlhttp.setRequestHeader("Authorisation",'Bearer ' + token);
 	xmlhttp.send(formData);
 }
 	

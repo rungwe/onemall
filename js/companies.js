@@ -31,7 +31,7 @@ function buildCompany(shop_data){
 	//shop data instances  name: shop_name , shop_profile_picture , shop_wall_picture,  shop_id , num_followers;
 	
 	var template='<div id="'+shop_data.ID+'" class="col-sm-3">'+
-						'<div class="fill highlight my_header" style="background-image:url(\''+shop_pic+'\');background-size:cover;height:34%;width:111%;margin-bottom:5px;">'+
+						'<div class="fill highlight my_header" id="'+shop_data.profile_pic.id+'" style="background-image:url('+shop_data.wallpaper+');background-size:cover;height:34%;width:111%;margin-bottom:5px;">'+
 										'<div class="row my_header-content">'+
 											'<div>'+shop_data.name+'</div>'+
 											'<div class="row">'+
@@ -112,7 +112,8 @@ function pull_companies(num,category,header,footer){
 	}
 		  
 		  
-	xmlhttp.open("POST",url+"?request_companies=true&number_companies="+num+"&category="+category,true);
+	xmlhttp.open("GET",url+"customer/get-companies-in-category?amount="+num+"&category="+category+"&page=1",true);
+	xmlhttp.setRequestHeader("Authorisation",'Bearer ' + token);
 	xmlhttp.send();
 	
 }
@@ -183,7 +184,8 @@ function pull_companies_followed(){
 	//SEND => name: pull_followers
 	//RECEIVE => name: shop_name , shop_profile_picture , shop_wall_picture, shopID , num_followers;
 		  
-	xmlhttp.open("POST",url+"?pull_followers=true",true);
+	xmlhttp.open("GET",url+"customer/get-following-companies?page=1&amount=30",true);
+	xmlhttp.setRequestHeader("Authorisation",'Bearer ' + token);
 	xmlhttp.send();
 	
 }
@@ -191,7 +193,7 @@ function pull_companies_followed(){
 function followed_setup(){
 	pull_companies_followed();
 	drawer_init();
-	close_drawer_onload(1500);
+	
 	
 }
 

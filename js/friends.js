@@ -4,7 +4,7 @@ Date: 20 May 2015
 
 Description: fetches and display friends
 
-status: unimplemented
+status: 
 
 **/
 
@@ -13,7 +13,7 @@ var isSuggestedCliked="";
 
 function pull_friends(type){ // type can either be friends or suggested_friends
 	var xmlhttp;
-	var id=0;
+	var id="";
 	if(type=="suggested_friends"){
 		id="suggested_friends";
 	}
@@ -52,7 +52,7 @@ function pull_friends(type){ // type can either be friends or suggested_friends
 	//SEND => name: pull_friends, name: user_id
 	//RECEIVE => name: profile_pic, user_id, num_following, num_ads, num_mutual_friends;
 		  
-	xmlhttp.open("POST",url+"?pull_friends=true",true);
+	xmlhttp.open("GET",url+"customer/get-buddies?amount=50&page=1",true);
 	xmlhttp.send();
 }
 

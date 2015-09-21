@@ -2,7 +2,7 @@
 
 function nav_drawer(){
 	$drawer_html ='<div id="drawer"class="row" style="position:fixed;z-index:3;left:0px;">
-			<div class="col-sm-4" id="drawer-content" style="border:2px solid #004A6E; width:250px;background-color:white;position:fixed;z-index:3;margin:0px;padding:0px;">
+			<div class="col-sm-4" id="drawer-content" style="border:1px solid #004A6E; width:250px;background-color:white;position:fixed;z-index:3;margin:0px;padding:0px;">
 				<div style="background-image:url(\'img/bk-freeze-ga.jpg\');height:150;width:100%;margin:0px;background-size:cover;">
 				
 				</div>

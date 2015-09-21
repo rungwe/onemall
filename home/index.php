@@ -129,7 +129,7 @@
 									<img src="img/camera3.png" height="40" width="40" style="margin-left:15px;margin-top:15px;">
 								</div>
 								<div style="background-color:white;width:279px;border-radius:2px;z-index:1;position:absolute;margin-top:100px;">
-									<label style="margin-left:50%;font-size:100%;"><b>Chaddy</b></label>
+									<label style="margin-left:50%;font-size:100%;"><b id="user-name">Chaddy</b></label>
 									<br>
 									<br>
 									<div class="row" style="font-size:14px;margin-left:4px;color:#B3B3B3;">
@@ -190,51 +190,7 @@
 					
 					<div id="center" class="col-sm-6" >
 						<div  id="center-main" style="margin-left:4%;" >
-							<!-- <div id="adcenter" style="margin-left:6px;margin-right:0px;">
-							<div class="row" style="margin:0px;">
-								<div class="col-sm-2">
-									<img src="img/Koala.jpg" height="53" width="50" style="border:1px solid #004A6E;"/>
-								</div>
-								<div class="col-sm-6">
-									<div class="panel" style="background-color:white;width:400px;left:0px">
-										<div class="panel-body" style="margin-bottom:-5px">
-										
-											<div class="row">
-											<div class="col-sm-5">
-												<p><b>Dejan Rungwe</a></b></p>
-											</div>
-											<div class="col-sm-offset-3 col-sm-2">
-												<span class="glyphicon glyphicon-earphone call" style="color:green"></span>
-											</div>
-											<div class="col-sm-2">
-												<span class="glyphicon glyphicon-envelope email" style="color:gold"></span>
-											</div>
-											</div>
-											<p style="color:grey;margin-left:0px;">@46min</p>
-											<hr>
-											<p> 
-											I am selling Mercedes Benz C200,it is in a good condition, 2014 brand. It has full services history and It has been owned by 1 owner, I am selling it at a good price, its slightly negotiable.
-											</p>
-											<img src="img/benz.jpg" height="248" width="370"/>
-											<p style="color:gray;"> category: automotive</p>
-											<div class="row">
-												<p class="col-sm-8" style="color:gray;"> tags: benz, C200, Mercedes</p>
-												<button class="btn btn-xs col-sm-offset-1 col-sm-3">view more</button>
-											</div>
-											<center style="font-size:10px;color:gray;">powered by adcenter</center>
-										</div>
-										<div class="panel-footer">
-											<div class="row" style="margin-left:10px;">
-												<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-eye-open">15</span></div>
-												<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-thumbs-up likes '+ liked+'">5</span> </div>
-												<div class="col-sm-3" style="cursor:pointer;"> <span class="glyphicon glyphicon-comment comment">4</span></div>
-												<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-share-alt"></span></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> 
-						</div>-->
+							
 						
 						</div>
 						<div id="friends_nav" style="margin-left:4%;display:none">
