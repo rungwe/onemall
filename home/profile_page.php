@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/loader.css">
 		<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/myshops.css" rel="stylesheet">
-		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/constants.js"></script>
 		<script type="text/javascript" src="js/like.js"></script>
@@ -112,12 +112,11 @@
 		<div id="content" style="width:100%;margin-top:400px;position:absolute;overflow-y:auto;">
 			<div  style="margin-top:5%;">
 				<div class="col-sm-4" id="left">
-					<div style="background-color:white;border-radius:5px;border: 2px solid #004A6E;;">
+					<div style="background-color:white;">
 					<center style="font-size:17px;font-style:oblique;color:black;font-weight:900;font-style:oblique;"><span class="" style="color:blue;"></span>&nbsp;<h4>Mr Price@mowbray</h4></center>
 					<br>
 					<p style="color:#336699;">"Passion, value and Partnership. Your satisfaction is our priority. Feel at Home our dear customers"</p>
 					<p style="margin-left:5px;font-style:oblique;color:#336699;"><b>category:</b>&nbsp; clothing and fashion</p>
-					<center><button class="btn btn-info btn-md" style="margin-left:5px;"><span class="glyphicon glyphicon-send"></span>&nbsp; post to Mr Price live chat</button></center>
 					<p style="margin-left:5px;font-size:15px;color:blue;cursor:pointer;"><span class="glyphicon glyphicon-link"></span>&nbsp;&nbsp;www.mr.co.za</p>
 					<p style="margin-left:5px;font-size:15px;color:blue;cursor:pointer;"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;&nbsp;+27 021 019 787 1264</p>
 					<p style="margin-left:5px;font-size:15px;color:blue;cursor:pointer;"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;info@mr.co.za</p>
@@ -142,12 +141,12 @@
 				</div>
 				<div class="col-sm-3" id="right">
 					<div class="panel panel-primary" >
-							<div class="panel-heading" style="background-color:#004A6E;">Suggested companies to follow</div>
+							<div class="panel-heading" style="background-color:white;color:#004A6E;">Suggested companies to follow</div>
 							<div id="suggestions" class="panel-body">
 								
 								
 							</div>
-							<center style="color:#008AB8;"><a href="shops.php">view more</a></center>
+							<center style="color:#008AB8;"><a href="companies.php">view more</a></center>
 					</div>
 					<div style="background-color:white;height:300px;width:100%;border-radius:5px;">
 		

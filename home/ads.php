@@ -74,7 +74,7 @@
 						<div id="nav_content" style="margin-right:3%;">
 						  <ul class="nav navbar-nav navbar-right style_font" >
 								
-							<li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-home"><label style="font-size:13px;"><a href="index.html">&nbsp;Home&nbsp;</a></label></span></li>
+							<li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-home"><label style="font-size:13px;"><a href="index.php">&nbsp;Home&nbsp;</a></label></span></li>
 						<!--	<li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-bell"><label style="font-size:13px;">&nbsp;Notifications&nbsp;</label></span></li>
 					-->
 							
@@ -185,7 +185,7 @@
 				<div class="col-sm-3">
 					<div class="left-sidebar">
 						<h2>Category</h2>
-						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
+						<div class="panel-group  panel-primary category-products" id="accordian" ><!--category-productsr-->
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title"><a href="#">All</a></h4>
@@ -291,7 +291,7 @@
 									<img src="img/seller1.jpg" height="53" width="50" style="border:1px solid #F2F2F2;"/>
 								</div>
 								<div class="col-sm-6">
-									<div class="panel" style="background-color:white;width:400px;left:0px;border: 1px solid #F2F2F2;">
+									<div class="panel" style="background-color:white;width:400px;left:0px;border: 2px solid #F2F2F2;">
 										<div class="panel-body" style="margin-bottom:-5px">
 										
 											<div class="row">
@@ -441,8 +441,9 @@
 				</div>
 				
 				<div class="col-sm-3 padding-left" id="right">
-					<div class="panel panel-primary" >
-							<div class="panel-heading" style="background-color:#004A6E;">Suggested companies to follow</div>
+
+					<div class="panel panel-primary" style="margin-top:53px;">
+							<div class="panel-heading" style="background-color:white;color:#004A6E;font-weight:700;">Suggested companies to follow</div>
 							<div id="suggestions" class="panel-body">
 								
 								

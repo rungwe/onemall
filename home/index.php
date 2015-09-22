@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/loader.css">
 		<link href="css/myshops.css" rel="stylesheet">
-		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 		<<script type="text/javascript" src="js/constants.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/like.js"></script>
@@ -228,7 +228,7 @@
 					<div id="right" class="col-sm-3" >
 						
 						<div class="panel panel-primary" >
-							<div class="panel-heading" style="background-color:#004A6E;">Suggested companies to follow</div>
+							<div class="panel-heading" style="background-color:white;color:#004A6E;">Suggested companies to follow</div>
 							<div id="suggestions" class="panel-body">
 								
 								

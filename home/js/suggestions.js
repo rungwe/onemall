@@ -35,7 +35,7 @@ function displaySuggestions(suggestionArr, locationID){
 	}
 	
 	
-		sessionStorage.suggestions=document.getElementById(locationID).innerHTML;
+		
 	
 		
 }
@@ -48,7 +48,7 @@ function buildSuggestion(sug_data){
 				'<img class="col-sm-4 " src="'+shop_profile+'" height="53px" width="50px" border="2" />'+
 				'<div class="col-sm-7 btn-xs">'+
 					'<p><b>'+shop_name+'</b></p>'+
-					'<button class="btn btn-info btn-xs suggestionBtn">+'+followers+'&nbsp;followers</button>'+
+					'<button class="btn btn-info btn-xs suggestionBtn" style="background-color:white;color:#004A6E">+'+followers+'&nbsp;followers</button>'+
 				'</div>'+
 				'</div>';
 			
