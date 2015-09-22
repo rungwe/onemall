@@ -11,7 +11,7 @@
     <link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/prettyPhoto.css" rel="stylesheet">
     <link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/price-range.css" rel="stylesheet">
-	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/myshops.css" rel="stylesheet">
+	<link href="css/myshops.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
 
 	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/main.css" rel="stylesheet">
@@ -76,7 +76,7 @@
 						<div id="nav_content" style="margin-right:3%;">
 						  <ul class="nav navbar-nav navbar-right style_font" >
 								
-							<li onclick="Home()" style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-home"><label style="font-size:13px;">&nbsp;Home&nbsp;</label></span></li>
+							<li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-home"><label style="font-size:13px;">&nbsp;Home&nbsp;</label></span></li>
 						<!--	<li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-bell"><label style="font-size:13px;">&nbsp;Notifications&nbsp;</label></span></li>
 					-->
 							
@@ -111,7 +111,7 @@
 	?>
 	
 	
-	<section id="slider"><!--slider-->
+	<section id="slider" style="height:400px;"><!--slider-->
 	
 		<div class="container">
 			<div class="row">
@@ -125,40 +125,43 @@
 						
 						<div class="carousel-inner">
 							<div class="item active">
-								<div class="col-sm-6">
-									<h1>Advert</h1>
-									<h2>Heading</h2>
-									<p>Content</p>
+								<div class="col-sm-5">
+									<h1>Standard Bank</h1>
+									<h2></h2>
+									<p>Travel conveniently, we take care of your monies even abroad </p>
 									<button type="button" class="btn btn-default get">Check it out</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="images/boys.jpg" class="girl img-responsive" alt="" />
-									<img src="images/home/pricing.png"  class="pricing" alt="" />
+									<br><br><br><br>
+									<img src="img/products/standard.png" class="img-responsive"  alt="" />
+									
 								</div>
 							</div>
 							<div class="item">
 								<div class="col-sm-6">
-									<h1>Advert</h1>
-									<h2>Heading </h2>
-									<p>Content</p>
+									<h1>Vodacom</h1>
+									<h2></h2>
+									<p>Always bring you the best deals in the game </p>
 									<button type="button" class="btn btn-default get">Check it out</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="images/Dogters.jpg" class="girl img-responsive" alt="" />
-									<img src="images/home/pricing.png"  class="pricing" alt="" />
+								<br><br><br><br>
+									<img src="img/products/tab.jpg" class="img-responsive" alt="" />
+									
 								</div>
 							</div>
 							
 							<div class="item">
 								<div class="col-sm-6">
-									<h1>Advert</h1>
-									<h2>Heading</h2>
-									<p>We also have great products for the babies </p>
+									<h1>iStore</h1>
+									<h2></h2>
+									<p>The home of everything, iStore </p>
 									<button type="button" class="btn btn-default get">Check it out</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="images/toddlers.jpg" class="girl" alt="" />
-									<img src="images/home/pricing.png" class="pricing" alt="" style="left:3px" />
+									<br><br><br><br>
+									<img src="img/products/iphones.jpg" class="img-responsive" alt="" />
+									
 								</div>
 							</div>
 							
@@ -271,8 +274,8 @@
 							</div>
 						</div><!--/price-range-->
 						
-						<div class="shipping text-center"><!--shipping-->
-							<img src="img/shipping.jpg" alt="" />
+						<div class="text-center"><!--shipping-->
+							<img src="img/products/shopping.jpg" height="250" alt="" />
 						</div><!--/shipping-->
 					
 					</div>
@@ -281,22 +284,75 @@
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Featured Products</h2>
+						
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
-										<div class="productinfo text-center">
-											<img src="images/product.png" alt="" />
-											<h2>R7550</h2>
-											<p>2 in 1 Circus Bunker</p>
+									<div class="productinfo text-center">
+										<img src="img/products/clock.jpg" class="item-img" alt="" />
+										<h2>R650</h2>
+										<p>Bedding set</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>R650</h2>
+											<p>Full bedding set</p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>
-										<div class="product-overlay">
-											<div class="overlay-content">
-												<h2>R7550</h2>
-												<p>2 in 1 Circus Bunker</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Product Details</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Purchase</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="img/products/bedding.jpg" class="item-img" alt="" />
+										<h2>R650</h2>
+										<p>Bedding set</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>R650</h2>
+											<p>Full bedding set</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Product Details</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Purchase</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="img/products/Microwave.jpg" alt="" />
+										<h2>R2650</h2>
+										<p>Microwave </p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>R2650</h2>
+											<p>Silver Philips</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										</div>
+									</div>
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
@@ -310,65 +366,15 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">
-										<img src="images/product11.png" alt="" />
-										<h2>R4650</h2>
-										<p>2in1 Space Aliens</p>
+										<img src="img/products/jackets.jpg" alt="" />
+										<h2>R790</h2>
+										<p>Jackets</p>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
 									<div class="product-overlay">
 										<div class="overlay-content">
-											<h2>R4650</h2>
-											<p>2in1 Space Aliens</p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-										</div>
-									</div>
-								</div>
-								<div class="choose">
-									<ul class="nav nav-pills nav-justified">
-										<li><a href="#"><i class="fa fa-plus-square"></i>Product Details</a></li>
-										<li><a href="#"><i class="fa fa-plus-square"></i>Purchase</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="images/toy2.png" alt="" />
-										<h2>R4650</h2>
-										<p>My Little Bakery </p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-									</div>
-									<div class="product-overlay">
-										<div class="overlay-content">
-											<h2>R4650</h2>
-											<p>My Little Bakery</p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-										</div>
-									</div>
-								</div>
-								<div class="choose">
-									<ul class="nav nav-pills nav-justified">
-										<li><a href="#"><i class="fa fa-plus-square"></i>Product Details</a></li>
-										<li><a href="#"><i class="fa fa-plus-square"></i>Purchase</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="images/product9.png" alt="" />
-										<h2>R4280</h2>
-										<p>The Sandman’s Bed</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-									</div>
-									<div class="product-overlay">
-										<div class="overlay-content">
-											<h2>R4280</h2>
-											<p>The Sandman’s Bed</p>
+											<h2>R790</h2>
+											<p>Men's winter jackets</p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>
 									</div>
@@ -386,15 +392,15 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">
-										<img src="images/toy3.png" alt="" />
-										<h2>R2095</h2>
-										<p>Wooden toy car</p>
+										<img src="img/products/makeup.jpg" alt="" />
+										<h2>R1095</h2>
+										<p>Make up kit</p>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
 									<div class="product-overlay">
 										<div class="overlay-content">
-											<h2>R2095</h2>
-											<p>Wooden toy car</p>
+											<h2>R1095</h2>
+											<p>Ladies Make up kit</p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>
 									</div>
@@ -412,15 +418,15 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">
-										<img src="images/product12.png" alt="" />
-										<h2>R7380</h2>
-										<p>Queen's Chariot</p>
+										<img src="img/products/macbook.jpg" alt="" />
+										<h2>R15380</h2>
+										<p>Macbook</p>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
 									<div class="product-overlay">
 										<div class="overlay-content">
-											<h2>R7380</h2>
-											<p>Queen's Chariot</p>
+											<h2>R15380</h2>
+											<p>Brand new Macbook</p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>
 									</div>
@@ -452,9 +458,9 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/product3.png" alt="" />
-												<h2>R8150</h2>
-												<p>$ in 1 bunk bed</p>
+												<img src="img/products/jeans.jpg" alt="" />
+												<h2>R650</h2>
+												<p>Mens apparel</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											
@@ -465,9 +471,9 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/product13.png" alt="" />
-												<h2>R4950</h2>
-												<p>Sailor's Compass</p>
+												<img src="img/products/converse.png" class="item-slide" alt="" />
+												<h2>R750</h2>
+												<p>Converse</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											
@@ -478,9 +484,9 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/toy6.png" alt="" />
-												<h2>R3500</h2>
-												<p>My little kitchen</p>
+												<img src="img/products/handbag.jpg" class="item-slide" alt="" />
+												<h2>R200</h2>
+												<p>Handbag</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											
@@ -491,9 +497,9 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/toy7.png" alt="" />
-												<h2>R5790</h2>
-												<p>Dreamland castle</p>
+												<img src="img/products/belt.jpg" class="item-slide" alt="" />
+												<h2>R390</h2>
+												<p>Belt</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											
@@ -507,8 +513,34 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery4.jpg" alt="" />
-												<h2>$56</h2>
+												<img src="img/products/galaxy.jpg" class="item-slide" alt="" />
+												<h2>R5607</h2>
+												<p>Samsung galaxy</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="img/products/remote.jpg" alt="" />
+												<h2>R90</h2>
+												<p>Remote</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="img/products/ipad.jpg" alt="" />
+												<h2>R5456</h2>
 												<p>Easy Polo Black Edition</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
@@ -520,35 +552,9 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery3.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery2.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery1.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
+												<img src="img/products/headphones.jpg" alt="" />
+												<h2>R450</h2>
+												<p>Headphones</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											
@@ -724,7 +730,10 @@
 						</div>
 					</div><!--/category-tab-->
 					
-					<div class="recommended_items"><!--recommended_items-->
+				</div>
+			</div>
+			
+			<div class="recommended_items"><!--recommended_items-->
 						<h2 class="title text-center">recommended items</h2>
 						
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
@@ -734,9 +743,9 @@
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="images/toy4.png" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
+													<img src="img/products/jackets.jpg" alt="" />
+													<h2>R456</h2>
+													<p>Men's Jacket</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 												</div>
 												
@@ -747,9 +756,9 @@
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="images/product2.png" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
+													<img src="img/products/converse.png" alt="" />
+													<h2>R670</h2>
+													<p>Converse</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 												</div>
 												
@@ -760,9 +769,9 @@
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="images/product7.png" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
+													<img src="img/products/hose-fittings.jpg" alt="" />
+													<h2>R560</h2>
+													<p>Hose pipe connector</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 												</div>
 												
@@ -775,9 +784,9 @@
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="images/dollhouse1.png" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
+													<img src="img/products/foodmixer.jpg" alt="" />
+													<h2>R200</h2>
+													<p>Food mixer</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 												</div>
 												
@@ -788,9 +797,9 @@
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="images/toy8.png" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
+													<img src="img/products/bed.jpg" alt="" />
+													<h2>R800</h2>
+													<p>Child's bed</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 												</div>
 												
@@ -801,9 +810,9 @@
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="images/product3.png" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
+													<img src="img/products/jeans.jpg" alt="" />
+													<h2>R600</h2>
+													<p>Men's apparel</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 												</div>
 												
@@ -820,9 +829,7 @@
 							  </a>			
 						</div>
 					</div><!--/recommended_items-->
-					
-				</div>
-			</div>
+			
 		</div>
 	</section>
 

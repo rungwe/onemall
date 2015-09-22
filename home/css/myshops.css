@@ -8,6 +8,9 @@
 
 }
 
+.item-img{
+	max-height: 150px;
+}
 #nav{
 	background-color:white;
 	border-bottom: 1px solid  #004A6E;
