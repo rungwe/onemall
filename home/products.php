@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/log3.png"/>
+	<meta name="viewport" content="width=1024">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Products</title>
-    <link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/prettyPhoto.css" rel="stylesheet">
     <link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/price-range.css" rel="stylesheet">
 	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/myshops.css" rel="stylesheet">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
 
 	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/main.css" rel="stylesheet">
 	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/responsive.css" rel="stylesheet">
@@ -37,7 +38,7 @@
 					
 					<div class="col-sm-2">
 						<div class="col-sm-2">
-							<a href="shops.php"><img src="img/log3.png" height="50" width="50"/></a>
+							<a href="companies.php"><img src="img/log3.png" height="50" width="50"/></a>
 						</div>
 					</div>
 					

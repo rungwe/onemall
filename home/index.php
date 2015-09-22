@@ -6,6 +6,7 @@
 		<link rel="icon" href="img/log3.png"/>
 		<meta name="viewport" content="width=1024">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/loader.css">
@@ -159,6 +160,16 @@
 										<div class="col-sm-10 btn-xs" style="margin-top:3px;">Broadcasts <span style="background-color:#19A3D1;" class="badge">2</span></div>
 									</div>
 									
+									<div class="row" style="cursor:pointer;">
+										<div class="col-sm-2" style="background-image:url('img/icons/Dollar-Coin.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-10 btn-xs" style="margin-top:5px;"> <a href="ads.php" style="text-align:left;font-style:oblique;color:black;">Ads</a></div>
+									</div>
+									
+									<div class="row" style="cursor:pointer;">
+										<div class="col-sm-2" style="background-image:url('img/icons/Shopping-cart.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-10 btn-xs" style="margin-top:5px;"> <a href="products.php" style="text-align:left;font-style:oblique;color:black;">Shopping</a></div>
+									</div>
+									
 									<div class="row" onclick="show_friends()" style="cursor:pointer;">
 										<div class="col-sm-2" style="background-image:url('img/icons/Contacts.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
 										<div class="col-sm-10 btn-xs" style="margin-top:5px;">Buddies</div>
@@ -170,10 +181,10 @@
 									</div> -->
 									
 								
-									<div class="row" style="cursor:pointer;" data-toggle="modal" data-target="#create_ad" onclick="setup_adCreate()" >
+									<!-- <div class="row" style="cursor:pointer;" data-toggle="modal" data-target="#create_ad" onclick="setup_adCreate()" >
 										<div class="col-sm-2" style="background-image:url('img/icons/Pencil.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
 										<div class="col-sm-10 btn-xs" style="margin-top:5px;">Create Ads</div>
-									</div>
+									</div> -->
 									
 									<div class="row" style="cursor:pointer;">
 										<div class="col-sm-2" style="background-image:url('img/icons/Building.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
