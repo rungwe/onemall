@@ -8,7 +8,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">	
 		<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/font-awesome.min.css">
-		<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/myshops.css" rel="stylesheet">
+		<link href="css/myshops.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/loader.css">
 		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>

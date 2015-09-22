@@ -71,7 +71,7 @@ function header(title){
 		return template;
 }
 function footer(){
-	var template ='<button class="btn btn-default" style="margin-left:90%;">view more</button>'+
+	var template ='<button class="btn btn-default" style="margin-left:90%;border: 1px solid #004A6E;color:#004A6E;">view more</button>'+
 				  '<hr>';
 	return template;
 }

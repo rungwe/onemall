@@ -103,7 +103,7 @@
 					<center class="tab"><b>Live Community</b> </center>
 				</div>
 				<div class="col-sm-2">
-					<center class="tab"><button class="btn btn-info btn-md" style="margin-top:3px;">following</button></center>
+					<center><button class="btn btn-info btn-md" style="margin-top:3px;color:#004A6E;background-color:white;border: 1px solid #004A6E;">following</button></center>
 				</div>
 			
 			</div>

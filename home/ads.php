@@ -185,7 +185,7 @@
 				<div class="col-sm-3">
 					<div class="left-sidebar">
 						<h2>Category</h2>
-						<div class="panel-group  panel-primary category-products" id="accordian" ><!--category-productsr-->
+						<div class="panel-group  panel-primary category-products" id="accordian" style="border: 2px solid #F2F2F2;"><!--category-productsr-->
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title"><a href="#">All</a></h4>
@@ -338,10 +338,10 @@
 							<div class="row" style="margin:0px;">
 							
 								<div class="col-sm-2">
-									<img src="img/seller3.jpg" height="53" width="50" style="border:1px solid #F2F2F2;"/>
+									<img src="img/seller3.jpg" height="53" width="50" style="border: 1px solid #F2F2F2;"/>
 								</div>
 								<div class="col-sm-6">
-									<div class="panel" style="background-color:white;width:400px;left:0px;border: 1px solid #F2F2F2;">
+									<div class="panel" style="background-color:white;width:400px;left:0px;border: 2px solid #F2F2F2;">
 										<div class="panel-body" style="margin-bottom:-5px">
 										
 											<div class="row">
@@ -391,7 +391,7 @@
 									<img src="img/seller2.jpg" height="53" width="50" style="border:1px solid #F2F2F2;"/>
 								</div>
 								<div class="col-sm-6">
-									<div class="panel" style="background-color:white;width:400px;left:0px;border: 1px solid #F2F2F2;">
+									<div class="panel" style="background-color:white;width:400px;left:0px;border: 2px solid #F2F2F2;">
 										<div class="panel-body" style="margin-bottom:-5px">
 										
 											<div class="row">

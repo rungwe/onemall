@@ -188,7 +188,7 @@
 									
 									<div class="row" style="cursor:pointer;">
 										<div class="col-sm-2" style="background-image:url('img/icons/Building.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
-										<div class="col-sm-10 btn-xs" style="margin-top:5px"> <a href="shops.php" style="text-align:left;font-style:oblique;color:black;">Companies</a></div>
+										<div class="col-sm-10 btn-xs" style="margin-top:5px"> <a href="companies.php" style="text-align:left;font-style:oblique;color:black;">Companies</a></div>
 									</div>
 							
 								</div>
@@ -244,7 +244,7 @@
 								
 								
 							</div>
-							<center style="color:#008AB8;"><a href="shops.php">view more</a></center>
+							<center style="color:#008AB8;"><a href="companies.php">view more</a></center>
 						</div>
 					</div>
 					
