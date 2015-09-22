@@ -166,7 +166,7 @@
 									</div>
 									
 									<div class="row" style="cursor:pointer;">
-										<div class="col-sm-2" style="background-image:url('img/icons/Shopping-cart.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-2" style="background-image:url('img/icons/Shopping-Cart.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
 										<div class="col-sm-10 btn-xs" style="margin-top:5px;"> <a href="products.php" style="text-align:left;font-style:oblique;color:black;">Shopping</a></div>
 									</div>
 									
