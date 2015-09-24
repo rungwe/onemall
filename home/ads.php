@@ -13,7 +13,7 @@
 	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/myshops.css" rel="stylesheet">
     
 
-	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/main.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/responsive.css" rel="stylesheet">
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/constants.js"></script>
