@@ -66,7 +66,7 @@ SESSION data username, timestamp, token, name, ip_address
  // Global variables
  define('SESSION_DURATION',3); // number of days
  require 'pages.php';
- require 'app-pages.php';
+ //require 'app-pages.php';
 
  
  
