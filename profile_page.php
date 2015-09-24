@@ -2,7 +2,7 @@
 
 session_start();
 require 'session.php';
-
+require 'components.php';
 
 aunthenticate(profile_page());
 

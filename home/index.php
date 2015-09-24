@@ -74,11 +74,11 @@
 						<div id="nav_content" style="margin-right:3%;">
 						  <ul class="nav navbar-nav navbar-right style_font" >
 								
-							<li onclick="Home()" style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><i class="icon ion-ios-home-outline" style="font-size:30px;color:#004A6E"><label style="font-size:13;font-weight:400;">&nbsp;Home&nbsp;&nbsp;<label></i></li>
+							<li onclick="Home()" style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><i class="icon ion-ios-home-outline circle" style="font-size:30px;color:#004A6E"></i>&nbsp;&nbsp;&nbsp;</li> 
 							<!-- <li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-bell" ><label style="font-size:13px;">&nbsp;Notifications&nbsp;</label></span></li> -->
 							
 							<li style="cursor:pointer;"><span class="input-group" style="color:white;font-weight:900;font-size:150%;margin-top:15px;">
-																												<i class="icon ion-ios-locked-outline dropdown-toggle" id="account" data-toggle="dropdown" aria-expanded="true" style="font-size:30px;color:#004A6E"><label style="font-size:13px;font-weight:400;">&nbsp;Account</label></i>
+																												<i class="icon ion-ios-locked-outline dropdown-toggle circle" id="account" data-toggle="dropdown" aria-expanded="true" style="font-size:30px;color:#004A6E"></i>
 																													<ul class="dropdown-menu" role="menu" aria-labelledby="account">
 																														<li role="presentation" class="dropdown-header"><center>Chaddy<center></li>
 																														 <li role="presentation" class="divider"></li>

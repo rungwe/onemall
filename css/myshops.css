@@ -1,5 +1,5 @@
 .highlight{
-				border: 5px solid #008AB8;
+				border: 2px solid #004A6E;
 			}
 .shape {
 	border-radius: 6px;
@@ -8,6 +8,9 @@
 
 }
 
+.item-img{
+	max-height: 150px;
+}
 #nav{
 	background-color:white;
 	border-bottom: 1px solid  #004A6E;

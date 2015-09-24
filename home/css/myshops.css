@@ -7,7 +7,16 @@
 	padding: 20px; 
 
 }
-
+.circle
+{
+  padding: 5px 10px;
+  display: inline-block;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  border: 1px solid #004A6E;
+  
+}
 .item-img{
 	max-height: 150px;
 }

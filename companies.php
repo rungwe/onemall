@@ -3,6 +3,7 @@
 
 session_start();
 require 'session.php';
+require 'components.php';
 
 aunthenticate(companies_page());
 //phpinfo();
