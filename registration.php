@@ -13,7 +13,7 @@
 	//'fname' => urlencode($_POST["form-first-name"]),
 	if (empty($_POST)){
 		
-		echo signup_page("Error, form is empty");
+		echo signup_page();
 	}
 	
 	

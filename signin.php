@@ -8,7 +8,7 @@
 	
 		if (empty($_POST)){
 			
-			echo signin_page("Error, form is empty");
+			echo signin_page();
 			//echo "testing";
 		} 
 		
