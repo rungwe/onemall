@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en"><head>
-
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,10 +33,7 @@
 
     <body>
     
-        <!-- Loader -->
-    	<div class="loader" style="display: none;">
-    		<div class="loader-img" style="display: none;"></div>
-    	</div>
+        
 				
         <!-- Top content -->
         <div class="top-content" style="position: relative; z-index: 0; background: none;">
@@ -53,7 +48,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						
+						<!--<a class="navbar-brand" src="img/log3.png">One MALL</a> -->
 					</div>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="top-navbar-1">
@@ -61,7 +56,7 @@
 							<li><a class="scroll-link" href="#features">Features</a></li>
 							<li><a class="scroll-link" href="#how-it-works">How it works</a></li>
 							<li><a class="scroll-link" href="#testimonials">Testimonials</a></li>
-							<li><a class="btn btn-link-2" href="signup.php">Sign up</a></li>
+							<li><a class="btn btn-link-2" href="login.php">Login</a></li>
 						</ul>
 					</div>
 				</div>
@@ -86,34 +81,46 @@
                             	</p>
                             </div>
                             <div class="top-big-link wow fadeInUp animated animated" style="visibility: visible; animation-name: fadeInUp;">
-                            	<a class="btn btn-link-1 " href="signup.php">Sign up</a>
+                            	<a class="btn btn-link-1 " href="login.php">Login</a>
                             	<a class="btn btn-link-2 scroll-link" href="#features">Learn more</a>
                             </div>
                         </div>
                         <div class="col-sm-5 wow fadeInUp animated animated" style="visibility: visible; animation-name: fadeInUp;background-color: rgba(5,4,2,0);">
                         	<div class="form-top" style="background-color: rgba(5,4,2,0.1);">
                         		<div class="form-top-left">
-                        			<h3 style="color:white;">Log in</h3>
+                        			<h3 style="color:white;">Sign up now</h3>
                             		
                         		</div>
                         		<div class="form-top-right">
-                        			<span aria-hidden="true" class="glyphicon glyphicon-lock"></span>
+                        			<span aria-hidden="true" class="glyphicon glyphicon-pencil"></span>
                         		</div>
                             </div>
                             <div class="form-bottom" style="background-color: rgba(5,4,2,0.1);">
 								<h3 style="color:red;" id="error"></h3>
-			                    <form role="form" action="signin.php" method="post" id="log-form">
-			                    	<input type="hidden"  name="login" value="true">
+			                    <form role="form" action="registration.php" method="post" id ="reg-form">
+									<input type="hidden"  name="signup" value="true">
+			                    	<div class="form-group">
+			                    		<label class="sr-only" for="form-first-name">First name</label>
+			                        	<input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name" value="">
+			                        </div>
+			                        <div class="form-group">
+			                        	<label class="sr-only" for="form-last-name">Last name</label>
+			                        	<input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name" value="">
+			                        </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-email">Email</label>
-			                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+			                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email" value="">
 			                        </div>
 									 <div class="form-group">
 			                        	<label class="sr-only" for="pswd">Password</label>
-			                        	<input type="password" name="pswd" placeholder="Enter password" class="form-email form-control" id="pswd">
+			                        	<input type="password" name="pswd" placeholder="Enter password" class="form-email form-control" id="pswd" value="">
+			                        </div>
+									 <div class="form-group">
+			                        	<label class="sr-only" for="pswd1">confirm password</label>
+			                        	<input type="password" name="pswd1" placeholder="Confirm password" class="form-email form-control" id="pswd1" value="">
 			                        </div>
 			                        
-			                        <button type="button" onclick="validate_login_form()" class="btn" style="background-color:#004A6E;">Log in</button>
+			                        <button type="button" onclick="validate_reg_form()" class="btn" style="background-color:#004A6E;">Sign me up!</button>
 			                        <div class="form-links">
 			                        	<a href="#" class="launch-modal" data-modal-id="modal-privacy">Privacy Policy</a> - 
 			                        	<a href="#" class="launch-modal" data-modal-id="modal-faq">FAQ</a>
@@ -249,7 +256,7 @@
 	                    	<p>
 	                    		We offer you a live community where individuals are able to know more in detail about the companies around them and help them
 								access their services and products easily. An online platform where people are able to buy all sorts of physical products instantly and 
-								get them delivered through available courier companies of their choice at very very cheaper rates due to economies of scale> Yes we have integrated courier service companies 
+								get them delivered through available courier companies of their choice at very very cheaper rates due to economies of scale. Yes we have integrated courier service companies 
 								within our system as well.
 								We are also up to providing marketing to all companies, get them known better than before. Helping the startups and individual to get started and integrate them into global commerce
 								without much difficulties, we carry them through our shoulder. 
@@ -310,7 +317,7 @@
 	            </div>
 	            <div class="row">
 	            	<div class="col-sm-12 section-bottom-button wow fadeInUp" style="visibility: hidden; animation-name: none;">
-                        <a class="btn btn-link-1 scroll-link" href="index.php">Sign up now</a>
+                        <a class="btn btn-link-1 scroll-link" href="#top-content">Sign up now</a>
 	            	</div>
 	            </div>
 	        </div>
@@ -325,14 +332,14 @@
 	                    <div class="divider-1 wow fadeInUp" style="visibility: hidden; animation-name: none;"><span></span></div>
 	                </div>
 	            </div>
-	            <div class="row">
+	            <!-- <div class="row">
 	                <div class="col-sm-10 col-sm-offset-1 testimonial-list wow fadeInUp" style="visibility: hidden; animation-name: none;">
 	                	<div role="tabpanel">
-	                		<!-- Tab panes -->
+	                		
 	                		<div class="tab-content">
 	                			<div role="tabpanel" class="tab-pane fade in active" id="tab1">
 	                				<div class="testimonial-image">
-	                					<img src="./Marco - Bootstrap Landing Page_files/1(3).jpg" alt="" data-at2x="assets/img/testimonials/1.jpg" style="width: auto !important; height: auto !important;">
+	                					<img style="width: auto !important; height: auto !important;">
 	                					<div class="testimonial-icon">
 	                						<span aria-hidden="true" class="typcn typcn-pin"></span>
 	                					</div>
@@ -342,13 +349,13 @@
 		                                	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
 		                                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
 		                                	Lorem ipsum dolor sit amet, consectetur..."<br>
-		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">Lorem Ipsum, dolor.co.uk</a>
+		                                	<a href="">Lorem Ipsum, dolor.co.uk</a>
 		                                </p>
 	                                </div>
 	                			</div>
 	                			<div role="tabpanel" class="tab-pane fade" id="tab2">
 	                				<div class="testimonial-image">
-	                					<img src="./Marco - Bootstrap Landing Page_files/2(1).jpg" alt="" data-at2x="assets/img/testimonials/2.jpg" style="width: auto !important; height: auto !important;">
+	                					<img src="" alt=""  style="width: auto !important; height: auto !important;">
 	                					<div class="testimonial-icon">
 	                						<span aria-hidden="true" class="typcn typcn-pin"></span>
 	                					</div>
@@ -358,13 +365,13 @@
 		                                	"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
 		                                	ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
 		                                	lobortis nisl ut aliquip ex ea commodo consequat..."<br>
-		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">Minim Veniam, nostrud.com</a>
+		                                	<a href="">Minim Veniam, nostrud.com</a>
 		                                </p>
 	                                </div>
 	                			</div>
 	                			<div role="tabpanel" class="tab-pane fade" id="tab3">
 	                				<div class="testimonial-image">
-	                					<img src="./Marco - Bootstrap Landing Page_files/3(1).jpg" alt="" data-at2x="assets/img/testimonials/3.jpg" style="width: auto !important; height: auto !important;">
+	                					<img  alt=""  style="width: auto !important; height: auto !important;">
 	                					<div class="testimonial-icon">
 	                						<span aria-hidden="true" class="typcn typcn-pin"></span>
 	                					</div>
@@ -374,13 +381,13 @@
 		                                	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
 		                                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
 		                                	Lorem ipsum dolor sit amet, consectetur..."<br>
-		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">Lorem Ipsum, dolor.co.uk</a>
+		                                	<a href="">Lorem Ipsum, dolor.co.uk</a>
 		                                </p>
 	                                </div>
 	                			</div>
 	                			<div role="tabpanel" class="tab-pane fade" id="tab4">
 	                				<div class="testimonial-image">
-	                					<img src="./Marco - Bootstrap Landing Page_files/4.jpg" alt="" data-at2x="assets/img/testimonials/4.jpg" style="width: auto !important; height: auto !important;">
+	                					<img  alt=""  style="width: auto !important; height: auto !important;">
 	                					<div class="testimonial-icon">
 	                						<span aria-hidden="true" class="typcn typcn-pin"></span>
 	                					</div>
@@ -390,11 +397,11 @@
 		                                	"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
 		                                	ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
 		                                	lobortis nisl ut aliquip ex ea commodo consequat..."<br>
-		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">Minim Veniam, nostrud.com</a>
+		                                	<a href="">Minim Veniam, nostrud.com</a>
 		                                </p>
 	                                </div>
 	                			</div>
-	                		</div>
+	                		</div> -->
 	                		<!-- Nav tabs -->
 	                		<ul class="nav nav-tabs" role="tablist">
 	                			<li role="presentation" class="active">
@@ -522,13 +529,13 @@
 
         <!-- Javascript -->
         <script src="js/jquery-1.11.1.min.js"></script>
-        <script src="./Marco - Bootstrap Landing Page_files/bootstrap.min.js"></script>
+        
         <script src="js/jquery.backstretch.min.js"></script>
         <script src="js/wow.min.js"></script>
         <script src="js/retina-1.1.0.min.js"></script>
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/script.js"></script>
-		<script src="js/login.js"></script>
+		<script src ="js/registration.js"></script>
         
         <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>

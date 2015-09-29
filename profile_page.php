@@ -18,17 +18,17 @@ function profile_page(){
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/loader.css">
-		<link href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/myshops.css" rel="stylesheet">
+		<link href="home/css/myshops.css" rel="stylesheet">
 		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/constants.js"></script>
-		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/like.js"></script>
-		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/broadcasts.js"></script>
-		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/suggestions.js"></script>
-		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/friends.js"></script>
-		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/comment.js"></script>
-		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/companies.js"></script>
-		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/main_init.js"></script>	
+		<script type="text/javascript" src="home/js/constants.js"></script>
+		<script type="text/javascript" src="home/js/like.js"></script>
+		<script type="text/javascript" src="home/js/broadcasts.js"></script>
+		<script type="text/javascript" src="home/js/suggestions.js"></script>
+		<script type="text/javascript" src="home/js/friends.js"></script>
+		<script type="text/javascript" src="home/js/comment.js"></script>
+		<script type="text/javascript" src="home/js/companies.js"></script>
+		<script type="text/javascript" src="home/js/main_init.js"></script>	
 	</head>
 	
 	<!-- <body onload="main_init()" style="background-image:url(https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/cloud.png);background-size:cover;background-repeat:no-repeat;background-attachment:fixed;">> -->

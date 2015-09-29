@@ -1,6 +1,6 @@
 <?php
 
-function signup_page(){
+function signup_page($message=""){
 	
 	$page='<!DOCTYPE html>
 
@@ -60,7 +60,7 @@ function signup_page(){
 							<li><a class="scroll-link" href="#features">Features</a></li>
 							<li><a class="scroll-link" href="#how-it-works">How it works</a></li>
 							<li><a class="scroll-link" href="#testimonials">Testimonials</a></li>
-							<li><a class="btn btn-link-2" href="index.php">Login</a></li>
+							<li><a class="btn btn-link-2" href="login.php">Login</a></li>
 						</ul>
 					</div>
 				</div>
@@ -100,7 +100,8 @@ function signup_page(){
                         		</div>
                             </div>
                             <div class="form-bottom" style="background-color: rgba(5,4,2,0.1);">
-			                    <form role="form" action="index.php" method="post">
+								<h3 style="color:red;" id="error">'.$message.'</h3>
+			                    <form role="form" action="registration.php" method="post" id ="reg-form">
 									<input type="hidden"  name="signup" value="true">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-first-name">First name</label>
@@ -123,7 +124,7 @@ function signup_page(){
 			                        	<input type="password" name="pswd1" placeholder="Confirm password" class="form-email form-control" id="pswd1">
 			                        </div>
 			                        
-			                        <button type="submit" class="btn" style="background-color:#004A6E;">Sign me up!</button>
+			                        <button type="button" onclick="validate_reg_form()" class="btn" style="background-color:#004A6E;">Sign me up!</button>
 			                        <div class="form-links">
 			                        	<a href="#" class="launch-modal" data-modal-id="modal-privacy">Privacy Policy</a> - 
 			                        	<a href="#" class="launch-modal" data-modal-id="modal-faq">FAQ</a>
@@ -135,7 +136,7 @@ function signup_page(){
                 </div>
             </div>
             
-        <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 907px; width: 1263px; z-index: -999998; position: absolute;"><img src="img/main3.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1263px; height: 947.25px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -20.125px;" class="deleteable"><img src="file:///C:/Users/Administrator/Downloads/assets/img/backgrounds/1.jpg" style="position: absolute; display: none; margin: 0px; padding: 0px; border: none; width: auto; height: auto; max-height: none; max-width: none; z-index: -999999;"></div></div>
+        <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 907px; width: 1263px; z-index: -999998; position: absolute;"><img src="img/main3.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1263px; height: 947.25px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -20.125px;" class="deleteable"><img style="position: absolute; display: none; margin: 0px; padding: 0px; border: none; width: auto; height: auto; max-height: none; max-width: none; z-index: -999999;"></div></div>
         
         <!-- Features -->
         <div class="features-container section-container">
@@ -537,7 +538,8 @@ function signup_page(){
         <script src="js/wow.min.js"></script>
         <script src="js/retina-1.1.0.min.js"></script>
         <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/scripts.js"></script>
+        <script src="js/script.js"></script>
+		<script src ="js/registration.js"></script>
         
         <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>
@@ -551,7 +553,7 @@ return $page;
 	
 }
 
-function signin_page(){
+function signin_page($message=""){
 	
 	$page='<!DOCTYPE html>
 
@@ -616,7 +618,7 @@ function signin_page(){
 							<li><a class="scroll-link" href="#features">Features</a></li>
 							<li><a class="scroll-link" href="#how-it-works">How it works</a></li>
 							<li><a class="scroll-link" href="#testimonials">Testimonials</a></li>
-							<li><a class="btn btn-link-2" href="index.php">Sign up</a></li>
+							<li><a class="btn btn-link-2" href="signup.php">Sign up</a></li>
 						</ul>
 					</div>
 				</div>
@@ -656,7 +658,8 @@ function signin_page(){
                         		</div>
                             </div>
                             <div class="form-bottom" style="background-color: rgba(5,4,2,0.1);">
-			                    <form role="form" action="index.php" method="post">
+								<h3 style="color:red;" id="error">'.$message.'</h3>
+			                    <form role="form" action="signin.php" method="post">
 			                    	<input type="hidden"  name="login" value="true">
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-email">Email</label>
@@ -1081,7 +1084,7 @@ function signin_page(){
         <script src="js/wow.min.js"></script>
         <script src="js/retina-1.1.0.min.js"></script>
         <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/scripts.js"></script>
+        <script src="js/script.js"></script>
         
         <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>

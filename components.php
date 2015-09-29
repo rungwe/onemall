@@ -101,7 +101,7 @@ function nav_drawer(){
 						<img src="img/icons/Lock.png" height="30" width="30">
 					</div>
 					<div class="col-sm-offset-2 col-sm-8">
-						<h4>Logout</h4>
+						<h4 id="logout">Logout</h4>
 					</div>
 					
 				</div>

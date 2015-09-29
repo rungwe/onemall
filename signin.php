@@ -1,39 +1,37 @@
 <?php
+	session_set_cookie_params (3600*24*365);
+	session_start();
+	require "session.php";
 
-	//extract data from the post
-extract($_POST);
-
-//set POST variables
-$url = 'http://domain.com/get-post.php';
-$fields = array(
-						'lname' => urlencode($last_name),
-						'fname' => urlencode($first_name),
-						'title' => urlencode($title),
-						'company' => urlencode($institution),
-						'age' => urlencode($age),
-						'email' => urlencode($email),
-						'phone' => urlencode($phone)
-				);
-
-//url-ify the data for the POST
-foreach($fields as $key=>$value) { $fields_string .= $key.'='.$value.'&'; }
-rtrim($fields_string, '&');
-
-//open connection
-$ch = curl_init();
-
-//set the url, number of POST vars, POST data
-curl_setopt($ch,CURLOPT_URL, $url);
-curl_setopt($ch,CURLOPT_POST, count($fields));
-curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
-curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-curl_setopt($ch,CURLOPT_HEADER,false)
-
-//execute post
-$result = curl_exec($ch);
-
-//close connection
-curl_close($ch);
-
+	//validation
+	
+	
+		if (empty($_POST)){
+			
+			echo signin_page("Error, form is empty");
+			//echo "testing";
+		} 
+		
+		
+		else{
+			
+			$response = login();
+			if ($response[0]=="200"){
+				//create session
+				//$_SESSION['email'] = $_POST['form-email'];
+				
+				//echo $response[0]."<br>".$response[1];
+				header("Location: index.php");
+			}
+			else{
+				
+				echo signin_page($response[1]);
+				//echo $response[0]."<br>".$response[1];
+			}
+				
+				
+		}
+	
+	
 
 ?>

@@ -26,17 +26,17 @@ function main_page(){
 		<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
 		
 		<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
-		<<script type="text/javascript" src="js/constants.js"></script>
+		<<script type="text/javascript" src="home/js/constants.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/like.js"></script>
-		<script type="text/javascript" src="js/broadcasts.js"></script>
-		<script type="text/javascript" src="js/suggestions.js"></script>
-		<script type="text/javascript" src="js/friends.js"></script>
-		<script type="text/javascript" src="js/comment.js"></script>
-		<script type="text/javascript" src="js/companies.js"></script>
-		<script type="text/javascript" src="js/navigation-drawer.js"></script>
-		<script type="text/javascript" src="js/main_init.js"></script>
-		<script type="text/javascript" src="js/create_ad.js"></script>
+		<script type="text/javascript" src="home/js/like.js"></script>
+		<script type="text/javascript" src="home/js/broadcasts.js"></script>
+		<script type="text/javascript" src="home/js/suggestions.js"></script>
+		<script type="text/javascript" src="home/js/friends.js"></script>
+		<script type="text/javascript" src="home/js/comment.js"></script>
+		<script type="text/javascript" src="home/js/companies.js"></script>
+		<script type="text/javascript" src="home/js/navigation-drawer.js"></script>
+		<script type="text/javascript" src="home/js/main_init.js"></script>
+		<script type="text/javascript" src="home/js/create_ad.js"></script>
 	</head>
 	
 	
@@ -95,7 +95,7 @@ function main_page(){
 																														<li role="presentation" class="dropdown-header"><center>Chaddy<center></li>
 																														 <li role="presentation" class="divider"></li>
 																														<li role="presentation" data-toggle="modal" data-target="#edit_ac"><a role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;settings</a></li>
-																														<li role="presentation"><a role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;logout</a></li>
+																														<li role="presentation"><a href="logout.php" role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;logout</a></li>
 																														<li role="presentation"><a role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;about us</a></li>
 																														<li role="presentation"><a role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-question-sign"></span>&nbsp;&nbsp;help</a></li>
 																													 </ul>
@@ -167,7 +167,7 @@ function main_page(){
 									</div>
 									
 									<div class="row" style="cursor:pointer;">
-										<div class="col-sm-2" style="background-image:url(\'img/icons/Shopping-Cart.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-2" style="background-image:url(\'home/img/icons/Shopping-Cart.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
 										<div class="col-sm-10 btn-xs" style="margin-top:5px;"> <a href="products.php" style="text-align:left;font-style:oblique;color:black;">Shopping</a></div>
 									</div>
 									
