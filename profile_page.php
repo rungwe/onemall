@@ -151,7 +151,7 @@ function profile_page(){
 				</div>
 				<div class="col-sm-3" id="right">
 					<div class="panel panel-primary" >
-							<div class="panel-heading" style="background-color:#004A6E;">Suggested companies to follow</div>
+							<div class="panel-heading" style="background-color:white;color:#004A6E;font-weight:700;">Suggested companies to follow</div>
 							<div id="suggestions" class="panel-body">
 								
 								

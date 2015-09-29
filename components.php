@@ -20,7 +20,7 @@ function nav_drawer(){
 						<img src="img/icons/Paper-Money.png" height="30" width="30">
 					</div>
 					<div class="col-sm-offset-2 col-sm-8">
-						<h4>Create Ads </h4>
+						<h4 data-toggle="modal" data-target="#create_ad" onclick="setup_adCreate()" >Create Ads </h4>
 					</div>
 					
 				</div>
