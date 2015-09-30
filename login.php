@@ -317,7 +317,7 @@
 	            	</div>
 	            </div>
 	        </div>
-        <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 918px; width: 1263px; z-index: -999998; position: absolute;"><img src="img/main5.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1263px; height: 947.25px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -14.625px;" class="deleteable"><img src="file:///C:/Users/Administrator/Downloads/assets/img/backgrounds/1.jpg" style="position: absolute; display: none; margin: 0px; padding: 0px; border: none; width: auto; height: auto; max-height: none; max-width: none; z-index: -999999;"></div></div>
+        <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 918px; width: 1263px; z-index: -999998; position: absolute;"><img src="img/main5.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 100%; height: 947.25px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -14.625px;" class="deleteable"><img src="file:///C:/Users/Administrator/Downloads/assets/img/backgrounds/1.jpg" style="position: absolute; display: none; margin: 0px; padding: 0px; border: none; width: auto; height: auto; max-height: none; max-width: none; z-index: -999999;"></div></div>
 
         <!-- Testimonials -->
         <div class="testimonials-container section-container section-container-gray-bg">
