@@ -336,7 +336,7 @@
 	            <div class="row">
 	                <div class="col-sm-12 testimonials section-description wow fadeIn" style="visibility: hidden; animation-name: none;">
 	                    <h2>Testimonials</h2>
-	                    <div class="divider-1 wow fadeInUp" style="visibility: hidden; animation-name: none;"><span></span></div>
+	                   
 	                </div>
 	            </div>
 	            <!-- <div class="row">
