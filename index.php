@@ -14,7 +14,7 @@ function main_page(){
 <html>
 
 	<head>
-		<title> one mall</title>
+		<title> Home</title>
 		<link rel="icon" href="img/log3.png"/>
 		<meta name="viewport" content="width=1024">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">

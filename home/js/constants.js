@@ -22,10 +22,13 @@ function get_access(){
 		      if (xmlhttp_br.readyState == 4 && xmlhttp_br.status == 200) {
 
 		          var access = xmlhttp_br.responseText;
-		          token = access;
+		          token = access.trim();
+		          if (token == "invalid") {
+		              window.location.href = "login.php";
+		          }
 
 		      }
 		  } 	
-	xmlhttp_br.open("POST","access.php?request=true",false);
+	xmlhttp_br.open("POST","access.php?request=true",true);
 	xmlhttp_br.send();
 }
