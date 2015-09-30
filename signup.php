@@ -410,20 +410,7 @@
 	                			</div>
 	                		</div> -->
 	                		<!-- Nav tabs -->
-	                		<ul class="nav nav-tabs" role="tablist">
-	                			<li role="presentation" class="active">
-	                				<a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab"></a>
-	                			</li>
-	                			<li role="presentation">
-	                				<a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab"></a>
-	                			</li>
-	                			<li role="presentation">
-	                				<a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab"></a>
-	                			</li>
-	                			<li role="presentation">
-	                				<a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab"></a>
-	                			</li>
-	                		</ul>
+	                		
 	                	</div>
 	                </div>
 	            </div>
