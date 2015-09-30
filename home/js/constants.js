@@ -26,6 +26,6 @@ function get_access(){
 
 		      }
 		  } 	
-	xmlhttp_br.open("POST",url+"?request=true",false);
+	xmlhttp_br.open("POST","access.php?request=true",false);
 	xmlhttp_br.send();
 }
