@@ -267,7 +267,7 @@
         </div>
         
         <!-- How it works -->
-        <div class="how-it-works-container section-container section-container-image-bg" style="position: relative; z-index: 0; background: none;">
+        <div class="how-it-works-container section-container section-container-image-bg" style="position: relative; z-index: 0; background: none;width:100%;">
 	        <div class="container">
 	            <div class="row">
 	                <div class="col-sm-12 how-it-works section-description wow fadeIn" style="visibility: hidden; animation-name: none;">
@@ -335,7 +335,7 @@
 	                		<div class="tab-content">
 	                			<div role="tabpanel" class="tab-pane fade in active" id="tab1">
 	                				<div class="testimonial-image">
-	                					<img src="./Marco - Bootstrap Landing Page_files/1(3).jpg" alt="" data-at2x="assets/img/testimonials/1.jpg" style="width: auto !important; height: auto !important;">
+	                					<img src="" alt=""  style="width: auto !important; height: auto !important;">
 	                					<div class="testimonial-icon">
 	                						<span aria-hidden="true" class="typcn typcn-pin"></span>
 	                					</div>
@@ -345,7 +345,7 @@
 		                                	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
 		                                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
 		                                	Lorem ipsum dolor sit amet, consectetur..."<br>
-		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">Lorem Ipsum, dolor.co.uk</a>
+		                                	<a href="">Lorem Ipsum, dolor.co.uk</a>
 		                                </p>
 	                                </div>
 	                			</div>
@@ -361,13 +361,13 @@
 		                                	"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
 		                                	ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
 		                                	lobortis nisl ut aliquip ex ea commodo consequat..."<br>
-		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">Minim Veniam, nostrud.com</a>
+		                                	<a>Minim Veniam, nostrud.com</a>
 		                                </p>
 	                                </div>
 	                			</div>
 	                			<div role="tabpanel" class="tab-pane fade" id="tab3">
 	                				<div class="testimonial-image">
-	                					<img src="./Marco - Bootstrap Landing Page_files/3(1).jpg" alt="" data-at2x="assets/img/testimonials/3.jpg" style="width: auto !important; height: auto !important;">
+	                					<img src= alt="" style="width: auto !important; height: auto !important;">
 	                					<div class="testimonial-icon">
 	                						<span aria-hidden="true" class="typcn typcn-pin"></span>
 	                					</div>
