@@ -41,7 +41,7 @@
     	</div>
 				
         <!-- Top content -->
-        <div class="top-content" style="position: relative; z-index: 0; background: none;">
+        <div class="top-content" style="position: relative; z-index: 0; background: none;width:100%;">
         	
         	<!-- Top menu -->
 			<nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
@@ -126,7 +126,7 @@
             </div>
             
 			<div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 907px; z-index: -999998; position: absolute;width:100%;">
-				<img src="img/main3.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1263px; height: 947.25px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -20.125px;" class="deleteable">
+				<img src="img/main3.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 100%; height: 947.25px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -20.125px;" class="deleteable">
 			</div>
 		</div>
         
