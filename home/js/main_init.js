@@ -8,6 +8,7 @@ Content: Library for client side scripts for My Shops
 
 
 function main_init(){
+		get_access();
 		pull_broadcasts(6);
 		pull_suggestions(3);
 		friends_num();
