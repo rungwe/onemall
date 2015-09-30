@@ -136,7 +136,10 @@ function signup_page($message=""){
                 </div>
             </div>
             
-        <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 907px; width: 1263px; z-index: -999998; position: absolute;"><img src="img/main3.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1263px; height: 947.25px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -20.125px;" class="deleteable"><img style="position: absolute; display: none; margin: 0px; padding: 0px; border: none; width: auto; height: auto; max-height: none; max-width: none; z-index: -999999;"></div></div>
+            <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 907px; width: 100%; z-index: -999998; position: absolute;">
+                <img src="img/main3.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 100%; height: 947.25px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -20.125px;" class="deleteable">
+            </div>
+        </div>
         
         <!-- Features -->
         <div class="features-container section-container">
@@ -325,7 +328,11 @@ function signup_page($message=""){
 	            	</div>
 	            </div>
 	        </div>
-        <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 918px; width: 1263px; z-index: -999998; position: absolute;"><img src="img/main5.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1263px; height: 947.25px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -14.625px;" class="deleteable"><img src="file:///C:/Users/Administrator/Downloads/assets/img/backgrounds/1.jpg" style="position: absolute; display: none; margin: 0px; padding: 0px; border: none; width: auto; height: auto; max-height: none; max-width: none; z-index: -999999;"></div></div>
+            <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 918px; width: 100%; z-index: -999998; position: absolute;">
+                <img src="img/main5.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 100%; height: 947.25px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -14.625px;" class="deleteable">
+                
+            </div>
+        </div>
 
         <!-- Testimonials -->
         <div class="testimonials-container section-container section-container-gray-bg">
@@ -336,94 +343,7 @@ function signup_page($message=""){
 	                    <div class="divider-1 wow fadeInUp" style="visibility: hidden; animation-name: none;"><span></span></div>
 	                </div>
 	            </div>
-	            <div class="row">
-	                <div class="col-sm-10 col-sm-offset-1 testimonial-list wow fadeInUp" style="visibility: hidden; animation-name: none;">
-	                	<div role="tabpanel">
-	                		<!-- Tab panes -->
-	                		<div class="tab-content">
-	                			<div role="tabpanel" class="tab-pane fade in active" id="tab1">
-	                				<div class="testimonial-image">
-	                					<img src="./Marco - Bootstrap Landing Page_files/1(3).jpg" alt="" data-at2x="assets/img/testimonials/1.jpg" style="width: auto !important; height: auto !important;">
-	                					<div class="testimonial-icon">
-	                						<span aria-hidden="true" class="typcn typcn-pin"></span>
-	                					</div>
-	                				</div>
-	                				<div class="testimonial-text">
-		                                <p>
-		                                	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
-		                                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
-		                                	Lorem ipsum dolor sit amet, consectetur..."<br>
-		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">Lorem Ipsum, dolor.co.uk</a>
-		                                </p>
-	                                </div>
-	                			</div>
-	                			<div role="tabpanel" class="tab-pane fade" id="tab2">
-	                				<div class="testimonial-image">
-	                					<img src="./Marco - Bootstrap Landing Page_files/2(1).jpg" alt="" data-at2x="assets/img/testimonials/2.jpg" style="width: auto !important; height: auto !important;">
-	                					<div class="testimonial-icon">
-	                						<span aria-hidden="true" class="typcn typcn-pin"></span>
-	                					</div>
-	                				</div>
-	                				<div class="testimonial-text">
-		                                <p>
-		                                	"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
-		                                	ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
-		                                	lobortis nisl ut aliquip ex ea commodo consequat..."<br>
-		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">Minim Veniam, nostrud.com</a>
-		                                </p>
-	                                </div>
-	                			</div>
-	                			<div role="tabpanel" class="tab-pane fade" id="tab3">
-	                				<div class="testimonial-image">
-	                					<img src="./Marco - Bootstrap Landing Page_files/3(1).jpg" alt="" data-at2x="assets/img/testimonials/3.jpg" style="width: auto !important; height: auto !important;">
-	                					<div class="testimonial-icon">
-	                						<span aria-hidden="true" class="typcn typcn-pin"></span>
-	                					</div>
-	                				</div>
-	                				<div class="testimonial-text">
-		                                <p>
-		                                	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
-		                                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
-		                                	Lorem ipsum dolor sit amet, consectetur..."<br>
-		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">Lorem Ipsum, dolor.co.uk</a>
-		                                </p>
-	                                </div>
-	                			</div>
-	                			<div role="tabpanel" class="tab-pane fade" id="tab4">
-	                				<div class="testimonial-image">
-	                					<img src="./Marco - Bootstrap Landing Page_files/4.jpg" alt="" data-at2x="assets/img/testimonials/4.jpg" style="width: auto !important; height: auto !important;">
-	                					<div class="testimonial-icon">
-	                						<span aria-hidden="true" class="typcn typcn-pin"></span>
-	                					</div>
-	                				</div>
-	                				<div class="testimonial-text">
-		                                <p>
-		                                	"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
-		                                	ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
-		                                	lobortis nisl ut aliquip ex ea commodo consequat..."<br>
-		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">Minim Veniam, nostrud.com</a>
-		                                </p>
-	                                </div>
-	                			</div>
-	                		</div>
-	                		<!-- Nav tabs -->
-	                		<ul class="nav nav-tabs" role="tablist">
-	                			<li role="presentation" class="active">
-	                				<a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab"></a>
-	                			</li>
-	                			<li role="presentation">
-	                				<a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab"></a>
-	                			</li>
-	                			<li role="presentation">
-	                				<a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab"></a>
-	                			</li>
-	                			<li role="presentation">
-	                				<a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab"></a>
-	                			</li>
-	                		</ul>
-	                	</div>
-	                </div>
-	            </div>
+	           
 	        </div>
         </div>
 
@@ -682,7 +602,11 @@ function signin_page($message=""){
                 </div>
             </div>
             
-        <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 907px; width: 1263px; z-index: -999998; position: absolute;"><img src="img/main3.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1263px; height: 947.25px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -20.125px;" class="deleteable"><img src="file:///C:/Users/Administrator/Downloads/assets/img/backgrounds/1.jpg" style="position: absolute; display: none; margin: 0px; padding: 0px; border: none; width: auto; height: auto; max-height: none; max-width: none; z-index: -999999;"></div></div>
+            <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 907px; width: 100%; z-index: -999998; position: absolute;">
+                <img src="img/main3.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 100%; height: 947.25px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -20.125px;" class="deleteable">
+        
+            </div>
+        </div>
         
         <!-- Features -->
         <div class="features-container section-container">
@@ -871,7 +795,10 @@ function signin_page($message=""){
 	            	</div>
 	            </div>
 	        </div>
-        <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 918px; width: 1263px; z-index: -999998; position: absolute;"><img src="img/main5.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1263px; height: 947.25px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -14.625px;" class="deleteable"><img src="file:///C:/Users/Administrator/Downloads/assets/img/backgrounds/1.jpg" style="position: absolute; display: none; margin: 0px; padding: 0px; border: none; width: auto; height: auto; max-height: none; max-width: none; z-index: -999999;"></div></div>
+            <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 918px; width: 100%; z-index: -999998; position: absolute;">
+                <img src="img/main5.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 100%; height: 947.25px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -14.625px;" class="deleteable">
+            </div>
+        </div>
 
         <!-- Testimonials -->
         <div class="testimonials-container section-container section-container-gray-bg">
@@ -882,94 +809,7 @@ function signin_page($message=""){
 	                    <div class="divider-1 wow fadeInUp" style="visibility: hidden; animation-name: none;"><span></span></div>
 	                </div>
 	            </div>
-	            <div class="row">
-	                <div class="col-sm-10 col-sm-offset-1 testimonial-list wow fadeInUp" style="visibility: hidden; animation-name: none;">
-	                	<div role="tabpanel">
-	                		<!-- Tab panes -->
-	                		<div class="tab-content">
-	                			<div role="tabpanel" class="tab-pane fade in active" id="tab1">
-	                				<div class="testimonial-image">
-	                					<img src="./Marco - Bootstrap Landing Page_files/1(3).jpg" alt="" data-at2x="assets/img/testimonials/1.jpg" style="width: auto !important; height: auto !important;">
-	                					<div class="testimonial-icon">
-	                						<span aria-hidden="true" class="typcn typcn-pin"></span>
-	                					</div>
-	                				</div>
-	                				<div class="testimonial-text">
-		                                <p>
-		                                	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
-		                                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
-		                                	Lorem ipsum dolor sit amet, consectetur..."<br>
-		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">Lorem Ipsum, dolor.co.uk</a>
-		                                </p>
-	                                </div>
-	                			</div>
-	                			<div role="tabpanel" class="tab-pane fade" id="tab2">
-	                				<div class="testimonial-image">
-	                					<img src="./Marco - Bootstrap Landing Page_files/2(1).jpg" alt="" data-at2x="assets/img/testimonials/2.jpg" style="width: auto !important; height: auto !important;">
-	                					<div class="testimonial-icon">
-	                						<span aria-hidden="true" class="typcn typcn-pin"></span>
-	                					</div>
-	                				</div>
-	                				<div class="testimonial-text">
-		                                <p>
-		                                	"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
-		                                	ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
-		                                	lobortis nisl ut aliquip ex ea commodo consequat..."<br>
-		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">Minim Veniam, nostrud.com</a>
-		                                </p>
-	                                </div>
-	                			</div>
-	                			<div role="tabpanel" class="tab-pane fade" id="tab3">
-	                				<div class="testimonial-image">
-	                					<img src="./Marco - Bootstrap Landing Page_files/3(1).jpg" alt="" data-at2x="assets/img/testimonials/3.jpg" style="width: auto !important; height: auto !important;">
-	                					<div class="testimonial-icon">
-	                						<span aria-hidden="true" class="typcn typcn-pin"></span>
-	                					</div>
-	                				</div>
-	                				<div class="testimonial-text">
-		                                <p>
-		                                	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
-		                                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
-		                                	Lorem ipsum dolor sit amet, consectetur..."<br>
-		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">Lorem Ipsum, dolor.co.uk</a>
-		                                </p>
-	                                </div>
-	                			</div>
-	                			<div role="tabpanel" class="tab-pane fade" id="tab4">
-	                				<div class="testimonial-image">
-	                					<img src="./Marco - Bootstrap Landing Page_files/4.jpg" alt="" data-at2x="assets/img/testimonials/4.jpg" style="width: auto !important; height: auto !important;">
-	                					<div class="testimonial-icon">
-	                						<span aria-hidden="true" class="typcn typcn-pin"></span>
-	                					</div>
-	                				</div>
-	                				<div class="testimonial-text">
-		                                <p>
-		                                	"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
-		                                	ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
-		                                	lobortis nisl ut aliquip ex ea commodo consequat..."<br>
-		                                	<a href="http://azmind.com/premium/marco/v1-9/layout-1/index.php#">Minim Veniam, nostrud.com</a>
-		                                </p>
-	                                </div>
-	                			</div>
-	                		</div>
-	                		<!-- Nav tabs -->
-	                		<ul class="nav nav-tabs" role="tablist">
-	                			<li role="presentation" class="active">
-	                				<a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab"></a>
-	                			</li>
-	                			<li role="presentation">
-	                				<a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab"></a>
-	                			</li>
-	                			<li role="presentation">
-	                				<a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab"></a>
-	                			</li>
-	                			<li role="presentation">
-	                				<a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab"></a>
-	                			</li>
-	                		</ul>
-	                	</div>
-	                </div>
-	            </div>
+	            
 	        </div>
         </div>
 
