@@ -201,7 +201,10 @@ function main_page(){
 							
 					</div>
 					
-					
+					<div id="center" class="col-sm-6" >
+                                
+		                    
+                            
 						    <div  id="center-main" style="margin-left:4%;" >
 							
 						

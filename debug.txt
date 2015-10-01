@@ -1,7 +1,4 @@
 starting
 
- session variables are not set 
-current session id:9c367g1h0419r2tlmkcvv4ha42
-throw a sign up page, its most likely to be the first time the user has visited the page
-
+SESSION was already available and we are proceeding to home page
 *********************finished excuting*********************************
