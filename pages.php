@@ -85,7 +85,7 @@ function signup_page($message=""){
                             	</p>
                             </div>
                             <div class="top-big-link wow fadeInUp animated animated" style="visibility: visible; animation-name: fadeInUp;">
-                            	<a class="btn btn-link-1 " href="index.php">Login</a>
+                            	<a class="btn btn-link-1 " href="login.php">Login</a>
                             	<a class="btn btn-link-2 scroll-link" href="#features">Learn more</a>
                             </div>
                         </div>
@@ -580,7 +580,7 @@ function signin_page($message=""){
                             	</p>
                             </div>
                             <div class="top-big-link wow fadeInUp animated animated" style="visibility: visible; animation-name: fadeInUp;">
-                            	<a class="btn btn-link-1 " href="index.php">Sign up</a>
+                            	<a class="btn btn-link-1 " href="signup.php">Sign up</a>
                             	<a class="btn btn-link-2 scroll-link" href="#features">Learn more</a>
                             </div>
                         </div>
