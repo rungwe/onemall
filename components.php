@@ -344,6 +344,35 @@ function create_ad(){
 	return $ad_component;
 }
 
+function post_interface(){
+    $component ='<div id="center" class="col-sm-6" >
+                                <div class="ui-68">
+			                    <div class="container-fluid">	
+				                    <div class="ui-content">
+					                    <!-- TextArea -->
+					                    <textarea class="form-control" rows="4" placeholder="Share to your customers" style="margin-bottom:3px;resize:none;"></textarea>
+					                    <!-- Button -->
+					                    <div class="row">
+						                    <!-- Icon -->
+						                    <div class="col-sm-3">
+							                    <!-- Music -->
+							                    <a href="#" class="col-sm-4" data-toggle="tooltip" data-placement="top" title="Attach File"><i class="fa fa-paperclip"></i></a>
+							                    <!-- Picture -->
+							                    <a href="#" class="col-sm-4" data-toggle="tooltip" data-placement="top" title="Attach Photo"><i class="fa fa-camera"></i></a>
+							                    <!-- Camera -->
+							                    <a href="#" class="col-sm-4" data-toggle="tooltip" data-placement="top" title="Attach Video"><i class="fa fa-video-camera"></i></a>
+						                    </div>
+						                    <!-- Button -->
+                                            <div class="col-sm-offset-7 col-sm-1">
+						                    <a href="#" class="btn btn-info btn-xs " style="background-color:white; color: #004A6E;">Submit</a>
+                                            </div>
+					                    </div>
+				                    </div>
+			                    </div>
+		                    </div>
+                            <br>';
+        return $component;
+}
 
 
 

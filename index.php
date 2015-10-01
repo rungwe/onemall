@@ -22,9 +22,10 @@ function main_page(){
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/loader.css">
+        
 		<link href="css/myshops.css" rel="stylesheet">
 		<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-		
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
 		<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 		<<script type="text/javascript" src="home/js/constants.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -200,42 +201,42 @@ function main_page(){
 							
 					</div>
 					
-					<div id="center" class="col-sm-6" >
-						<div  id="center-main" style="margin-left:4%;" >
+					
+						    <div  id="center-main" style="margin-left:4%;" >
 							
 						
-						</div>
-						<div id="friends_nav" style="margin-left:4%;display:none">
-							<center>
-							 <div class= "row" style="width:50%;">
-								<div class="col-sm-6 tab active_tab" id="friendslist">
-								 <center style="cursor:pointer;font-weight:900;"> <h4>My friends</h4></center>
-								</div>
-								<div class="col-sm-6 tab" id="sug_friends">
-								 <center style="cursor:pointer;font-weight:900;"><h4>Find friends </h4></center>
-								</div>
-							 </div>
-							</center><br>
-							<div id="friends">
+						    </div>
+						    <div id="friends_nav" style="margin-left:4%;display:none">
+							    <center>
+							     <div class= "row" style="width:50%;">
+								    <div class="col-sm-6 tab active_tab" id="friendslist">
+								     <center style="cursor:pointer;font-weight:900;"> <h4>My friends</h4></center>
+								    </div>
+								    <div class="col-sm-6 tab" id="sug_friends">
+								     <center style="cursor:pointer;font-weight:900;"><h4>Find friends </h4></center>
+								    </div>
+							     </div>
+							    </center><br>
+							    <div id="friends">
 							
-							</div>
-							<div id="suggested_friends" style="display:none">
+							    </div>
+							    <div id="suggested_friends" style="display:none">
 							
-							</div>
-						</div>
+							    </div>
+						    </div>
 						
-						<div id="loader" class="loader loader2 col-sm-offset-3" style="margin-top:40%">
-						  <div class="cube">
-							<div class="side side1"></div>
-							<div class="side side2"></div>
-							<div class="side side3"></div>
-							<div class="side side4"></div>
-							<div class="side side5"></div>
-							<div class="side side6"></div>
-						  </div>
-						</div>
+						    <div id="loader" class="loader loader2 col-sm-offset-3" style="margin-top:40%">
+						      <div class="cube">
+							    <div class="side side1"></div>
+							    <div class="side side2"></div>
+							    <div class="side side3"></div>
+							    <div class="side side4"></div>
+							    <div class="side side5"></div>
+							    <div class="side side6"></div>
+						      </div>
+						    </div>
 						
-					</div>
+					    </div>
 					
 					<div id="right" class="col-sm-3" >
 						

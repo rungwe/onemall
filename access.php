@@ -13,7 +13,7 @@ if(!empty($_REQUEST["request"])){
 
 }
 else{
-    header("Location: index.php");
+    header("Location: login.php");
     
 }
 

@@ -9,8 +9,7 @@
 	
 	
 	
-	//'l' => urlencode($_POST["form-last-name"]),
-	//'fname' => urlencode($_POST["form-first-name"]),
+	
 	if (empty($_POST)){
 		
 		echo signup_page();
@@ -23,6 +22,9 @@
 			$url="http://ec2-52-88-102-30.us-west-2.compute.amazonaws.com/account/Register";
 			//$url="testreg.php";
 			 $fields = array(
+                                'lname' => $_POST["form-last-name"],
+	                            'fname' => $_POST["form-first-name"],
+                                'type'=> $_POST["options"],
 								'Email' => $_POST["form-email"],
 								'Password' => $_POST["pswd"],
 								'ConfirmPassword' => $_POST["pswd1"]

@@ -105,25 +105,42 @@ function signup_page($message=""){
 									<input type="hidden"  name="signup" value="true">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-first-name">First name</label>
-			                        	<input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
+			                        	<input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name" value="">
 			                        </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-last-name">Last name</label>
-			                        	<input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
+			                        	<input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name" value="">
 			                        </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-email">Email</label>
-			                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+			                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email" value="">
 			                        </div>
 									 <div class="form-group">
 			                        	<label class="sr-only" for="pswd">Password</label>
-			                        	<input type="password" name="pswd" placeholder="Enter password" class="form-email form-control" id="pswd">
+			                        	<input type="password" name="pswd" placeholder="Enter password" class="form-email form-control" id="pswd" value="">
 			                        </div>
 									 <div class="form-group">
 			                        	<label class="sr-only" for="pswd1">confirm password</label>
-			                        	<input type="password" name="pswd1" placeholder="Confirm password" class="form-email form-control" id="pswd1">
+			                        	<input type="password" name="pswd1" placeholder="Confirm password" class="form-email form-control" id="pswd1" value="">
 			                        </div>
-			                        
+                                    <style>
+                                        .type{
+                                            background-color: white;
+                                            color: #004A6E;
+                                        }
+                                    </style>
+			                        <div class="btn-group pull-right" data-toggle="buttons">
+                                        <label class="btn btn-primary type active">
+                                        <input type="radio" name="options" id="option1" autocomplete="off" value="customer" checked> Individual
+                                        </label>
+                                        <label class="btn btn-primary type">
+                                        <input type="radio" name="options" id="option2" autocomplete="off" value="merchant">Merchant
+                                        </label>
+                                        <label class="btn btn-primary type">
+                                        <input type="radio" name="options" id="option2" autocomplete="off" value="company">Organisation
+                                        </label>
+                                        
+                                    </div><br><br>
 			                        <button type="button" onclick="validate_reg_form()" class="btn" style="background-color:#004A6E;">Sign me up!</button>
 			                        <div class="form-links">
 			                        	<a href="#" class="launch-modal" data-modal-id="modal-privacy">Privacy Policy</a> - 
