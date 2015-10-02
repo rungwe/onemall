@@ -27,9 +27,6 @@ function main_init(){
 		          token = access.trim();
 		          pull_broadcasts(6);
 		          pull_suggestions(3);
-		          friends_num();
-		          companies_num();
-		          ads_num();
 		          drawer_init();
 		          close_drawer_onload(1500);
 		          //alert("loading profile.....");
@@ -60,12 +57,18 @@ function get_profile(){
 		  }
 		  xmlhttp_br.onreadystatechange = function () {
 		      if (xmlhttp_br.readyState == 4 && xmlhttp_br.status == 200) {
+
 		          var profile_data = xmlhttp_br.responseText;
-		          alert(profile_data);
+		          //alert(profile_data);
+		          var profileInfo = JSON.parse(profile_data)[0];
+		          document.getElementById("num_followers").innerHTML = 12;
+		          document.getElementById("num_buddies").innerHTML = profileInfo.num_friends;
+		          document.getElementById("num_ads").innerHTML = profileInfo.active_ads;
+		          document.getElementById("user-name").innerHTML = profileInfo.name;
 		      }
 		  } 	
 	xmlhttp_br.open("GET",uri+"/customer/get-user-profile",true);
-    xmlhttp_br.setRequestHeader("Authorisation",'Bearer ' + token);
+    xmlhttp_br.setRequestHeader("Authorization",'Bearer ' + token);
    // xmlhttp_br.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 	xmlhttp_br.send();
 }

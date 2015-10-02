@@ -132,18 +132,18 @@ function main_page(){
 									<img src="img/camera3.png" height="40" width="40" style="margin-left:15px;margin-top:15px;">
 								</div>
 								<div style="background-color:white;width:279px;border-radius:2px;z-index:1;position:absolute;margin-top:100px;">
-									<label style="margin-left:50%;font-size:100%;"><b id="user-name">Chaddy</b></label>
+									<label style="margin-left:50%;font-size:100%;"><b id="user-name"></b></label>
 									<br>
 									<br>
 									<div class="row" style="font-size:14px;margin-left:4px;color:#B3B3B3;">
 										<div class="col-sm-4" style="cursor:pointer;">
-											<p ><a href="followers.php" style="color:#B3B3B3;"> following <br><span id="num_followers" style="background-color:#19A3D1;" class="badge">17</span></a></p>
+											<p ><a href="followers.php" style="color:#B3B3B3;"> following <br><span id="num_followers" style="background-color:#19A3D1;" class="badge"></span></a></p>
 										</div>
 										<div class="col-sm-4">
 											<p style="cursor:pointer;" onclick="show_friends()"> buddies <br><span id="num_buddies" style="background-color:#19A3D1;" class="badge"></span></p>
 										</div>
 										<div class="col-sm-4">
-											<p style="cursor:pointer;"> active Ads <br><span id="num_ads" style="background-color:#19A3D1;" class="badge">2</span></p> 
+											<p style="cursor:pointer;"> active Ads <br><span id="num_ads" style="background-color:#19A3D1;" class="badge"></span></p> 
 										</div>
 										
 										
