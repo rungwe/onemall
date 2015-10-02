@@ -65,7 +65,7 @@ function get_profile(){
 		      }
 		  } 	
 	xmlhttp_br.open("GET",uri+"/customer/get-user-profile",true);
-    //xmlhttp_br.setRequestHeader("Authorisation",'Bearer ' + token);
+    xmlhttp_br.setRequestHeader("Authorisation",'Bearer ' + token);
    // xmlhttp_br.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 	xmlhttp_br.send();
 }
