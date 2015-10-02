@@ -12,7 +12,7 @@
 	
 	if (empty($_POST)){
 		
-		echo signup_page();
+		echo signup_page("empty fields");
 	}
 	
 	
@@ -21,7 +21,7 @@
 			//register
 			$url="http://ec2-52-88-102-30.us-west-2.compute.amazonaws.com/account/Register";
 			//$url="testreg.php";
-			 $fields = array(
+			$fields = array(
                                 'lname' => $_POST["form-last-name"],
 	                            'fname' => $_POST["form-first-name"],
                                 'type'=> $_POST["options"],
@@ -29,6 +29,8 @@
 								'Password' => $_POST["pswd"],
 								'ConfirmPassword' => $_POST["pswd1"]
 						);
+          
+
 			
 			$data = json_encode($fields);
 			//$data ='{"Email":"test@admin.com","Password":"12345678","PasswordConfirm":"12345678"}';
@@ -54,24 +56,17 @@
 			//login the user
 			if ($code=="200"){
 				
-				
+				//echo "attempting to login";
 				$response = login();
-				$out="fcvbn";
-				foreach( $_SESSION as $key => $val ){
-					 $out.=$key." <br>".$val;
-				}
-				echo $out;
+				
 				if ($response[0]=="200"){
-					//create session
-					//$_SESSION['email'] = $_POST['form-email'];
-					
-					//echo $status[0]."<br>".$status[1];
+				    //echo $response[0]."<br>".$response[1]."<br> registration login testing";
 					header("Location: index.php");
 				}
 				else{
 					
-					//echo signin_page($response[1]);
-					echo $status[0]."<br>".$status[1];
+					echo signin_page($response[1]);
+					//echo $response[0]."<br>".$response[1];
 				}
 				
 			}
@@ -86,6 +81,7 @@
 				}
 				
 				echo signup_page($error);
+                //echo "Error code: \t".$code."<br> Error message: \t".$error."<br> error json: \t".$result;
 			}
 			
 			//{"Message":"The request is invalid.","ModelState":{"model.ConfirmPassword":["The password and confirmation password do not match."]}}

@@ -6,21 +6,68 @@ Content: Library for client side scripts for My Shops
 
 **/
 
-
 function main_init(){
-		get_access();
-		pull_broadcasts(6);
-		pull_suggestions(3);
-		friends_num();
-		companies_num();
-		ads_num();
-		drawer_init();
-		close_drawer_onload(1500);
-		$(".call").popover({title: "phone number", content: "+263 772 446 073",placement: "bottom"});
-		$(".email").popover({title: "email", content: "kchaddy871@gmail.com",placement: "bottom"});
-		
-		
 	
+	var xmlhttp_br;
+	
+	if (window.XMLHttpRequest)
+		  {// code for IE7+, Firefox, Chrome, Opera, Safari
+		  xmlhttp_br=new XMLHttpRequest();
+		 
+		  }
+		else
+		  {// code for IE6, IE5
+		  xmlhttp_br=new ActiveXObject("Microsoft.XMLHTTP");
+		  
+		  }
+		  xmlhttp_br.onreadystatechange = function () {
+		      if (xmlhttp_br.readyState == 4 && xmlhttp_br.status == 200) {
+
+		          var access = xmlhttp_br.responseText;
+		          token = access.trim();
+		          pull_broadcasts(6);
+		          pull_suggestions(3);
+		          friends_num();
+		          companies_num();
+		          ads_num();
+		          drawer_init();
+		          close_drawer_onload(1500);
+		          //alert("loading profile.....");
+		          get_profile();
+		          if (token == "invalid") {
+		              window.location.href = "login.php";
+		          }
+
+		      }
+		  } 	
+	xmlhttp_br.open("POST","access.php?request=true",true);
+	xmlhttp_br.send();
+}
+
+function get_profile(){
+    var uri = "http://ec2-52-88-102-30.us-west-2.compute.amazonaws.com";
+	var xmlhttp_br;
+	
+	if (window.XMLHttpRequest)
+		  {// code for IE7+, Firefox, Chrome, Opera, Safari
+		  xmlhttp_br=new XMLHttpRequest();
+		 
+		  }
+		else
+		  {// code for IE6, IE5
+		  xmlhttp_br=new ActiveXObject("Microsoft.XMLHTTP");
+		  
+		  }
+		  xmlhttp_br.onreadystatechange = function () {
+		      if (xmlhttp_br.readyState == 4 && xmlhttp_br.status == 200) {
+		          var profile_data = xmlhttp_br.responseText;
+		          alert(profile_data);
+		      }
+		  } 	
+	xmlhttp_br.open("GET",uri+"/customer/get-user-profile",true);
+    xmlhttp_br.setRequestHeader("Authorisation",'Bearer ' + token);
+    xmlhttp_br.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xmlhttp_br.send();
 }
 
 // tested
