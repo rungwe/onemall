@@ -15,6 +15,27 @@ function nav_drawer(){
 					</div>
 					
 				</div>
+
+                <div class="menu row">
+					<div class="col-sm-2">
+						<img src="img/icons/Bell.png" height="30" width="30">
+					</div>
+					<div class="col-sm-offset-2 col-sm-8">
+						<h4>Notifications <span style="background-color:red;" class="badge">2</span></h4>
+					</div>
+					
+				</div>
+
+                <div class="menu row">
+					<div class="col-sm-2">
+						<img src="img/icons/Shopping-Cart.png" height="30" width="30">
+					</div>
+					<div class="col-sm-offset-2 col-sm-8">
+						<h4>Basket <span style="background-color:#19A3D1;" class="badge">2</span></h4>
+					</div>
+					
+				</div>
+
 				<div class="menu row">
 					<div class="col-sm-2">
 						<img src="img/icons/Paper-Money.png" height="30" width="30">
@@ -78,38 +99,12 @@ function nav_drawer(){
 					</div>
 					
 				</div>
-				<div class="menu row">
-					<div class="col-sm-2">
-						<img src="img/icons/Gear.png" height="30" width="30">
-					</div>
-					<div class="col-sm-offset-2 col-sm-8">
-						<h4>Settings</h4>
-					</div>
-					
-				</div>
-				<div class="menu row">
-					<div class="col-sm-2">
-						<img src="img/icons/Support.png" height="30" width="30">
-					</div>
-					<div class="col-sm-offset-2 col-sm-8">
-						<h4>Support</h4>
-					</div>
-					
-				</div>
-				<div class="menu row">
-					<div class="col-sm-2">
-						<img src="img/icons/Lock.png" height="30" width="30">
-					</div>
-					<div class="col-sm-offset-2 col-sm-8">
-						<h4 id="logout">Logout</h4>
-					</div>
-					
-				</div>
+				
 				<br>
 				<br>
 			</div>
 			<div class="col-sm-2 pull-right" id="control" style="cursor:pointer;border:2px solid #004A6E;width:45px;height:45px;background-color:white;position:fixed;z-index:3;margin-left:250px;">
-				<span class="glyphicon glyphicon-align-justify  btn-lg" style="margin-left:-19px;color:#004A6E"></span>
+				<span class="glyphicon glyphicon-align-justify  btn-lg" style="margin-left:-19px;color:#004A6E"><span style="background-color:red;" class="badge">2</span></span>
 			</div>
 		</div>';
 		

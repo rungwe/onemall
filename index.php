@@ -152,45 +152,45 @@ function main_page(){
 								</div>
 								
 							</div>
-						   
-							<div id="dashboard" class="row" style="margin-top:200px;font-style:oblique;background-image:url(\'img/cloudbg61.png\');background-size:cover;margin-left:-50px;width:280px;">
+						    <br>
+							<div id="dashboard" class="row" style="margin-top:200px;font-style:oblique;background-image:url();background-color:white;margin-left:-50px;width:280px;">
 						
-								<div class="col-sm-offset-3 col-sm-8 " style="margin-top:50px;font-weight:900;color:black;" >
+								<div class="col-sm-offset-2 col-sm-8 " style="margin-top:5px;font-weight:400;color:black;" >
 									
 									<div class="row" style="cursor:pointer;" onclick="Home()">
-										<div class="col-sm-2" style="background-image:url(\'img/icons/RSS.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
-										<div class="col-sm-10 btn-xs" style="margin-top:3px;">Broadcasts <span style="background-color:#19A3D1;" class="badge">2</span></div>
+										<div class="col-sm-2 " style="background-image:url(\'img/icons/RSS.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-8 col-sm-offset-2 btn-xs" style="margin-top:3px;">Broadcasts <span style="background-color:#19A3D1;" class="badge"></span></div>
 									</div>
 									
 									<div class="row" style="cursor:pointer;">
 										<div class="col-sm-2" style="background-image:url(\'img/icons/Dollar-Coin.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
-										<div class="col-sm-10 btn-xs" style="margin-top:5px;"> <a href="ads.php" style="text-align:left;font-style:oblique;color:black;">Ads</a></div>
+										<div class="col-sm-8 col-sm-offset-2 btn-xs" style="margin-top:5px;"> <a href="ads.php" style="text-align:left;font-style:oblique;color:black;">Ads</a></div>
 									</div>
 									
 									<div class="row" style="cursor:pointer;">
-										<div class="col-sm-2" style="background-image:url(\'home/img/icons/Shopping-Cart.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
-										<div class="col-sm-10 btn-xs" style="margin-top:5px;"> <a href="products.php" style="text-align:left;font-style:oblique;color:black;">Shopping</a></div>
+										<div class="col-sm-2" style="background-image:url(\'home/img/icons/Shopping-Bag.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-8 col-sm-offset-2 btn-xs" style="margin-top:5px;"> <a href="products.php" style="text-align:left;font-style:oblique;color:black;">Go shopping</a></div>
 									</div>
 									
 									<div class="row" onclick="show_friends()" style="cursor:pointer;">
 										<div class="col-sm-2" style="background-image:url(\'img/icons/Contacts.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
-										<div class="col-sm-10 btn-xs" style="margin-top:5px;">Buddies</div>
+										<div class="col-sm-8 col-sm-offset-2 btn-xs" style="margin-top:5px;">Buddies</div>
 									</div>
 									
 									<!-- <div class="row" style="cursor:pointer;">
 										<div class="col-sm-2" style="background-image:url(\'img/notify.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
-										<div class="col-sm-10 btn-xs" style="margin-top:5px;">Notify me</div>
+										<div class="col-sm-8 col-sm-offset-2 btn-xs" style="margin-top:5px;">Notify me</div>
 									</div> -->
 									
 								
 									<!-- <div class="row" style="cursor:pointer;" data-toggle="modal" data-target="#create_ad" onclick="setup_adCreate()" >
 										<div class="col-sm-2" style="background-image:url(\'img/icons/Pencil.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
-										<div class="col-sm-10 btn-xs" style="margin-top:5px;">Create Ads</div>
+										<div class="col-sm-8 col-sm-offset-2 btn-xs" style="margin-top:5px;">Create Ads</div>
 									</div> -->
 									
 									<div class="row" style="cursor:pointer;">
 										<div class="col-sm-2" style="background-image:url(\'img/icons/Building.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
-										<div class="col-sm-10 btn-xs" style="margin-top:5px"> <a href="companies.php" style="text-align:left;font-style:oblique;color:black;">Companies</a></div>
+										<div class="col-sm-8 col-sm-offset-2 btn-xs" style="margin-top:5px"> <a href="companies.php" style="text-align:left;font-style:oblique;color:black;">Companies</a></div>
 									</div>
 							
 								</div>
