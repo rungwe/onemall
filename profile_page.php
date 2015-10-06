@@ -1,5 +1,5 @@
 <?php
-
+ini_set('display_errors',true);
 require 'session.php';
 require 'components.php';
 custom_handler_init();

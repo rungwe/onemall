@@ -11,7 +11,7 @@ SESSION data email, username, timestamp, token, token-exp
  define('SESSION_DURATION',3); // number of days
  define('TOKEN_DURATION', 13);
  require 'pages.php';
- require 'SessionHandler.php';
+ require 'CustomSessionHandler.php';
  
  
  
@@ -183,7 +183,7 @@ function create_session($access){
 }
 
 function custom_handler_init(){
-    $handler = new SessionHandler();
+    $handler = new CustomSessionHandler();
     $status = session_set_save_handler(
     array($handler, "open"),
     array($handler, "close"),

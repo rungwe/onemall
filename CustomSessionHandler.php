@@ -6,7 +6,7 @@
  define('PSWD','project123');
 //use SessionHandlerInterface;
 //use SessionHandlerInterface;
-class SessionHandler
+class CustomSessionHandler
 {
    public $status;
    public function _construct(){
@@ -107,8 +107,8 @@ class SessionHandler
    
 }
 
-$handler = new SessionHandler();
-$handler->write("ID Stored","This is the session data");
+//$handler = new SessionHandler();
+//$handler->write("ID Stored","This is the session data");
 //session_set_save_handler($handler, true);
    
  //$handler = new SessionHandler();
