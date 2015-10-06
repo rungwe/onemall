@@ -17,47 +17,32 @@ SESSION data email, username, timestamp, token, token-exp
  
 
  function aunthenticate($page_html){
-	//1) check if there is an existing session.
-					//start_session();
-	$branch=0;
-	$output ="starting\n";                   //debug
-	$file =fopen("debug.txt","w");			//debug
+	     $branch=0;
 	
-					if (empty($_SESSION)){ // check if a session existed before
-						$output.="\n session variables are not set \ncurrent session id:".session_id();
-						
-							//throw a sign up page, its most likely to be the first time the user has visited the page
-							
-							$output .="\nthrow a sign up page, its most likely to be the first time the user has visited the page\n"; //debug
-							
-							$branch=1;	
-						
-					}
+		if (empty($_SESSION)){ // check if a session existed before
+			$output.="\n session variables are not set \ncurrent session id:".session_id();
+				$branch=1;	
+		}
 					
+					
+		else{
 						
-					else{
+			if (is_session_valid()){
+				update_session_time();
 						
-						if (is_session_valid()){
-							update_session_time();
-							$output .= "\nSESSION was already available and we are proceeding to home page"; 
-							//echo $page_html;
-							$branch=3; //go to home page
+				$branch=3; //go to home page
 							
-						}
-						else{
-							delete_session();
-							//throw the login page
-							$output .= "\n was already available and had expired, redirecting to login page"; 
-							$branch=2;
+			}
+			else{
+				delete_session();
+							 
+				$branch=2; //go to login
 							
-						}
-					}
+			}
+		}
 	
 	
-	$output.="\n*********************finished excuting*********************************";
-	fwrite($file, $output);
-	fclose($file);
-	//end of function
+	
 	if($branch==1){
 		header("Location: signup.php");
 	}
