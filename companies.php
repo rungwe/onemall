@@ -1,9 +1,9 @@
 <?php
-
-
-session_start();
 require 'session.php';
 require 'components.php';
+custom_handler_init();
+session_start();
+
 
 aunthenticate(companies_page());
 //phpinfo();

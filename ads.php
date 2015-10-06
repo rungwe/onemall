@@ -1,7 +1,8 @@
 <?php
-session_start();
 require 'session.php';
 require 'components.php';
+custom_handler_init();
+session_start();
 
 aunthenticate(ads_page());
 

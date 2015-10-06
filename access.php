@@ -1,4 +1,6 @@
 <?php
+require 'session.php';
+custom_handler_init();
 session_start();
 
 if(!empty($_REQUEST["request"])){

@@ -27,7 +27,7 @@ function displayBroadcasts(feedsArr,locationID){
 		var feed =feedsArr[i];
 		var broadcast = buildBroadcast(feed);
 		num_broadcasts+=1
-		document.getElementById(locationID).innerHTML=document.getElementById(locationID).innerHTML+broadcast;
+		document.getElementById(locationID).innerHTML+=broadcast;
 		
 	}
 	

@@ -3,13 +3,7 @@
 	//require "signin.php";
 	require "session.php";
 	//validation
-	
-	session_set_cookie_params (3600*24*365);
-	session_start();
-	
-	
-	
-	
+
 	if (empty($_POST)){
 		
 		echo signup_page("empty fields");

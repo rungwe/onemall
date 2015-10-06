@@ -1,5 +1,5 @@
 <?php
-
+ini_set('display_errors',true);
  
  /*
 SESSION data email, username, timestamp, token, token-exp 
@@ -11,11 +11,11 @@ SESSION data email, username, timestamp, token, token-exp
  define('SESSION_DURATION',3); // number of days
  define('TOKEN_DURATION', 13);
  require 'pages.php';
+ require 'SessionHandler.php';
+ 
+ 
  
 
- 
- 
- 
  function aunthenticate($page_html){
 	//1) check if there is an existing session.
 					//start_session();
@@ -73,7 +73,9 @@ SESSION data email, username, timestamp, token, token-exp
 
 
  function is_session_valid(){
-	 
+	    if(empty($_SESSION['timestamp']) or empty($_SESSION['token-issue']) ){
+	        return FALSE;
+	    }
 		$session = duration($_SESSION['timestamp']);
 		$token =  duration($_SESSION['token-issue']);
 		if ($session>SESSION_DURATION){
@@ -163,6 +165,10 @@ function create_session($access){
 			//login the user
 			if ($code=="200"){
 				$response =  Array($code,$result);
+                custom_handler_init();
+                //return $status;
+                session_set_cookie_params (3600*24*365);
+	            session_start();
 				create_session($msg);
 				return $response;
 				
@@ -174,6 +180,20 @@ function create_session($access){
 				return $response;
 				
 			}
+}
+
+function custom_handler_init(){
+    $handler = new SessionHandler();
+    $status = session_set_save_handler(
+    array($handler, "open"),
+    array($handler, "close"),
+    array($handler, "read"),
+    array($handler, "write"),
+    array($handler, "destroy"),
+    array($handler, "gc")
+    );
+    register_shutdown_function('session_write_close');
+    return $status;
 }
 
  

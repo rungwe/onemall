@@ -1,8 +1,9 @@
 <?php
 
-session_start();
 require 'session.php';
 require 'components.php';
+custom_handler_init();
+session_start();
 
 aunthenticate(profile_page());
 

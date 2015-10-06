@@ -83,10 +83,10 @@ function nav_drawer(){
 				</div>
 				<div class="menu row">
 					<div class="col-sm-2">
-						<img src="img/icons/Graph.png" height="30" width="30">
+						<img src="img/icons/social.png" height="30" width="30">
 					</div>
 					<div class="col-sm-offset-2 col-sm-8">
-						<h4>My Statistics</h4>
+						<h4>Social Media</h4>
 					</div>
 					
 				</div>

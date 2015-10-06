@@ -1,9 +1,9 @@
 <?php
-
-session_set_cookie_params (3600*24*365);
-session_start();
 require 'session.php';
 require 'components.php';
+custom_handler_init();
+session_start();
+
 
 aunthenticate(main_page());
 //phpinfo();
@@ -26,7 +26,7 @@ function main_page(){
 		<link href="css/myshops.css" rel="stylesheet">
 		<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
-		<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="home/js/jquery.min.js"></script>
 		<<script type="text/javascript" src="home/js/constants.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="home/js/like.js"></script>
@@ -38,10 +38,11 @@ function main_page(){
 		<script type="text/javascript" src="home/js/navigation-drawer.js"></script>
 		<script type="text/javascript" src="home/js/main_init.js"></script>
 		<script type="text/javascript" src="home/js/create_ad.js"></script>
+        <script type="text/javascript" src="home/js/jquery.endless-scroll.js"></script>
 	</head>
 	
 	
-	<!-- <body onload="main_init()" style="background-image:url(img/cloud.png);background-size:cover;background-repeat:no-repeat;overflow:hidden;background-attachment:fixed;overflow-y:auto;"> -->
+	<!-- <body id="body" onload="main_init()" style="background-image:url(img/cloud.png);background-size:cover;background-repeat:no-repeat;overflow:hidden;background-attachment:fixed;overflow-y:auto;"> -->
 		<body onload="main_init()" style="background-color:#F2F2F2;overflow-y:auto;">
 		<div id="nav" class="navbar-fixed-top" >
 			<div class="container-fluid">
@@ -257,15 +258,7 @@ function main_page(){
 				</div>
 				
 		</div>
-	</body>
-	
-	<script>
-		$(".call").popover({title: "phone number", content: "+263 772 446 073",placement: "bottom"});
-		$(".email").popover({title: "email", content: "kchaddy871@gmail.com",placement: "bottom"});
-	</script>
-	
-	
-	
+	</body>	
 </html>
 ';
 
