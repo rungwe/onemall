@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors',true);
- 
+date_default_timezone_set('Africa/Johannesburg');
  /*
 SESSION data email, username, timestamp, token, token-exp 
  
