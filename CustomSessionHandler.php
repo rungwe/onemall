@@ -64,8 +64,8 @@ class CustomSessionHandler
     public function write($sid, $data)
     {
         $db = new mysqli(HOST, USER, PSWD,DBNAME);
-        $read_stmt = $db->prepare("INSERT INTO session (session_id, session_data) VALUES(?,?) ON DUPLICATE KEY UPDATE session_data =?");
-        $read_stmt->bind_param("sss",$sid,$data,$data);
+        $read_stmt = $db->prepare("INSERT INTO session (username,session_id, session_data) VALUES(?,?,?) ON DUPLICATE KEY UPDATE session_data =?");
+        $read_stmt->bind_param("ssss",$_SESSION["email"],$sid,$data,$data);
         
 
         if($read_stmt->execute()){
