@@ -1,17 +1,5 @@
-<?php
-ini_set('display_errors',true);
-require 'session.php';
-require 'components.php';
-custom_handler_init();
-session_start();
+<!DOCTYPE html>
 
-
-aunthenticate(main_page());
-//phpinfo();
-
-function main_page(){
-	
-	$page ='
 <html>
 
 	<head>
@@ -263,10 +251,3 @@ function main_page(){
 		</div>
 	</body>	
 </html>
-';
-
-return $page;
-	
-}
-
-?>

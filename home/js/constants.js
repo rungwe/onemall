@@ -32,13 +32,4 @@ function get_access(){
 	xmlhttp_br.open("POST","access.php?request=true",true);
 	xmlhttp_br.send();
 }
-    $(document).endlessScroll({
-        pagesToKeep: 100,
-        inflowPixels: 100,
-        fireDelay: 10,
-        content: function(i, p, d) {
-          console.log(i, p, d);
-		  alert("test");
-          
-        }
-      });
+   
