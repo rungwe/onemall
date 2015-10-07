@@ -113,7 +113,6 @@ function create_session($access){
  function update_session_time(){
 	$current_date = date_create();
 	$date_string = date_format($current_date,"d.m.y");
-	
 	return $date_string;
 	
  }
@@ -177,6 +176,7 @@ function custom_handler_init(){
     array($handler, "destroy"),
     array($handler, "gc")
     );
+
     register_shutdown_function('session_write_close');
     return $status;
 }

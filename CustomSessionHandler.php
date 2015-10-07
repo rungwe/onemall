@@ -1,6 +1,6 @@
 <?php
  ini_set('display_errors',true);
- define('HOST','sessiondb.chujykwc6ihz.us-west-2.rds.amazonaws.com');
+ define('HOST','p:sessiondb.chujykwc6ihz.us-west-2.rds.amazonaws.com');
  define('USER','root');
  define('DBNAME','sessionDB');
  define('PSWD','project123');
@@ -25,7 +25,7 @@ class CustomSessionHandler
         $db = new mysqli(HOST, USER, PSWD,DBNAME);
         // Check connection
         if ($db->connect_error) {
-            die("Connection failed: " . $db->connect_error);
+            //die("Connection failed: " . $db->connect_error);
             return FALSE;
         } 
         else{
@@ -64,7 +64,7 @@ class CustomSessionHandler
     public function write($sid, $data)
     {
         $db = new mysqli(HOST, USER, PSWD,DBNAME);
-        $read_stmt = $db->prepare("INSERT INTO session (username,session_id, session_data) VALUES(?,?,?) ON DUPLICATE KEY UPDATE session_data =?");
+        $read_stmt = $db->prepare("INSERT INTO session (username,session_id, session_data) VALUES(?,?,?) ON DUPLICATE KEY UPDATE session_data =?, session_lastaccesstime=CURRENT_TIMESTAMP");
         $read_stmt->bind_param("ssss",$_SESSION["email"],$sid,$data,$data);
         
 
