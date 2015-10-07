@@ -123,7 +123,8 @@ function main_page(){
 		
 				nav_drawer().
 				edit_account_modal().
-				create_ad().	
+				create_ad().
+                shopping_cart().	
 				'<div id="content">
 					
 					<div id="left" class="col-sm-3">

@@ -122,7 +122,7 @@ function profile_page(){
 		<div id="content" style="width:100%;margin-top:400px;position:absolute;overflow-y:auto;">
 			<div  style="margin-top:5%;">
 				<div class="col-sm-4" id="left">
-					<div style="background-color:white;">
+					<div style="background-color:white;box-shadow: 10px 10px 5px #888888;">
 					<center style="font-size:17px;font-style:oblique;color:black;font-weight:900;font-style:oblique;"><span class="" style="color:blue;"></span>&nbsp;<h4>Mr Price@mowbray</h4></center>
 					<br>
 					<p style="color:#336699;">"Passion, value and Partnership. Your satisfaction is our priority. Feel at Home our dear customers"</p>

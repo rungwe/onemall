@@ -31,7 +31,7 @@ function nav_drawer(){
 						<img src="img/icons/Shopping-Cart.png" height="30" width="30">
 					</div>
 					<div class="col-sm-offset-2 col-sm-8">
-						<h4>Basket <span style="background-color:#19A3D1;" class="badge">2</span></h4>
+						<h4 data-toggle="modal" data-target="#cart">Basket <span style="background-color:#19A3D1;" class="badge">2</span></h4>
 					</div>
 					
 				</div>
@@ -369,6 +369,120 @@ function post_interface(){
         return $component;
 }
 
+function shopping_cart(){
+    
+    $cart=' <div class="modal fade" id="cart" role="dialog">
+    <div class="modal-dialog modal-lg" style="width:80%;">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <div class="col-sm-2" style="background-image:url(\'img/icons/Shopping-Cart.png\');background-size:30px 30px;background-repeat:no-repeat;height:30px;width:30px;background-size:cover;"></div>
+		  <div class="col-sm-10 btn-xs" style="margin-top:5px;"><h4 class="modal-title">Shopping cart</h4></div>
+          
+        </div>
+        <div class="modal-body">
+          <div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-10">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Total</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-sm-8 col-md-6">
+                        <div class="media">
+                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="img/products/clock.jpg" style="max-height: 72px;"> </a>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">Wrist watch</a></h4>
+                                <h5 class="media-heading"> by <a href="#">Rolex</a></h5>
+                                <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
+                            </div>
+                        </div></td>
+                        <td class="col-sm-1 col-md-1" style="text-align: center">
+                        <input type="email" class="form-control" id="exampleInputEmail1" value="1">
+                        </td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>R1008.87</strong></td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>R1008.87</strong></td>
+                        <td class="col-sm-1 col-md-1">
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span> Remove
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-6">
+                        <div class="media">
+                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="img/products/converse.png" style="width: 72px; height: 72px;"> </a>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">High cut canvas</a></h4>
+                                <h5 class="media-heading"> by <a href="#">Converse</a></h5>
+                                <span>Status: </span><span class="text-warning"><strong>Leaves warehouse in 2 - 3 weeks</strong></span>
+                            </div>
+                        </div></td>
+                        <td class="col-md-1" style="text-align: center">
+                        <input type="email" class="form-control" id="exampleInputEmail1" value="2">
+                        </td>
+                        <td class="col-md-1 text-center"><strong>R578.99</strong></td>
+                        <td class="col-md-1 text-center"><strong>R578.99</strong></td>
+                        <td class="col-md-1">
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span> Remove
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h5>Subtotal</h5></td>
+                        <td class="text-right"><h5><strong>R1157.98</strong></h5></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h5>Estimated shipping</h5></td>
+                        <td class="text-right"><h5><strong>R50</strong></h5></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h3>Total</h3></td>
+                        <td class="text-right"><h3><strong>R1207.98</strong></h3></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>
+                        <a href="products.php"><button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
+                        </button></a></td>
+                        <td>
+                        <button type="button" class="btn btn-success">
+                            Checkout <span class="glyphicon glyphicon-play"></span>
+                        </button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+        </div>
+      </div>
+      
+    </div>
+  </div>';
 
+    return $cart;
+}
 
 ?>
