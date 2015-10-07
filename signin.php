@@ -14,9 +14,9 @@
 		
 		
 		else{
-			echo "login starting<br>";
+			
 			$response = login();
-            echo "login finished<br>";
+           
             //echo $response;
 			if ($response[0]=="200"){
 				//create session
