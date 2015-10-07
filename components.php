@@ -428,7 +428,7 @@ function shopping_cart(){
                             </div>
                         </div></td>
                         <td class="col-md-1" style="text-align: center">
-                        <input type="email" class="form-control" id="exampleInputEmail1" value="2">
+                        <input type="email" class="form-control" id="exampleInputEmail1" value="1">
                         </td>
                         <td class="col-md-1 text-center"><strong>R578.99</strong></td>
                         <td class="col-md-1 text-center"><strong>R578.99</strong></td>
