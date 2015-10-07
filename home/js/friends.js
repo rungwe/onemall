@@ -70,7 +70,7 @@ function buildFriend(friendData){
 	
 	//RECEIVE => name: profile_pic, user_id, num_following, num_ads, num_mutual_friends, user_name;
 	var pic = friendData["profile_pic"], name=friendData["user_name"], id=friendData["user_id"], following=friendData["num_following"], ads=friendData["num_ads"], friends=friendData["num_mutual_friends"];
-	var template ='<div id="'+id+'" class="row" style="background-color:white; border-radius:5px;border: 2px solid #004A6E;margin-left:0px;margin-right:0px;">'+
+	var templat ='<div id="'+id+'" class="row" style="background-color:white; border-radius:5px;border: 2px solid #004A6E;margin-left:0px;margin-right:0px;">'+
 							'<div class="col-sm-3" style="margin-left:-15px;" style="margin-left:-15px;">'+
 								'<img src="'+pic+'" sytele="padding:0px;" width="90px" height="100px" alt="profile picture"/>'+
 							'</div>'+
@@ -99,8 +99,37 @@ function buildFriend(friendData){
 								'</div>'+
 							'</div>'+
 						'</div>';
-		return template;
-	
+		//return template;
+		
+		var template ='<div class="col-sm-6">'+
+                '<div class="panel panel-default panel-card">'+
+                   '<div class="panel-heading">'+
+                        '<img src="https://unsplash.imgix.net/12/barley.jpg?q=75&fm=jpg&s=f39de5ca1970a13dbe6af6c86b3c47ec" />'+
+                        '<button class="btn btn-primary btn-sm" role="button">Follow</button>'+
+                    '</div>'+
+                    '<div class="panel-figure">'+
+                        '<img class="img-responsive img-circle" src="'+pic+'" />'+
+                    '</div>'+
+                    '<div class="panel-body text-center">'+
+                        '<h4 class="panel-header">'+name+'</a></h4>'+
+                        '<small>I am very cool</small>'+
+                    '</div>'+
+					'<br>'+
+                    '<div class="panel-thumbnails">'+
+                        '<div class="row">'+
+                            '<div class="col-sm-4" style="cursor:pointer;">'+
+									'<p style="cursor:pointer;"> following <br><span style="background-color:#19A3D1;" class="badge">'+following+'</span></p>'+
+							'</div>'+
+							'<div class="col-sm-4">'+
+								'<p style="cursor:pointer;" > buddies <br><span style="background-color:#19A3D1;" class="badge">'+friends+'</span></p>'+
+							'</div>'+
+							'<div class="col-sm-4">'+
+								'<p style="cursor:pointer;"> Ads <br><span style="background-color:#19A3D1;" class="badge">'+ads+'</span></p>'+ 
+							'</div>'+
+                        '</div>'+
+                    '</div>'+
+                '</div>';
+	return template;
 	
 }
 

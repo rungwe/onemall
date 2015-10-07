@@ -23,8 +23,9 @@ function main_page(){
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/loader.css">
-        
+        <link rel="stylesheet" href="home/css/friends.css">
 		<link href="css/myshops.css" rel="stylesheet">
+        <link rel="stylesheet" href="home/css/friends.css">
 		<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
 		<script type="text/javascript" src="home/js/jquery.min.js"></script>
@@ -224,9 +225,15 @@ function main_page(){
 								    </div>
 							     </div>
 							    </center><br>
-							    <div id="friends">
 							
-							    </div>
+							    
+                                    
+                                        <div  id="friends">
+
+                                        </div>
+                                    
+                                
+							    
 							    <div id="suggested_friends" style="display:none">
 							
 							    </div>
