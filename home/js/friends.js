@@ -116,7 +116,7 @@ function buildFriend(friendData){
                     '</div>'+
 					'<br>'+
                     '<div class="panel-thumbnails">'+
-                        '<div class="row">'+
+                        '<div class="row" style="color:#B3B3B3;">'+
                             '<div class="col-sm-4" style="cursor:pointer;">'+
 									'<p style="cursor:pointer;"> following <br><span style="background-color:#19A3D1;" class="badge">'+following+'</span></p>'+
 							'</div>'+
