@@ -191,7 +191,7 @@ function ads_page(){
 		</div>
 	</section><!--/slider-->
 
-	<section style="background-color:#F2F2F2;">
+	<section >
 		<div class="container" >
 			<div class="row" >
 				<div class="col-sm-3">

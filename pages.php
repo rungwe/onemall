@@ -90,7 +90,7 @@ function signup_page($message=""){
                             </div>
                         </div>
                         <div class="col-sm-5 wow fadeInUp animated animated" style="visibility: visible; animation-name: fadeInUp;background-color: rgba(5,4,2,0);">
-                        	<div class="form-top" style="background-color: rgba(5,4,2,0.1);">
+                        	<div class="form-top" style="background-color: rgba(5,4,2,0.1);margin-top: -100px;">
                         		<div class="form-top-left">
                         			<h3 style="color:white;">Sign up now</h3>
                             		
@@ -99,8 +99,8 @@ function signup_page($message=""){
                         			<span aria-hidden="true" class="glyphicon glyphicon-pencil"></span>
                         		</div>
                             </div>
-                            <div class="form-bottom" style="background-color: rgba(5,4,2,0.1);">
-								<h3 style="color:red;" id="error">'.$message.'</h3>
+                            <div class="form-bottom" style="background-color: rgba(5,4,2,0.1);margin-top: -20px;">
+								<h3 style="color:red;" id="error"></h3>
 			                    <form role="form" action="registration.php" method="post" id ="reg-form">
 									<input type="hidden"  name="signup" value="true">
 			                    	<div class="form-group">
@@ -129,7 +129,7 @@ function signup_page($message=""){
                                             color: #004A6E;
                                         }
                                     </style>
-			                        <div class="btn-group pull-right" data-toggle="buttons">
+			                        <div class="btn-group col-sm-9" data-toggle="buttons">
                                         <label class="btn btn-primary type active">
                                         <input type="radio" name="options" id="option1" autocomplete="off" value="customer" checked> Individual
                                         </label>
@@ -140,9 +140,10 @@ function signup_page($message=""){
                                         <input type="radio" name="options" id="option2" autocomplete="off" value="company">Organisation
                                         </label>
                                         
-                                    </div><br><br>
-			                        <button type="button" onclick="validate_reg_form()" class="btn" style="background-color:#004A6E;">Sign me up!</button>
-			                        <div class="form-links">
+                                    </div>
+			                        <button type="button" onclick="validate_reg_form()" class="btn col-sm-3" style="background-color:#004A6E;">Sign up!</button>
+			                        
+                                    <div class="form-links">
 			                        	<a href="#" class="launch-modal" data-modal-id="modal-privacy">Privacy Policy</a> - 
 			                        	<a href="#" class="launch-modal" data-modal-id="modal-faq">FAQ</a>
 			                        </div>
@@ -159,6 +160,7 @@ function signup_page($message=""){
         </div>
         
         <!-- Features -->
+        <br>
         <div class="features-container section-container">
 	        <div class="container">
 	            <div class="row">

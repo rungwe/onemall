@@ -258,6 +258,7 @@ function create_ad(){
 					
 						<div class="row">
 							<center id="ad_error" style="color:red"></center>
+                            
 							<div class="col-sm-6">
 								<div class="form-group">
 										<label for="ad_title">title:</label>
@@ -265,6 +266,7 @@ function create_ad(){
 									</div>
 							</div>
 							<div class="col-sm-6">
+                                
 								<div class="form-group">
 								  <label for="category">category:</label>
 								  <select class="form-control" id="ad_category" name="category">
@@ -286,11 +288,17 @@ function create_ad(){
 								  </select>
 								</div>
 							</div>
+                            
+                            <div class="form-group col-sm-3">
+						        <label for="info">Price:</label>
+						        <input class="form-control" type="number" min="0" id="price" placeholder="amount" name="price" maxlength="150" style="resize:none;" required>
+						    </div>
+                            
 						</div>
 						
 						 <div class="form-group">
 						  <label for="info">product information:</label>
-						  <textarea class="form-control" rows="2" id="ad_info" name="product_info" maxlength="150" style="resize:none;" required></textarea>
+						  <textarea class="form-control" rows="3" id="ad_info" name="product_info" maxlength="150" style="resize:none;" required></textarea>
 						</div>
 						<br>
 						<label>upload images:</label>

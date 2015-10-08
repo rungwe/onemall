@@ -10,6 +10,7 @@ function post_ad(){
 	var title = document.getElementById("ad_title").value.trim();
     var category=document.getElementById("ad_category").value;
     var product_info =document.getElementById("ad_info").value.trim();
+    var price = document.getElementById("price").value.trim();
     //var pic1="", pic2="", pic3="";
 	//display_input_error("testing 1234");
 	if(document.getElementById("ad_title").value.trim()!=""){
