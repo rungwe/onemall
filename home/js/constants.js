@@ -3,6 +3,7 @@
 drawer="off"
 //url = "http://localhost:8080/Client.php";
 url ="Client.php"
+URI = "http://ec2-52-88-102-30.us-west-2.compute.amazonaws.com/";
 token="";
 function get_access(){
 	

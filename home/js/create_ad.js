@@ -30,14 +30,23 @@ function post_ad(){
 	if(document.getElementById("ad_info").value.trim()!=""){
 		document.getElementById("ad_info").value=document.getElementById("ad_info").value.trim();
 	}
-	else{
+    else{
 		display_input_error("Please enter description of this advert ):");
 		return;
 	}
+
+    if (price==""){
+        display_input_error("Please enter amount ):")
+        return;
+    }
 	
-	var form = document.getElementById("ad_form");
-	var formData = new FormData(form);
-	formData.append("create_ad","true");
+	
+    var ad_array={title:title,details:product_info,price:price, currency:"en-ZA",category:{category:category}}
+    var ad_jason = JSON.stringify(ad_array);
+    //alert(ad_jason);
+	//var form = document.getElementById("ad_form");
+	//var formData = new FormData(form);
+	//formData.append("create_ad","true");
 	
 	var xmlhttp;
 	if (window.XMLHttpRequest)
@@ -71,8 +80,9 @@ function post_ad(){
 		  }
 		  
 	//name: create_ad, name: pic1, name:pic2, name:pic3, name:title, name:category, name:product_info
-	xmlhttp.open("POST",url+"",true);
-	xmlhttp.send(formData);
+	xmlhttp.open("POST",URI+"customer/create-advert",true);
+    xmlhttp.setRequestHeader("Authorization",'Bearer ' + token);
+	xmlhttp.send();
 }
 	
 // read image uploads and display
