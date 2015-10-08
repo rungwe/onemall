@@ -60,7 +60,7 @@ function buildBroadcast(feed){
 			  '				<div class="panel-body">'+
 			  '					'+post_info+	
 			  '					<div class="row">'+
-			  '						<div> <center><img  class="img-border" src="'+poster+'" style="max-height:300px;min-height:200;max-width:100%;boder-radius:5%;"></center></div>'+
+			  '						<div> <center><img  class="img-border" src="'+poster+'" style="max-height:300px;min-height:200;max-width:100%;"></center></div>'+
 			  '					</div>'+
 			  '				</div>'+
 			  '				<div class="panel-footer">'+

@@ -140,7 +140,7 @@ function edit_account_modal(){
 							<div class="col-sm-offset-2 col-sm-5">
 								<div class="form-group">
 									<label for="exampleInputEmail1">username</label>
-									<input type="text" class="form-control" id="username" value="chaddy">
+									<input type="text" class="form-control" id="username" value="">
 								</div>
 							</div>
 							
@@ -183,13 +183,13 @@ function edit_account_modal(){
 							<div class="col-sm-6">
 								<div class="form-group">
 										<label for="email">email</label>
-										<input type="email" class="form-control" id="email" value="kumbirair@yahoo.com" style="width:80%;">
+										<input type="email" class="form-control" id="email" value="" style="width:80%;">
 									</div>
 							</div>
 							<div class="col-sm-6">
 								<div class="form-group">
 										<label for="conf_new" style="text-align:right;">phone number</label>
-										<input type="text" class="form-control  pull-right" id="phone" value="0603886630" style="width:80%;">
+										<input type="text" class="form-control  pull-right" id="phone" value="" style="width:80%;">
 									</div>
 							</div>
 						<div class="form-group">

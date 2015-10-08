@@ -5,7 +5,7 @@ Date: 20 May 2015
 Content: Library for client side scripts for My Shops
 
 **/
-
+count =6
 function main_init(){
 	
 	var xmlhttp_br;
@@ -122,3 +122,15 @@ function loader(status){
 		document.getElementById("loader").style.display="none";
 	}
 }
+// infinity scroll
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
+            //alert("bottom of the page reached!");
+            if (count <=8) {
+                pull_broadcasts(count++);
+            }
+        }
+    });
+
+});

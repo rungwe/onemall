@@ -1,11 +1,9 @@
 <?php
- ini_set('display_errors',true);
- define('HOST','p:sessiondb.chujykwc6ihz.us-west-2.rds.amazonaws.com');
- define('USER','root');
- define('DBNAME','sessionDB');
- define('PSWD','project123');
-//use SessionHandlerInterface;
-//use SessionHandlerInterface;
+ini_set('display_errors',true);
+define('HOST','p:sessiondb.chujykwc6ihz.us-west-2.rds.amazonaws.com');
+define('USER','root');
+define('DBNAME','sessionDB');
+define('PSWD','project123');
 class CustomSessionHandler
 {
    public $status;
@@ -36,7 +34,10 @@ class CustomSessionHandler
 
     public function close()
     {
-        
+        $db = new mysqli(HOST, USER, PSWD,DBNAME);
+        $read_stmt = $db->prepare("UPDATE session set username=? where session_id=?");
+        $read_stmt->bind_param("ss",$_SESSION["email"],session_id());
+        $read_stmt->execute();
         return TRUE;
     }
     public function read($sid)
