@@ -6,7 +6,7 @@ Content: Library for client side scripts for My Shops
 
 **/
 //***************Globals**********************************************
-var reloadsug=setInterval(function(){pull_suggestions(3)}, 10000);
+
 //***************end of globals***************************************
 
 /*
@@ -74,7 +74,6 @@ function pull_suggestions(num){
 		  {
 		  if (xmlhttp_sug.readyState==4 && xmlhttp_sug.status==200)
 			{
-			window.clearInterval(reloadsug);
 			var info =xmlhttp_sug.responseText;
 			var data =JSON.parse(info);
 			displaySuggestions(data,suggestionID);

@@ -61,7 +61,7 @@ function get_profile(){
 		          var profile_data = xmlhttp_br.responseText;
 		          //alert(profile_data);
 		          var profileInfo = JSON.parse(profile_data)[0];
-		          document.getElementById("num_followers").innerHTML = 12;
+		          document.getElementById("num_followers").innerHTML = profileInfo.num_of_followigs;
 		          document.getElementById("num_buddies").innerHTML = profileInfo.num_friends;
 		          document.getElementById("num_ads").innerHTML = profileInfo.active_ads;
 		          document.getElementById("user-name").innerHTML = profileInfo.name;

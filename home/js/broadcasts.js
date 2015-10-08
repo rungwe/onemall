@@ -7,7 +7,6 @@ Description: facilitates broadcasts
 **/
 
 //*****************************************GLOBALS************************************************
-var reloadbr=setInterval(function(){pull_broadcasts(6)}, 10000);
 
 var num_broadcasts=0;
 //*************************************end of globals*********************************************
@@ -51,7 +50,7 @@ function buildBroadcast(feed){
 		var template= '<div id="'+ID+'" class="panel panel-info">'+
 			  '				<div class="panel-heading">'+
 			  ' 					<div class="row">'+
-			  ' 						<a href="profile_page.php"><img class="col-sm-2" src="'+shop_profile_pic+'" height="53px" width="50px"/></a>'+
+			  ' 						<a href="profile_page.php"><img class="col-sm-2" src="'+shop_profile_pic+'" height="53px" width="50px" style="border-radius:2px;"/></a>'+
 			  ' 						<div class="col-sm-5">'+
 			  ' 							<p><b><a href="profile_page.php">'+shop_name+'</a></b></p>'+
 			  '							<p style="color:grey">'+time+'</p>'+
@@ -61,7 +60,7 @@ function buildBroadcast(feed){
 			  '				<div class="panel-body">'+
 			  '					'+post_info+	
 			  '					<div class="row">'+
-			  '						<div> <center><img src="'+poster+'" style="max-height:300px;min-height:200;max-width:100%;"></center></div>'+
+			  '						<div> <center><img  class="img-border" src="'+poster+'" style="max-height:300px;min-height:200;max-width:100%;boder-radius:5%;"></center></div>'+
 			  '					</div>'+
 			  '				</div>'+
 			  '				<div class="panel-footer">'+
@@ -95,7 +94,6 @@ function pull_broadcasts(num){
 		  {
 		  if (xmlhttp_br.readyState==4 && xmlhttp_br.status==200)
 			{
-			window.clearInterval(reloadbr);
 			document.getElementById("loader").style.display="none"
 			var info =xmlhttp_br.responseText;
 			var data = JSON.parse(info);
