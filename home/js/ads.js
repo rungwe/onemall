@@ -65,7 +65,7 @@ function buildAd(ad){
 									'<img src="'+profile_img_url+'" width="53" style="border:1px solid #F2F2F2;"/>' +
 								'</div>' +
 								'<div class="col-sm-6">' +
-									'<div class="panel" style="background-color:white;width:400px;left:0px;border: 1px solid #0066FF;">' +
+									'<div class="panel" style="background-color:white;width:400px;left:0px;">' +
 										'<div class="panel-body" style="margin-bottom:-5px">' +
 
 											'<div class="row">' +

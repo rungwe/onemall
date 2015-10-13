@@ -35,7 +35,7 @@ function ads_page(){
    
 </head><!--/head-->
 
-<body onload="ads_init()" >
+<body onload="ads_init()" style="background-color:#F2F2F2;">
 	
 	
 	<div id="nav" class="navbar-fixed-top" style="width:100%;height:55px;margin:0px;padding:0px;">
@@ -112,7 +112,8 @@ function ads_page(){
 		 '.create_ad().'
 		'.edit_account_modal().'
 	    '.ad_detail().'
-	<section id="slider" style="height:400px;"><!--slider-->
+        <br><br><br>
+	<!-- <section id="slider" style="height:400px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -180,7 +181,7 @@ function ads_page(){
 				</div>
 			</div>
 		</div>
-	</section><!--/slider-->
+	</section> slider-->
 
 	<section >
 		<div class="container" >
@@ -188,7 +189,7 @@ function ads_page(){
 				<div class="col-sm-3">
 					<div class="left-sidebar">
 						<h2>Category</h2>
-						<div class="panel-group  panel-primary category-products" id="accordian" style="border: 1px solid #0066FF;"><!--category-productsr-->
+						<div class="panel-group  panel-primary category-products" id="accordian"><!--category-productsr-->
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title"><a href="#">All</a></h4>
