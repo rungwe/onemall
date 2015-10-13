@@ -10,7 +10,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
-		<link src="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/typicons.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/popup.css">
@@ -39,7 +39,7 @@
         <div class="top-content" style="position: relative; z-index: 0; background: none;">
         	
         	<!-- Top menu -->
-			<nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
+			<nav class="navbar" role="navigation" style="background-color: white;border-bottom: 1px solid #004A6E">
 				<div class="container">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
@@ -52,11 +52,11 @@
 					</div>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="top-navbar-1">
-						<ul class="nav navbar-nav navbar-right">
+						<ul class="nav navbar-nav navbar-right" style="color: #004A6E">
 							<li><a class="scroll-link" href="#features">Features</a></li>
 							<li><a class="scroll-link" href="#how-it-works">How it works</a></li>
 							<li><a class="scroll-link" href="#testimonials">Testimonials</a></li>
-							<li><a class="btn btn-link-2" href="login.php">Login</a></li>
+							<li><a class="btn btn-link-2" href="login.php" style="background-color: #004A6E">Login</a></li>
 						</ul>
 					</div>
 				</div>

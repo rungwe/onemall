@@ -181,5 +181,12 @@ function custom_handler_init(){
     return $status;
 }
 
+function init(){
+    ini_set('display_errors',true);
+    require 'components.php';
+    custom_handler_init();
+    session_start();
+}
+
  
 ?>

@@ -41,7 +41,7 @@ function post_ad(){
     }
 	
 	
-    var ad_array={title:title,details:product_info,price:price, currency:"en-ZA",category:{category:category}}
+    var ad_array={title:title,details:product_info,price:price, currency:"en-ZA",categories:[{category:category}]}
     var ad_jason = JSON.stringify(ad_array);
     //alert(ad_jason);
 	//var form = document.getElementById("ad_form");
@@ -58,31 +58,30 @@ function post_ad(){
 		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 		  
 		  }
-	xmlhttp.onreadystatechange=function()
-		  {
-			  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-				{
-				//window.clearInterval(reloadbr);
-				
-				var info =xmlhttp.responseText;
-				
-				if(info=="success"){
-					ad_success();
-					//clear form
-					reset_form();
-					//alert(xmlhttp.responseText);
-					
-				}
-				else{
-					ad_error();
-				}
-			  }
+		  xmlhttp.onreadystatechange = function () {
+		      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+		          //window.clearInterval(reloadbr)
+		          var info = xmlhttp.responseText;
+                  //alert("ad received " + info);
+		          //process_uploads(info);
+		          //alert("ad received " + info);
+		          ad_success();
+		          //clear form
+		          reset_form();
+		          //alert(xmlhttp.responseText);
+
+
+		      }
+		      else if (xmlhttp.readyState == 4 && xmlhttp.status != 200) {
+		          ad_error();
+		      }
 		  }
 		  
 	//name: create_ad, name: pic1, name:pic2, name:pic3, name:title, name:category, name:product_info
 	xmlhttp.open("POST",URI+"customer/create-advert",true);
     xmlhttp.setRequestHeader("Authorization",'Bearer ' + token);
-	xmlhttp.send();
+    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+	xmlhttp.send(ad_jason);
 }
 	
 // read image uploads and display
@@ -173,38 +172,49 @@ function readURL(input,id) {
 	document.getElementById("pic3").src="img/ad_prof.png";
  }
  
- function ads_num(){
-	
-	var xmlhttp;
-	
-	if (window.XMLHttpRequest)
-		  {// code for IE7+, Firefox, Chrome, Opera, Safari
-		  
-		  xmlhttp=new XMLHttpRequest();
-		  }
-		else
-		  {// code for IE6, IE5
-		 
-		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-		  }
-	
-	xmlhttp.onreadystatechange=function()
-		  {
-		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-			{
-				var info= xmlhttp.responseText;
-				document.getElementById("num_ads").innerHTML=info;
-				
-			}
-		  }
-	//SEND => name: num_ads 
-	//RECEIVE => name: ads_num  
-	xmlhttp.open("POST",url+"?num_ads=true",true);
-	xmlhttp.send();
-		  
-	
+
+function process_uploads(id){
+    if (document.getElementById("ad_pic1").value!=""){
+        alert(document.getElementById("ad_pic1").value)
+        upload_ad_pic(document.getElementById("pic1"), id);
+    }
+   if (document.getElementById("pic2").value!=""){
+        upload_ad_pic(document.getElementById("pic2"), id);
+    }
+
+    if (document.getElementById("pic3").value!=""){
+        upload_ad_pic(document.getElementById("pic3"), id);
+    }
 }
 
 
-// pull ads
+function upload_ad_pic(img_file,ad_id){
+    var img_upload = new FormData();
+    img_upload.append("img", img_file.files[0]);
+    var xmlhttp_br;
+	
+	if (window.XMLHttpRequest)
+		  {// code for IE7+, Firefox, Chrome, Opera, Safari
+		  xmlhttp_br=new XMLHttpRequest();
+		 
+		  }
+	else
+		{// code for IE6, IE5
+		xmlhttp_br=new ActiveXObject("Microsoft.XMLHTTP");
+		  
+		}
+		xmlhttp_br.onreadystatechange = function () {
+		    if (xmlhttp_br.readyState == 4 && xmlhttp_br.status == 200) {
+		        var response = xmlhttp_br.responseText;
+		        alert("uploaded");
+		    }
+		} 	
+	xmlhttp_br.open("POST",URI+"upload-advert-pictures?id="+ad_id,true);
+    xmlhttp_br.setRequestHeader("Authorization",'Bearer ' + token);
+	xmlhttp_br.send(img_upload);
+
+}
+
+
+    
 

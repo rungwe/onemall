@@ -7,7 +7,7 @@ Content: Library for client side scripts for My Shops
 **/
 count =6
 function main_init(){
-	
+	initAutocomplete(); // google maps
 	var xmlhttp_br;
 	
 	if (window.XMLHttpRequest)
@@ -25,20 +25,24 @@ function main_init(){
 
 		          var access = xmlhttp_br.responseText;
 		          token = access.trim();
-		          pull_broadcasts(6);
-		          pull_suggestions(3);
-		          drawer_init();
-		          close_drawer_onload(1500);
-		          //alert("loading profile.....");
-		          get_profile();
 		          if (token == "invalid") {
 		              window.location.href = "login.php";
 		          }
+		          else {
+		              pull_broadcasts(6);
+		              pull_suggestions(3);
+		              drawer_init();
+		              close_drawer_onload(1500);
+		              //alert("loading profile.....");
+		              get_profile();
+		          }
+
 
 		      }
 		  } 	
 	xmlhttp_br.open("POST","access.php?request=true",true);
 	xmlhttp_br.send();
+	
 }
 
 function get_profile(){
@@ -64,7 +68,7 @@ function get_profile(){
 		          document.getElementById("num_followers").innerHTML = profileInfo.num_of_followigs;
 		          document.getElementById("num_buddies").innerHTML = profileInfo.num_friends;
 		          document.getElementById("num_ads").innerHTML = profileInfo.active_ads;
-		          document.getElementById("user-name").innerHTML = profileInfo.name;
+		          document.getElementById("user-name").innerHTML = profileInfo.fname+"&nbsp;&nbsp;"+profileInfo.lname;
 		      }
 		  } 	
 	xmlhttp_br.open("GET",uri+"/customer/get-user-profile",true);

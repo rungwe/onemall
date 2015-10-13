@@ -12,10 +12,10 @@ class CustomSessionHandler
    }
    public function getStatus(){
        if($this->status==TRUE){
-            return "it worked";
+            return True;
         }
         else{
-            return "nah it didn't work";
+            return False;
         }
    }
    public function open($savePath, $sessionName)

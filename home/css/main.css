@@ -593,7 +593,7 @@ ul.sub-menu {
 .left-sidebar h2:after, h2.title:after{
 	content: " ";
 	position: absolute;
-	border: 1px solid #f5f5f5;
+	border: 1px solid #004A6E;
 	bottom:8px;
 	left: 0;
 	width: 100%;

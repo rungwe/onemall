@@ -1,9 +1,7 @@
 <?php
-ini_set('display_errors',true);
+
 require 'session.php';
-require 'components.php';
-custom_handler_init();
-session_start();
+init();
 
 
 aunthenticate(main_page());
@@ -26,11 +24,18 @@ function main_page(){
         <link rel="stylesheet" href="home/css/friends.css">
 		<link href="home/css/myshops.css" rel="stylesheet">
         <link rel="stylesheet" href="home/css/friends.css">
+        <link rel="stylesheet" href="home/css/profile.css">
 		<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
-		<script type="text/javascript" src="home/js/jquery.min.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+		<link href="home/css/googlemaps.css" rel="stylesheet">
+        <script type="text/javascript" src="home/js/googlemaps.js"></script>
+        <script type="text/javascript" src="home/js/jquery.min.js"></script>
 		<<script type="text/javascript" src="home/js/constants.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+        <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+        <script type="text/javascript" src="home/js/googlemaps.js"></script>
 		<script type="text/javascript" src="home/js/like.js"></script>
 		<script type="text/javascript" src="home/js/broadcasts.js"></script>
 		<script type="text/javascript" src="home/js/suggestions.js"></script>
@@ -45,7 +50,7 @@ function main_page(){
 	
 	
 	<!-- <body id="body" onload="main_init()" style="background-image:url(img/cloud.png);background-size:cover;background-repeat:no-repeat;overflow:hidden;background-attachment:fixed;overflow-y:auto;"> -->
-		<body onload="main_init()" style="background-color:#F2F2F2;overflow-y:auto;">
+		<body onload="main_init()"  style="background-color:#F2F2F2;overflow-y:auto;">
 		<div id="nav" class="navbar-fixed-top" >
 			<div class="container-fluid">
 				<div class="row">

@@ -2,7 +2,7 @@
 
 function nav_drawer(){
 	$drawer_html ='<div id="drawer"class="row" style="position:fixed;z-index:3;left:0px;">
-			<div class="col-sm-4" id="drawer-content" style="border:2px solid #004A6E; width:250px;background-color:white;position:fixed;z-index:3;margin:0px;padding:0px;">
+			<div class="col-sm-4" id="drawer-content" style="border:1px solid #004A6E; width:250px;background-color:white;position:fixed;z-index:3;margin:0px;padding:0px;">
 				<div style="background-image:url(\'img/bk-freeze-ga.jpg\');height:150;width:100%;margin:0px;background-size:cover;">
 				
 				</div>
@@ -125,102 +125,182 @@ function edit_account_modal(){
 					</div>
 				  </div>
 				  <div class="modal-body">
-						<div class="row">
-							<div class="col-sm-2">
-								<img src="img/profile.png" height="80" width="80"/>
-								 
-							</div>
-							<div class="col-sm-3">
-							  <div class="form-group"
-								<label for="exampleInputFile">upload pic</label>
-								<input type="file" id="profile_pic">
-								
-							  </div>
-							</div>
-							<div class="col-sm-offset-2 col-sm-5">
-								<div class="form-group">
-									<label for="exampleInputEmail1">username</label>
-									<input type="text" class="form-control" id="username" value="">
-								</div>
-							</div>
-							
-						</div>
-						<button type="button" class="btn btn-primary pull-right">update</button>
-						<br>
-						<hr/>
-						<form>
-						 <div class="row">
-							<div class="col-sm-6">
-								<div class="form-group">
-										<label for="new_pass">new password</label>
-										<input type="password" class="form-control" id="new_pass" style="width:80%;">
-									</div>
-							</div>
-							<div class="col-sm-6">
-								<div class="form-group">
-										<label for="conf_new" style="text-align:right;">confirm new password</label>
-										<input type="password" class="form-control  pull-right" id="conf_new" style="width:80%;">
-									</div>
-							</div>
-						 </div>
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="form-group">
-										<label for="pass">old password</label>
-										<input type="password" class="form-control" id="pass" style="width:80%;">
-									</div>
-							</div>
-							<div class="col-sm-6">
-								<div class="form-group">
-									<button type="button" class="btn btn-primary pull-right" style="margin-top:10%;">change password</button>
-								</div>
-							</div>
-						</div>
-						</form>
-						<hr/>
-						<form>
-							<div class="row">
-							<div class="col-sm-6">
-								<div class="form-group">
-										<label for="email">email</label>
-										<input type="email" class="form-control" id="email" value="" style="width:80%;">
-									</div>
-							</div>
-							<div class="col-sm-6">
-								<div class="form-group">
-										<label for="conf_new" style="text-align:right;">phone number</label>
-										<input type="text" class="form-control  pull-right" id="phone" value="" style="width:80%;">
-									</div>
-							</div>
-						<div class="form-group">
-									<button type="button" class="btn btn-primary pull-right" style="margin-top:2%;">update</button>
-								</div>
-						 </div>
-						 
-						</form>
-						<hr/>
-						<form>
-							<div class="row">
-							<div class="col-sm-6">
-								<div class="form-group">
-										<label for="email">country</label>
-										<input type="email" class="form-control" id="country"  style="width:80%;">
-									</div>
-							</div>
-							<div class="col-sm-6">
-								<div class="form-group" style="margin-top:7%;">
-										<label for="conf_new" style="text-align:right;">state</label>
-										<input type="text" class="form-control  pull-right" id="state"  style="width:80%;">
-									</div>
-							</div>
-						<div class="form-group">
-									<button type="button" class="btn btn-primary pull-right" style="margin-top:2%;">update</button>
-								</div>
-						 </div>
-						 
-						</form>
 						
-					
+                        <div class="" style="margin-top:-58px;">
+                            <div class="row">
+                                <div class="board">
+                                    <div class="board-inner">
+                                    <ul class="nav nav-tabs" id="myTab">
+                                    <div class="liner"></div>
+                                     <li class="active">
+                                     <a href="#home" data-toggle="tab" title="welcome">
+                                      <span class="round-tabs one">
+                                              <i class="glyphicon glyphicon-user middle"></i>
+                                      </span> 
+                                  </a></li>
+
+                                  <li><a href="#profile" data-toggle="tab" title="profile">
+                                     <span class="round-tabs two">
+                                         <i class="glyphicon glyphicon-user middle"></i>
+                                     </span> 
+                           </a>
+                                 </li>
+                                 <li><a href="#messages" data-toggle="tab" title="bootsnipp goodies">
+                                     <span class="round-tabs three">
+                                          <i class="glyphicon glyphicon-map-marker middle"></i>
+                                     </span> </a>
+                                     </li>
+
+                                     <li><a href="#settings" data-toggle="tab" title="blah blah">
+                                         <span class="round-tabs four">
+                                              <i class="glyphicon glyphicon-phone-alt middle"></i>
+                                         </span> 
+                                     </a></li>
+
+                                     <li><a href="#doner" data-toggle="tab" title="completed">
+                                         <span class="round-tabs five">
+                                              <i class="glyphicon glyphicon-ok middle"></i>
+                                         </span> </a>
+                                     </li>
+                     
+                                     </ul></div>
+
+                                     <div class="tab-content">
+                                      <div class="tab-pane fade in active" id="home">
+                                          <div class="row">
+                                              <div class="col-sm-3">
+								                        <img src="img/profile.png" height="80" width="80"/>
+							                    </div>
+							                    <div class="col-sm-6">
+							                        <div class="form-group"
+								                    <label for="exampleInputFile">upload pic</label>
+								                    <input type="file" id="profile_pic">
+								
+							                        </div>
+							                    </div>
+                                            </div>
+                                            <br>
+                                            <div class="form-group">
+                                                <label for="exampleInputName2">First Name</label>
+                                                <input type="text" class="form-control" id="exampleInputName2" maxlength="26" placeholder="">
+                                            </div>
+                                             <div class="form-group">
+                                                <label for="exampleInputEmail2">Middle Name</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail2" maxlength="26" placeholder="">
+                                             </div>
+
+                                             <div class="form-group">
+                                                <label for="exampleInputEmail2">Surname</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail2" maxlength="26" placeholder="">
+                                             </div>
+                                             <button type="button" class="btn btn-primary pull-right">update</button>
+                                      </div>
+                                      <div class="tab-pane fade" id="profile">
+                                          <div class="form-group">
+                                                <label for="exampleInputName2">Date of Birth</label>
+                                                <input type="text" class="form-control" id="exampleInputName2" maxlength="10" placeholder="1991-12-31">
+                                            </div>
+                                             <div class="form-group">
+                                                <label for="exampleInputEmail2">Ethinic group</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail2" maxlength="26" placeholder="">
+                                             </div>
+                                             <div class="row">
+                                                 <div class="form-group">
+                                                    <label for="sex" class="col-sm-2">
+								                        Gender:
+							                        </label>
+							                        <div class="col-sm-4">
+								                        <label class="radio">
+									                        <input type="radio" name="sex" id="sex" value="male" checked>
+									                        Male
+								                        </label>
+								                        <label class="radio">
+									                        <input type="radio" name="sex" id="Radio1" value="female">
+									                        Female
+								                        </label>
+							                        </div>
+                                                 </div>
+                                             </div>
+                                             <button type="button" class="btn btn-primary pull-right">update</button>
+                                      </div>
+                                      <div class="tab-pane fade" id="messages">
+                                          <div class="row" >
+						                    <div>
+							                    <label for="autocomplete" class="col-sm-3">
+								                    Search for Address:
+							                    </label>
+							                    <div class="col-sm-9">
+								                    <input type="text" class="form-control" id="autocomplete" placeholder="search address" onFocus="geolocate()">
+								                    
+							                    </div>
+							                    <div class="col-sm-3">
+								                    <input type="hidden" class="form-control" id="street_number" placeholder="street address" disabled="true">
+							                    </div>
+							                    <div class="col-sm-2">
+								                    <input type="hidden" class="form-control" id="route"
+										                    disabled="true"></input>
+							                    </div>
+						                    </div>
+					                    </div>
+					                    <br>
+					                    <div class="row">
+							                    <label for="locality" class="col-sm-2">
+								                    City:
+							                    </label>
+							                    <div class="col-sm-4">
+								                    <input type="text" class="form-control" id="locality" placeholder="city" disabled="true">
+							
+							                    </div>
+						                    <label for="administrative_area_level_1" class="col-sm-2">
+							                    State:
+							                    </label>
+							                    <div class="col-sm-4">
+								                    <input type="text" class="form-control" id="administrative_area_level_1" placeholder="state" disabled="true">
+							                    </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <label for="country" class="col-sm-2">
+						                    Country:
+						                    </label>
+							                <div class="col-sm-4">
+								                <input class="form-control" id="country"
+										                disabled="true" placeholder="country"></input>
+							                </div>
+						                    <label for="postal_code" class="col-sm-2">
+							                    Zip Code
+						                    </label>
+							                    <div class="col-sm-4">
+								                    <input class="form-control" id="postal_code"
+										                    disabled="true" placeholder="zip code"></input>
+							                    </div>
+					                    </div>
+                                        <button type="button" class="btn btn-primary pull-right">update</button>
+                                      </div>
+                                      <div class="tab-pane fade" id="settings">
+                                          <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1"  disabled="true">
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="exampleInputPassword1">Cell</label>
+                                            <input type="" class="form-control" id="exampleInputPassword1" >
+                                          </div>
+                                          <button type="button" class="btn btn-primary pull-right">update</button>
+                                     </div>
+                                      <div class="tab-pane fade" id="doner">
+                                           <div class="alert alert-info">
+                                                <strong>Thank you </strong> 
+                                            </div>
+                                      </div>
+                <div class="clearfix"></div>
+                </div>
+
+                </div>
+                </div>
+                </div>
+                
+                   
 				  </div>
 				  
 				</div><!-- /.modal-content -->
@@ -246,13 +326,15 @@ function create_ad(){
 				  </div>
 				  <form id="ad_form" action="" method="" enctype="multipart/form-data">
 				  <div id="ads_success" class="modal-body" style="display:none">
-					<center style=\'color:blue\'>Thank you :) <br> your ad has been placed successfully</center>
+					    <div class="alert alert-info">
+                            <strong>Thank you </strong> your ads has be posted successfully
+                        </div>
 				  </div>
-				  <div id="ads_success" class="modal-body" style="display:none">
-					<center style=\'color:blue\'>Thank you :) <br> your ad has been placed successfully</center>
-				  </div>
+				  
 				  <div id="ads_error" class="modal-body" style="display:none">
-					<center style=\'color:red\'>Sorry ): <br> your ad has not been placed successfully, you might have run out of credits for ads <br> You can buy more ad credits and continue</center>
+					<div class="alert alert-danger">
+                        <strong>Sorry :(</strong> Something went wrong please, please try again. check if you still have credits
+                    </div>
 				  </div>
 				  <div id="ads_body" class="modal-body">
 					
@@ -380,7 +462,7 @@ function post_interface(){
 function shopping_cart(){
     
     $cart=' <div class="modal fade" id="cart" role="dialog">
-    <div class="modal-dialog modal-lg" style="width:80%;">
+    <div class="modal-dialog modal-lg" style="width:65%";>
     
       <!-- Modal content-->
       <div class="modal-content">
@@ -391,9 +473,9 @@ function shopping_cart(){
           
         </div>
         <div class="modal-body">
-          <div class="container">
+          <div>
     <div class="row">
-        <div class="col-sm-12 col-md-10">
+        <div class="col-sm-12">
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -406,7 +488,7 @@ function shopping_cart(){
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="col-sm-8 col-md-6">
+                        <td class="col-sm-8">
                         <div class="media">
                             <a class="thumbnail pull-left" href="#"> <img class="media-object" src="img/products/clock.jpg" style="max-height: 72px;"> </a>
                             <div class="media-body">
@@ -415,12 +497,12 @@ function shopping_cart(){
                                 <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
                             </div>
                         </div></td>
-                        <td class="col-sm-1 col-md-1" style="text-align: center">
-                        <input type="email" class="form-control" id="exampleInputEmail1" value="1">
+                        <td class="col-sm-1" style="text-align: center">
+                        <input type="number" class="form-control" id="" value="1">
                         </td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>R1008.87</strong></td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>R1008.87</strong></td>
-                        <td class="col-sm-1 col-md-1">
+                        <td class="col-sm-1 text-center"><strong>R1008.87</strong></td>
+                        <td class="col-sm-1 text-center"><strong>R1008.87</strong></td>
+                        <td class="col-sm-1 ">
                         <button type="button" class="btn btn-danger">
                             <span class="glyphicon glyphicon-remove"></span> Remove
                         </button></td>
@@ -436,7 +518,7 @@ function shopping_cart(){
                             </div>
                         </div></td>
                         <td class="col-md-1" style="text-align: center">
-                        <input type="email" class="form-control" id="exampleInputEmail1" value="1">
+                        <input type="number" class="form-control" id="na" value="1">
                         </td>
                         <td class="col-md-1 text-center"><strong>R578.99</strong></td>
                         <td class="col-md-1 text-center"><strong>R578.99</strong></td>
@@ -491,6 +573,106 @@ function shopping_cart(){
   </div>';
 
     return $cart;
+}
+
+function ad_detail(){
+
+    $detailed ='<div class="modal fade" id="ad_detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document" style="width:70%;">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel">Adcenter</h4>
+		  </div>
+		  <div class="modal-body">
+				<div class="product-details"><!--product-details-->
+						<div class="col-sm-5">
+							<div class="view-product">
+								<img id="ad_first_image" src="home/img/no_image.jpg" alt="" />
+							</div>
+
+						</div>
+						<div class="col-sm-7">
+							<div class="product-information"><!--/product-information-->
+								<h2 id="ad_title">Title: womens apparel</h2>
+								<p id="ad_description">Description:</p>
+								<span>
+									<span id="ad_price">US $59</span>
+									<button type="button" class="btn btn-fefault cart">
+										<i class="fa fa-shopping-cart"></i>
+										Add to cart
+									</button>
+								</span>
+								
+								<p><b>Condition:</b> New</p>
+								
+								
+							</div><!--/product-information-->
+						</div>
+					</div><!--/product-details-->
+					
+					<div class="row">
+						<div id="similar-product" class="carousel slide col-sm-5" data-ride="carousel">
+									
+									  <!-- Wrapper for slides -->
+									<div id="ad_images" class="carousel-inner">
+										<div class="item active">
+										  <img src="images/product-details/similar1.jpg" alt="">
+										  <img src="images/product-details/similar2.jpg" alt="">
+										  <img src="images/product-details/similar3.jpg" alt="">
+										  
+										</div>
+										<div class="item">
+										  <img src="images/product-details/similar1.jpg" alt="">
+										  <img src="images/product-details/similar2.jpg" alt="">
+										  <img src="images/product-details/similar3.jpg" alt="">
+										  
+										</div>
+									
+									</div>
+									
+									  <!-- Controls -->
+									  <a class="left item-control" href="#similar-product" data-slide="prev">
+										<i class="fa fa-angle-left"></i>
+									  </a>
+									  <a class="right item-control" href="#similar-product" data-slide="next">
+										<i class="fa fa-angle-right"></i>
+									  </a>
+						</div>
+						
+						<div class="category-tab shop-details-tab col-sm-6"><!--category-tab-->
+						<div class="col-sm-12">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="#features" data-toggle="tab">Features</a></li>
+								<li><a href="#owner" data-toggle="tab">Owner Details</a></li>
+								
+								<li ><a href="#comments" data-toggle="tab">Comments</a></li>
+							</ul>
+						</div>
+						<div class="tab-content">
+							<div class="tab-pane fade" id="features" >
+								Specifications
+							</div>
+							
+							<div class="tab-pane fade" id="owner" >
+								Owner Details
+							</div>
+							
+							<div class="tab-pane fade active in" id="comments" >
+								Comments
+							</div>
+							
+						</div>
+					</div><!--/category-tab-->
+					</div>
+					
+		  </div>
+		  
+		</div>
+	  </div>
+	</div>';
+
+    return $detailed;
 }
 
 ?>

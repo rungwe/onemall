@@ -1,0 +1,112 @@
+<html>
+<head>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/bootstrap.min.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
+		<link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ad_detail">
+	  Launch demo modal
+	</button>
+
+	<!-- Modal -->
+	<div class="modal fade" id="ad_detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document" style="width:70%;height:100%;">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel">Adcenter</h4>
+		  </div>
+		  <div class="modal-body">
+				<div class="product-details"><!--product-details-->
+						<div class="col-sm-5">
+							<div class="view-product">
+								<img id="ad_first_image" src="home/img/no_image.jpg" alt="" />
+							</div>
+
+						</div>
+						<div class="col-sm-7">
+							<div class="product-information"><!--/product-information-->
+								<h2 id="ad_title">Title: womens apparel</h2>
+								<p id="ad_description">Description:</p>
+								<span>
+									<span id="ad_price">US $59</span>
+									<button type="button" class="btn btn-fefault cart">
+										<i class="fa fa-shopping-cart"></i>
+										Add to cart
+									</button>
+								</span>
+								
+								<p><b>Condition:</b> New</p>
+								
+								
+							</div><!--/product-information-->
+						</div>
+					</div><!--/product-details-->
+					
+					<div class="row">
+						<div id="similar-product" class="carousel slide col-sm-5" data-ride="carousel">
+									
+									  <!-- Wrapper for slides -->
+									<div id="ad_images" class="carousel-inner">
+										<div class="item active">
+										  <img src="images/product-details/similar1.jpg" alt="">
+										  <img src="images/product-details/similar2.jpg" alt="">
+										  <img src="images/product-details/similar3.jpg" alt="">
+										  
+										</div>
+										<div class="item">
+										  <img src="images/product-details/similar1.jpg" alt="">
+										  <img src="images/product-details/similar2.jpg" alt="">
+										  <img src="images/product-details/similar3.jpg" alt="">
+										  
+										</div>
+									
+									</div>
+									
+									  <!-- Controls -->
+									  <a class="left item-control" href="#similar-product" data-slide="prev">
+										<i class="fa fa-angle-left"></i>
+									  </a>
+									  <a class="right item-control" href="#similar-product" data-slide="next">
+										<i class="fa fa-angle-right"></i>
+									  </a>
+						</div>
+						
+						<div class="category-tab shop-details-tab col-sm-6"><!--category-tab-->
+						<div class="col-sm-12">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="#features" data-toggle="tab">Features</a></li>
+								<li><a href="#owner" data-toggle="tab">Owner Details</a></li>
+								
+								<li ><a href="#comments" data-toggle="tab">Comments</a></li>
+							</ul>
+						</div>
+						<div class="tab-content">
+							<div class="tab-pane fade" id="features" >
+								Specifications
+							</div>
+							
+							<div class="tab-pane fade" id="owner" >
+								Owner Details
+							</div>
+							
+							<div class="tab-pane fade active in" id="comments" >
+								Comments
+							</div>
+							
+						</div>
+					</div><!--/category-tab-->
+					</div>
+					
+		  </div>
+		  
+		</div>
+	  </div>
+	</div>
+</body>
+
+</html>

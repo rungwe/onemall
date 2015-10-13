@@ -1,9 +1,6 @@
 <?php
-ini_set('display_errors',true);
 require 'session.php';
-require 'components.php';
-custom_handler_init();
-session_start();
+init();
 
 aunthenticate(ads_page());
 
@@ -20,10 +17,9 @@ function ads_page(){
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
     <link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/prettyPhoto.css" rel="stylesheet">
     <link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/price-range.css" rel="stylesheet">
-	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/myshops.css" rel="stylesheet">
-    
-
-	<link href="css/main.css" rel="stylesheet">
+	<link href="home/css/myshops.css" rel="stylesheet">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+	<link href="home/css/main.css" rel="stylesheet">
 	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/responsive.css" rel="stylesheet">
 	<script type="text/javascript" src="home/js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="home/js/constants.js"></script>
@@ -39,7 +35,7 @@ function ads_page(){
    
 </head><!--/head-->
 
-<body onload="pull_suggestions(3)" >
+<body onload="ads_init()" >
 	
 	
 	<div id="nav" class="navbar-fixed-top" style="width:100%;height:55px;margin:0px;padding:0px;">
@@ -86,17 +82,16 @@ function ads_page(){
 						<div id="nav_content" style="margin-right:3%;">
 						  <ul class="nav navbar-nav navbar-right style_font" >
 								
-							<li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-home"><label style="font-size:13px;"><a href="index.php">&nbsp;Home&nbsp;</a></label></span></li>
-						<!--	<li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-bell"><label style="font-size:13px;">&nbsp;Notifications&nbsp;</label></span></li>
-					-->
+							<li onclick="Home()" style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><i class="icon ion-ios-home-outline" style="font-size:30px;color:#004A6E"><label style="font-size:13px;font-weight:400;">&nbsp;Home&nbsp;&nbsp;</label></i></li>
+							<!-- <li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-bell" ><label style="font-size:13px;">&nbsp;Notifications&nbsp;</label></span></li> -->
 							
 							<li style="cursor:pointer;"><span class="input-group" style="color:white;font-weight:900;font-size:150%;margin-top:15px;">
-																												<span class="glyphicon glyphicon-lock dropdown-toggle" id="account" data-toggle="dropdown" aria-expanded="true"><label style="font-size:13px;">&nbsp;Account</label></span>
+																												<i class="icon ion-ios-locked-outline dropdown-toggle" id="account" data-toggle="dropdown" aria-expanded="true" style="font-size:30px;color:#004A6E"><label style="font-size:13px;font-weight:400;">&nbsp;Account</label></i>
 																													<ul class="dropdown-menu" role="menu" aria-labelledby="account">
-																														<li role="presentation" class="dropdown-header"><center>Chaddy<center></li>
+																														<li role="presentation" class="dropdown-header"><center>Chaddy</center></li>
 																														 <li role="presentation" class="divider"></li>
 																														<li role="presentation" data-toggle="modal" data-target="#edit_ac"><a role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;settings</a></li>
-																														<li role="presentation"><a role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;logout</a></li>
+																														<li role="presentation"><a href="logout.php" role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;logout</a></li>
 																														<li role="presentation"><a role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;about us</a></li>
 																														<li role="presentation"><a role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-question-sign"></span>&nbsp;&nbsp;help</a></li>
 																													 </ul>
@@ -113,14 +108,10 @@ function ads_page(){
 			</div>
 			
 		</div> <!-- navabar end -->
-	<?php
-		require "components.php";
-		echo create_ad();
-		echo edit_account_modal();
 	
-	?>
-	
-	
+		 '.create_ad().'
+		'.edit_account_modal().'
+	    '.ad_detail().'
 	<section id="slider" style="height:400px;"><!--slider-->
 		<div class="container">
 			<div class="row">
@@ -197,7 +188,7 @@ function ads_page(){
 				<div class="col-sm-3">
 					<div class="left-sidebar">
 						<h2>Category</h2>
-						<div class="panel-group  panel-primary category-products" id="accordian" style="border: 2px solid #F2F2F2;"><!--category-productsr-->
+						<div class="panel-group  panel-primary category-products" id="accordian" style="border: 1px solid #0066FF;"><!--category-productsr-->
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title"><a href="#">All</a></h4>
@@ -286,7 +277,7 @@ function ads_page(){
 						</div><!--/price-range-->
 						
 						<div class="text-center"><!--shipping-->
-							<img src="img/ads_banner2.png" alt="" height="400"  style="background-size:cover;"/>
+							<img src="home/img/ads_banner2.png" alt="" height="400"  style="background-size:cover;"/>
 						</div><!--/shipping-->
 					
 					</div>
@@ -297,153 +288,9 @@ function ads_page(){
 						<h2 class="title text-center">Featured Adverts</h2>
 						
 						 <div id="adcenter" style="margin-left:6px;margin-right:0px;">
-							<div class="row" style="margin:0px;">
 							
-								<div class="col-sm-2">
-									<img src="img/seller1.jpg" height="53" width="50" style="border:1px solid #F2F2F2;"/>
-								</div>
-								<div class="col-sm-6">
-									<div class="panel" style="background-color:white;width:400px;left:0px;border: 2px solid #F2F2F2;">
-										<div class="panel-body" style="margin-bottom:-5px">
-										
-											<div class="row">
-											<div class="col-sm-5">
-												<p><b>Themba</a></b></p>
-											</div>
-											<div class="col-sm-offset-3 col-sm-2">
-												<span class="glyphicon glyphicon-earphone call" style="color:green"></span>
-											</div>
-											<div class="col-sm-2">
-												<span class="glyphicon glyphicon-envelope email" style="color:gold"></span>
-											</div>
-											</div>
-											<p style="color:grey;margin-left:0px;">@46min</p>
-											<hr>
-											<p> 
-											I am selling Mercedes Benz C200,it is in a good condition, 2014 brand. It has full services history and It has been owned by 1 owner, I am selling it at a good price, its slightly negotiable.
-											</p>
-											<img src="img/benz.jpg" height="248" width="370"/>
-											<p style="color:gray;"> category: automotive</p>
-											<div class="row">
-												<p class="col-sm-8" style="color:gray;"> tags: benz, C200, Mercedes</p>
-												<button class="btn btn-xs col-sm-offset-1 col-sm-3">view more</button>
-											</div>
-											<center style="font-size:10px;color:gray;">powered by adcenter</center>
-										</div>
-										<div class="panel-footer">
-											<div class="row" style="margin-left:10px;">
-												<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-eye-open">15</span></div>
-												<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-thumbs-up likes">5</span> </div>
-												<div class="col-sm-3" style="cursor:pointer;"> <span class="glyphicon glyphicon-comment comment">4</span></div>
-												<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-share-alt"></span></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> 
-						</div>
-						
-						
-						
-						
-						 <div id="adcenter" style="margin-left:6px;margin-right:0px;">
-							<div class="row" style="margin:0px;">
-							
-								<div class="col-sm-2">
-									<img src="img/seller3.jpg" height="53" width="50" style="border: 1px solid #F2F2F2;"/>
-								</div>
-								<div class="col-sm-6">
-									<div class="panel" style="background-color:white;width:400px;left:0px;border: 2px solid #F2F2F2;">
-										<div class="panel-body" style="margin-bottom:-5px">
-										
-											<div class="row">
-											<div class="col-sm-5">
-												<p><b>James</a></b></p>
-											</div>
-											<div class="col-sm-offset-3 col-sm-2">
-												<span class="glyphicon glyphicon-earphone call" style="color:green"></span>
-											</div>
-											<div class="col-sm-2">
-												<span class="glyphicon glyphicon-envelope email" style="color:gold"></span>
-											</div>
-											</div>
-											<p style="color:grey;margin-left:0px;">@46min</p>
-											<hr>
-											<p> 
-												Apple Ipad 4, in very good condition, selling it at the lowest price, I rarely use it since I am always on my laptop.
-											</p>
-											<img src="img/tablet.jpg" height="248" width="370"/>
-											<p style="color:gray;"> category: automotive</p>
-											<div class="row">
-												<p class="col-sm-8" style="color:gray;"> tags: benz, C200, Mercedes</p>
-												<button class="btn btn-xs col-sm-offset-1 col-sm-3">view more</button>
-											</div>
-											<center style="font-size:10px;color:gray;">powered by adcenter</center>
-										</div>
-										<div class="panel-footer">
-											<div class="row" style="margin-left:10px;">
-												<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-eye-open">15</span></div>
-												<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-thumbs-up likes ">5</span> </div>
-												<div class="col-sm-3" style="cursor:pointer;"> <span class="glyphicon glyphicon-comment comment">4</span></div>
-												<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-share-alt"></span></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> 
-						</div>
-						
-						
-						
-						
-						<div id="adcenter" style="margin-left:6px;margin-right:0px;">
-							<div class="row" style="margin:0px;">
-							
-								<div class="col-sm-2">
-									<img src="img/seller2.jpg" height="53" width="50" style="border:1px solid #F2F2F2;"/>
-								</div>
-								<div class="col-sm-6">
-									<div class="panel" style="background-color:white;width:400px;left:0px;border: 2px solid #F2F2F2;">
-										<div class="panel-body" style="margin-bottom:-5px">
-										
-											<div class="row">
-											<div class="col-sm-5">
-												<p><b>Mazwi</a></b></p>
-											</div>
-											<div class="col-sm-offset-3 col-sm-2">
-												<span class="glyphicon glyphicon-earphone call" style="color:green"></span>
-											</div>
-											<div class="col-sm-2">
-												<span class="glyphicon glyphicon-envelope email" style="color:gold"></span>
-											</div>
-											</div>
-											<p style="color:grey;margin-left:0px;">@2hrs</p>
-											<hr>
-											<p> 
-											I am my brand new leather sofa,it has never been used, I got it as gift and I do not beed since I bought some recently, feel free to contact me.
-											</p>
-											<img src="img/sofa.jpg" height="248" width="370"/>
-											<p style="color:gray;"> category: automotive</p>
-											<div class="row">
-												<p class="col-sm-8" style="color:gray;"> tags: benz, C200, Mercedes</p>
-												<button class="btn btn-xs col-sm-offset-1 col-sm-3">view more</button>
-											</div>
-											<center style="font-size:10px;color:gray;">powered by adcenter</center>
-										</div>
-										<div class="panel-footer">
-											<div class="row" style="margin-left:10px;">
-												<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-eye-open">15</span></div>
-												<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-thumbs-up likes ">5</span> </div>
-												<div class="col-sm-3" style="cursor:pointer;"> <span class="glyphicon glyphicon-comment comment">4</span></div>
-												<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-share-alt"></span></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> 
-						</div>
-						
-						
+
+                         </div>
 						
 						
 					</div><!--features_items-->
@@ -571,7 +418,7 @@ function ads_page(){
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/price-range.js"></script>
     <script src="js/price.js"></script>
-	<script src="js/suggestions.js"></script>
+	<script src="home/js/suggestions.js"></script>
 </body>
 </html>';
 
