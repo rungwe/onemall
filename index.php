@@ -28,6 +28,7 @@ function main_page(){
 		<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
 		<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+        <link rel="stylesheet" href="http://css-spinners.com/css/spinners.css" type="text/css">
 		<link href="home/css/googlemaps.css" rel="stylesheet">
         <script type="text/javascript" src="home/js/googlemaps.js"></script>
         <script type="text/javascript" src="home/js/jquery.min.js"></script>
@@ -217,7 +218,7 @@ function main_page(){
 		                    
                             
 						    <div  id="center-main" style="margin-left:4%;" >
-							
+							    
 						
 						    </div>
 						    <div id="friends_nav" style="margin-left:4%;display:none">
@@ -246,15 +247,12 @@ function main_page(){
 						    </div>
 						
 						    <div id="loader" class="loader loader2 col-sm-offset-3" style="margin-top:40%">
-						      <div class="cube">
-							    <div class="side side1"></div>
-							    <div class="side side2"></div>
-							    <div class="side side3"></div>
-							    <div class="side side4"></div>
-							    <div class="side side5"></div>
-							    <div class="side side6"></div>
-						      </div>
-						    </div>
+						      <center>
+							        <div class="throbber-loader">
+                                       
+                                    </div>
+                                </center>
+                            </div>
 						
 					    </div>
 					

@@ -20,6 +20,7 @@ function ads_page(){
 	<link href="home/css/myshops.css" rel="stylesheet">
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
 	<link href="home/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://css-spinners.com/css/spinners.css" type="text/css">
 	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/responsive.css" rel="stylesheet">
 	<script type="text/javascript" src="home/js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="home/js/constants.js"></script>
@@ -289,7 +290,11 @@ function ads_page(){
 						<h2 class="title text-center">Featured Adverts</h2>
 						
 						 <div id="adcenter" style="margin-left:6px;margin-right:0px;">
-							
+                            <center>
+							    <div class="throbber-loader">
+                             
+                                </div>
+                            </center>
 
                          </div>
 						
@@ -305,7 +310,6 @@ function ads_page(){
 					<div class="panel panel-primary" style="margin-top:53px;">
 							<div class="panel-heading" style="background-color:white;color:#004A6E;font-weight:700;">Suggested companies to follow</div>
 							<div id="suggestions" class="panel-body">
-								
 								
 							</div>
 							<center style="color:#008AB8;"><a href="companies.php">view more</a></center>
