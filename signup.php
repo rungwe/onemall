@@ -39,7 +39,7 @@
         <div class="top-content" style="position: relative; z-index: 0; background: none;">
         	
         	<!-- Top menu -->
-			<nav class="navbar" role="navigation" style="background-color: white;border-bottom: 1px solid #004A6E">
+			<nav class="navbar navbar-inverse navbar-no-bg" role="navigation" >
 				<div class="container">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">

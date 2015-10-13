@@ -108,7 +108,6 @@ function ads_page(){
 			</div>
 			
 		</div> <!-- navabar end -->
-	
 		 '.create_ad().'
 		'.edit_account_modal().'
 	    '.ad_detail().'
@@ -185,6 +184,7 @@ function ads_page(){
 
 	<section >
 		<div class="container" >
+        '.nav_drawer().'
 			<div class="row" >
 				<div class="col-sm-3">
 					<div class="left-sidebar">

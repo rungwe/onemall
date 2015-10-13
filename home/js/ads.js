@@ -167,6 +167,8 @@ function ads_init(){
 		        else {
 		            pull_ads();
 		            pull_suggestions(3);
+                    drawer_init();
+		            close_drawer_onload(1500);
 		        }
 
 
