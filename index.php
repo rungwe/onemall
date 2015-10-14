@@ -19,7 +19,6 @@ function main_page(){
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/loader.css">
         <link rel="stylesheet" href="home/css/friends.css">
 		<link href="home/css/myshops.css" rel="stylesheet">

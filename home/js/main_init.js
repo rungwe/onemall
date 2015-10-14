@@ -3,11 +3,13 @@ Author: Chaddy Rungwe
 Date: 20 May 2015
 
 Content: Library for client side scripts for My Shops
-
 **/
+
+// global 
 count =6
+// end of global
 function main_init(){
-	initAutocomplete(); // google maps
+	
 	var xmlhttp_br;
 	
 	if (window.XMLHttpRequest)

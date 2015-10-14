@@ -48,12 +48,12 @@ function buildBroadcast(feed){
 		var shop_name=feed['shop_name'],shop_profile_pic=feed['shop_profile_pic'],poster=feed['poster'],post_info=feed['post_info'],likes=feed["num_likes"];
 		var liked=feed["liked"], comments=feed["num_comments"],time=feed["time"], ID=feed["postID"];
 		var template= '<div id="'+ID+'" class="panel panel-info">'+
-			  '				<div class="panel-heading">'+
+			  '				<div class="panel-heading" style="background-color:white;">'+
 			  ' 					<div class="row">'+
 			  ' 						<a href="profile_page.php"><img class="col-sm-2" src="'+shop_profile_pic+'" height="53px" width="50px" style="border-radius:2px;"/></a>'+
 			  ' 						<div class="col-sm-5">'+
-			  ' 							<p><b><a href="profile_page.php">'+shop_name+'</a></b></p>'+
-			  '							<p style="color:grey">'+time+'</p>'+
+			  ' 						    <p><b>'+shop_name+'</b></p>'+
+			  '							    <p style="color:grey">'+time+'</p>'+
 			  '						</div>'+
 			  '					</div>'+
 			  '				</div>'+

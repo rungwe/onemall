@@ -26,8 +26,8 @@ function ads_page(){
 	<script type="text/javascript" src="home/js/constants.js"></script>
 	<script type="text/javascript" src="home/js/navigation-drawer.js"></script>
 	<script type="text/javascript" src="home/js/ads.js"></script>
-	<script type="text/javascript" src="home/js/likes.js"></script>
-	<script type="text/javascript" src="home/js/comments.js"></script>
+	<script type="text/javascript" src="home/js/like.js"></script>
+	<script type="text/javascript" src="home/js/comment.js"></script>
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -307,13 +307,15 @@ function ads_page(){
 				
 				<div class="col-sm-3 padding-left" id="right">
 
-					<div class="panel panel-primary" style="margin-top:53px;">
+					<div class="panel panel-primary" >
 							<div class="panel-heading" style="background-color:white;color:#004A6E;font-weight:700;">Suggested companies to follow</div>
 							<div id="suggestions" class="panel-body">
 								
+								
 							</div>
 							<center style="color:#008AB8;"><a href="companies.php">view more</a></center>
-					</div>
+							 
+						</div>
 					<div style="background-color:white;height:300px;width:100%;border-radius:5px;">
 		
 					</div>
