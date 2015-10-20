@@ -45,6 +45,7 @@ function main_page(){
 		<script type="text/javascript" src="home/js/navigation-drawer.js"></script>
 		<script type="text/javascript" src="home/js/main_init.js"></script>
 		<script type="text/javascript" src="home/js/create_ad.js"></script>
+        <script type="text/javascript" src="home/js/profile.js"></script>
         <script type="text/javascript" src="home/js/jquery.endless-scroll.js"></script>
 	</head>
 	
@@ -103,7 +104,7 @@ function main_page(){
 							<li style="cursor:pointer;"><span class="input-group" style="color:white;font-weight:900;font-size:150%;margin-top:15px;">
 																												<i class="icon ion-ios-locked-outline dropdown-toggle" id="account" data-toggle="dropdown" aria-expanded="true" style="font-size:30px;color:#004A6E"><label style="font-size:13px;font-weight:400;">&nbsp;Account</label></i>
 																													<ul class="dropdown-menu" role="menu" aria-labelledby="account">
-																														<li role="presentation" class="dropdown-header"><center>Chaddy</center></li>
+																														<li role="presentation" class="dropdown-header"><center id="popup_name"></center></li>
 																														 <li role="presentation" class="divider"></li>
 																														<li role="presentation" data-toggle="modal" data-target="#edit_ac"><a role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;settings</a></li>
 																														<li role="presentation"><a href="logout.php" role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;logout</a></li>
@@ -213,11 +214,9 @@ function main_page(){
 					</div>
 					
 					<div id="center" class="col-sm-6" >
-                                
-		                    
-                            
+                             
 						    <div  id="center-main" style="margin-left:4%;" >
-							    
+	                              
 						
 						    </div>
 						    <div id="friends_nav" style="margin-left:4%;display:none">

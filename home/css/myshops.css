@@ -8,6 +8,26 @@
 
 }
 
+.social-media{
+   font-size: 25px;
+   cursor: pointer; 
+}
+.fb{
+    color: #336699;
+}
+.twitter{
+    color: #0099FF;
+}
+
+.linkdn{
+    color: #006699;
+}
+.google{
+    color: #CC0000;
+}
+.instagram{
+   color: #996633; 
+}
 .img-border{
     border-radius:5px;
     -moz-border-radius:5px;

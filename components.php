@@ -118,7 +118,7 @@ function edit_account_modal(){
 			  <div class="modal-dialog">
 				<div class="modal-content">
 				  <div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="z-index:1000;position:relative;">&times;</span></button>
 					<div class="row col-sm-offset-6" style="cursor:pointer;">
 						<!-- <div class="col-sm-2" style="background-image:url(\'img/edit.png\');background-size:25px 25px;background-repeat:no-repeat;height:30px;width:30px;background-size:cover;"></div> -->
 						<div class="col-sm-5" >Edit Account</div>
@@ -126,32 +126,32 @@ function edit_account_modal(){
 				  </div>
 				  <div class="modal-body">
 						
-                        <div class="" style="margin-top:-20px;">
+                        <div class="" style="margin-top:-65px;">
                             <div class="row">
                                 <div class="board">
                                     <div class="board-inner">
                                     <ul class="nav nav-tabs" id="myTab">
                                     <div class="liner"></div>
-                                     <li class="active">
-                                     <a href="#home" data-toggle="tab" title="welcome">
+                                     <li>
+                                     <a href="#home" data-toggle="tab">
                                       <span class="round-tabs one">
                                               <i class="glyphicon glyphicon-user middle"></i>
                                       </span> 
                                   </a></li>
 
-                                  <li><a href="#profile" data-toggle="tab" title="profile">
+                                  <li class="active"><a href="#profile" data-toggle="tab">
                                      <span class="round-tabs two">
                                          <i class="glyphicon glyphicon-user middle"></i>
                                      </span> 
                            </a>
                                  </li>
-                                 <li><a href="#messages" data-toggle="tab" title="bootsnipp goodies">
+                                 <li><a href="#messages" data-toggle="tab">
                                      <span class="round-tabs three">
                                           <i class="glyphicon glyphicon-map-marker middle"></i>
                                      </span> </a>
                                      </li>
 
-                                     <li><a href="#settings" data-toggle="tab" title="blah blah">
+                                     <li><a href="#settings" data-toggle="tab">
                                          <span class="round-tabs four">
                                               <i class="glyphicon glyphicon-phone-alt middle"></i>
                                          </span> 
@@ -166,10 +166,11 @@ function edit_account_modal(){
                                      </ul></div>
 
                                      <div class="tab-content">
-                                      <div class="tab-pane fade in active" id="home">
+                                      <div class="tab-pane fade" id="home">
+                                          <p id="profile_error1"> </p>
                                           <div class="row">
-                                              <div class="col-sm-3">
-								                        <img src="img/profile.png" height="80" width="80"/>
+                                               <div class="col-sm-3">
+								                    <img src="img/profile.png" height="80" width="80"/>
 							                    </div>
 							                    <div class="col-sm-6">
 							                        <div class="form-group"
@@ -180,29 +181,31 @@ function edit_account_modal(){
 							                    </div>
                                             </div>
                                             <br>
+                                            
                                             <div class="form-group">
-                                                <label for="exampleInputName2">First Name</label>
-                                                <input type="text" class="form-control" id="exampleInputName2" maxlength="26" placeholder="">
+                                                <label for="firstname">First Name</label>
+                                                <input type="text" class="form-control" id="firstname" maxlength="26" placeholder="">
                                             </div>
                                              <div class="form-group">
-                                                <label for="exampleInputEmail2">Middle Name</label>
-                                                <input type="text" class="form-control" id="exampleInputEmail2" maxlength="26" placeholder="">
+                                                <label for="middlename">Middle Name</label>
+                                                <input type="text" class="form-control" id="middlename" maxlength="26" placeholder="">
                                              </div>
 
                                              <div class="form-group">
-                                                <label for="exampleInputEmail2">Surname</label>
-                                                <input type="text" class="form-control" id="exampleInputEmail2" maxlength="26" placeholder="">
+                                                <label for="surname">Surname</label>
+                                                <input type="text" class="form-control" id="surname" maxlength="26" placeholder="">
                                              </div>
-                                             <button type="button" class="btn btn-primary pull-right">update</button>
+                                             <button type="button" class="btn btn-primary pull-right" onclick="set_profile_personal1()">update</button>
                                       </div>
-                                      <div class="tab-pane fade" id="profile">
+                                      <div class="tab-pane fade  in active" id="profile">
+                                        <p id="profile_error2"></p>
                                           <div class="form-group">
-                                                <label for="exampleInputName2">Date of Birth</label>
-                                                <input type="text" class="form-control" id="exampleInputName2" maxlength="10" placeholder="1991-12-31">
+                                                <label for="dob">Date of Birth</label>
+                                                <input type="text" class="form-control" id="dob" maxlength="10">
                                             </div>
                                              <div class="form-group">
-                                                <label for="exampleInputEmail2">Ethinic group</label>
-                                                <input type="text" class="form-control" id="exampleInputEmail2" maxlength="26" placeholder="">
+                                                <label for="rice">Ethinic group</label>
+                                                <input type="text" class="form-control" id="race" maxlength="15" placeholder="">
                                              </div>
                                              <div class="row">
                                                  <div class="form-group">
@@ -211,17 +214,17 @@ function edit_account_modal(){
 							                        </label>
 							                        <div class="col-sm-4">
 								                        <label class="radio">
-									                        <input type="radio" name="sex" id="sex" value="male" checked>
+									                        <input type="radio" name="sex" id="male" value="male">
 									                        Male
 								                        </label>
 								                        <label class="radio">
-									                        <input type="radio" name="sex" id="Radio1" value="female">
+									                        <input type="radio" name="sex" id="female" value="female">
 									                        Female
 								                        </label>
 							                        </div>
                                                  </div>
                                              </div>
-                                             <button type="button" class="btn btn-primary pull-right">update</button>
+                                             <button type="button" class="btn btn-primary pull-right" onclick="set_profile_personal2()">update</button>
                                       </div>
                                       <div class="tab-pane fade" id="messages">
                                           <div class="row" >
@@ -430,32 +433,40 @@ function create_ad(){
 }
 
 function post_interface(){
-    $component ='<div id="center" class="col-sm-6" >
-                                <div class="ui-68">
-			                    <div class="container-fluid">	
-				                    <div class="ui-content">
-					                    <!-- TextArea -->
-					                    <textarea class="form-control" rows="4" placeholder="Share to your customers" style="margin-bottom:3px;resize:none;"></textarea>
-					                    <!-- Button -->
-					                    <div class="row">
-						                    <!-- Icon -->
-						                    <div class="col-sm-3">
-							                    <!-- Music -->
-							                    <a href="#" class="col-sm-4" data-toggle="tooltip" data-placement="top" title="Attach File"><i class="fa fa-paperclip"></i></a>
-							                    <!-- Picture -->
-							                    <a href="#" class="col-sm-4" data-toggle="tooltip" data-placement="top" title="Attach Photo"><i class="fa fa-camera"></i></a>
-							                    <!-- Camera -->
-							                    <a href="#" class="col-sm-4" data-toggle="tooltip" data-placement="top" title="Attach Video"><i class="fa fa-video-camera"></i></a>
-						                    </div>
-						                    <!-- Button -->
-                                            <div class="col-sm-offset-7 col-sm-1">
-						                    <a href="#" class="btn btn-info btn-xs " style="background-color:white; color: #004A6E;">Submit</a>
-                                            </div>
-					                    </div>
-				                    </div>
-			                    </div>
-		                    </div>
-                            <br>';
+                $component ='<div style="width:100%;background-color:#F2F2F2;box-shadow: 10px 10px 5px #888888;">
+                                <textarea rows="4" cols="50" placeholder="Whats happening?" style="width:100%;resize:none;"></textarea>
+                                <div class="row">
+                                    <div class=" col-sm-1">
+                                        <span class="glyphicon glyphicon-picture" style="font-size:25px;"></span>
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <span class="glyphicon glyphicon-film" style="font-size:25px;"></span>
+                                    </div>
+                                    <div class="col-sm-offset-8 pull-right col-sm-2">
+                                        <button class="btn btn-primary"> post </button>
+                                    </div>
+                                </div>
+                                
+                                <h5>share via</h5>
+                                <div class="row">
+                                    <div class="col-sm-offset-1 col-sm-2 social-media fbk ">
+                                        <i class="fa fa-facebook-official "></i>
+                                    </div>
+                                    <div class="col-sm-2 social-media twt">
+                                        <i class="fa fa-twitter-square "></i>
+                                    </div>
+                                    <div class="col-sm-2 social-media inst">
+                                      <i class="fa fa-instagram "></i>
+                                    </div>
+                                    <div class="col-sm-2 social-media ggp">
+                                        <i class="fa fa-google-plus-square "></i>
+                                    </div>
+                                    <div class="col-sm-2 social-media lnkd">
+                                        <i class="fa fa-linkedin-square "></i>
+                                    </div>
+                                </div>
+
+                            </div>';
         return $component;
 }
 

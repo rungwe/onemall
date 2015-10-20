@@ -9,7 +9,8 @@ Content: Library for client side scripts for My Shops
 count =6
 // end of global
 function main_init(){
-	
+	drawer_init();
+    close_drawer_onload(1000);
 	var xmlhttp_br;
 	
 	if (window.XMLHttpRequest)
@@ -31,12 +32,12 @@ function main_init(){
 		              window.location.href = "login.php";
 		          }
 		          else {
+                      
 		              pull_broadcasts(6);
 		              pull_suggestions(3);
-		              drawer_init();
-		              close_drawer_onload(1500);
 		              //alert("loading profile.....");
 		              get_profile();
+		              social_media_init();
 		          }
 
 
@@ -70,7 +71,11 @@ function get_profile(){
 		          document.getElementById("num_followers").innerHTML = profileInfo.num_of_followigs;
 		          document.getElementById("num_buddies").innerHTML = profileInfo.num_friends;
 		          document.getElementById("num_ads").innerHTML = profileInfo.active_ads;
-		          document.getElementById("user-name").innerHTML = profileInfo.fname+"&nbsp;&nbsp;"+profileInfo.lname;
+		          document.getElementById("user-name").innerHTML = profileInfo.fname + "&nbsp;&nbsp;" + profileInfo.lname;
+		          document.getElementById("popup_name").innerHTML = profileInfo.fname;
+		          document.getElementById("firstname").value = profileInfo.fname;
+		          document.getElementById("surname").value = profileInfo.lname;
+		          document.getElementById("dob").value = profileInfo.date_of_birth;
 		      }
 		  } 	
 	xmlhttp_br.open("GET",uri+"/customer/get-user-profile",true);
@@ -140,3 +145,66 @@ $(document).ready(function () {
     });
 
 });
+function social_media_init() {
+    $(document).ready(function () {
+        $(".social-media").click(function () {
+            var icon = $(this);
+            
+            if (icon.hasClass("fbk")) {
+                if (icon.hasClass("chosen")) {
+                    icon.removeClass("chosen");
+                    icon.removeClass("fb");
+                }
+                else {
+                    icon.addClass("chosen");
+                    icon.addClass("fb");
+                }
+            }
+
+            else if (icon.hasClass("twt")) {
+                if (icon.hasClass("chosen")) {
+                    icon.removeClass("chosen");
+                    icon.removeClass("twitter");
+                }
+                else {
+                    icon.addClass("chosen");
+                    icon.addClass("twitter");
+                }
+            }
+
+            else if (icon.hasClass("inst")) {
+                if (icon.hasClass("chosen")) {
+                    icon.removeClass("chosen");
+                    icon.removeClass("instagram");
+                }
+                else {
+                    icon.addClass("chosen");
+                    icon.addClass("instagram");
+                }
+            }
+
+            else if (icon.hasClass("ggp")) {
+                if (icon.hasClass("chosen")) {
+                    icon.removeClass("chosen");
+                    icon.removeClass("google");
+                }
+                else {
+                    icon.addClass("chosen");
+                    icon.addClass("google");
+                }
+            }
+
+            else if (icon.hasClass("lnkd")) {
+                if (icon.hasClass("chosen")) {
+                    icon.removeClass("chosen");
+                    icon.removeClass("linkdn");
+                }
+                else {
+                    icon.addClass("chosen");
+                    icon.addClass("linkdn");
+                }
+            }
+
+        });
+    });
+}

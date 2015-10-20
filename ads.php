@@ -20,12 +20,14 @@ function ads_page(){
 	<link href="home/css/myshops.css" rel="stylesheet">
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
 	<link href="home/css/main.css" rel="stylesheet">
+    <link href="home/css/profile.css" rel="stylesheet">
     <link rel="stylesheet" href="http://css-spinners.com/css/spinners.css" type="text/css">
 	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/responsive.css" rel="stylesheet">
 	<script type="text/javascript" src="home/js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="home/js/constants.js"></script>
 	<script type="text/javascript" src="home/js/navigation-drawer.js"></script>
 	<script type="text/javascript" src="home/js/ads.js"></script>
+    <script type="text/javascript" src="home/js/create_ad.js"></script>
 	<script type="text/javascript" src="home/js/like.js"></script>
 	<script type="text/javascript" src="home/js/comment.js"></script>
     <!--[if lt IE 9]>
@@ -290,11 +292,11 @@ function ads_page(){
 						<h2 class="title text-center">Featured Adverts</h2>
 						
 						 <div id="adcenter" style="margin-left:6px;margin-right:0px;">
-                            <center>
-							    <div class="throbber-loader">
-                             
-                                </div>
-                            </center>
+                             <center>
+							        <div class="throbber-loader">
+                                       
+                                    </div>
+                              </center>
 
                          </div>
 						

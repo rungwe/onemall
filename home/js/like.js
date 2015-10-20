@@ -42,10 +42,10 @@ function like(postID, likedObject){
 	
 	xmlHttp.onreadystatechange=function()
 		  {
-		  if (xmlHttp.readyState==4 && xmlHttp.status==200)
+		  if (xmlHttp.readyState==4 && xmlHttp.status==201)
 			{
-			
-			var info =xmlHttp.responseText;
+			alert(xmlHttp.status+"  ")
+			//var info =xmlHttp.responseText;
 			//window.clearTimeout(notifyLike);
 			likedObject.addClass("liked");
 			likedObject.removeClass("cursorLoad");
@@ -53,7 +53,8 @@ function like(postID, likedObject){
 			}
 		  }
 		  
-	xmlHttp.open("POST",url+"?like_broadcasts=true&postID="+postID,true);
+	xmlHttp.open("PUT",URI+"customer/like-advert?adId="+postID,true);
+    xmlHttp.setRequestHeader("Authorization",'Bearer ' + token);
 	xmlHttp.send();
 	
 }	
@@ -85,10 +86,10 @@ function unlike(postID, unlikedObject){
 	
 	xmlHttp.onreadystatechange=function()
 		  {
-		  if (xmlHttp.readyState==4 && xmlHttp.status==200)
+		  if (xmlHttp.readyState==4 )
 			{
-			
-			var info =xmlHttp.responseText;
+			alert(xmlHttp.status)
+			//var info =xmlHttp.responseText;
 			//window.clearTimeout(notifyUnlike);
 			unlikedObject.removeClass("liked");
 			unlikedObject.removeClass("cursorLoad");
@@ -96,7 +97,8 @@ function unlike(postID, unlikedObject){
 			}
 		  }
 		  
-	xmlHttp.open("POST",url+"?unlike_broadcasts=true&postID="+postID,true);
+	xmlHttp.open("DELETE",URI+"customer/unlike-advert?id="+postID,true);
+    xmlHttp.setRequestHeader("Authorization",'Bearer ' + token);
 	xmlHttp.send();
 	
 }
@@ -108,25 +110,28 @@ This methods binds the event listeners for liking and liking posts
 status: successfully tested
 **/
 function bindBroadcastLikeEvents(){
-	$(".likes").click(function(){
-		var broadcast=$(this).parent().parent().parent().parent(); // traversing up the dom to get the parent broadcast div
-		var id= broadcast.prop("id");
-		// only execute if no like or unlike is being processed already, atomic transaction.
-		if(!$(this).hasClass("liked") && !$(this).hasClass("cursorLoad")){
-			//notifyLike=setTimeout(function(){$(this).removeClass("cursorLoad")}, 5000);
-			$(this).addClass("cursorLoad");
-			like(id,$(this));
-			
-		}
-		else if($(this).hasClass("liked") && !$(this).hasClass("cursorLoad")){
-			//notifyUnlike=setTimeout(function(){$(this).removeClass("cursorLoad");}, 5000);
-			$(this).addClass("cursorLoad");
-			unlike(id,$(this));
-		}
-		
-		else if($(this).hasClass("cursorLoad")){
-			$(this).removeClass("cursorLoad");
-		}
-		
-	});
+    $(".likes").click(function () {
+        //var broadcast=$(this).parent().parent().parent().parent(); // traversing up the dom to get the parent broadcast div
+
+        var obj = $(this);
+        var id = obj.prop("id").substring(4);
+        
+        // only execute if no like or unlike is being processed already, atomic transaction.
+        if (!$(this).hasClass("liked") && !$(this).hasClass("cursorLoad")) {
+            //notifyLike=setTimeout(function(){$(this).removeClass("cursorLoad")}, 5000);
+            $(this).addClass("cursorLoad");
+            like(id, $(this));
+
+        }
+        else if ($(this).hasClass("liked") && !$(this).hasClass("cursorLoad")) {
+            //notifyUnlike=setTimeout(function(){$(this).removeClass("cursorLoad");}, 5000);
+            $(this).addClass("cursorLoad");
+            unlike(id, $(this));
+        }
+
+        else if ($(this).hasClass("cursorLoad")) {
+            $(this).removeClass("cursorLoad");
+        }
+
+    });
 }
