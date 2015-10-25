@@ -33,4 +33,18 @@ function get_access(){
 	xmlhttp_br.open("POST","access.php?request=true",true);
 	xmlhttp_br.send();
 }
-   
+
+$(document).ready(function () {
+    $(".home").click(function () {
+        window.location.href ="index.php";
+    });
+
+    $(".following").click(function () {
+        window.location.href ="followers.php";
+    });
+
+     $(".company").click(function () {
+        window.location.href ="companies.php";
+    });
+
+});

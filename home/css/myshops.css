@@ -59,7 +59,8 @@
 	color:#004A6E;
 }
 .active_tab{
-	border-bottom: thick solid #004A6E;
+	color: #003399;
+    font-weight: 900 ! important;
 }
 u,li{
 	cursor:pointer;

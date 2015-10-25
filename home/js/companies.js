@@ -67,12 +67,12 @@ function buildCompanyPage(){
 }
 
 function header(title){
-		var template = '<div style="margin-left:2%;font-weight:900;font-style:oblique;background-color:#F0F1F1;width:25%;margin-bottom:1%;height:5%;border-radius: 25px;"><h4 style="margin-left:5%;font-weight:900;font-style:oblique;">'+title+'</h4></div>';
+		var template = '<div style="margin-left:2%;background-color:#F0F1F1;width:25%;margin-bottom:1%;height:5%;border-radius: 25px;"><h4 style="margin-left:5%;">'+title+'</h4></div>';
 		return template;
 }
 function footer(){
-	var template ='<button class="btn btn-default" style="margin-left:90%;border: 1px solid #004A6E;color:#004A6E;">view more</button>'+
-				  '<hr>';
+    var template = '<button class="btn btn-default" style="margin-left:90%;border: 1px solid #004A6E;color:#004A6E;">view more</button>';
+				  
 	return template;
 }
 

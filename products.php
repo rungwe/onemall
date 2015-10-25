@@ -38,7 +38,7 @@ function products_page(){
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
-<body>
+<body style="background-color:#F2F2F2;">
 	
 	
 	<div id="nav" class="navbar-fixed-top" style="width:100%;height:55px;margin:0px;padding:0px;">
@@ -85,7 +85,7 @@ function products_page(){
 						<div id="nav_content" style="margin-right:3%;">
 						  <ul class="nav navbar-nav navbar-right style_font" >
 								
-							<li onclick="Home()" style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><i class="icon ion-ios-home-outline" style="font-size:30px;color:#004A6E"><label style="font-size:13px;font-weight:400;">&nbsp;Home&nbsp;&nbsp;</label></i></li>
+							<li class="home" style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><i class="icon ion-ios-home-outline" style="font-size:30px;color:#004A6E"><label style="font-size:13px;font-weight:400;">&nbsp;Home&nbsp;&nbsp;</label></i></li>
 							<!-- <li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-bell" ><label style="font-size:13px;">&nbsp;Notifications&nbsp;</label></span></li> -->
 							
 							<li style="cursor:pointer;"><span class="input-group" style="color:white;font-weight:900;font-size:150%;margin-top:15px;">
@@ -183,7 +183,7 @@ function products_page(){
 		</div>
 	</section><!--/slider-->
 	
-	<section>
+	<section >
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3">

@@ -20,6 +20,7 @@ function companies_page(){
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/font-awesome.min.css">
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="http://css-spinners.com/css/spinners.css" type="text/css">
 		<link href="home/css/myshops.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/loader.css">
 		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/jquery-1.9.1.min.js"></script>
@@ -46,7 +47,7 @@ function companies_page(){
 					<div class="col-sm-offset-1 col-sm-4">
 						
 							<div class="input-group" style="margin-top:3%;width:150%;">
-							  <input type="text" class="form-control" placeholder="Search Shops">
+							  <input type="text" class="form-control" placeholder="Search for companies">
 							  <span class="input-group-btn">
 								<button class="btn btn-default" type="button">Search</button>
 							  </span>
@@ -58,7 +59,7 @@ function companies_page(){
 					<div id="nav_content" style="margin-right:3%;" class="res">
 						  <ul class="nav navbar-nav navbar-right style_font" >
 								
-							<li onclick="Home()" style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><i class="icon ion-ios-home-outline" style="font-size:30px;color:#004A6E"><label style="font-size:13px;font-weight:400;">&nbsp;Home&nbsp;&nbsp;</label></i></li>
+							<li class="home" style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><i class="icon ion-ios-home-outline" style="font-size:30px;color:#004A6E"><label style="font-size:13px;font-weight:400;">&nbsp;Home&nbsp;&nbsp;</label></i></li>
 							<!-- <li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-bell" ><label style="font-size:13px;">&nbsp;Notifications&nbsp;</label></span></li> -->
 							
 							<li style="cursor:pointer;"><span class="input-group" style="color:white;font-weight:900;font-size:150%;margin-top:15px;">
@@ -89,14 +90,14 @@ function companies_page(){
 		nav_drawer().
 		create_ad().
 		edit_account_modal().
-		'<div class= "row" style="width:50%;margin-left:20%;position:fixed;z-index:2;">
+		'<div class= "row" style="width:80%;margin-left:10%;position:fixed;z-index:2;">
 			<div class="col-sm-3 tab active_tab" >
-			<center style="cursor:pointer;"><a><b> My companies</b></a></center>
+			<center style="cursor:pointer;"><h3> Companies</h3></center>
 			</div>
 			<div class="col-sm-3 tab" >
 			<center>
 			<span class="input-group">
-				<center class="dropdown-toggle" id="dropdownMenu" data-toggle="dropdown" style="cursor:pointer;"><a><b>Category&nbsp;</b><span class="caret"></span></a></center>
+				<center class="dropdown-toggle" id="dropdownMenu" data-toggle="dropdown" style="cursor:pointer;"><h3>Category&nbsp;</h3><span class="caret"></span></center>
 				
 				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
 										<li role="presentation"><a>All</a></li>
@@ -122,7 +123,7 @@ function companies_page(){
 			<div class="col-sm-3 tab"  >
 			<center style="cursor:pointer;">
 				<span class="input-group">
-				<center class=" dropdown-toggle" id="dropdownMenuLocation" data-toggle="dropdown" style="cursor:pointer;"><a><b>Location&nbsp;</b><span class="caret"></span></a></center>
+				<center class=" dropdown-toggle" id="dropdownMenuLocation" data-toggle="dropdown" style="cursor:pointer;"><h3>Location&nbsp;</h3><span class="caret"></span></center>
 				
 				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuLocation">
 										<li role="presentation"><a>Western Cape</a></li>
@@ -140,7 +141,7 @@ function companies_page(){
 			</center>
 			</div>
 			<div class="col-sm-3 tab" >
-			<center style="cursor:pointer;"> <a href="followers.php"><b>Following</b></a></center>
+			<center style="cursor:pointer;"><h3 class="following">Following</h3></center>
 			</div>
 		</div>
 		<br>
@@ -148,15 +149,13 @@ function companies_page(){
 			
 			<div class="row col-sm-offset-1 col-sm-10">
 				<div id="loader" class="loader loader2 col-sm-offset-3" style="margin-top:25%">
-						  <div class="cube">
-							<div class="side side1"></div>
-							<div class="side side2"></div>
-							<div class="side side3"></div>
-							<div class="side side4"></div>
-							<div class="side side5"></div>
-							<div class="side side6"></div>
-						  </div>
+						  <center>
+							        <div class="throbber-loader">
+                                       
+                                    </div>
+                              </center>
 				</div>
+            <br><br>
 			<div id ="popular" class="row" style="margin:0px;padding:0px;">
 				
 			</div>
