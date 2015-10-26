@@ -14,9 +14,10 @@ function profile_page(){
 		<meta name="viewport" content="width=1024">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/font-awesome.min.css">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/loader.css">
+        <link rel ="stylesheet" href="home/css/services.css" type="text/css">
 		<link href="home/css/myshops.css" rel="stylesheet">
 		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/bootstrap.min.js"></script>
@@ -112,7 +113,7 @@ function profile_page(){
 					<center class="tab"><h4 data-toggle="tab" href="#broadcasts">Broadcasts</h4></center>
 				</div>
 				<div class="col-sm-2">
-					<center class="tab"><h4>Services</h4> </center>
+					<center class="tab"><h4 data-toggle="tab" href="#services">Services</h4> </center>
 				</div>
 				<div class="col-sm-2">
 					<center class="tab"><h4>Online Shop</h4> </center>
@@ -182,21 +183,16 @@ function profile_page(){
 
 		    <div id="broadcasts" class="tab-pane fade" style="width:100%;margin-top:290px;position:absolute;overflow-y:auto;">
 			    <div  style="margin-top:5%;">
-				    <div class="col-sm-4" id="left" style="width:350px; height:10px;">
-					    <div style="background-color:white;height:300px;width:100%;border-radius:5px;">
-		
-					    </div>
+				    <div class="col-sm-4" id="left" style="width:400px; height:10px;">
+					   
 				    </div>
 				    <div class="col-sm-5" id="center-main" >
 					    <div id="loader" class="loader loader2 col-sm-offset-3" style="margin-top:40%">
-						      <div class="cube">
-							    <div class="side side1"></div>
-							    <div class="side side2"></div>
-							    <div class="side side3"></div>
-							    <div class="side side4"></div>
-							    <div class="side side5"></div>
-							    <div class="side side6"></div>
-						      </div>
+						      <center>
+							        <div class="throbber-loader">
+                                       
+                                    </div>
+                              </center>
 					    </div>
 					    <div  id="center-main">
 						
@@ -204,7 +200,7 @@ function profile_page(){
 					
 				    </div>
 				    <div class="col-sm-3" id="right">
-					    <div class="panel panel-primary" >
+					    <!-- <div class="panel panel-primary" >
 							    <div class="panel-heading" style="background-color:white;color:#004A6E;font-weight:700;">Suggested companies to follow</div>
 							    <div id="suggestions" class="panel-body">
 								
@@ -212,14 +208,172 @@ function profile_page(){
 							    </div>
 							    <center style="color:#008AB8;"><a href="companies.php">view more</a></center>
 					    </div>
-					    <div style="background-color:white;height:300px;width:100%;border-radius:5px;">
-		
-					    </div>
+                        -->
+					    
 				    </div>
 			    </div>
+
+
 		
-		    </div>'.
-			edit_account_modal().
+		    </div>
+            
+
+            <div id="services" class="tab-pane fade" style="width:100%;margin-top:290px;position:absolute;overflow-y:auto;">
+			    <div  style="margin-top:5%;">
+				    
+                    <div class="ui-249">
+		
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-6">
+						<!-- Item -->
+						<div class="item">
+							<!-- Icon -->
+							<div class="icon">
+								<!-- Icon -->
+								<a><i class="fa fa-ils bg-red"></i></a>
+							</div>
+							<!-- Content -->
+							<div class="details">
+								<!-- Heading -->
+								<h3><a>Web Designing</a></h3>
+								<!-- Para -->
+								<p>this is our first service</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<!-- Item -->
+						<div class="item">
+							<!-- Icon -->
+							<div class="icon">
+								<!-- Icon -->
+								<a><i class="fa fa-desktop bg-green"></i></a>
+							</div>
+							<!-- Content -->
+							<div class="details">
+								<!-- Heading -->
+								<h3><a>Graphic Designing</a></h3>
+								<!-- Para -->
+								<p>our second servics</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<!-- Item -->
+						<div class="item">
+							<!-- Icon -->
+							<div class="icon">
+								<!-- Icon -->
+								<a><i class="fa fa-cloud bg-lblue"></i></a>
+							</div>
+							<!-- Content -->
+							<div class="details">
+								<!-- Heading -->
+								<h3><a>PHP Scripts</a></h3>
+								<!-- Para -->
+								<p>We love our services</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<!-- Item -->
+						<div class="item">
+							<!-- Icon -->
+							<div class="icon">
+								<!-- Icon -->
+								<a ><i class="fa fa-gift bg-blue"></i></a>
+							</div>
+							<!-- Content -->
+							<div class="details">
+								<!-- Heading -->
+								<h3><a>Java Apps</a></h3>
+								<!-- Para -->
+								<p>we love our services</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<!-- Item -->
+						<div class="item">
+							<!-- Icon -->
+							<div class="icon">
+								<!-- Icon -->
+								<a><i class="fa fa-code bg-orange"></i></a>
+							</div>
+							<!-- Content -->
+							<div class="details">
+								<!-- Heading -->
+								<h3><a>iOS Apps</a></h3>
+								<!-- Para -->
+								<p>our services are too good please</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<!-- Item -->
+						<div class="item">
+							<!-- Icon -->
+							<div class="icon">
+								<!-- Icon -->
+								<a><i class="fa fa-bug bg-yellow"></i></a>
+							</div>
+							<!-- Content -->
+							<div class="details">
+								<!-- Heading -->
+								<h3><a>Android Apps</a></h3>
+								<!-- Para -->
+								<p>you will definitely love our services</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<!-- Item -->
+						<div class="item">
+							<!-- Icon -->
+							<div class="icon">
+								<!-- Icon -->
+								<a><i class="fa fa-bullhorn bg-rose"></i></a>
+							</div>
+							<!-- Content -->
+							<div class="details">
+								<!-- Heading -->
+								<h3><a>Game Engine</a></h3>
+								<!-- Para -->
+								<p>we have perfect services</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<!-- Item -->
+						<div class="item">
+							<!-- Icon -->
+							<div class="icon">
+								<!-- Icon -->
+								<a><i class="fa fa-automobile bg-purple"></i></a>
+							</div>
+							<!-- Content -->
+							<div class="details">
+								<!-- Heading -->
+								<h3><a>Web Development</a></h3>
+								<!-- Para -->
+								<p>The best service you will ever see in your lifetime</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+				    
+			    </div>
+
+		    </div>
+
+
+
+            
+            '.edit_account_modal().
 	'</body>
 	
 	<script>

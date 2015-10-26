@@ -36,15 +36,20 @@ function get_access(){
 
 $(document).ready(function () {
     $(".home").click(function () {
-        window.location.href ="index.php";
+        window.location.href = "index.php";
     });
 
     $(".following").click(function () {
-        window.location.href ="followers.php";
+        window.location.href = "followers.php";
     });
 
-     $(".company").click(function () {
-        window.location.href ="companies.php";
+    $(".company").click(function () {
+        window.location.href = "companies.php";
     });
-
 });
+
+
+function redirect(url){
+    window.location.href =url;
+
+}

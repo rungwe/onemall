@@ -1,0 +1,112 @@
+/************************
+Designed by : http://responsivewebinc.com
+************************/
+/* Open Sans  */
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600');
+/* General */
+
+
+
+/* Background color classes */
+.bg-white {
+  background-color: #ffffff !important;
+}
+.bg-grey {
+  background-color: #eeeeee !important;
+}
+.bg-black {
+  background-color: #555555 !important;
+}
+.bg-red {
+  background-color: #f75353 !important;
+}
+.bg-green {
+  background-color: #51d466 !important;
+}
+.bg-lblue {
+  background-color: #32c8de !important;
+}
+.bg-blue {
+  background-color: #609cec !important;
+}
+.bg-orange {
+  background-color: #f78153 !important;
+}
+.bg-yellow {
+  background-color: #fcd419 !important;
+}
+.bg-purple {
+  background-color: #cb79e6 !important;
+}
+.bg-rose {
+  background-color: #ff61e7 !important;
+}
+.bg-brown {
+  background-color: #d08166 !important;
+}
+
+
+/* UI X */
+
+.ui-249{
+	margin:50px 0px;
+}
+.ui-249 .item{
+	max-width:320px;
+	margin:20px auto;
+	text-align:center;
+}
+.ui-249 .item .icon{
+	position:relative;
+}
+.ui-249 .item .icon a i{
+	display:inline-block;
+	width:60px;
+	height:60px;
+	line-height:60px;
+	color:#fff;
+	border-radius:100%;
+	font-size:25px;
+}
+.ui-249 .item .details{
+	background:#fff;
+	position:relative;
+	margin-top:20px;
+	padding:15px;
+	border-radius:5px;
+	border:1px solid #e7e7e7;
+	box-shadow:2px 2px 0px 1px rgba(0,0,0,0.07);
+}
+.ui-249 .item .details:after, 
+.ui-249 .item .details:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.ui-249 .item .details:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 9px;
+	margin-left: -9px;
+}
+.ui-249 .item .details:before {
+	border-color: rgba(221, 221, 221, 0);
+	border-bottom-color: #dddddd;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.ui-249 .item .details h3{
+	font-size:14px;
+	line-height:24px;
+	text-transform:uppercase;
+}
+.ui-249 .item .details p{
+	font-size:12px;
+	line-height:25px;
+	color:#999;
+}

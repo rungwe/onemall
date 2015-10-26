@@ -149,14 +149,11 @@ function following_page(){
 			
 			<div class="row col-sm-offset-1 col-sm-10">
 				<div id="loader" class="loader loader2 col-sm-offset-3" style="margin-top:25%">
-						  <div class="cube">
-							<div class="side side1"></div>
-							<div class="side side2"></div>
-							<div class="side side3"></div>
-							<div class="side side4"></div>
-							<div class="side side5"></div>
-							<div class="side side6"></div>
-						  </div>
+						   <center>
+							        <div class="throbber-loader">
+                                       
+                                    </div>
+                              </center>
 				</div>
 				<br>
 				<div id ="companies_followed" class="row" style="margin:0px;padding:0px;">
