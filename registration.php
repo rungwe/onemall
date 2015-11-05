@@ -13,7 +13,7 @@
 	else{
 	
 			//register
-			$url="http://ec2-52-88-102-30.us-west-2.compute.amazonaws.com/account/Register";
+			$url="http://ec2-52-32-82-172.us-west-2.compute.amazonaws.com/account/Register";
 			//$url="testreg.php";
 			$fields = array(
                                 'lname' => $_POST["form-last-name"],

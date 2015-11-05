@@ -1,0 +1,53 @@
+{
+    "categories": {
+           "All":[] ,
+
+           "Automotive Vehicles":[],
+
+           "Property sales, rentals":[
+                                    "For sale",
+                                    "For Rent"
+                                    ],
+
+            "Electronic gadgets":[
+                                        "Computers and Accessories",
+                                        "Mobile Phones and Tablets",
+                                        "Gaming Consoles",
+                                        "Tv and Dvds",
+                                        "Audio and Music Equipment"
+                                  ],
+
+           "Fashion": [
+                        "Womens apparel",
+                        "Mens aparel",
+                        "Kids and babies"
+                        ],
+
+           "Beauty and Therapy":[],
+
+           "Sporting":[],
+
+           "Art and Entertainment":[],
+
+           "Pets":[],
+
+           "Jobs" :[
+                    "Wanted",
+                    "Offered"
+                    ],
+            "Home and Garden": [
+                                    "Furniture",
+                                    "Decor and Interior",
+                                    "Home Appliances",
+                                    "Gardening",
+                                    "Tools"
+                                ],
+            "Services" :[],
+            "Financing":[],
+            "Baby and Kids":[],
+            "Travelling and Accommodation":[],
+            "Office equipment":[],
+
+
+        }      
+   }

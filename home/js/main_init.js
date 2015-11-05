@@ -49,7 +49,7 @@ function main_init(){
 }
 
 function get_profile(){
-    var uri = "http://ec2-52-88-102-30.us-west-2.compute.amazonaws.com";
+    
 	var xmlhttp_br;
 	
 	if (window.XMLHttpRequest)
@@ -78,7 +78,7 @@ function get_profile(){
 		          document.getElementById("dob").value = profileInfo.date_of_birth;
 		      }
 		  } 	
-	xmlhttp_br.open("GET",uri+"/customer/get-user-profile",true);
+	xmlhttp_br.open("GET",URI+"customer/get-user-profile",true);
     xmlhttp_br.setRequestHeader("Authorization",'Bearer ' + token);
    // xmlhttp_br.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 	xmlhttp_br.send();

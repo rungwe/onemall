@@ -119,7 +119,7 @@ function create_session($access){
  
  function login(){
 	//login
-			$url="http://ec2-52-88-102-30.us-west-2.compute.amazonaws.com/Token";
+			$url="http://ec2-52-32-82-172.us-west-2.compute.amazonaws.com/Token";
 			
 			 $fields = array(
 								'grant_type'=>"password",
@@ -161,7 +161,7 @@ function create_session($access){
 			//throw error message 
 			else{
 				$response =  Array($code,$msg->error_description);
-				return $response;
+				echo $msg."  ".$code;
 				
 			}
 }
