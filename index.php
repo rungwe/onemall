@@ -257,7 +257,7 @@ function main_page(){
 					<div id="right" class="col-sm-3" >
 						
 						<div class="panel panel-primary" >
-							<div class="panel-heading" style="background-color:white;color:#004A6E;font-weight:700;">Suggested companies to follow</div>
+							<div class="panel-heading" style="background-color:#004A6E;font-weight:700;">Suggested companies to follow</div>
 							<div id="suggestions" class="panel-body">
 								
 								
