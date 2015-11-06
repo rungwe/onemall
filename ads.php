@@ -21,6 +21,7 @@ function ads_page(){
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
 	<link href="home/css/main.css" rel="stylesheet">
     <link href="home/css/profile.css" rel="stylesheet">
+    <link href="./menu_files/style-24.css" rel="stylesheet">
     <link rel="stylesheet" href="http://css-spinners.com/css/spinners.css" type="text/css">
 	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/responsive.css" rel="stylesheet">
 	<script type="text/javascript" src="home/js/jquery-1.9.1.min.js"></script>
@@ -111,6 +112,7 @@ function ads_page(){
 			</div>
 			
 		</div> <!-- navabar end -->
+        '.nav_drawer().'
 		 '.create_ad().'
 		'.edit_account_modal().'
 	    '.ad_detail().'
@@ -187,12 +189,12 @@ function ads_page(){
 
 	<section >
 		<div class="container" >
-        '.nav_drawer().'
+        
 			<div class="row" >
 				<div class="col-sm-3">
 					<div class="left-sidebar">
                         <br><br>
-						<div class="panel-group  panel-primary category-products" id="accordian"><!--category-productsr-->
+						<div class="panel-group  panel-info category-products" id="accordian"><!--category-productsr-->
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title"><a href="#">All</a></h4>
@@ -280,18 +282,18 @@ function ads_page(){
 							</div>
 						</div><!--/price-range-->
 						
-						<div class="text-center"><!--shipping-->
-							<img src="home/img/ads_banner2.png" alt="" height="400"  style="background-size:cover;"/>
-						</div><!--/shipping-->
+						
 					
 					</div>
 				</div>
 				
 				<div class="col-sm-6 padding-right">
+
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Featured Adverts</h2>
 						
 						 <div id="adcenter" style="margin-left:6px;margin-right:0px;">
+                            
                              <center>
 							        <div class="throbber-loader">
                                        
@@ -309,7 +311,7 @@ function ads_page(){
 				
 				<div class="col-sm-3 padding-left" id="right">
                     <br><br>
-					<div class="panel panel-primary" >
+					<div class="panel panel-info" >
 							<div class="panel-heading" style="background-color:white;color:#004A6E;font-weight:700;">Suggested companies to follow</div>
 							<div id="suggestions" class="panel-body">
 								
@@ -318,9 +320,7 @@ function ads_page(){
 							<center style="color:#008AB8;"><a href="companies.php">view more</a></center>
 							 
 						</div>
-					<div style="background-color:white;height:300px;width:100%;border-radius:5px;">
-		
-					</div>
+					
 				</div>
 			</div>
 			

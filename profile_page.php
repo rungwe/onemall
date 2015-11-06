@@ -19,9 +19,11 @@ function profile_page(){
 		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/loader.css">
         <link rel ="stylesheet" href="home/css/services.css" type="text/css">
 		<link href="home/css/myshops.css" rel="stylesheet">
+        <link href="./menu_files/style-24.css" rel="stylesheet">
 		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="home/js/constants.js"></script>
+        <script type="text/javascript" src="home/js/navigation-drawer.js"></script>
         <script type="text/javascript" src="home/js/profile_page.js"></script>
 		<script type="text/javascript" src="home/js/like.js"></script>
 		<script type="text/javascript" src="home/js/broadcasts.js"></script>
@@ -30,6 +32,7 @@ function profile_page(){
 		<script type="text/javascript" src="home/js/comment.js"></script>
 		<script type="text/javascript" src="home/js/companies.js"></script>
 		<script type="text/javascript" src="home/js/main_init.js"></script>	
+        
 	</head>
 	
 	<!-- <body onload="main_init()" style="background-image:url(https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/cloud.png);background-size:cover;background-repeat:no-repeat;background-attachment:fixed;">> -->
@@ -124,7 +127,13 @@ function profile_page(){
 			
 			</div>
 		</div>
-        <br><br>
+        <br><br>'
+        .
+		
+				nav_drawer().
+				edit_account_modal().
+				create_ad().
+                shopping_cart().'	
         <div class="tab-content">
 		    <div id="about" class="tab-pane fade in active" style="margin-top:350px;">
                 <div class="container">
@@ -372,9 +381,7 @@ function profile_page(){
 
 
 
-            
-            '.edit_account_modal().
-	'</body>
+         </body>
 	
 	<script>
 			$(document).ready(function(){

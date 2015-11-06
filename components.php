@@ -1,6 +1,108 @@
 <?php
 
+
 function nav_drawer(){
+	$drawer_html ='<div class="ui-24 open" style="left: 0px;z-index:100;margin-top:60px;position:fixed">
+			<!-- Button -->
+			<div class="ui-button" id="side-drawer">
+				<a href="#" class="bg-lblue">Dashboard</a>
+			</div>
+			<div class="ui-content" >
+				<!-- Container Fluid -->
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<!-- UI Item -->
+							<div class="ui-item">
+								<!-- Image -->
+								<a href="index.php"><img src="img/icons/Home.png" class="img-responsive" alt=""></a>
+							</div>
+							<!-- Heading -->
+							<h5><a href="index.php">Home</a></h5>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<!-- UI Item -->
+							<div class="ui-item">
+								<!-- Image -->
+								<a href="#"><img src="img/icons/Bell.png" class="img-responsive" alt=""></a>
+							</div>
+								<!-- Heading -->
+							<h5><a href="#">Notifications</a></h5>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<!-- UI Item -->
+							<div class="ui-item">
+								<!-- Image -->
+								<a href="#"><img data-toggle="modal" data-target="#cart" src="img/icons/Shopping-Cart.png" class="img-responsive" alt=""></a>
+							</div>
+								<!-- Heading -->
+							<h5><a data-toggle="modal" data-target="#cart" href="#">Basket</a></h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<!-- UI Item -->
+							<div class="ui-item">
+								<!-- Image -->
+								<a href="#"><img data-toggle="modal" data-target="#create_ad" onclick="setup_adCreate()" src="img/icons/Paper-Money.png" class="img-responsive" alt=""></a>
+							</div>
+							<h5><a data-toggle="modal" data-target="#create_ad" onclick="setup_adCreate()" href="#">Create Ads</a></h5>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<!-- UI Item -->
+							<div class="ui-item">
+								<!-- Image -->
+								<a href="#"><img src="img/icons/Briefcase.png" class="img-responsive" alt=""></a>
+							</div>
+							<h5><a href="#">Manage Ads</a></h5>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<!-- UI Item -->
+							<div class="ui-item">
+								<!-- Image -->
+								<a href="#"><img src="img/icons/Credit-Card.png" class="img-responsive" alt=""></a>
+							</div>
+							<h5><a href="#">Payments</a></h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<!-- UI Item -->
+							<div class="ui-item">
+								<!-- Image -->
+								<a href="#"><img src="img/icons/Desktop.png" class="img-responsive" alt=""></a>
+							</div>
+							<h5><a href="#">Create Pages</a></h5>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<!-- UI Item -->
+							<div class="ui-item">
+								<!-- Image -->
+								<a href="#"><img src="img/icons/social.png" class="img-responsive" alt=""></a>
+							</div>
+							<h5><a href="#">Social Integration</a></h5>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<!-- UI Item -->
+							<div class="ui-item">
+								<!-- Image -->
+								<a href="#"><img src="img/icons/X.png" class="img-responsive" alt=""></a>
+							</div>
+							<!-- Heading -->
+							<h5><a href="#">Verify Account</a></h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- /UI X -->
+        ';
+		
+	return $drawer_html;
+	
+}
+
+
+function nav_draw(){
 	$drawer_html ='<div id="drawer"class="row" style="position:fixed;z-index:1000;left:0px;">
 			<div class="col-sm-4" id="drawer-content" style="border:1px solid #004A6E; width:250px;background-color:white;position:fixed;z-index:1000;margin:0px;padding:0px;">
 				<div style="background-image:url(img/bk-freeze-ga.jpg);height:150px;width:100%;margin:0px;background-size:cover;">

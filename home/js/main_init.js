@@ -11,6 +11,7 @@ count =6
 function main_init(){
 	drawer_init();
     close_drawer_onload(1000);
+    //document.getElementById("side-drawer").click();
 	var xmlhttp_br;
 	
 	if (window.XMLHttpRequest)

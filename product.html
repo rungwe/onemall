@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049) -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>UI Design</title>
+		<!-- Description, Keywords and Author -->
+		<meta name="description" content="Your description">
+		<meta name="keywords" content="Your,Keywords">
+		<meta name="author" content="ResponsiveWebInc">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- Styles -->
+		<!-- Bootstrap CSS -->
+		<link href="./product_files/bootstrap.min.css" rel="stylesheet">
+		<!-- Font awesome CSS -->
+		<link href="./product_files/font-awesome.min.css" rel="stylesheet">
+		
+		
+		<!-- Main CSS -->
+		<link href="./product_files/style-63.css" rel="stylesheet">
+				
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="#">
+	</head>
+	
+	<body>
+	
+		
+		<!-- UI X -->
+		<div class="ui-63">
+		
+			<!-- Trigger button -->
+			<div class="text-center">
+				<a href="#" class="ui-trigger btn btn-lg btn-red">Menu</a>
+			</div>
+			
+			<!-- Outer -->
+			<div class="ui-outer bg-red" style="display: block; opacity: 0.157726;">
+				<a href="#" class="ui-close">x</a>
+				<!-- Content -->
+				<div class="ui-content">
+					
+					<!-- Menu -->
+					<div class="menu">
+						<a href="#">Home</a>
+						<a href="#">About Us</a>
+						<a href="#">Gallery</a>
+						<a href="#">Service</a>
+						<a href="#">Contact Us</a>
+					</div>
+					
+				</div>
+				
+			</div>
+		
+		</div>
+		
+		<!-- Javascript files -->
+		<!-- jQuery -->
+		<script src="./product_files/jquery.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="./product_files/bootstrap.min.js"></script>
+		<!-- Placeholder JS -->
+		<script src="./product_files/placeholder.js"></script>
+		<!-- Respond JS for IE8 -->
+		<script src="./product_files/respond.min.js"></script>
+		<!-- HTML5 Support for IE -->
+		<script src="./product_files/html5shiv.js"></script>
+		
+		<script>
+		
+			$(document).ready(function(){
+				$("a.ui-trigger").click(function(e){
+					e.preventDefault();
+					$(".ui-outer").fadeIn(400);
+				});
+				$("a.ui-close").click(function(e){
+					e.preventDefault();
+					$(".ui-outer").fadeOut(400);
+				});
+			});
+			
+		</script>
+		
+		
+</body></html>

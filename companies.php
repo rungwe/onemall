@@ -22,6 +22,7 @@ function companies_page(){
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="http://css-spinners.com/css/spinners.css" type="text/css">
 		<link href="home/css/myshops.css" rel="stylesheet">
+        <link href="./menu_files/style-24.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/loader.css">
 		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/bootstrap.min.js"></script>

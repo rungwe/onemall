@@ -29,6 +29,8 @@ function main_page(){
 		<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
         <link rel="stylesheet" href="http://css-spinners.com/css/spinners.css" type="text/css">
 		<link href="home/css/googlemaps.css" rel="stylesheet">
+        
+		<link href="./menu_files/style-24.css" rel="stylesheet">
         <script type="text/javascript" src="home/js/googlemaps.js"></script>
         <script type="text/javascript" src="home/js/jquery.min.js"></script>
 		<<script type="text/javascript" src="home/js/constants.js"></script>
@@ -256,8 +258,8 @@ function main_page(){
 					
 					<div id="right" class="col-sm-3" >
 						
-						<div class="panel panel-primary" >
-							<div class="panel-heading" style="background-color:#004A6E;font-weight:700;">Suggested companies to follow</div>
+						<div class="panel panel-info" >
+							<div class="panel-heading" style="background-color:white;color:#004A6E;font-weight:700;">Suggested companies to follow</div>
 							<div id="suggestions" class="panel-body">
 								
 								
@@ -271,6 +273,7 @@ function main_page(){
 				
 		</div>
 	</body>	
+    
 </html>
 ';
 
