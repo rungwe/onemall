@@ -24,9 +24,12 @@ function products_page(){
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
 	<link href="home/css/main.css" rel="stylesheet">
+    <link href="./menu_files/style-24.css" rel="stylesheet">
 	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/responsive.css" rel="stylesheet">
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/constants.js"></script>
+    <script type="text/javascript" src="home/js/navigation-drawer.js"></script>
+    <script type="text/javascript" src="home/js/products.js"></script>
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -38,7 +41,7 @@ function products_page(){
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
-<body style="background-color:#F2F2F2;">
+<body style="background-color:#F2F2F2;" onload="products_init()">
 	
 	
 	<div id="nav" class="navbar-fixed-top" style="width:100%;height:55px;margin:0px;padding:0px;">
@@ -110,11 +113,11 @@ function products_page(){
 			  
 			</div>
 			
-		</div> <!-- navabar end -->'.
-			create_ad().
-			edit_account_modal().
-	
-	'<section id="slider" style="height:400px;"><!--slider-->
+		</div> <!-- navabar end -->
+        '.nav_drawer().'
+		 '.create_ad().'
+		'.edit_account_modal().'
+	    '.ad_detail().'<section id="slider" style="height:400px;"><!--slider-->
 	
 		<div class="container">
 			<div class="row">
