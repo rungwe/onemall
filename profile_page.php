@@ -2,10 +2,9 @@
 require 'session.php';
 init();
 
-aunthenticate(profile_page());
+aunthenticate();
+?>
 
-function profile_page(){
-	$page = '
 <html>
 
 	<head>
@@ -94,7 +93,7 @@ function profile_page(){
 		</div>
 		
 		
-		<div class="wall" style="background-image:url(\'https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/mrpricewall.jpg\');z-index:1;position:absolute;height:320px;">
+		<div class="wall" style="background-image:url('https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/mrpricewall.jpg');z-index:1;position:absolute;height:320px;">
 			
 		</div>
 		
@@ -127,13 +126,13 @@ function profile_page(){
 			
 			</div>
 		</div>
-        <br><br>'
-        .
-		
-				nav_drawer().
-				edit_account_modal().
-				create_ad().
-                shopping_cart().'	
+        <br><br>
+        <?php 
+            echo nav_drawer();
+		    echo create_ad();
+		    echo edit_account_modal();
+	        echo ad_detail();
+        ?>	
         <div class="tab-content">
 		    <div id="about" class="tab-pane fade in active" style="margin-top:350px;">
                 <div class="container">
@@ -209,15 +208,6 @@ function profile_page(){
 					
 				    </div>
 				    <div class="col-sm-3" id="right">
-					    <!-- <div class="panel panel-primary" >
-							    <div class="panel-heading" style="background-color:white;color:#004A6E;font-weight:700;">Suggested companies to follow</div>
-							    <div id="suggestions" class="panel-body">
-								
-								
-							    </div>
-							    <center style="color:#008AB8;"><a href="companies.php">view more</a></center>
-					    </div>
-                        -->
 					    
 				    </div>
 			    </div>
@@ -394,9 +384,4 @@ function profile_page(){
 			
 	</script>
 
-</html>';
-
-return $page;
-}
-
-?>
+</html>s

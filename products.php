@@ -2,11 +2,10 @@
 require 'session.php';
 init();
 
-aunthenticate(products_page());
-//echo products_page();
+aunthenticate();
 
-function products_page(){
-	$page='
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -114,10 +113,14 @@ function products_page(){
 			</div>
 			
 		</div> <!-- navabar end -->
-        '.nav_drawer().'
-		 '.create_ad().'
-		'.edit_account_modal().'
-	    '.ad_detail().'<section id="slider" style="height:400px;"><!--slider-->
+        <?php 
+            echo nav_drawer();
+		    echo create_ad();
+		    echo edit_account_modal();
+	        echo ad_detail();
+        ?>
+        
+    <section id="slider" style="height:400px;"><!--slider-->
 	
 		<div class="container">
 			<div class="row">
@@ -844,11 +847,4 @@ function products_page(){
 	<script src="js/price-range.js"></script>
     <script src="js/price.js"></script>
 </body>
-</html>';
-
-return $page;
-	
-}
-
-
-?>
+</html>

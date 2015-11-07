@@ -4,12 +4,10 @@ require 'session.php';
 init();
 
 
-aunthenticate(following_page());
+aunthenticate();
 
 
-function following_page(){
-	
-	$page = '
+?>
 <html>
 
 	<head>
@@ -87,11 +85,14 @@ function following_page(){
 			  
 			
 		</div>
-		<br><br><br>'.
-		nav_drawer().
-		create_ad().
-		edit_account_modal().
-		'<div class= "row" style="width:80%;margin-left:10%;position:fixed;z-index:2;">
+		<br><br><br>
+       <?php 
+            echo nav_drawer();
+		    echo create_ad();
+		    echo edit_account_modal();
+	        echo ad_detail();
+        ?>
+		<div class= "row" style="width:80%;margin-left:10%;position:fixed;z-index:2;">
 			<div class="col-sm-3 tab" >
 			<center style="cursor:pointer;"><h3 class="company"> Companies</h3></center>
 			</div>

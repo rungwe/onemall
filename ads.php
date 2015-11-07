@@ -2,10 +2,9 @@
 require 'session.php';
 init();
 
-aunthenticate(ads_page());
-
-function ads_page(){
-	$page = '<!DOCTYPE html>
+aunthenticate();
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -112,10 +111,12 @@ function ads_page(){
 			</div>
 			
 		</div> <!-- navabar end -->
-        '.nav_drawer().'
-		 '.create_ad().'
-		'.edit_account_modal().'
-	    '.ad_detail().'
+        <?php 
+            echo nav_drawer();
+		    echo create_ad();
+		    echo edit_account_modal();
+	        echo ad_detail();
+        ?>
         <br><br><br>
 	<!-- <section id="slider" style="height:400px;">
 		<div class="container">
@@ -195,7 +196,9 @@ function ads_page(){
 					<div class="left-sidebar">
                         <br><br>
 						<div class="panel-group  panel-info category-products" id="accordian"><!--category-productsr-->
-							'.generate_category().'
+							<?php 
+                               echo generate_category()
+                              ?>
 							
 							
 						</div><!--/category- products-->
@@ -350,9 +353,3 @@ function ads_page(){
 	<script src="home/js/suggestions.js"></script>
 </body>
 </html>';
-
-return $page;
-}
-
-
-?>

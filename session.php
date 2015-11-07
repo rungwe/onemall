@@ -16,7 +16,7 @@ SESSION data email, username, timestamp, token, token-exp
  
  
 
- function aunthenticate($page_html){
+ function aunthenticate(){
 	     $branch=0;
 	
 		if (empty($_SESSION)){ // check if a session existed before
@@ -49,9 +49,7 @@ SESSION data email, username, timestamp, token, token-exp
 	else if($branch==2){
 		header("Location: login.php");
 	}
-	else if ($branch==3){
-		echo $page_html;
-	}
+	
 	
  }
  

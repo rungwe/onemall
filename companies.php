@@ -3,13 +3,11 @@ require 'session.php';
 init();
 
 
-aunthenticate(companies_page());
+aunthenticate();
 //phpinfo();
 
+?>
 
-function companies_page(){
-	
-	$page ='
 <html>
 
 	<head>
@@ -87,11 +85,14 @@ function companies_page(){
 			  
 			
 		</div>
-		<br><br><br>'.
-		nav_drawer().
-		create_ad().
-		edit_account_modal().
-		'<div class= "row" style="width:80%;margin-left:10%;position:fixed;z-index:2;">
+		<br><br><br>
+        <?php 
+            echo nav_drawer();
+		    echo create_ad();
+		    echo edit_account_modal();
+	        echo ad_detail();
+        ?>
+		<div class= "row" style="width:80%;margin-left:10%;position:fixed;z-index:2;">
 			<div class="col-sm-3 tab active_tab" >
 			<center style="cursor:pointer;"><h3> Companies</h3></center>
 			</div>
@@ -194,11 +195,5 @@ function companies_page(){
 			
 	</script>
 	
-</html>';
+</html>
 
-return $page;
-}
-
-
-
-?>

@@ -36,7 +36,7 @@ function generate_category(){
             }
             $html_result.='</ul>
 									</div>
-								</div>';
+								</div><div style="height:4px;width:2px;"></div>';
         }
         $id=$id +1;
     }

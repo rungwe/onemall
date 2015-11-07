@@ -4,12 +4,10 @@ require 'session.php';
 init();
 
 
-aunthenticate(main_page());
+aunthenticate();
 //phpinfo();
+?>
 
-function main_page(){
-	
-	$page ='
 <html>
 
 	<head>
@@ -127,13 +125,14 @@ function main_page(){
 			
 		</div> <!-- navabar end -->
 		
-		<div class="container pos" style="height:91%;margin-top:5%;">'.
-		
-				nav_drawer().
-				edit_account_modal().
-				create_ad().
-                shopping_cart().	
-				'<div id="content">
+		<div class="container pos" style="height:91%;margin-top:5%;">
+            <?php 
+                echo nav_drawer();
+		        echo create_ad();
+		        echo edit_account_modal();
+	            echo ad_detail(); 
+            ?>
+            <div id="content">
 					
 					<div id="left" class="col-sm-3">
 					
@@ -172,22 +171,22 @@ function main_page(){
 								<div class="col-sm-offset-2 col-sm-8 " style="margin-top:5px;font-weight:400;color:black;" >
 									
 									<div class="row" style="cursor:pointer;" onclick="Home()">
-										<div class="col-sm-2 " style="background-image:url(\'img/icons/RSS.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-2 " style="background-image:url('img/icons/RSS.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
 										<div class="col-sm-8 col-sm-offset-2 btn-xs" style="margin-top:3px;">Broadcasts <span style="background-color:#19A3D1;" class="badge"></span></div>
 									</div>
 									
 									<div class="row" style="cursor:pointer;">
-										<div class="col-sm-2" style="background-image:url(\'img/icons/Dollar-Coin.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-2" style="background-image:url('img/icons/Dollar-Coin.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
 										<div class="col-sm-8 col-sm-offset-2 btn-xs" style="margin-top:5px;"> <a href="ads.php" style="text-align:left;font-style:oblique;color:black;">Ads</a></div>
 									</div>
 									
 									<div class="row" style="cursor:pointer;">
-										<div class="col-sm-2" style="background-image:url(\'home/img/icons/Shopping-Bag.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-2" style="background-image:url('home/img/icons/Shopping-Bag.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
 										<div class="col-sm-8 col-sm-offset-2 btn-xs" style="margin-top:5px;"> <a href="products.php" style="text-align:left;font-style:oblique;color:black;">Go shopping</a></div>
 									</div>
 									
 									<div class="row" onclick="show_friends()" style="cursor:pointer;">
-										<div class="col-sm-2" style="background-image:url(\'img/icons/Contacts.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-2" style="background-image:url('img/icons/Contacts.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
 										<div class="col-sm-8 col-sm-offset-2 btn-xs" style="margin-top:5px;">Buddies</div>
 									</div>
 									
@@ -203,7 +202,7 @@ function main_page(){
 									</div> -->
 									
 									<div class="row" style="cursor:pointer;">
-										<div class="col-sm-2" style="background-image:url(\'img/icons/Building.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
+										<div class="col-sm-2" style="background-image:url('img/icons/Building.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
 										<div class="col-sm-8 col-sm-offset-2 btn-xs" style="margin-top:5px"> <a href="companies.php" style="text-align:left;font-style:oblique;color:black;">Companies</a></div>
 									</div>
 							
@@ -275,10 +274,3 @@ function main_page(){
 	</body>	
     
 </html>
-';
-
-return $page;
-	
-}
-
-?>
