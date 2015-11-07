@@ -177,8 +177,4 @@ aunthenticate();
 			});
 	</script>
 	
-</html>';
-
-return $page;
-}
-?>
+</html>
