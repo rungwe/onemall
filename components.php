@@ -13,7 +13,7 @@ function generate_category(){
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordian" href="#'.$id.'">
 											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
-											'.$category.'
+											<a href="ads.php?category='.urlencode($category).'">'.$category.'</a>
 										</a>
 									</h4>
 								</div>
@@ -22,7 +22,7 @@ function generate_category(){
         else{
             $html_result.='<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">'.$category.'</a></h4>
+									<h4 class="panel-title"><a href="ads.php?category='.urlencode($category).'">'.$category.'</a></h4>
 								</div>
 							</div>';
         }
@@ -31,7 +31,7 @@ function generate_category(){
 									<div class="panel-body">
 										<ul>';
             foreach($sub_category as $value){
-            $html_result.= '<li><a href="#">'.$value.' </a></li>';
+            $html_result.= '<li><a href="ads.php?category'.urlencode($value).'">'.$value.' </a></li>';
 
             }
             $html_result.='</ul>
@@ -624,7 +624,7 @@ function shopping_cart(){
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <div class="col-sm-2" style="background-image:url(\'img/icons/Shopping-Cart.png\');background-size:30px 30px;background-repeat:no-repeat;height:30px;width:30px;background-size:cover;"></div>
 		  <div class="col-sm-10 btn-xs" style="margin-top:5px;"><h4 class="modal-title">Shopping cart</h4></div>
-          
+          <br>
         </div>
         <div class="modal-body">
           <div>

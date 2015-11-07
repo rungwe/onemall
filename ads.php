@@ -38,7 +38,16 @@ aunthenticate();
    
 </head><!--/head-->
 
-<body onload="ads_init()" style="background-color:#F2F2F2;">
+<body onload="<?php 
+    
+    if(empty($_REQUEST)){
+        echo "ads_init('')";
+    }
+    else{
+        $category = $_REQUEST["category"];
+        echo "ads_init('$category')";
+        
+    }?>" style="background-color:#F2F2F2;">
 	
 	
 	<div id="nav" class="navbar-fixed-top" style="width:100%;height:55px;margin:0px;padding:0px;">
@@ -60,7 +69,8 @@ aunthenticate();
 									
 									<button class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" type="button">category&nbsp;<span class="caret"></span></button>
 									<div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-									<li role="presentation"><a >clothing</a></li>
+									<li role="presentation"><a >All</a></li>
+                                    <li role="presentation"><a >clothing</a></li>
 									<li role="presentation"><a >beauty and therapy</a></li>
 									<li role="presentation"><a >sports and leisure</a></li>
 									<li role="presentation"><a >jewellery</a></li>
@@ -118,75 +128,7 @@ aunthenticate();
 	        echo ad_detail();
         ?>
         <br><br><br>
-	<!-- <section id="slider" style="height:400px;">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
-						
-						<ol class="carousel-indicators">
-							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-							<li data-target="#slider-carousel" data-slide-to="1"></li>
-							<li data-target="#slider-carousel" data-slide-to="2"></li>
-						</ol>
-						
-						<div class="carousel-inner">
-							<div class="item active">
-								<div class="col-sm-6">
-									<h1>EDGARS</h1>
-									<h2>Red Hanger Specials</h2>
-									<p>Go to the your nearest EDGARS store and check out our special deals and save some money, do not be the last one!!</p>
-									<button type="button" class="btn btn-default get">Check it out</button>
-								</div>
-								<div class="col-sm-6">
-									<br><br><br><br>
-									<img src="img/commercials1.jpg" class="img-responsive" style="max-width:500px;" alt="" />
-									
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-sm-6">
-									
-									<h1>Game Mania</h1>
-									<h2> </h2>
-									<p>Bringing affordable gaming, come chat to us, we have gaming consoles at a nice price</p>
-									<button type="button" class="btn btn-default get">Check it out</button>
-								</div>
-								<div class="col-sm-6">
-									<br><br><br><br>
-									<img src="img/commercials4.jpg" class="img-responsive" style="max-width:500px;" alt="" />
-									
-								</div>
-							</div>
-							
-							<div class="item">
-								<div class="col-sm-6">
-									<h1>Electronica</h1>
-									<h2></h2>
-									<p>Great television at affordable prices </p>
-									<button type="button" class="btn btn-default get">Check it out</button>
-								</div>
-								<div class="col-sm-6">
-									<br><br><br><br>
-									<img src="img/commercials3.jpg" class="img-responsive" style="max-width:500px;" alt="" />
-									
-								</div>
-							</div>
-							
-						</div>
-						
-						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-							<i class="fa fa-angle-left"></i>
-						</a>
-						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-							<i class="fa fa-angle-right"></i>
-						</a>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</section> slider-->
+	
 
 	<section >
 		<div class="container" >
@@ -213,7 +155,21 @@ aunthenticate();
 				<div class="col-sm-6 padding-right">
 
 					<div class="features_items"><!--features_items-->
-						<h2 class="title text-center">Featured Adverts</h2>
+						<h2 class="title text-center">
+                            <?php
+                                if(empty($_REQUEST)){
+                                    echo "Featured Adverts";
+                                }
+                                else{
+                                    echo $_REQUEST["category"];
+                                }
+                                
+                            ?>
+                            
+                        
+                        
+                        
+                        </h2>
 						
 						 <div id="adcenter" style="margin-left:6px;margin-right:0px;">
                             

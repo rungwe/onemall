@@ -131,6 +131,7 @@ aunthenticate();
 		        echo create_ad();
 		        echo edit_account_modal();
 	            echo ad_detail(); 
+                echo shopping_cart();
             ?>
             <div id="content">
 					

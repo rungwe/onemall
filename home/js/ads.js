@@ -110,7 +110,7 @@ function buildAd(ad){
 	}
 
 //Demo tested
-function pull_ads(){
+function pull_ads(category){
 	var mainID="adcenter";
 	var xmlhttp;
 	
@@ -128,19 +128,27 @@ function pull_ads(){
 		      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 		          //document.getElementById("loader").style.display="none"
 		          var info = xmlhttp.responseText;
-		          //alert(info);
+		          alert(info);
 		          var data = JSON.parse(info);
 		          displayAds(data, mainID);
 		      }
-		  } 	
-	xmlhttp.open("GET",URI+"customer/get-adverts",true);
+		  }
+    if (category==""){
+        alert("features");
+        xmlhttp.open("GET",URI+"customer/get-adverts",true);
+    } 	
+    else{
+        alert("category");
+        xmlhttp.open("GET",URI+"customer/get-adverts-in-category?category="+category+"&page=1&amount=10",true);
+    }
+	
     xmlhttp.setRequestHeader("Authorization",'Bearer ' + token);
 	xmlhttp.send();
 	
 	
 }
 
-function ads_init(){
+function ads_init(category){
 	
 	var xmlhttp;
 	
@@ -165,7 +173,7 @@ function ads_init(){
 		            window.location.href = "login.php";
 		        }
 		        else {
-		            pull_ads();
+		            pull_ads(category);
 		            pull_suggestions(3);
                     drawer_init();
 		            close_drawer_onload(1500);
