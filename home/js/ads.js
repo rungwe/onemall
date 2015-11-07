@@ -128,17 +128,17 @@ function pull_ads(category){
 		      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 		          //document.getElementById("loader").style.display="none"
 		          var info = xmlhttp.responseText;
-		          alert(info);
+		          //alert(info);
 		          var data = JSON.parse(info);
 		          displayAds(data, mainID);
 		      }
 		  }
     if (category==""){
-        alert("features");
+        //alert("features");
         xmlhttp.open("GET",URI+"customer/get-adverts",true);
     } 	
     else{
-        alert("category");
+        //alert("category");
         xmlhttp.open("GET",URI+"customer/get-adverts-in-category?category="+category+"&page=1&amount=10",true);
     }
 	
