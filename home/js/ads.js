@@ -109,7 +109,7 @@ function buildAd(ad){
 		return advert;
 	}
 
-// tested
+//Demo tested
 function pull_ads(){
 	var mainID="adcenter";
 	var xmlhttp;

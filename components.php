@@ -1,6 +1,47 @@
 <?php
 
+function generate_category(){
+    $html_result="";
+    $file = fopen("categories.json","r");
+    $contents = fread($file, filesize("categories.json"));
+    $categories = json_decode($contents, true);
+    $id=0;
+    foreach ($categories as $category => $sub_category){
+        if (count($sub_category)!=0 ){
+            $html_result.='<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#'.$id.'">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											'.$category.'
+										</a>
+									</h4>
+								</div>
+                                </div>';
+        }
+        else{
+            $html_result.='<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">'.$category.'</a></h4>
+								</div>
+							</div>';
+        }
+        if ( count($sub_category)!=0 ){
+             $html_result.= '<div id="'.$id.'" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>';
+            foreach($sub_category as $value){
+            $html_result.= '<li><a href="#">'.$value.' </a></li>';
 
+            }
+            $html_result.='</ul>
+									</div>
+								</div>';
+        }
+        $id=$id +1;
+    }
+    return $html_result;
+}
 function nav_drawer(){
 	$drawer_html ='<div class="ui-24 open" style="left: 0px;z-index:100;margin-top:60px;position:fixed">
 			<!-- Button -->

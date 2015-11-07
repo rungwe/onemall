@@ -1,5 +1,4 @@
 {
-    "categories": {
            "All":[] ,
 
            "Automotive Vehicles":[],
@@ -46,8 +45,8 @@
             "Financing":[],
             "Baby and Kids":[],
             "Travelling and Accommodation":[],
-            "Office equipment":[],
+            "Office equipment":[]
 
 
-        }      
+             
    }
