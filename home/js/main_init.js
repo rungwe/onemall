@@ -5,9 +5,7 @@ Date: 20 May 2015
 Content: Library for client side scripts for My Shops
 **/
 
-// global 
-count =6
-// end of global
+
 function main_init(){
 	drawer_init();
     close_drawer_onload(1000);
@@ -33,12 +31,13 @@ function main_init(){
 		              window.location.href = "login.php";
 		          }
 		          else {
-                      
+
 		              pull_broadcasts(6);
 		              pull_suggestions(3);
 		              //alert("loading profile.....");
 		              get_profile();
 		              social_media_init();
+		              notify("this is your firs session", "info");
 		          }
 
 
@@ -134,18 +133,7 @@ function loader(status){
 		document.getElementById("loader").style.display="none";
 	}
 }
-// infinity scroll
-$(document).ready(function () {
-    $(window).scroll(function () {
-        if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
-            //alert("bottom of the page reached!");
-            if (count <=8) {
-                pull_broadcasts(count++);
-            }
-        }
-    });
 
-});
 function social_media_init() {
     $(document).ready(function () {
         $(".social-media").click(function () {

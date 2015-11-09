@@ -209,7 +209,7 @@ aunthenticate();
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
 								<div class="item active">	
-									<div class="col-sm-4">
+									<div class="col-sm-3">
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
@@ -222,7 +222,20 @@ aunthenticate();
 											</div>
 										</div>
 									</div>
-									<div class="col-sm-4">
+                                    <div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="img/products/jeans.jpg" alt="" />
+													<h2>R600</h2>
+													<p>Mens apparel</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-3">
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
@@ -235,7 +248,7 @@ aunthenticate();
 											</div>
 										</div>
 									</div>
-									<div class="col-sm-4">
+									<div class="col-sm-3">
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
@@ -250,7 +263,7 @@ aunthenticate();
 									</div>
 								</div>
 								<div class="item">	
-									<div class="col-sm-4">
+									<div class="col-sm-3">
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
@@ -263,7 +276,7 @@ aunthenticate();
 											</div>
 										</div>
 									</div>
-									<div class="col-sm-4">
+									<div class="col-sm-3">
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
@@ -276,7 +289,20 @@ aunthenticate();
 											</div>
 										</div>
 									</div>
-									<div class="col-sm-4">
+                                    <div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="img/products/jackets.jpg" alt="" />
+													<h2>R456</h2>
+													<p>Mens Jacket</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-3">
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
@@ -304,8 +330,7 @@ aunthenticate();
 
 	
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/price-range.js"></script>
-    <script src="js/price.js"></script>
+	
 	<script src="home/js/suggestions.js"></script>
 </body>
 </html>';

@@ -17,12 +17,14 @@ function post_ad(){
 		document.getElementById("ad_title").value=document.getElementById("ad_title").value.trim();
 	}
 	else{
-		display_input_error("Please enter the title of this advert ):")
+		//display_input_error("Please enter the title of this advert ):")
+        notify_validation("Please enter the title of this advert ):");
 		return;
 	}
 	
 	if(document.getElementById("ad_category").value=="Please select"){
-		display_input_error("Please select valid category ):")
+		//display_input_error("Please select valid category ):")
+        notify_validation("Please select valid category ):");
 		return;
 	}
 	
@@ -31,12 +33,14 @@ function post_ad(){
 		document.getElementById("ad_info").value=document.getElementById("ad_info").value.trim();
 	}
     else{
-		display_input_error("Please enter description of this advert ):");
+		//display_input_error("Please enter description of this advert ):");
+        notify_validation("Please enter description of this advert ):");
 		return;
 	}
 
     if (price==""){
-        display_input_error("Please enter amount ):")
+        //display_input_error("Please enter advert price amount ):")
+        notify_validation("Please enter advert price amount ):");
         return;
     }
 	
@@ -62,11 +66,12 @@ function post_ad(){
 		      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 		          //window.clearInterval(reloadbr)
 		          var info = xmlhttp.responseText;
-                  //alert("ad received " + info);
+		          //alert("ad received " + info);
 		          //process_uploads(info);
 		          //alert("ad received " + info);
-		          ad_success();
-		          //clear form
+		          //ad_success();
+		          //clear 
+		          notify_success("advert posted");
 		          reset_form();
 		          //alert(xmlhttp.responseText);
 

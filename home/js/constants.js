@@ -53,3 +53,75 @@ function redirect(url){
     window.location.href =url;
 
 }
+
+function notify(mssg, type){
+    //alert("executed");
+    $(document).ready(function(){
+				
+					$.notify({
+						// options
+						message: mssg
+					},{
+						// settings
+						type: type,
+                        z_index: 1000000
+					});
+				
+			});
+}
+
+function notify_success(mssg){
+    //alert("executed");
+    $(document).ready(function(){
+				
+					$.notify({
+						// options
+						message: mssg,
+                        icon: 'glyphicon glyphicon glyphicon-ok',
+                        title: "successfull operation"
+					},{
+						// settings
+						type: "success",
+                        z_index: 1000000
+					});
+				
+			});
+}
+
+function notify_failure(mssg){
+    //alert("executed");
+    $(document).ready(function(){
+				
+					$.notify({
+						// options
+						message: mssg,
+                        icon: 'glyphicon glyphicon-remove',
+                        title: "operation failed"
+					},{
+						// settings
+						type: "danger",
+                        z_index: 1000000
+					});
+				
+			});
+}
+
+function notify_validation(mssg){
+    //alert("executed");
+    $(document).ready(function(){
+				
+					$.notify({
+						// options
+						message: mssg,
+                        icon: 'glyphicon glyphicon-remove'
+                        
+					},{
+						// settings
+						type: "danger",
+                        z_index: 1000000
+					});
+				
+			});
+}
+
+

@@ -18,42 +18,38 @@
 	 );
 	//var id= shop_data["shop_id"], shop_pic = shop_data["shop_wall_picture"], shop_name=shop_data["shop_name"], followers=shop_data["num_followers"];
 	 $popular =array(
-		array("shop_id"=>"12345", "shop_wall_picture"=>"img/pnp.jpg","shop_name"=>"Pick n Pay","num_followers"=>"1780"),
-		array("shop_id"=>"6789", "shop_wall_picture"=>"img/trueworths.jpg","shop_name"=>"Trueworths","num_followers"=>"900"),
-		array("shop_id"=>"101112", "shop_wall_picture"=>"img/checkers.jpg","shop_name"=>"Checkers","num_followers"=>"1200"),
-		array("shop_id"=>"131415", "shop_wall_picture"=>"img/glomail.jpg","shop_name"=>"Glomail","num_followers"=>"989")
+		array("ID"=>"1234r5", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
+		array("ID"=>"123w45", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
+		array("ID"=>"123f45", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
+		array("ID"=>"123iebf45", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
 	 );
 	
 	$recommended =array(
-		array("shop_id"=>"16171819", "shop_wall_picture"=>"img/game.jpg","shop_name"=>"Game","num_followers"=>"180"),
-		array("shop_id"=>"20212223", "shop_wall_picture"=>"img/istore.png","shop_name"=>"iStore","num_followers"=>"930"),
-		array("shop_id"=>"24252627", "shop_wall_picture"=>"img/checkers.jpg","shop_name"=>"Nike","num_followers"=>"412"),
-		array("shop_id"=>"252627", "shop_wall_picture"=>"img/adidas.jpg","shop_name"=>"Addidas","num_followers"=>"989"),
-		array("shop_id"=>"16171819", "shop_wall_picture"=>"img/mtn.jpg","shop_name"=>"Mtn","num_followers"=>"180"),
-		array("shop_id"=>"20212223", "shop_wall_picture"=>"img/md.jpg","shop_name"=>"McDonalds","num_followers"=>"900"),
-		array("shop_id"=>"24252627", "shop_wall_picture"=>"img/vodacom.jpg","shop_name"=>"Vodacom","num_followers"=>"560"),
-		array("shop_id"=>"252627", "shop_wall_picture"=>"img/identity.jpg","shop_name"=>"identity","num_followers"=>"891")
+		array("ID"=>"1234goeg5", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
+		array("ID"=>"12opmn345", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
+		array("ID"=>"1emge2345", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
+		array("ID"=>"1ege2t345", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
 	 );
 	
 	$clothing =array(
-		array("shop_id"=>"12345", "shop_wall_picture"=>"img/edgars.jpg","shop_name"=>"Edgars","num_followers"=>"480"),
-		array("shop_id"=>"6789", "shop_wall_picture"=>"img/mrp.jpg","shop_name"=>"Mr Price","num_followers"=>"200"),
-		array("shop_id"=>"101112", "shop_wall_picture"=>"img/trueworths.jpg","shop_name"=>"Trueworths","num_followers"=>"300"),
-		array("shop_id"=>"131415", "shop_wall_picture"=>"img/glomail.jpg","shop_name"=>"Glomail","num_followers"=>"689")
+		array("ID"=>"1geg23r45", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
+		array("ID"=>"12hthe3g45", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
+		array("ID"=>"123keke,45", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
+		array("ID"=>"1234dmdmd5", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
 	 );
 	 
 	 $electronics=array(
-		array("shop_id"=>"12345", "shop_wall_picture"=>"img/dion.jpg","shop_name"=>"Dion Wired","num_followers"=>"413"),
-		array("shop_id"=>"6789", "shop_wall_picture"=>"img/samsung.jpg","shop_name"=>"Samsung","num_followers"=>"345"),
-		array("shop_id"=>"101112", "shop_wall_picture"=>"img/istore.png","shop_name"=>"iStore","num_followers"=>"621"),
-		array("shop_id"=>"131415", "shop_wall_picture"=>"img/communica.jpg","shop_name"=>"Communica","num_followers"=>"234")
+		array("ID"=>"1infr2345", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
+		array("ID"=>"nfne12345", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
+		array("ID"=>"1234jjjdue5", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
+		array("ID"=>"1234fbbfhrh5", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
 	 );
 	 
 	 $banks=array(
-		array("shop_id"=>"12345", "shop_wall_picture"=>"img/absa.jpg","shop_name"=>"ABSA","num_followers"=>"413"),
-		array("shop_id"=>"6789", "shop_wall_picture"=>"img/standard.jpg","shop_name"=>"Standard Bank","num_followers"=>"345"),
-		array("shop_id"=>"101112", "shop_wall_picture"=>"img/fnb.jpg","shop_name"=>"FNB","num_followers"=>"621"),
-		array("shop_id"=>"131415", "shop_wall_picture"=>"img/nedbank.jpg","shop_name"=>"Nedbank","num_followers"=>"234")
+		array("ID"=>"ffef12345", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
+		array("ID"=>"1cs2345", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
+		array("ID"=>"1234vse5", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
+		array("ID"=>"123wgweg45", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
 	 );
 	 
 	 //SEND => name: pull_friends, name: user_id

@@ -15,6 +15,9 @@ Shops are arranged in order of retrieval
 
 status: in progress
 **/
+followers_counter = 0;
+
+
 function displayCompany(compArr,locationID){
 	
 	
@@ -27,15 +30,15 @@ function displayCompany(compArr,locationID){
 	
 }
 
-function buildCompany(shop_data){
-	//shop data instances  name: shop_name , shop_profile_picture , shop_wall_picture,  shop_id , num_followers;
-	var id= shop_data["shop_id"], shop_pic = shop_data["shop_wall_picture"], shop_name=shop_data["shop_name"], followers=shop_data["num_followers"];
-	var template='<div id="'+id+'" class="col-sm-3">'+
-						'<div class="fill highlight my_header" style="background-image:url(\''+shop_pic+'\');background-size:cover;height:34%;width:111%;margin-bottom:5px;">'+
+function buildCompany(company){
+	
+	
+	var template='<div id="'+company.ID+'" class="col-sm-3">'+
+						'<div class="fill highlight my_header" style="background-image:url(\''+company.profile_pic.url+'\');background-size:cover;height:34%;width:111%;margin-bottom:5px;">'+
 										'<div class="row my_header-content">'+
-											'<div>'+shop_name+'</div>'+
+											'<div>'+company.name+'</div>'+
 											'<div class="row">'+
-												'<div class="col-sm-6" style="font-weight:400;color:white;">followers &nbsp;'+followers+'</div>'+
+												'<div class="col-sm-6" style="font-weight:400;color:white;">followers &nbsp;'+company.number_of_followers+'</div>'+
 												'<div class="col-sm-4 " style="margin-bottom:5px;"> <button class="btn btn-info btn-xs">+follow</button></div>'+
 											'</div>'+
 										'</div>'+
@@ -99,7 +102,7 @@ function pull_companies(num,category,header,footer){
 				//SEND => name: request_companies = 'true'  , name:category, name:number_companies;
 				
 				var info =xmlhttp.responseText;
-				//alert(info);
+				alert(info);
 				var data =JSON.parse(info);
 				document.getElementById("loader").style.display="none"
 				if(info!=""){
@@ -111,8 +114,8 @@ function pull_companies(num,category,header,footer){
 			}
 	}
 		  
-		  
-	xmlhttp.open("POST",url+"?request_companies=true&number_companies="+num+"&category="+category,true);
+    xmlhttp.open("GET",URI+"customer/get-company-suggestions-by-category?num_categories={num_categories}&page={page}&num_companies={num_companies}",true);	  
+	xmlhttp.setRequestHeader("Authorization",'Bearer ' + token);
 	xmlhttp.send();
 	
 }
@@ -122,7 +125,7 @@ function pull_companies(num,category,header,footer){
 function pull_companies_followed(){
 	
 	var xmlhttp;
-	
+	var page = followers_counter++;
 	if (window.XMLHttpRequest)
 		  {// code for IE7+, Firefox, Chrome, Opera, Safari
 		  
@@ -141,7 +144,7 @@ function pull_companies_followed(){
 				//SEND => name: request_companies = 'true'  , name:category, name:number_companies;
 				
 				var info =xmlhttp.responseText;
-				//alert(info);
+				alert(info);
 				var data =JSON.parse(info);
 				document.getElementById("loader").style.display="none"
 				if(info!=""){
@@ -152,8 +155,8 @@ function pull_companies_followed(){
 		
 	//SEND => name: pull_followers
 	//RECEIVE => name: shop_name , shop_profile_picture , shop_wall_picture, shopID , num_followers;
-		  
-	xmlhttp.open("POST",url+"?pull_followers=true",true);
+	xmlhttp.open("GET",URI+"customer/get-following-companies?page="+page+"&amount=20",true);	  
+	xmlhttp.setRequestHeader("Authorization",'Bearer ' + token);
 	xmlhttp.send();
 	
 }

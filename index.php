@@ -27,8 +27,9 @@ aunthenticate();
 		<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
         <link rel="stylesheet" href="http://css-spinners.com/css/spinners.css" type="text/css">
 		<link href="home/css/googlemaps.css" rel="stylesheet">
+        <link href="./menu_files/style-24.css" rel="stylesheet">
+        <link href="home/css/animate.css" rel="stylesheet">
         
-		<link href="./menu_files/style-24.css" rel="stylesheet">
         <script type="text/javascript" src="home/js/googlemaps.js"></script>
         <script type="text/javascript" src="home/js/jquery.min.js"></script>
 		<<script type="text/javascript" src="home/js/constants.js"></script>
@@ -47,6 +48,7 @@ aunthenticate();
 		<script type="text/javascript" src="home/js/create_ad.js"></script>
         <script type="text/javascript" src="home/js/profile.js"></script>
         <script type="text/javascript" src="home/js/jquery.endless-scroll.js"></script>
+        <script type="text/javascript" src="home/js/bootstrap-notify.min.js"></script>
 	</head>
 	
 	

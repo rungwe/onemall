@@ -99,7 +99,7 @@ aunthenticate();
 			<div class="col-sm-3 tab" >
 			<center>
 			<span class="input-group">
-				<center class="dropdown-toggle" id="dropdownMenu" data-toggle="dropdown" style="cursor:pointer;"><h3>Category&nbsp;</h3><span class="caret"></span></center>
+				<center class="dropdown-toggle" id="dropdownMenu" data-toggle="dropdown" style="cursor:pointer;"><h3>Category&nbsp;</h3></center>
 				
 				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
 										<li role="presentation"><a>All</a></li>
@@ -125,7 +125,7 @@ aunthenticate();
 			<div class="col-sm-3 tab"  >
 			<center style="cursor:pointer;">
 				<span class="input-group">
-				<center class=" dropdown-toggle" id="dropdownMenuLocation" data-toggle="dropdown" style="cursor:pointer;"><h3>Location&nbsp;</h3><span class="caret"></span></center>
+				<center class=" dropdown-toggle" id="dropdownMenuLocation" data-toggle="dropdown" style="cursor:pointer;"><h3>Location&nbsp;</h3></center>
 				
 				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuLocation">
 										<li role="presentation"><a>Western Cape</a></li>
