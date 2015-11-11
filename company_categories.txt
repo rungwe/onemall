@@ -1,0 +1,13 @@
+<li role="presentation"><a>All</a></li>
+										<li role="presentation"><a>Top Trending</a></li>
+										<li role="presentation"><a>Recommended</a></li>
+										<li role="presentation"><a>Clothing and fashion</a></li>
+										<li role="presentation"><a>Consumer Electronics</a></li>
+										<li role="presentation"><a>Groceries</a></li>
+										<li role="presentation"><a>Banking and Insurance</a></li>
+										<li role="presentation"><a>Automotive</a></li>
+										<li role="presentation"><a>Sports and Entertainment</a></li>
+										<li role="presentation"><a>Health</a></li>
+										<li role="presentation"><a>Home and Gardening</a></li>
+										<li role="presentation"><a>Travel</a></li>
+										<li role="presentation"><a>Education</a></li>

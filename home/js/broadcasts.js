@@ -59,7 +59,7 @@ function buildBroadcast(feed){
             time = feed.date.substring(0, 10);
         }
         var profile_img_url=feed.company.profile_pic.url;
-       if(ad.seller.profile_pic==null){
+       if(feed.company.profile_pic==null){
           profile_img_url="img/company.png" 
        }	
 
@@ -74,7 +74,7 @@ function buildBroadcast(feed){
 			  '					</div>'+
 			  '				</div>'+
 			  '				<div class="panel-body">'+
-			  '					'+post_info+	
+			  '					'+feed.details+	
 			  '					<div class="row">'+
 			  '						<div> <center><img  class="img-border" src="'+feed.images[0].url+'" style="max-height:300px;min-height:200;max-width:100%;"></center></div>'+
 			  '					</div>'+
@@ -117,8 +117,9 @@ function pull_broadcasts(){
 		          displayBroadcasts(data, mainID);
 		      }
 		  } 	
-	xmlhttp_br.open("GET",URI+"customer/get-broadcasts?page="+page+"&amount=10&time=2015-11-08",true);
-	xmlhttp_br.setRequestHeader("Authorization",'Bearer ' + token);
+    xmlhttp_br.open("GET","Client.php?pull_broadcasts=true",true);
+	//xmlhttp_br.open("GET",URI+"customer/get-broadcasts?page="+page+"&amount=10&time=2015-11-08",true);
+	//xmlhttp_br.setRequestHeader("Authorization",'Bearer ' + token);
 	xmlhttp_br.send();
 	
 	

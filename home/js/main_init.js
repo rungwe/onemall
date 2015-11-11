@@ -37,7 +37,7 @@ function main_init(){
 		              //alert("loading profile.....");
 		              get_profile();
 		              social_media_init();
-		              notify("this is your firs session", "info");
+		             
 		          }
 
 
@@ -76,6 +76,7 @@ function get_profile(){
 		          document.getElementById("firstname").value = profileInfo.fname;
 		          document.getElementById("surname").value = profileInfo.lname;
 		          document.getElementById("dob").value = profileInfo.date_of_birth;
+                   notify("Welcome back "+profileInfo.fname, "info");
 		      }
 		  } 	
 	xmlhttp_br.open("GET",URI+"customer/get-user-profile",true);

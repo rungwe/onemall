@@ -3,7 +3,7 @@
 require 'session.php';
 init();
 
-
+customer_restricted();
 aunthenticate();
 //phpinfo();
 ?>
@@ -188,21 +188,10 @@ aunthenticate();
 										<div class="col-sm-8 col-sm-offset-2 btn-xs" style="margin-top:5px;"> <a href="products.php" style="text-align:left;font-style:oblique;color:black;">Go shopping</a></div>
 									</div>
 									
-									<div class="row" onclick="show_friends()" style="cursor:pointer;">
+									<div class="row" style="cursor:pointer;">
 										<div class="col-sm-2" style="background-image:url('img/icons/Contacts.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
-										<div class="col-sm-8 col-sm-offset-2 btn-xs" style="margin-top:5px;">Buddies</div>
+										<div class="col-sm-8 col-sm-offset-2 btn-xs" style="margin-top:5px;"><a href="friends.php" style="text-align:left;font-style:oblique;color:black;">Friends</a></div>
 									</div>
-									
-									<!-- <div class="row" style="cursor:pointer;">
-										<div class="col-sm-2" style="background-image:url(\'img/notify.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
-										<div class="col-sm-8 col-sm-offset-2 btn-xs" style="margin-top:5px;">Notify me</div>
-									</div> -->
-									
-								
-									<!-- <div class="row" style="cursor:pointer;" data-toggle="modal" data-target="#create_ad" onclick="setup_adCreate()" >
-										<div class="col-sm-2" style="background-image:url(\'img/icons/Pencil.png\');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
-										<div class="col-sm-8 col-sm-offset-2 btn-xs" style="margin-top:5px;">Create Ads</div>
-									</div> -->
 									
 									<div class="row" style="cursor:pointer;">
 										<div class="col-sm-2" style="background-image:url('img/icons/Building.png');background-size:20px 20px;background-repeat:no-repeat;height:20px;width:20px;"></div>
@@ -223,30 +212,7 @@ aunthenticate();
 	                              
 						
 						    </div>
-						    <div id="friends_nav" style="margin-left:4%;display:none">
-							    <center>
-							     <div class= "row" style="width:50%;">
-								    <div class="col-sm-6 tab active_tab" id="friendslist">
-								     <center style="cursor:pointer;font-weight:900;"> <h4>My friends</h4></center>
-								    </div>
-								    <div class="col-sm-6 tab" id="sug_friends">
-								     <center style="cursor:pointer;font-weight:900;"><h4>Find friends </h4></center>
-								    </div>
-							     </div>
-							    </center><br>
-							
-							    
-                                    
-                                        <div  id="friends">
-
-                                        </div>
-                                    
-                                
-							    
-							    <div id="suggested_friends" style="display:none">
-							
-							    </div>
-						    </div>
+						    
 						
 						    <div id="loader" class="loader loader2 col-sm-offset-3" style="margin-top:40%">
 						      <center>

@@ -31,7 +31,7 @@ function generate_category(){
 									<div class="panel-body">
 										<ul>';
             foreach($sub_category as $value){
-            $html_result.= '<li><a href="ads.php?category'.urlencode($value).'">'.$value.' </a></li>';
+            $html_result.= '<li><a href="ads.php?category='.urlencode($value).'">'.$value.' </a></li>';
 
             }
             $html_result.='</ul>
@@ -46,7 +46,7 @@ function nav_drawer(){
 	$drawer_html ='<div class="ui-24 open" style="left: 0px;z-index:100;margin-top:60px;position:fixed">
 			<!-- Button -->
 			<div class="ui-button" id="side-drawer">
-				<a href="#" class="bg-lblue">Dashboard</a>
+				<a style="background-color:#004A6E; cursor:pointer">Dashboard</a>
 			</div>
 			<div class="ui-content" >
 				<!-- Container Fluid -->
@@ -576,21 +576,23 @@ function create_ad(){
 }
 
 function post_interface(){
-                $component ='<div style="width:100%;background-color:#F2F2F2;box-shadow: 10px 10px 5px #888888;">
-                                <textarea rows="4" cols="50" placeholder="Whats happening?" style="width:100%;resize:none;"></textarea>
-                                <div class="row">
+                $component ='<div style="width:100%;background-color:#E0EBEB;">
+                                <textarea class="form-control" rows="4" cols="50" placeholder="Whats new" style="width:100%;resize:none;"></textarea>
+                                
+                                <div class="row" style="margin-top:4px;">
+                                   
                                     <div class=" col-sm-1">
-                                        <span class="glyphicon glyphicon-picture" style="font-size:25px;"></span>
+                                        <i class="fa fa-camera"" style="font-size:25px;color:grey;"></i>
                                     </div>
                                     <div class="col-sm-1">
-                                        <span class="glyphicon glyphicon-film" style="font-size:25px;"></span>
+                                        <i class="fa fa-video-camera" style="font-size:25px;color:grey;"></i>
                                     </div>
-                                    <div class="col-sm-offset-8 pull-right col-sm-2">
-                                        <button class="btn btn-primary"> post </button>
+                                    <div class="col-sm-offset-8 pull-right col-sm-2" style="left:0px;">
+                                        <button class="btn btn-primary"> share </button>
                                     </div>
                                 </div>
                                 
-                                <h5>share via</h5>
+                                <h4>share via</h4>
                                 <div class="row">
                                     <div class="col-sm-offset-1 col-sm-2 social-media fbk ">
                                         <i class="fa fa-facebook-official "></i>

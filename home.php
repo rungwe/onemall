@@ -8,7 +8,7 @@ aunthenticate();
 <html>
 
 	<head>
-		<title> Mr Price</title>
+		<title>Home</title>
 		<link rel="icon" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/img/log3.png"/>
 		<meta name="viewport" content="width=1024">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -42,7 +42,7 @@ aunthenticate();
 					
 					<div class="col-sm-2">
 						<div class="col-sm-2">
-							<a href="index.php"><img src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/log3.png" height="50" width="50"/></a>
+							<a href="home.php"><img src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/log3.png" height="50" width="50"/></a>
 						</div>
 					</div>
 					
@@ -109,10 +109,10 @@ aunthenticate();
 		<div  id="header" style="height:50px;width:100%;position:absolute;z-index:1;margin-top:320px;background-color:white;">
 			<div >
 				<div class="col-sm-offset-2 col-sm-2" align="right">
-					<center class="active_tab tab active" ><h4 data-toggle="tab" href="#about">About us</h4></center>
+					<center class="tab" ><h4 data-toggle="tab" href="#about">About us</h4></center>
 				</div>
 				<div class="col-sm-2">
-					<center class="tab"><h4 data-toggle="tab" href="#broadcasts">Broadcasts</h4></center>
+					<center class="active_tab tab active"><h4 data-toggle="tab" href="#broadcasts">Broadcasts</h4></center>
 				</div>
 				<div class="col-sm-2">
 					<center class="tab"><h4 data-toggle="tab" href="#services">Services</h4> </center>
@@ -134,7 +134,7 @@ aunthenticate();
 	        echo ad_detail();
         ?>	
         <div class="tab-content">
-		    <div id="about" class="tab-pane fade in active" style="margin-top:350px;">
+		    <div id="about" class="tab-pane fade" style="margin-top:350px;">
                 <div class="container">
 
                     <div class="" >
@@ -189,7 +189,7 @@ aunthenticate();
 
             </div>
 
-		    <div id="broadcasts" class="tab-pane fade" style="width:100%;margin-top:290px;position:absolute;overflow-y:auto;">
+		    <div id="broadcasts" class="tab-pane fade in  active" style="width:100%;margin-top:290px;position:absolute;overflow-y:auto;">
 			    <div  style="margin-top:5%;">
 				    <div class="col-sm-4" id="left" style="width:400px; height:10px;">
 					   

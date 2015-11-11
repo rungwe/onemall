@@ -29,7 +29,6 @@ SESSION data email, username, timestamp, token, token-exp
 						
 			if (is_session_valid()){
 				update_session_time();
-						
 				$branch=3; //go to home page
 							
 			}
@@ -41,8 +40,6 @@ SESSION data email, username, timestamp, token, token-exp
 			}
 		}
 	
-	
-	
 	if($branch==1){
 		header("Location: signup.php");
 	}
@@ -53,7 +50,20 @@ SESSION data email, username, timestamp, token, token-exp
 	
  }
  
+ 
+ function customer_restricted(){
+     if($_SESSION["type"]!="customer"){
+			        header("Location: home.php");
+                    exit();
+	  }
+ }
 
+ function company_restricted(){
+     if($_SESSION["type"]!="company"){
+			        header("Location: index.php");
+                    exit();
+	  }
+ }
 
  function is_session_valid(){
 	    if(empty($_SESSION['timestamp']) or empty($_SESSION['token-issue']) ){
@@ -102,9 +112,7 @@ function create_session($access){
 	 $_SESSION['token-issue']=update_session_time();
 	 $_SESSION['email'] = $_POST['form-email'];
 	 $_SESSION['token'] = $access->access_token;
-	 
-	 
-	 
+     $_SESSION['type'] = $access->accountType; 
 	 	
  }
  
@@ -146,7 +154,7 @@ function create_session($access){
 			
 			//login the user
 			if ($code=="200"){
-				$response =  Array($code,$result);
+				$response =  Array($code,$result,$msg->accountType);
                 custom_handler_init();
                 //return $status;
                 session_set_cookie_params (3600*24*365);

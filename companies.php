@@ -22,6 +22,9 @@ aunthenticate();
 		<link href="home/css/myshops.css" rel="stylesheet">
         <link href="./menu_files/style-24.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/loader.css">
+        <link href="home/css/main.css" rel="stylesheet">
+        <link href="./companies_files/style-142.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
 		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="home/js/constants.js"></script>
@@ -92,108 +95,193 @@ aunthenticate();
 		    echo edit_account_modal();
 	        echo ad_detail();
         ?>
-		<div class= "row" style="width:80%;margin-left:10%;position:fixed;z-index:2;">
-			<div class="col-sm-3 tab active_tab" >
-			<center style="cursor:pointer;"><h3> Companies</h3></center>
-			</div>
-			<div class="col-sm-3 tab" >
-			<center>
-			<span class="input-group">
-				<center class="dropdown-toggle" id="dropdownMenu" data-toggle="dropdown" style="cursor:pointer;"><h3>Category&nbsp;</h3></center>
-				
-				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-										<li role="presentation"><a>All</a></li>
-										<li role="presentation"><a>Top Trending</a></li>
-										<li role="presentation"><a>Recommended</a></li>
-										<li role="presentation"><a>Clothing and fashion</a></li>
-										<li role="presentation"><a>Consumer Electronics</a></li>
-										<li role="presentation"><a>Groceries</a></li>
-										<li role="presentation"><a>Banking and Insurance</a></li>
-										<li role="presentation"><a>Automotive</a></li>
-										<li role="presentation"><a>Sports and Entertainment</a></li>
-										<li role="presentation"><a>Health</a></li>
-										<li role="presentation"><a>Home and Gardening</a></li>
-										<li role="presentation"><a>Travel</a></li>
-										<li role="presentation"><a>Education</a></li>
-										
-										
-				</ul>
-			</span>
-			</center>
-			</div>
-			
-			<div class="col-sm-3 tab"  >
-			<center style="cursor:pointer;">
-				<span class="input-group">
-				<center class=" dropdown-toggle" id="dropdownMenuLocation" data-toggle="dropdown" style="cursor:pointer;"><h3>Location&nbsp;</h3></center>
-				
-				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuLocation">
-										<li role="presentation"><a>Western Cape</a></li>
-										<li role="presentation"><a>Gauteng</a></li>
-										<li role="presentation"><a>Northen Cape</a></li>
-										<li role="presentation"><a>Kwazulu Natal</a></li>
-										<li role="presentation"><a>Limpopo</a></li>
-										<li role="presentation"><a>Mpumalanga</a></li>
-										<li role="presentation"><a>Eastern Cape</a></li>
-										<li role="presentation"><a>North West</a></li>
-										<li role="presentation"><a>Free State</a></li>
-										
-				</ul>
-			</span>
-			</center>
-			</div>
-			<div class="col-sm-3 tab" >
-			<center style="cursor:pointer;"><h3 class="following">Following</h3></center>
-			</div>
-		</div>
+		
 		<br>
 		<div class="container-fluid" style="height:91%;">
 			
-			<div class="row col-sm-offset-1 col-sm-10">
+			<!--<div class="row col-sm-offset-1 col-sm-10">
 				<div id="loader" class="loader loader2 col-sm-offset-3" style="margin-top:25%">
 						  <center>
 							        <div class="throbber-loader">
                                        
                                     </div>
                               </center>
-				</div>
-            <br><br>
-			<div id ="popular" class="row" style="margin:0px;padding:0px;">
-				
-			</div>
-			
-			<div id ="recommended" class="row" style="margin:0px;padding:0px;">
-				
-			</div>
-	
-			<div id ="clothing" class="row" style="margin:0px;padding:0px;">
-				
-			</div>
-			
-			<div id ="electronics" class="row" style="margin:0px;padding:0px;">
-				
-			</div>
-			
-			<div id ="banks" class="row" style="margin:0px;padding:0px;">
-				
-			</div>
+				</div> -->
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="panel-group category-products" id="accordian" style="background-color:"><!--category-productsr-->
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">Recommended</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">Following</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Categories
+										</a>
+									</h4>
+								</div>
+								<div id="sportswear" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											
+                                            <li ><a>Top Trending</a></li>
+										    <li><a>Recommended</a></li>
+										    <li ><a>Clothing and fashion</a></li>
+										    <li ><a>Consumer Electronics</a></li>
+										    <li ><a>Groceries</a></li>
+										    <li ><a>Banking and Insurance</a></li>
+										    <li ><a>Automotive</a></li>
+										    <li ><a>Sports and Entertainment</a></li>
+										    <li ><a>Health</a></li>
+										    <li ><a>Home and Gardening</a></li>
+										    <li ><a>Travel</a></li>
+										    <li ><a>Education</a></li>
+											
+										</ul>
+									</div>
+								</div>
+							</div>
+                            <div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">Location</a></h4>
+								</div>
+							</div>
+							
+						</div><!--/category- products-->
+                
+                </div>
+
+
+                <div class="col-sm-10">
+                   <div class="ui-142">
+			        <div >
+				        <div class="row">
+					        <div class="col-sm-4">
+						        <!-- Item -->
+						        <div class="ui-item">
+							        <!-- Image -->
+							        <img src="img/pnp.jpg" alt="" class="img-responsive">
+							        <a href="" class="ui-circle bg-red">12</a>
+							        <!-- Details -->
+							        <div class="ui-details">
+								        <!-- Heading -->
+								        <h3>Pick n Pay</h3>
+								        <!-- Paragraph -->
+								        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut </p>
+								        <!-- Button -->
+								        <a href="" class="btn btn-red btn-xs">+follow</a>
+							        </div>
+						        </div>
+					        </div>
+					        <div class="col-sm-4">
+						        <!-- Item -->
+						        <div class="ui-item">
+							        <!-- Image -->
+							        <img src="img/vodacom.jpg" alt="" class="img-responsive">
+							        <a href="" class="ui-circle bg-lblue">32</a>
+							        <!-- Details -->
+							        <div class="ui-details">
+								        <!-- Heading -->
+								        <h3>Vodacom</h3>
+								        <!-- Paragraph -->
+								        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut .</p>
+								        <!-- Button -->
+								        <a href="" class="btn btn-lblue btn-xs">+follow</a>
+							        </div>
+						        </div>
+					        </div>
+					        <div class="col-sm-4">
+						        <!-- Item -->
+						        <div class="ui-item">
+							        <!-- Image -->
+							        <img src="img/standard.jpg" alt="" class="img-responsive">
+							        <a href="" class="ui-circle bg-green">10</a>
+							        <!-- Details -->
+							        <div class="ui-details">
+								        <!-- Heading -->
+								        <h3>Standard bank</h3>
+								        <!-- Paragraph -->
+								        <p>Nemo enim ipsam voluptatem quia voluptas fugit ratione voluptatem.</p>
+								        <!-- Button -->
+								        <a href="" class="btn btn-green btn-xs">+follow</a>
+							        </div>
+						        </div>
+					        </div>
+					        <div class="col-sm-4">
+						        <!-- Item -->
+						        <div class="ui-item">
+							        <!-- Image -->
+							        <img src="img/mrp.jpg" alt="" class="img-responsive">
+							        <a href="" class="ui-circle bg-yellow">89</a>
+							        <!-- Details -->
+							        <div class="ui-details">
+								        <!-- Heading -->
+								        <h3>Mr Price</h3>
+								        <!-- Paragraph -->
+								        <p>Nemo enim ipsam voluptatem quia voluptas sit ratione voluptatem .</p>
+								        <!-- Button -->
+								        <a href="" class="btn btn-yellow btn-xs">+follow</a>
+							        </div>
+						        </div>
+					        </div>
+					        <div class="col-sm-4">
+						        <!-- Item -->
+						        <div class="ui-item">
+							        <!-- Image -->
+							        <img src="img/absa.jpg" alt="" class="img-responsive">
+							        <a href="" class="ui-circle bg-purple">52</a>
+							        <!-- Details -->
+							        <div class="ui-details">
+								        <!-- Heading -->
+								        <h3>Absa</h3>
+								        <!-- Paragraph -->
+								        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut.</p>
+								        <!-- Button -->
+								        <a href="" class="btn btn-purple btn-xs">+follow</a>
+							        </div>
+						        </div>
+					        </div>
+					        <div class="col-sm-4">
+						        <!-- Item -->
+						        <div class="ui-item">
+							        <!-- Image -->
+							        <img src="img/edgars.jpg" alt="" class="img-responsive">
+							        <a href="" class="ui-circle bg-orange">67</a>
+							        <!-- Details -->
+							        <div class="ui-details">
+								        <!-- Heading -->
+								        <h3>Edgars</h3>
+								        <!-- Paragraph -->
+								        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
+								        <!-- Button -->
+								        <a href="" class="btn btn-orange btn-xs">+follow</a>
+							        </div>
+						        </div>
+					        </div>
+				        </div>
+			        </div>	
+		        </div>
+		        <!-- UI - X Ends -->
+            </div>
+        </div>
 						
-			</div>
+			
 				
 		</div>
+    </div>
 		
 		
 	</body>
-	<script>
-			$(document).ready(function(){
 	
-				$(".tab").click(function(){
-					$(".tab").removeClass("active_tab");
-					$(this).addClass("active_tab");
-				});
-			});
-			
-	</script>
 	
 </html>
 

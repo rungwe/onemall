@@ -23,6 +23,7 @@ aunthenticate();
     <link href="./menu_files/style-24.css" rel="stylesheet">
     <link rel="stylesheet" href="http://css-spinners.com/css/spinners.css" type="text/css">
 	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/responsive.css" rel="stylesheet">
+    <link href="home/css/animate.css" rel="stylesheet">
 	<script type="text/javascript" src="home/js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="home/js/constants.js"></script>
 	<script type="text/javascript" src="home/js/navigation-drawer.js"></script>

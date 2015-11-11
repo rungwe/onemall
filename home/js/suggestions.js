@@ -6,7 +6,7 @@ Content: Library for client side scripts for My Shops
 
 **/
 //****************Globals**********************************************
-
+var suggestions = Array();
 //***************end of globals***************************************
 
 /*
@@ -33,9 +33,9 @@ function displaySuggestions(suggestionArr, locationID){
 		}
 		
 	}
-	
-	
-		
+
+
+	bind_follow_suggestions();	
 	
 		
 }
@@ -48,7 +48,7 @@ function buildSuggestion(sug_data){
 				'<img class="col-sm-4 " src="'+shop_profile+'" height="53px" width="50px" border="2" />'+
 				'<div class="col-sm-7 btn-xs">'+
 					'<p><b>'+shop_name+'</b></p>'+
-					'<button class="btn btn-info btn-xs suggestionBtn" style="background-color:white;color:#004A6E">+'+followers+'&nbsp;followers</button>'+
+					'<button data-suggestion-id="'+ID+'" class="btn btn-info btn-xs suggestionBtn" style="background-color:white;color:#004A6E">+'+followers+'&nbsp;followers</button>'+
 				'</div>'+
 				'</div>';
 			
@@ -69,18 +69,52 @@ function pull_suggestions(num){
 		 
 		  xmlhttp_sug=new ActiveXObject("Microsoft.XMLHTTP");
 		  }
-	
-	xmlhttp_sug.onreadystatechange=function()
-		  {
-		  if (xmlhttp_sug.readyState==4 && xmlhttp_sug.status==200)
-			{
-			var info =xmlhttp_sug.responseText;
-			var data =JSON.parse(info);
-			displaySuggestions(data,suggestionID);
-			}
+
+		  xmlhttp_sug.onreadystatechange = function () {
+		      if (xmlhttp_sug.readyState == 4 && xmlhttp_sug.status == 200) {
+		          var info = xmlhttp_sug.responseText;
+		          var data = JSON.parse(info);
+		          if (suggestions.length == 0) {
+		              displaySuggestions(data, suggestionID);
+		          }
+		          else {
+		              var sug = suggestions.pop();
+		              sug.html(buildSuggestion(data[randomIntFromInterval(0, 2)]));
+		              //buildSuggestion(data[2]);
+		              bind_follow_suggestions();
+		              sug.removeClass("bounceOut");
+                      sug.removeClass("row");
+		              sud.addClass("fadeIn");
+
+		          }
+
+		      }
 		  }
 		  
 	xmlhttp_sug.open("POST",url+"?request_suggestions=true&number_suggestions="+num,true);
 	xmlhttp_sug.send();
 		  
+}
+
+function bind_follow_suggestions(){
+    $(document).ready(function () {
+
+        $(".suggestionBtn").click(function () {
+            var btn = $(this);
+            var id = btn.attr("data-suggestion-id");
+            $("#" + id).addClass("animated");
+            $("#" + id).addClass("bounceOut");
+            var sug = $("#" + id);
+            sug.removeAttr("id");
+            suggestions.push(sug);
+            setTimeout(function () { pull_suggestions(1); }, 1000);
+
+        });
+
+    });
+}
+
+function randomIntFromInterval(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
 }

@@ -19,11 +19,13 @@
            
             //echo $response;
 			if ($response[0]=="200"){
-				//create session
-				//$_SESSION['email'] = $_POST['form-email'];
-				//"it worked";
-				//echo $response[0]."<br>".$response[1];
-				header("Location: index.php");
+				if($response[2]=="customer"){
+				    header("Location: index.php");
+				}
+                else if($response[2]=="company"){
+                    header("Location: home.php");
+                }
+				
 			}
 			else{
 				//echo "nah it didn't";

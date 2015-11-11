@@ -2,14 +2,15 @@
 	header('Access-Control-Allow-Origin: *');
 	
 	$broadcasts = array(
-	 array("shop_name"=>"Mr Price","shop_profile_pic"=>"img/mrlog.jpg","poster"=>"img/mrpost.jpg","post_info"=>"hurry for the summer specials","num_likes"=>"12", "liked"=>"liked", "num_comments"=>"18", "time"=>"@30min" , "postID"=>"1234"),
-	 array("shop_name"=>"Edgars","shop_profile_pic"=>"img/edprof.png","poster"=>"img/edpost.jpg","post_info"=>"Red Hanger sale","num_likes"=>"10", "liked"=>"", "num_comments"=>"8", "time"=>"@33min" , "postID"=>"32346")
+	 array("company"=>array("name"=>"Mr Price","profile_pic"=>array("url"=>"img/mrlog.jpg")),"images"=>array(array("url"=>"img/mrpost.jpg")),"details"=>"hurry for the summer specials","number_of_likes"=>"12", "liked"=>"liked", "number_of_comments"=>"18","number_of_views"=>"12", "minutes"=>"30" , "ID"=>uniqid()),
+     array("company"=>array("name"=>"Edgars","profile_pic"=>array("url"=>"img/edprof.png")),"images"=>array(array("url"=>"img/edpost.jpg")),"details"=>"Red Hanger sale","number_of_likes"=>"10", "liked"=>"liked", "number_of_comments"=>"9", "minutes"=>"45","number_of_views"=>"18", "ID"=>uniqid()),
+	 
 	 );
 	 
 	 $suggestions = array(
-	  array("shop_name"=>"Identity Stores" , "shop_profile_picture"=>"img/edprof.png",  "shop_id"=>"2345" , "num_followers"=>"118"),
-	  array("shop_name"=>"Trueworths" , "shop_profile_picture"=>"img/trulog.jpg",  "shop_id"=>"23475" , "num_followers"=>"267"),
-	  array("shop_name"=>"Game Stores", "shop_profile_picture"=>"img/glog.jpg",  "shop_id"=>"123475" , "num_followers"=>"473")
+	  array("shop_name"=>"Identity Stores" , "shop_profile_picture"=>"img/edprof.png",  "shop_id"=>uniqid() , "num_followers"=>"118"),
+	  array("shop_name"=>"Trueworths" , "shop_profile_picture"=>"img/trulog.jpg",  "shop_id"=>uniqid() , "num_followers"=>"267"),
+	  array("shop_name"=>"Game Stores", "shop_profile_picture"=>"img/glog.jpg",  "shop_id"=>uniqid() , "num_followers"=>"473")
 	 );
 	 //SEND => name: postID , name: pull_comments = 'true'
 	//RECEIVE => commenter_name , commenter_picture , comment_txt , comment_time ;
@@ -55,8 +56,12 @@
 	 //SEND => name: pull_friends, name: user_id
 	 //RECEIVE => name: profile_pic,user_name,user_id, num_following, num_ads, num_mutual_friends;
 	 $friends= array(
-		array("profile_pic"=>"img/babe.jpg","user_name"=>"Chaddy","user_id"=>"12oe34","num_following"=>"172","num_ads"=>"12","num_mutual_friends"=>"29"),
-		array("profile_pic"=>"img/Koala.jpg","user_name"=>"Dejan","user_id"=>"78yda89","num_following"=>"212","num_ads"=>"16","num_mutual_friends"=>"60")
+		array("profile_pic"=>"img/babe.jpg","user_name"=>"Chaddy","user_id"=>uniqid(),"num_following"=>"172","num_ads"=>"12","num_mutual_friends"=>"13"),
+		array("profile_pic"=>"img/Koala.jpg","user_name"=>"Dejan","user_id"=>uniqid(),"num_following"=>"212","num_ads"=>"18","num_mutual_friends"=>"2"),
+        array("profile_pic"=>"img/Koala.jpg","user_name"=>"Tinotenda","user_id"=>uniqid(),"num_following"=>"212","num_ads"=>"6","num_mutual_friends"=>"10"),
+        array("profile_pic"=>"img/Koala.jpg","user_name"=>"Tariro","user_id"=>uniqid(),"num_following"=>"212","num_ads"=>"11","num_mutual_friends"=>"5"),
+        array("profile_pic"=>"img/Koala.jpg","user_name"=>"Tinashe","user_id"=>uniqid(),"num_following"=>"212","num_ads"=>"27","num_mutual_friends"=>"3"),
+        array("profile_pic"=>"img/Koala.jpg","user_name"=>"Gracia","user_id"=>uniqid(),"num_following"=>"212","num_ads"=>"9","num_mutual_friends"=>"7")
 	 );
 	 
 	 
