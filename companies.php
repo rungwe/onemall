@@ -2,7 +2,7 @@
 require 'session.php';
 init();
 
-
+customer_restricted();
 aunthenticate();
 //phpinfo();
 

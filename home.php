@@ -1,7 +1,7 @@
 <?php
 require 'session.php';
 init();
-
+company_restricted();
 aunthenticate();
 ?>
 
@@ -128,7 +128,7 @@ aunthenticate();
 		</div>
         <br><br>
         <?php 
-            echo nav_drawer();
+            echo nav_drawer_company();
 		    echo create_ad();
 		    echo edit_account_modal();
 	        echo ad_detail();
