@@ -230,117 +230,7 @@ function nav_drawer_company(){
 
 
 
-function nav_draw(){
-	$drawer_html ='<div id="drawer"class="row" style="position:fixed;z-index:1000;left:0px;">
-			<div class="col-sm-4" id="drawer-content" style="border:1px solid #004A6E; width:250px;background-color:white;position:fixed;z-index:1000;margin:0px;padding:0px;">
-				<div style="background-image:url(img/bk-freeze-ga.jpg);height:150px;width:100%;margin:0px;background-size:cover;">
-				
-				</div>
-				<div class="menu row">
-					<div class="col-sm-2">
-						<img src="img/icons/Home.png" height="30" width="30">
-					</div>
-					<div class="col-sm-offset-2 col-sm-8">
-						<h4 id="homemenu">Home</h4>
-					</div>
-					
-				</div>
 
-                <div class="menu row">
-					<div class="col-sm-2">
-						<img src="img/icons/Bell.png" height="30" width="30">
-					</div>
-					<div class="col-sm-offset-2 col-sm-8">
-						<h4>Notifications <span style="background-color:red;" class="badge">2</span></h4>
-					</div>
-					
-				</div>
-
-                <div class="menu row">
-					<div class="col-sm-2">
-						<img src="img/icons/Shopping-Cart.png" height="30" width="30">
-					</div>
-					<div class="col-sm-offset-2 col-sm-8">
-						<h4 data-toggle="modal" data-target="#cart">Basket <span style="background-color:#19A3D1;" class="badge">2</span></h4>
-					</div>
-					
-				</div>
-
-				<div class="menu row">
-					<div class="col-sm-2">
-						<img src="img/icons/Paper-Money.png" height="30" width="30">
-					</div>
-					<div class="col-sm-offset-2 col-sm-8">
-						<h4 data-toggle="modal" data-target="#create_ad" onclick="setup_adCreate()" >Create Ads </h4>
-					</div>
-					
-				</div>
-				<div class="menu row">
-					<div class="col-sm-2">
-						<img src="img/icons/Briefcase.png" height="30" width="30">
-					</div>
-					<div class="col-sm-offset-2 col-sm-8">
-						<h4>Manage Ads</h4>
-					</div>
-					
-				</div>
-				<div class="menu row">
-					<div class="col-sm-2">
-						<img src="img/icons/Credit-Card.png" height="30" width="30">
-					</div>
-					<div class="col-sm-offset-2 col-sm-8">
-						<h4>Payments</h4>
-					</div>
-					
-				</div>
-				<div class="menu row">
-					<div class="col-sm-2">
-						<img src="img/icons/Desktop.png" height="30" width="30">
-					</div>
-					<div class="col-sm-offset-2 col-sm-8">
-						<h4>Create Page</h4>
-					</div>
-					
-				</div>
-				<div class="menu row">
-					<div class="col-sm-2">
-						<img src="img/icons/Web Browser.png" height="30" width="30">
-					</div>
-					<div class="col-sm-offset-2 col-sm-8">
-						<h4>Manage Pages</h4>
-					</div>
-					
-				</div>
-				<div class="menu row">
-					<div class="col-sm-2">
-						<img src="img/icons/social.png" height="30" width="30">
-					</div>
-					<div class="col-sm-offset-2 col-sm-8">
-						<h4>Social Media</h4>
-					</div>
-					
-				</div>
-				<div class="menu row">
-					<div class="col-sm-2">
-						<img src="img/icons/X.png" height="30" width="30">
-					</div>
-					<div class="col-sm-offset-2 col-sm-8">
-						<h4>Verify Account</h4>
-					</div>
-					
-				</div>
-				
-				<br>
-				<br>
-			</div>
-			<div class="col-sm-2 pull-right" id="control" style="cursor:pointer;border:2px solid #004A6E;width:45px;height:45px;background-color:white;position:fixed;z-index:3;margin-left:250px;">
-				<span class="glyphicon glyphicon-align-justify  btn-lg" style="margin-left:-19px;color:#004A6E"><span style="background-color:red;" class="badge">2</span></span>
-			</div>
-		</div>';
-		
-	return $drawer_html;
-	
-}
 
 function edit_account_modal(){
 	
@@ -664,7 +554,7 @@ function create_ad(){
 
 function post_interface(){
                 $component ='<div style="width:100%;background-color:#E0EBEB;">
-                                <textarea class="form-control" rows="4" cols="50" placeholder="Whats new" style="width:100%;resize:none;"></textarea>
+                                <textarea id="broadcast-post" class="form-control" rows="4" cols="50" placeholder="Whats new" style="width:100%;resize:none;"></textarea>
                                 
                                 <div class="row" style="margin-top:4px;">
                                    

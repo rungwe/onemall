@@ -121,7 +121,7 @@ aunthenticate();
 					<center class="tab"><h4>Online Shop</h4> </center>
 				</div>
 				<div class="col-sm-2">
-					<center><button class="btn btn-info btn-md" style="margin-top:3px;">following</button></center>
+					<center><button class="btn  btn-md" style="margin-top:3px;background-color: #004A6E;color:white;">following</button></center>
 				</div>
 			
 			</div>

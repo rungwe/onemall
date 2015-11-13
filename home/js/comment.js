@@ -93,7 +93,7 @@ function buildComment(data){
 	return template;
 }
 
-function comment_broadcast(postID,comment,obj){
+function comment_broadcast(postID,comment,obj, type){
 	//SEND => name: put_comment = 'true' , name: postID , name: comment_txt name: user_name , **user_ID** **(do you really need the user_name since its in the session variables?)
 	//RECEIVE => name: confirmation (success or fail), name: user_profile_pic
 	comment=comment.trim();
@@ -125,8 +125,13 @@ function comment_broadcast(postID,comment,obj){
 		      }
 		  } 
 		  
+	if (type=="ads"){
+	    xmlhttp.open("PUT",URI+"customer/comment-on-advert?adId="+postID+"&comment="+comment,true);
+	}
+    else if(type=="broadcasts"){
+        xmlhttp.open("PUT",URI+"customer/comment-on-broadcast?broadcastId="+postID+"&comment="+comment,true);
+    }
 	
-	xmlhttp.open("PUT",URI+"customer/comment-on-advert?adId="+postID+"&comment="+comment,true);
     xmlhttp.setRequestHeader("Authorization",'Bearer ' + token);
 	xmlhttp.send();
 	
@@ -150,7 +155,8 @@ function bindBroadcastCommentEvents(){
 
 	    //var par = $(this).parent().parent().parent().parent();
 	    var obj = $(this);
-	    var id = obj.prop("id").substring(4);
+	    var id = obj.data("id");
+	    var type = obj.data("type");
 	    //id = "1234";
 	    //alert(id);
 	    pull_comments(id, $(this));
@@ -159,7 +165,7 @@ function bindBroadcastCommentEvents(){
 	    $(this).next().find("button").click(function () {
 	        var get_comment = $(this).parent().prev().find("textarea");
 	        cm = $(this).parent().parent().parent().parent().prev();
-	        comment_broadcast(id, get_comment.val(), cm);
+	        comment_broadcast(id, get_comment.val(), cm, type);
 	        get_comment.val("");
 
 	    });

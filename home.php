@@ -19,19 +19,19 @@ aunthenticate();
         <link rel ="stylesheet" href="home/css/services.css" type="text/css">
 		<link href="home/css/myshops.css" rel="stylesheet">
         <link href="./menu_files/style-24.css" rel="stylesheet">
-		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/jquery-1.9.1.min.js"></script>
+        <link href="bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="home/js/constants.js"></script>
         <script type="text/javascript" src="home/js/navigation-drawer.js"></script>
-        <script type="text/javascript" src="home/js/profile_page.js"></script>
+        <script type="text/javascript" src="home/js/company_home.js"></script>
 		<script type="text/javascript" src="home/js/like.js"></script>
 		<script type="text/javascript" src="home/js/broadcasts.js"></script>
-		<script type="text/javascript" src="home/js/suggestions.js"></script>
 		<script type="text/javascript" src="home/js/friends.js"></script>
 		<script type="text/javascript" src="home/js/comment.js"></script>
 		<script type="text/javascript" src="home/js/companies.js"></script>
 		<script type="text/javascript" src="home/js/main_init.js"></script>	
-        
+        <script src="bootstrap3-editable/js/bootstrap-editable.js"></script>
 	</head>
 	
 	<!-- <body onload="main_init()" style="background-image:url(https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/cloud.png);background-size:cover;background-repeat:no-repeat;background-attachment:fixed;">> -->
@@ -93,18 +93,23 @@ aunthenticate();
 		</div>
 		
 		
-		<div class="wall" style="background-image:url('https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/mrpricewall.jpg');z-index:1;position:absolute;height:320px;">
+		<div id="wall" class="wall" style="background-image:url('img/bk-freeze-ga.jpg');z-index:1;position:absolute;height:320px;background-size: cover;">
 			
 		</div>
+        <span data-toggle="tooltip" title="change wallpaper" class="glyphicon glyphicon-edit pictures" style="cursor:pointer; position: absolute; margin-left: 15px; margin-top: 100px;z-index: 2; font-size: 18px; color: white;"></span>
+        <input class="filechooser" type="file" id="wall-pic" name="pic1" style="display:none" onchange="change_wall(this,'wall');" />
 		
-		<div style="background-color:#004A6E;height:170px;width:170px;border-radius:4px;margin-top:200px;position:absolute;margin-left:100px;border-color:white;border-width:5px;border-style:solid;z-index:2;">
-			<img src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/mrlog1.jpg" height="160" width="160" />
+		
+        <div style="cursor:pointer; background-color:white;height:170px;width:170px;border-radius:4px;margin-top:180px;position:absolute;margin-left:100px;border-color:white;border-width:5px;border-style:solid;z-index:2;">
+            <img data-toggle="tooltip" title="change profile picture" id="profile-pic" class="pictures" src="img/companyprof.png" height="160" width="160" accept="image/gif, image/jpeg, image/png" />
+			<input class="filechooser" type="file" id="prof-pic" name="pic1" style="display:none" onchange="readURL(this,'profile-pic');" />
 		</div>
-        <div style="margin-top:180px;position:absolute;margin-left:350px;color:white;z-index:2;">
-			<h2>Mr Price Stores</h2>
-            <h5>5 Hope road, Rosebank, Cape Town, 7700</h5>
-            <h5>+277 02 432 8984</h5>
-            <h5>www.mrp.com</h5>
+        <div style="margin-top:155px;position:absolute;margin-left:350px;z-index:2;">
+			<h3 id="name" data-type="text" data-pk="1" data-title="Enter Company Name" style="color: #F2F2F2 ">Company Name</h3>
+            <h5 id="categories" data-type="text" data-pk="1" data-title="Enter Categories" style="color: #F2F2F2 " ><span class="glyphicon glyphicon-tag"></span>Categories</h5>
+            <h5 id="address" data-type="text" data-pk="1" data-title="Enter email address" style="color: #F2F2F2 " ><span class="glyphicon glyphicon-envelope"></span>info@example.com</h5>
+            <h5 id="contact" data-type="text" data-pk="1" data-title="Enter telephone number" style="color: #F2F2F2 "><span class="glyphicon glyphicon-earphone"></span>+277 123 456</h5>
+            <h5 id="website" data-type="text" data-pk="1" data-title="Enter website url" style="color: #F2F2F2 "><span class=" glyphicon glyphicon-link"></span>ww.example.com</h5>
 		</div>
 		<div  id="header" style="height:50px;width:100%;position:absolute;z-index:1;margin-top:320px;background-color:white;">
 			<div >
@@ -121,7 +126,7 @@ aunthenticate();
 					<center class="tab"><h4>Online Shop</h4> </center>
 				</div>
 				<div class="col-sm-2">
-					<center><button class="btn btn-info btn-md" style="margin-top:3px;">following</button></center>
+					<center><button class="btn  btn-md" style="margin-top:3px;background-color: #004A6E;color:white;">following</button></center>
 				</div>
 			
 			</div>

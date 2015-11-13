@@ -24,7 +24,7 @@ status: tested successfully
 
 future improvements: how to handle situation where network is not available
 **/
-function like(postID, likedObject){
+function like(postID, likedObject, type){
 	//SEND => name: like_broadcasts = 'true' , name: postID ;
 	//ACTION: num_likes++;
 	var xmlHttp;
@@ -44,7 +44,7 @@ function like(postID, likedObject){
 		  {
 		  if (xmlHttp.readyState==4 && xmlHttp.status==201)
 			{
-			alert(xmlHttp.status+"  ")
+			//alert(xmlHttp.status+"  ")
 			//var info =xmlHttp.responseText;
 			//window.clearTimeout(notifyLike);
 			likedObject.addClass("liked");
@@ -52,8 +52,13 @@ function like(postID, likedObject){
 			likedObject.html((parseInt(likedObject.html())+1)+"");
 			}
 		  }
-		  
-	xmlHttp.open("PUT",URI+"customer/like-advert?adId="+postID,true);
+	if(type=="ads"){
+	    xmlHttp.open("PUT",URI+"customer/like-advert?adId="+postID,true);
+	}
+    else if(type=="broadcasts"){
+        xmlHttp.open("PUT",URI+"customer/like-broadcast?broadcastId="+postID,true);
+    }	  
+	
     xmlHttp.setRequestHeader("Authorization",'Bearer ' + token);
 	xmlHttp.send();
 	
@@ -69,7 +74,7 @@ status: tested successfully
 
 future improvements: how to handle situation where network is not available
 **/
-function unlike(postID, unlikedObject){
+function unlike(postID, unlikedObject, type){
 	
 	var xmlHttp;
 	
@@ -96,8 +101,14 @@ function unlike(postID, unlikedObject){
 			unlikedObject.html((parseInt(unlikedObject.html())-1)+"");
 			}
 		  }
-		  
-	xmlHttp.open("DELETE",URI+"customer/unlike-advert?id="+postID,true);
+	if(type=="ads"){
+	    xmlHttp.open("DELETE",URI+"customer/unlike-advert?id="+postID,true);
+	}	
+    
+    else if(type=="broadcasts"){
+        xmlHttp.open("DELETE",URI+"customer/unlike-broadcast?id="+postID,true);
+    }  
+	
     xmlHttp.setRequestHeader("Authorization",'Bearer ' + token);
 	xmlHttp.send();
 	
@@ -114,19 +125,18 @@ function bindBroadcastLikeEvents(){
         //var broadcast=$(this).parent().parent().parent().parent(); // traversing up the dom to get the parent broadcast div
 
         var obj = $(this);
-        var id = obj.prop("id").substring(4);
-        
-        // only execute if no like or unlike is being processed already, atomic transaction.
-        if (!$(this).hasClass("liked") && !$(this).hasClass("cursorLoad")) {
-            //notifyLike=setTimeout(function(){$(this).removeClass("cursorLoad")}, 5000);
-            $(this).addClass("cursorLoad");
-            like(id, $(this));
+        var id = obj.data("id");
+        var type = obj.data("type");
 
+        // only execute if no like or unlike is being processed already, atomic process.
+        if (!$(this).hasClass("liked") && !$(this).hasClass("cursorLoad")) {
+            $(this).addClass("cursorLoad");
+            like(id, $(this), type);
         }
         else if ($(this).hasClass("liked") && !$(this).hasClass("cursorLoad")) {
             //notifyUnlike=setTimeout(function(){$(this).removeClass("cursorLoad");}, 5000);
             $(this).addClass("cursorLoad");
-            unlike(id, $(this));
+            unlike(id, $(this), type);
         }
 
         else if ($(this).hasClass("cursorLoad")) {

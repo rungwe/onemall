@@ -96,10 +96,10 @@ function buildAd(ad){
 										'</div>' +
 										'<div class="panel-footer">' +
 											'<div class="row" style="margin-left:10px;">' +
-												'<div class="col-sm-3" style="cursor:pointer;">  <span id="view'+ad.ID+'" class="glyphicon glyphicon-eye-open">'+ad.number_of_views+'</span></div>' +
-												'<div class="col-sm-3" style="cursor:pointer;">  <span id="like'+ad.ID+'" class="glyphicon glyphicon-thumbs-up likes">'+ad.number_of_likes+'</span> </div>' +
-												'<div class="col-sm-3" style="cursor:pointer;"> <span  id="comm'+ad.ID+'" class="glyphicon glyphicon-comment comment">'+ad.number_of_comments+'</span></div>' +
-												'<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-share-alt"></span></div>' +
+												'<div class="col-sm-3" style="cursor:pointer;">  <span data-type="ads" data-id=" '+ad.ID+'" class="glyphicon glyphicon-eye-open">'+ad.number_of_views+'</span></div>' +
+												'<div class="col-sm-3" style="cursor:pointer;">  <span data-type="ads" data-id=" '+ad.ID+'" class="glyphicon glyphicon-thumbs-up likes">'+ad.number_of_likes+'</span> </div>' +
+												'<div class="col-sm-3" style="cursor:pointer;"> <span  data-type="ads" data-id=" '+ad.ID+'" class="glyphicon glyphicon-comment comment">'+ad.number_of_comments+'</span></div>' +
+												'<div class="col-sm-3" style="cursor:pointer;">  <span data-type="ads" data-id=" '+ad.ID+'" class="glyphicon glyphicon-share-alt"></span></div>' +
 											'</div>' +
 										'</div>' +
 									'</div>' +

@@ -33,7 +33,7 @@ function displayBroadcasts(feedsArr,locationID){
 		
 	}
 	
-	sessionStorage.broadcasts=document.getElementById(locationID).innerHTML;
+	
 	bindBroadcastLikeEvents();
 	bindBroadcastCommentEvents();
 
@@ -81,10 +81,10 @@ function buildBroadcast(feed){
 			  '				</div>'+
 			  '				<div class="panel-footer">'+
 			  ' 				<div class="row" style="margin-left:15px;">'+
-			  '						<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-eye-open">'+feed.number_of_views+'</span></div>'+
-			  '  					<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-thumbs-up likes">'+feed.number_of_likes+'</span> </div>'+
-			  '						<div class="col-sm-3" style="cursor:pointer;"> <span class="glyphicon glyphicon-comment comment">'+ feed.number_of_comments+'</span></div>'+
-			  '						<div class="col-sm-3" style="cursor:pointer;">  <span class="glyphicon glyphicon-share-alt"></span></div>'+
+			  '						<div class="col-sm-3" style="cursor:pointer;">  <span data-type="broadcasts" data-id=" '+feed.ID+'" class="glyphicon glyphicon-eye-open">'+feed.number_of_views+'</span></div>'+
+			  '  					<div class="col-sm-3" style="cursor:pointer;">  <span data-type="broadcasts" data-id=" '+feed.ID+'" class="glyphicon glyphicon-thumbs-up likes">'+feed.number_of_likes+'</span> </div>'+
+			  '						<div class="col-sm-3" style="cursor:pointer;"> <span  data-type="broadcasts" data-id=" '+feed.ID+'" class="glyphicon glyphicon-comment comment">'+ feed.number_of_comments+'</span></div>'+
+			  '						<div class="col-sm-3" style="cursor:pointer;">  <span data-type="broadcasts" data-id=" '+feed.ID+'" class="glyphicon glyphicon-share-alt"></span></div>'+
 			  '					</div>'+
 			  '				</div>'+			
 			  '			</div>';
@@ -125,6 +125,9 @@ function pull_broadcasts(){
 	
 }
 
+function post_broadcast(){
+    
+}
 // infinity scroll
 $(document).ready(function () {
     $(window).scroll(function () {
