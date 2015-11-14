@@ -97,12 +97,12 @@ aunthenticate();
 			
 		</div>
         <span data-toggle="tooltip" title="change wallpaper" class="glyphicon glyphicon-edit pictures" style="cursor:pointer; position: absolute; margin-left: 15px; margin-top: 100px;z-index: 2; font-size: 18px; color: white;"></span>
-        <input class="filechooser" type="file" id="wall-pic" name="pic1" style="display:none" onchange="change_wall(this,'wall');" />
+        <input class="filechooser" type="file" id="wall-pic" name="pic1" style="display:none" onchange="change_wall(this,'wall');" accept="image/*"/>
 		
 		
         <div style="cursor:pointer; background-color:white;height:170px;width:170px;border-radius:4px;margin-top:180px;position:absolute;margin-left:100px;border-color:white;border-width:5px;border-style:solid;z-index:2;">
             <img data-toggle="tooltip" title="change profile picture" id="profile-pic" class="pictures" src="img/companyprof.png" height="160" width="160" accept="image/gif, image/jpeg, image/png" />
-			<input class="filechooser" type="file" id="prof-pic" name="pic1" style="display:none" onchange="readURL(this,'profile-pic');" />
+			<input class="filechooser" type="file" id="prof-pic" name="pic1" style="display:none" onchange="readURL(this,'profile-pic');" accept="image/*" />
 		</div>
         <div style="margin-top:155px;position:absolute;margin-left:350px;z-index:2;">
 			<h3 id="name" data-type="text" data-pk="1" data-title="Enter Company Name" style="color: #F2F2F2 ">Company Name</h3>
