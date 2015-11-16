@@ -20,6 +20,7 @@ aunthenticate();
 		<link href="home/css/myshops.css" rel="stylesheet">
         <link href="./menu_files/style-24.css" rel="stylesheet">
         <link href="bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
+        <link href="home/css/main.cs" rel="stylesheet">
 		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="home/js/constants.js"></script>
@@ -140,28 +141,46 @@ aunthenticate();
         ?>	
         <div class="tab-content">
 		    <div id="about" class="tab-pane fade" style="margin-top:350px;">
-                <div class="container">
 
-                    <div class="" >
-                        <div class="col-sm-offset-3 col-sm-9" style="background-color:white;width:600px;">
-                            <center><h4>who we are?</h4></center>
-                            <hr>
-                            <p>We are a very good company serving people throught the country</p>
-                        </div>
+                <div class="col-sm-3">
+                    <div class="panel-group category-products" id="accordian" style="margin-top: 7px;"><!--category-productsr-->
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a >Branche 1</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a >Branche 2</a></h4>
+								</div>
+							</div>
+							
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a >Branch 3</a></h4>
+								</div>
+							</div>
+							
+							
+							
+						</div><!--/category- products-->
+                </div>
+                <div class="col-offset-1 col-sm-8">
+                    <div style="background-color:white;width:600px;border-radius: 2px;">
+                        <h4 align="center">who we are?</h4>
+                        <hr>
+                        <p>We are a very good company serving people throught the country</p>
                     </div>
-                    <div style="height:130px;"></div>
-                    <div class="" >
-                        <div class="col-sm-offset-3 col-sm-9" style="background-color:white;width:600px;">
-                        <center><h4>Category</h4></center>
+                    
+                    <div style="background-color:white;width:600px;border-radius: 2px;">
+                        <h4 align="center">Category</h4>
                         <hr>
                         <p>clothing store </p>
-                        </div>
                     </div>
-
-                    <div style="height:130px;"></div>
-                    <div class="" >
-                        <div class="col-sm-offset-3 col-sm-9" style="background-color:white;width:600px;">
-                        <center><h4>Hours</h4></center>
+                  
+                    <div style="background-color:white;width:600px;border-radius: 2px;">
+                        <h4 align="center">Hours</h4>
                         <hr>
                         <p> Monday <i>08:00 - 17:00</i> </p>
                         <p> Tuesday <i>08:00 - 17:00</i> </p>
@@ -169,26 +188,20 @@ aunthenticate();
                         <p> Thursday <i>08:00 - 17:00</i> </p>
                         <p> Friday <i>08:00 - 16:00</i> </p>
 
-                        </div>
                     </div>
-
-                    <div style="height:250px;"></div>
-                    <div class="" >
-                        <div class="col-sm-offset-3 col-sm-9" style="background-color:white;width:600px;">
-                        <center><h4>Links</h4></center>
+                    
+                    <div  style="background-color:white;width:600px;border-radius: 2px;">
+                        <h4 align="center">Links</h4>
                         <hr>
                         <a href="https://www.mrp.com">www.mrp.com</a>
-                        </div>
                     </div>
-
-                    <div style="height:130px;"></div>
-                    <div class="" >
-                        <div class="col-sm-offset-3 col-sm-9" style="background-color:white;width:600px;">
-                        <center><h4>Address</h4></center>
+                    
+                    <div style="background-color:white;width:600px;border-radius: 2px;">
+                        <h4 align="center">Address</h4>
                         <hr>
                         <p>5 Hope road, Rosebank, Cape Town, 7700</p>
-                        </div>
                     </div>
+                    
 
                 </div>
 
