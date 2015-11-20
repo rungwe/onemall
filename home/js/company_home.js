@@ -170,18 +170,6 @@ function set_edit(){
 }
 
 
-function change_wall(input,id) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('#'+id)
-                    .css('background-image','url('+e.target.result+')')
-            };
-
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
 
 function social_media_init() {
     $(document).ready(function () {

@@ -141,11 +141,15 @@ aunthenticate();
 					
 							<div style="background-color:white;margin-left:-50px;">
 								
-								<div style="background-color:#004A6E;height:150px;width:279px;border-radius:2px;z-index:1;position:absolute;">
-								
+								<div id="wall" style="background-color:#004A6E;height:150px;width:279px;border-radius:2px;z-index:1;position:absolute;background-size: cover;">
+								    <span data-toggle="tooltip" title="change wallpaper" class="glyphicon glyphicon-edit pictures" style="cursor: pointer; color: white;"></span>
+                                    <input class="filechooser" type="file" id="wall-pic" name="pic1" style="display:none" onchange="change_wall(this,'wall');" accept="image/*"/>
 								</div>
+                                
 								<div style="background-color:#004A6E;height:80px;width:80px;border-radius:2px;position:absolute;margin-top:60px;margin-left:40px;border-color:white;border-width:5px;border-style:solid;z-index:2;">
-									<img src="img/camera3.png"alt="profile picture" height="40" width="40" style="margin-left:15px;margin-top:15px;">
+									<img  id="profile-pic" class="pictures" data-toggle="tooltip" title="change profile picture"  src="img/camera3.png"alt="profile picture"  style="height: 100%;width: 100%;cursor: pointer;">
+                                    
+			                        <input class="filechooser" type="file" id="prof-pic" name="pic1" style="display:none" onchange="readURL(this,'profile-pic');" accept="image/*" />
 								</div>
 								<div style="background-color:white;width:279px;border-radius:2px;z-index:1;position:absolute;margin-top:100px;">
 									<label style="margin-left:50%;font-size:100%;"><b id="user-name"></b></label>
@@ -227,7 +231,7 @@ aunthenticate();
 					<div id="right" class="col-sm-3" >
 						
 						<div class="panel panel-info" >
-							<div class="panel-heading" style="background-color:white;color:#004A6E;font-weight:700;">Suggested companies to follow</div>
+							<div class="panel-heading" style="background-color:white;color:#004A6E;"><h5>Suggested companies to follow</h5></div>
 							<div id="suggestions" class="panel-body">
 								
 								

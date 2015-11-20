@@ -192,7 +192,7 @@ aunthenticate();
 				<div class="col-sm-3 padding-left" id="right">
                     <br><br>
 					<div class="panel panel-info" >
-							<div class="panel-heading" style="background-color:white;color:#004A6E;font-weight:700;">Suggested companies to follow</div>
+							<div class="panel-heading" style="background-color:white;color:#004A6E;"><h5>Suggested companies to follow</h5></div>
 							<div id="suggestions" class="panel-body">
 								
 								

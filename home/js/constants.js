@@ -141,3 +141,16 @@ $(document).ready(function(){
 		  $(this).next().click();  
 	  });
   });
+
+function change_wall(input,id) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#'+id)
+                    .css('background-image','url('+e.target.result+')')
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
