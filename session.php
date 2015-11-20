@@ -40,11 +40,11 @@ SESSION data email, username, timestamp, token, token-exp
 			}
 		}
 	
-	if($branch==1){
-		header("Location: signup.php");
-	}
-	else if($branch==2){
+	if($branch==1 or $branch==2){
 		header("Location: login.php");
+	}
+	else {
+		// proceed  to 
 	}
 	
 	
@@ -52,14 +52,20 @@ SESSION data email, username, timestamp, token, token-exp
  
  
  function customer_restricted(){
-     if($_SESSION["type"]!="customer"){
+     if (empty($_SESSION)){
+         return;
+     }
+     else if($_SESSION["type"]!="customer"){
 			        header("Location: home.php");
                     exit();
 	  }
  }
 
  function company_restricted(){
-     if($_SESSION["type"]!="company"){
+     if (empty($_SESSION)){
+         return;
+     }
+     else if($_SESSION["type"]!="company"){
 			        header("Location: index.php");
                     exit();
 	  }
@@ -167,7 +173,8 @@ function create_session($access){
 			//throw error message 
 			else{
 				$response =  Array($code,$msg->error_description);
-				echo $msg."  ".$code;
+				//echo $msg->error_description."  ".$code;
+                header("Location: login.php?error=".urlencode($msg->error_description."  Error code".$code));
 				
 			}
 }

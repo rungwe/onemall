@@ -61,7 +61,7 @@
 							<li><a class="scroll-link" href="#features">Features</a></li>
 							<li><a class="scroll-link" href="#how-it-works">How it works</a></li>
 							<li><a class="scroll-link" href="#testimonials">Testimonials</a></li>
-							<li><a class="btn btn-link-2" href="signup.php">Sign up</a></li>
+							<li><a class="btn btn-link-2" data-toggle="modal" data-target="#signup">Sign up</a></li>
 						</ul>
 					</div>
 				</div>
@@ -101,7 +101,12 @@
                         		</div>
                             </div>
                             <div class="form-bottom" style="background-color: rgba(5,4,2,0.1);">
-								<h3 style="color:red;" id="error"></h3>
+								<h3 style="color:red;" id="error"><?php 
+                                        if(!empty($_REQUEST["error"])){
+                                            echo $_REQUEST["error"];
+                                        }
+                                    ?>
+                                </h3>
 			                    <form role="form" action="signin.php" method="post" id="log-form">
 			                    	<input type="hidden"  name="login" value="true">
 			                        <div class="form-group">
@@ -439,6 +444,72 @@
         </div>
 
 
+
+        <!-- Modal -->
+        <div id="signup" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Sign up</h4>
+                <p id="error_reg" style="color: red"></p>
+              </div>
+              <div class="modal-body">
+                <form role="form" action="registration.php" method="post" id ="reg-form">
+									<input type="hidden"  name="signup" value="true">
+			                    	<div class="form-group">
+			                    		<label class="sr-only" for="form-first-name">First name</label>
+			                        	<input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name" value="">
+			                        </div>
+			                        <div class="form-group">
+			                        	<label class="sr-only" for="form-last-name">Last name</label>
+			                        	<input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name" value="">
+			                        </div>
+			                        <div class="form-group">
+			                        	<label class="sr-only" for="form-email-reg">Email</label>
+			                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email-reg" value="">
+			                        </div>
+									 <div class="form-group">
+			                        	<label class="sr-only" for="pswd-reg">Password</label>
+			                        	<input type="password" name="pswd" placeholder="Enter password" class="form-email form-control" id="pswd-reg" value="">
+			                        </div>
+									 <div class="form-group">
+			                        	<label class="sr-only" for="pswd1-reg">confirm password</label>
+			                        	<input type="password" name="pswd1" placeholder="Confirm password" class="form-email form-control" id="pswd1-reg" value="">
+			                        </div>
+                                    <style>
+                                        .type{
+                                            background-color: white;
+                                            color: #004A6E;
+                                        }
+                                    </style>
+			                        <div class="btn-group col-sm-9" data-toggle="buttons">
+                                        <label class="btn btn-primary type active">
+                                        <input type="radio" name="options" id="option1" autocomplete="off" value="customer" checked> Personal
+                                        </label>
+                                        <label class="btn btn-primary type">
+                                        <input type="radio" name="options" id="option2" autocomplete="off" value="company">Business
+                                        </label>
+                                        
+                                    </div>
+			                        <button type="button" onclick="validate_reg_form()" class="btn col-sm-3" style="background-color:#004A6E;">Sign up!</button>
+			                        
+                                    <div class="form-links">
+			                        	<a href="#" class="launch-modal" data-modal-id="modal-privacy">Privacy Policy</a> - 
+			                        	<a href="#" class="launch-modal" data-modal-id="modal-faq">FAQ</a>
+			                        </div>
+			                    </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
         <!-- Javascript -->
         <script src="js/jquery-1.11.1.min.js"></script>
         <script src="js/jquery.backstretch.min.js"></script>
@@ -447,6 +518,7 @@
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/script.js"></script>
 		<script src="js/login.js"></script>
+        <script src ="js/registration.js"></script>
         
         <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>

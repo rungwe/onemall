@@ -218,6 +218,17 @@ function nav_drawer_company(){
 							<!-- Heading -->
 							<h5><a href="#">Verify Account</a></h5>
 						</div>
+
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+							<!-- UI Item -->
+							<div class="ui-item">
+								<!-- Image -->
+								<a href="logout.php"><img src="home/img/icons/logout.png" class="img-responsive" alt=""></a>
+							</div>
+							<!-- Heading -->
+							<h5><a href="logout.php">Logout</a></h5>
+						</div>
+
 					</div>
 				</div>
 			</div>

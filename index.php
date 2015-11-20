@@ -3,8 +3,9 @@
 require 'session.php';
 init();
 
-customer_restricted();
+
 aunthenticate();
+customer_restricted();
 //phpinfo();
 ?>
 
