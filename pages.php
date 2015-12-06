@@ -131,13 +131,11 @@ function signup_page($message=""){
                                     </style>
 			                        <div class="btn-group col-sm-9" data-toggle="buttons">
                                         <label class="btn btn-primary type active">
-                                        <input type="radio" name="options" id="option1" autocomplete="off" value="customer" checked> Individual
+                                        <input type="radio" name="options" id="option1" autocomplete="off" value="customer" checked> Personal
                                         </label>
+                                        
                                         <label class="btn btn-primary type">
-                                        <input type="radio" name="options" id="option2" autocomplete="off" value="merchant">Merchant
-                                        </label>
-                                        <label class="btn btn-primary type">
-                                        <input type="radio" name="options" id="option2" autocomplete="off" value="company">Organisation
+                                        <input type="radio" name="options" id="option2" autocomplete="off" value="company">Business
                                         </label>
                                         
                                     </div>
