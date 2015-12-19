@@ -59,10 +59,7 @@ SESSION data email, username, timestamp, token, token-exp
 			        header("Location: home.php");
                     exit();
 	  }
-      else{
-          header("Location: logout.php");
-          exit();
-      }
+      
  }
 
  function company_restricted(){
@@ -73,10 +70,7 @@ SESSION data email, username, timestamp, token, token-exp
 			        header("Location: index.php");
                     exit();
 	  }
-      else{
-          header("Location: logout.php");
-          exit();
-      }
+      
  }
 
  function is_session_valid(){

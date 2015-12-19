@@ -1,14 +1,4 @@
 
-function init_compan(){
-    drawer_init();
-    close_drawer_onload(1000);
-    pull_broadcasts(6);
-    social_media_init();
-    set_edit();
-    var header ={};
-    header.Authorization = 'Bearer ' + token;
-}
-
 function init_company(){
 	drawer_init();
     close_drawer_onload(1000);
@@ -36,11 +26,12 @@ function init_company(){
 		          }
 		          else {
 
-		              pull_broadcasts(6);
+		              pull_company_broadcasts(1);
 		              social_media_init();
 		              set_edit();
 		              header = {};
 		              header.Authorization = 'Bearer ' + token;
+		              company_profile();
 
 		          }
 
@@ -52,6 +43,43 @@ function init_company(){
 	
 }
 
+function company_profile(){
+	var xmlhttp_br;
+	
+	if (window.XMLHttpRequest)
+		  {// code for IE7+, Firefox, Chrome, Opera, Safari
+		  xmlhttp_br=new XMLHttpRequest();
+		 
+		  }
+		else
+		  {// code for IE6, IE5
+		  xmlhttp_br=new ActiveXObject("Microsoft.XMLHTTP");
+		  
+		  }
+		  xmlhttp_br.onreadystatechange = function () {
+		      if (xmlhttp_br.readyState == 4 && xmlhttp_br.status == 200) {
+
+		          var data = xmlhttp_br.responseText;
+
+		          var company = JSON.parse(data);
+		          company = company[0];
+		          document.getElementById("name").innerHTML = company.name;
+		          for (var i in company.categories) {
+		              document.getElementById("categories").innerHTML += i + " ";
+		          }
+
+
+
+
+		      }
+		  } 	
+	xmlhttp_br.open("GET",URI+"company/get-user-profile",true);
+	xmlhttp_br.setRequestHeader("Authorization", "bearer " + token);
+	xmlhttp_br.send();
+	
+}  
+
+
 //data: '{"name":"'+$("#name").html()+'"}',
 function set_edit(){
     $(document).ready(function () {
@@ -59,6 +87,7 @@ function set_edit(){
         $('#name').editable({
             url: URI+'company/edit-profile',
             pk: 1,
+            emptytext: "",
             params: function(params) {  //params already contain name, value and pk
                             var data = {};
                             

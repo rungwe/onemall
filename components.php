@@ -498,7 +498,7 @@ function create_ad(){
 									<option>mobile phones</option>
 									<option>computers</option>
 									<option>other electronic</option>
-									<option>vehicles</option>
+									<option>Automotive Vehicles</option>
 									<option>business equipment</option>
 									<option>services</option>
 								  </select>
@@ -576,7 +576,7 @@ function post_interface(){
                                         <i class="fa fa-video-camera" style="font-size:25px;color:grey;"></i>
                                     </div>
                                     <div class="col-sm-offset-8 pull-right col-sm-2" style="left:0px;">
-                                        <button class="btn btn-primary"> share </button>
+                                        <button id="share" class="btn btn-primary"> share </button>
                                     </div>
                                 </div>
                                 

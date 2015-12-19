@@ -58,10 +58,16 @@ function buildBroadcast(feed){
         else if (feed.minutes==0 && feed.hours==0){
             time = feed.date.substring(0, 10);
         }
-        var profile_img_url=feed.company.profile_pic.url;
+        var profile_img_url = feed.company.profile_pic;
        if(feed.company.profile_pic==null){
           profile_img_url="img/company.png" 
-       }	
+       }
+
+       var post_img = feed.images;
+       if (feed.images==null){
+           post_img = "img/no_post.jpg";
+       }
+       	
 
 		var template= '<div id="'+feed.ID+'" class="panel panel-info">'+
 			  '				<div class="panel-heading" style="background-color:white;">'+
@@ -76,7 +82,7 @@ function buildBroadcast(feed){
 			  '				<div class="panel-body">'+
 			  '					'+feed.details+	
 			  '					<div class="row">'+
-			  '						<div> <center><img  class="img-border" src="'+feed.images[0].url+'" style="max-height:300px;min-height:200;max-width:100%;"></center></div>'+
+			  '						<div> <center><img  class="img-border" src="'+post_img+'" style="max-height:300px;min-height:200;max-width:100%;"></center></div>'+
 			  '					</div>'+
 			  '				</div>'+
 			  '				<div class="panel-footer">'+
@@ -92,7 +98,7 @@ function buildBroadcast(feed){
 	}
 
 // tested
-function pull_broadcasts(){
+function pull_broadcasts(count){
 	var mainID="center-main";
 	var xmlhttp_br;
 	var page = count++;
@@ -117,9 +123,43 @@ function pull_broadcasts(){
 		          displayBroadcasts(data, mainID);
 		      }
 		  } 	
-    xmlhttp_br.open("GET","Client.php?pull_broadcasts=true",true);
-	//xmlhttp_br.open("GET",URI+"customer/get-broadcasts?page="+page+"&amount=10&time=2015-11-08",true);
-	//xmlhttp_br.setRequestHeader("Authorization",'Bearer ' + token);
+    //xmlhttp_br.open("GET","Client.php?pull_broadcasts=true",true);
+	xmlhttp_br.open("GET",URI+"customer/get-broadcasts?page="+count+"&amount=10&time=2015-12-19",true);
+	xmlhttp_br.setRequestHeader("Authorization",'Bearer ' + token);
+	xmlhttp_br.send();
+	
+	
+}
+
+
+function pull_company_broadcasts(count){
+	var mainID="center-main";
+	var xmlhttp_br;
+	var page = count++;
+	if (window.XMLHttpRequest)
+		  {// code for IE7+, Firefox, Chrome, Opera, Safari
+		  xmlhttp_br=new XMLHttpRequest();
+		 
+		  }
+		else
+		  {// code for IE6, IE5
+		  xmlhttp_br=new ActiveXObject("Microsoft.XMLHTTP");
+		  
+		  }
+		  xmlhttp_br.onreadystatechange = function () {
+		      if (xmlhttp_br.readyState == 4) {
+
+		          //document.getElementById("loader").style.display = "none";
+
+		          var info = xmlhttp_br.responseText;
+		          alert(xmlhttp_br.status+"   "+info);
+		          var data = JSON.parse(info);
+		          displayBroadcasts(data, mainID);
+		      }
+		  } 	
+    //xmlhttp_br.open("GET","Client.php?pull_broadcasts=true",true);
+	xmlhttp_br.open("GET",URI+"company/get-broadcasts?page="+count+"&amount=10&time=2015-12-19",true);
+	xmlhttp_br.setRequestHeader("Authorization",'Bearer ' + token);
 	xmlhttp_br.send();
 	
 	
@@ -127,16 +167,63 @@ function pull_broadcasts(){
 
 function post_broadcast(){
     
+    var details = document.getElementById("broadcast-post").value.trim();
+
+    if (details==""){
+        notify_failure("error failed to post")
+        
+        return;
+    }
+
+    
+    var data = {title:"testing", details : details, categories : ["clothing"]}
+    var post_data = JSON.stringify(data);
+    //alert(post_data);
+    var xmlhttp_br;
+	if (window.XMLHttpRequest)
+		  {
+           // code for IE7+, Firefox, Chrome, Opera, Safari
+		  xmlhttp_br=new XMLHttpRequest();
+		 
+		  }
+	else
+		 {
+          // code for IE6, IE5
+		  xmlhttp_br=new ActiveXObject("Microsoft.XMLHTTP");
+		  
+		  }
+		  xmlhttp_br.onreadystatechange = function () {
+		      if (xmlhttp_br.readyState == 4 && xmlhttp_br.status==200) {
+
+		          var info = xmlhttp_br.responseText;
+		          //alert(xmlhttp_br.status+"   "+info);
+                  notify_success("posted successfully")
+		          
+		      }
+              else if(xmlhttp_br.readyState == 4 && xmlhttp_br.status!=200){
+                  notify_failure("error failed to post, error code" + xmlhttp_br.status)
+              }
+		  } 	
+    xmlhttp_br.open("POST",URI+"company/create-broadcast",true);
+	//xmlhttp_br.open("GET",URI+"customer/get-broadcasts?page="+page+"&amount=10&time=2015-11-08",true);
+	xmlhttp_br.setRequestHeader("Authorization",'Bearer ' + token);
+    xmlhttp_br.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+	xmlhttp_br.send(post_data);
+	
 }
 // infinity scroll
 $(document).ready(function () {
     $(window).scroll(function () {
         if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
             //alert("bottom of the page reached!");
-            if (count <=8) {
+            if (count <= 8) {
                 pull_broadcasts(count++);
             }
         }
+    });
+
+    $("#share").click(function () {
+        post_broadcast();
     });
 
 });

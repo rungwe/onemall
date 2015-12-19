@@ -24,6 +24,7 @@ aunthenticate();
     <link rel="stylesheet" href="http://css-spinners.com/css/spinners.css" type="text/css">
 	<link href="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/css/responsive.css" rel="stylesheet">
     <link href="home/css/animate.css" rel="stylesheet">
+
 	<script type="text/javascript" src="home/js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="home/js/constants.js"></script>
 	<script type="text/javascript" src="home/js/navigation-drawer.js"></script>
@@ -31,6 +32,7 @@ aunthenticate();
     <script type="text/javascript" src="home/js/create_ad.js"></script>
 	<script type="text/javascript" src="home/js/like.js"></script>
 	<script type="text/javascript" src="home/js/comment.js"></script>
+    <script type="text/javascript" src="home/js/bootstrap-notify.min.js"></script>
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
