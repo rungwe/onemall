@@ -29,7 +29,7 @@ function displayBroadcasts(feedsArr,locationID){
 		var feed =feedsArr[i];
 		var broadcast = buildBroadcast(feed);
 		num_broadcasts+=1
-		document.getElementById(locationID).innerHTML+=broadcast;
+		document.getElementById(locationID).innerHTML=broadcast+document.getElementById(locationID).innerHTML;
 		
 	}
 	
@@ -124,7 +124,7 @@ function pull_broadcasts(count){
 		      }
 		  } 	
     //xmlhttp_br.open("GET","Client.php?pull_broadcasts=true",true);
-	xmlhttp_br.open("GET",URI+"customer/get-broadcasts?page="+count+"&amount=10&time=2015-12-19",true);
+	xmlhttp_br.open("GET",URI+"customer/get-broadcasts?page="+1+"&amount=10&time=2015-12-19",true);
 	xmlhttp_br.setRequestHeader("Authorization",'Bearer ' + token);
 	xmlhttp_br.send();
 	
@@ -152,13 +152,13 @@ function pull_company_broadcasts(count){
 		          //document.getElementById("loader").style.display = "none";
 
 		          var info = xmlhttp_br.responseText;
-		          alert(xmlhttp_br.status+"   "+info);
+		          //alert(xmlhttp_br.status+"   "+info);
 		          var data = JSON.parse(info);
 		          displayBroadcasts(data, mainID);
 		      }
 		  } 	
     //xmlhttp_br.open("GET","Client.php?pull_broadcasts=true",true);
-	xmlhttp_br.open("GET",URI+"company/get-broadcasts?page="+count+"&amount=10&time=2015-12-19",true);
+	xmlhttp_br.open("GET",URI+"company/get-broadcasts?page="+1+"&amount=10&time=2015-12-19",true);
 	xmlhttp_br.setRequestHeader("Authorization",'Bearer ' + token);
 	xmlhttp_br.send();
 	
@@ -217,7 +217,7 @@ $(document).ready(function () {
         if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
             //alert("bottom of the page reached!");
             if (count <= 8) {
-                pull_broadcasts(count++);
+                pull_broadcasts(count);
             }
         }
     });
