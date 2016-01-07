@@ -45,7 +45,7 @@ function post_ad(){
     }
 	
 	
-    var ad_array={title:title,details:product_info,price:price, currency:"en-ZA",categories:[{category:category}]}
+    var ad_array={title:title,details:product_info,price:price, currency:"en-ZA",categories:[category]}
     var ad_jason = JSON.stringify(ad_array);
     //alert(ad_jason);
 	//var form = document.getElementById("ad_form");

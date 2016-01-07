@@ -31,39 +31,35 @@ function displayCompany(compArr,locationID){
 }
 
 function buildCompany(company){
-	
-	
-	var template='<div id="'+company.ID+'" class="col-sm-3">'+
-						'<div class="fill highlight my_header" style="background-image:url(\''+company.profile_pic.url+'\');background-size:cover;height:34%;width:111%;margin-bottom:5px;">'+
-										'<div class="row my_header-content">'+
-											'<div>'+company.name+'</div>'+
-											'<div class="row">'+
-												'<div class="col-sm-6" style="font-weight:400;color:white;">followers &nbsp;'+company.number_of_followers+'</div>'+
-												'<div class="col-sm-4 " style="margin-bottom:5px;"> <button class="btn btn-info btn-xs">+follow</button></div>'+
-											'</div>'+
-										'</div>'+
-						'</div>'+
-				  '</div>'
+    var url =company.wallpaper.url;
+    if(url==null){
+        url = "img/companybg.jpg"
+    }
+
+    var template = '<div class="col-sm-4">' +
+						        '<!-- Item -->' +
+						        '<div id="'+company.ID+'" class="ui-item">' +
+							        '<!-- Image -->' +
+							        '<img src="'+url+'" alt="" class="img-responsive">' +
+							        '<a href="" class="ui-circle bg-lblue">'+company.number_of_followers+'</a>' +
+							        '<!-- Details -->' +
+							        '<div class="ui-details">' +
+								        '<!-- Heading -->' +
+								        '<h3>'+company.name+'</h3>' +
+								        '<!-- Paragraph -->' +
+								        '<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut </p>' +
+								        '<!-- Button -->' +
+								        '<a class="btn btn-lblue btn-xs fllwBtn" data-companyID="'+company.ID+'">+follow</a>' +
+							        '</div>' +
+						        '</div>' +
+					        '</div>';
 	return template;
 
 }
 // pull_companies(num,category,header,footer)
 function buildCompanyPage(){
-	//most popular
-	pull_companies(4,"popular",header("Most Popular"),footer())
 	
-	// recommended
-	pull_companies(8,"recommended",header("Recommended"),footer())
-	
-	// clothing
-	pull_companies(8,"clothing",header("clothing and fashion"),footer())
-	
-	//electronics
-	pull_companies(8,"electronics",header("consumer electronics"),footer())
-	
-	// banks
-	pull_companies(8,"banks",header("Banking and insuarance"),footer());
-	
+	pull_recommended(6);
 	drawer_init();
 	close_drawer_onload(1500);
 	
@@ -78,6 +74,37 @@ function footer(){
 				  
 	return template;
 }
+
+
+function pull_recommended(num){
+    var xmlHttp;
+
+    if (window.XMLHttpRequest){
+         xmlHttp=new XMLHttpRequest();
+    }
+
+    else
+		  {// code for IE6, IE5
+		 
+		  xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+            var info = xmlHttp.responseText;
+            //alert(info);
+            var data = JSON.parse(info);
+            displayCompany(data, "recommend");
+
+        }
+    }
+    
+    xmlHttp.open("GET",URI+"customer/get-company-suggestions?page=1&amount=10",true);
+    xmlHttp.send();
+			
+    
+}
+
 
 function pull_companies(num,category,header,footer){
 	
@@ -167,4 +194,5 @@ function followed_setup(){
 	close_drawer_onload(1500);
 	
 }
+
 

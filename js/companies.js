@@ -46,35 +46,14 @@ function buildCompany(shop_data){
 }
 // pull_companies(num,category,header,footer)
 function buildCompanyPage(){
-	//most popular
-	pull_companies(4,"popular",header("Most Popular"),footer())
 	
-	// recommended
-	pull_companies(8,"recommended",header("Recommended"),footer())
-	
-	// clothing
-	pull_companies(8,"clothing",header("clothing and fashion"),footer())
-	
-	//electronics
-	pull_companies(8,"electronics",header("consumer electronics"),footer())
-	
-	// banks
-	pull_companies(8,"banks",header("Banking and insuarance"),footer());
 	
 	drawer_init();
 	close_drawer_onload(1500);
 	
 }
 
-function header(title){
-		var template = '<div style="margin-left:2%;font-weight:900;font-style:oblique;background-color:#F0F1F1;width:25%;margin-bottom:1%;height:5%;border-radius: 25px;"><h4 style="margin-left:5%;font-weight:900;font-style:oblique;">'+title+'</h4></div>';
-		return template;
-}
-function footer(){
-	var template ='<button class="btn btn-default" style="margin-left:90%;">view more</button>'+
-				  '<hr>';
-	return template;
-}
+
 
 function pull_companies(num,category,header,footer){
 	
@@ -118,37 +97,7 @@ function pull_companies(num,category,header,footer){
 	
 }
 
-function companies_num(){
-	
-	var xmlhttp;
-	
-	if (window.XMLHttpRequest)
-		  {// code for IE7+, Firefox, Chrome, Opera, Safari
-		  
-		  xmlhttp=new XMLHttpRequest();
-		  }
-		else
-		  {// code for IE6, IE5
-		 
-		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-		  }
-	
-	xmlhttp.onreadystatechange=function()
-		  {
-		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-			{
-				var info= xmlhttp.responseText;
-				document.getElementById("num_followers").innerHTML=info;
-				
-			}
-		  }
-	//SEND => name: num_following;
-	//RECEIVE => name: followers_num;  
-	xmlhttp.open("POST",url+"?num_following=true",true);
-	xmlhttp.send();
-		  
-	
-}
+
 
 function pull_companies_followed(){
 	
@@ -168,23 +117,19 @@ function pull_companies_followed(){
 	xmlhttp.onreadystatechange=function()
 		  {
 		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-			{
-				//SEND => name: request_companies = 'true'  , name:category, name:number_companies;
-				
+			{	
 				var info =xmlhttp.responseText;
 				//alert(info);
 				var data =JSON.parse(info);
-				document.getElementById("loader").style.display="none"
-				if(info!=""){
-					displayCompany(data,"companies_followed");
+				
+				if(data.length>0){
+					displayCompany(data,"location");
 				}
 			}
 	}
 		
-	//SEND => name: pull_followers
-	//RECEIVE => name: shop_name , shop_profile_picture , shop_wall_picture, shopID , num_followers;
 		  
-	xmlhttp.open("GET",url+"customer/get-following-companies?page=1&amount=30",true);
+	xmlhttp.open("GET",URI+"customer/get-following-companies?page=1&amount=30",true);
 	xmlhttp.setRequestHeader("Authorisation",'Bearer ' + token);
 	xmlhttp.send();
 	

@@ -56,7 +56,7 @@ function like(postID, likedObject, type){
 	    xmlHttp.open("PUT",URI+"customer/like-advert?adId="+postID,true);
 	}
     else if(type=="broadcasts"){
-        xmlHttp.open("PUT",URI+"customer/like-broadcast?broadcastId="+postID,true);
+        xmlHttp.open("PUT",URI+"company/like-broadcast?broadcastId="+postID,true);
     }	  
 	
     xmlHttp.setRequestHeader("Authorization",'Bearer ' + token);
@@ -106,7 +106,7 @@ function unlike(postID, unlikedObject, type){
 	}	
     
     else if(type=="broadcasts"){
-        xmlHttp.open("DELETE",URI+"customer/unlike-broadcast?id="+postID,true);
+        xmlHttp.open("DELETE",URI+"company/unlike-broadcast?id="+postID,true);
     }  
 	
     xmlHttp.setRequestHeader("Authorization",'Bearer ' + token);
@@ -126,6 +126,7 @@ function bindBroadcastLikeEvents(){
 
         var obj = $(this);
         var id = obj.data("id");
+        alert(id);
         var type = obj.data("type");
 
         // only execute if no like or unlike is being processed already, atomic process.

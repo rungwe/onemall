@@ -112,28 +112,28 @@ aunthenticate();
                     <div class="panel-group category-products" id="accordian" style="background-color:"><!--category-productsr-->
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Recommended</a></h4>
+									<h4 class="panel-title"><a class="active" data-toggle="tab" href="#recommend">Recommended</a></h4>
 								</div>
 							</div>
 							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Following</a></h4>
+								<div class="panel-heading" onclick="pull_companies_followed()">
+									<h4 class="panel-title"><a data-toggle="tab" href="#following">Following</a></h4>
 								</div>
 							</div>
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
+										<a data-toggle="collapse" data-parent="#accordian" href="#categories">
 											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
 											Categories
 										</a>
 									</h4>
 								</div>
-								<div id="sportswear" class="panel-collapse collapse">
+								<div id="categories" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul>
 											
-                                            <li ><a>Top Trending</a></li>
+                                            <li ><a data-toggle="tab" href="#category">Top Trending</a></li>
 										    <li><a>Recommended</a></li>
 										    <li ><a>Clothing and fashion</a></li>
 										    <li ><a>Consumer Electronics</a></li>
@@ -150,11 +150,33 @@ aunthenticate();
 									</div>
 								</div>
 							</div>
+
                             <div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Location</a></h4>
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#area">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Location
+										</a>
+									</h4>
 								</div>
-							</div>
+								<div id="area" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+                                            <li ><a data-toggle="tab" href="#location">Gauteng</a></li>
+										    <li><a>Western Cape</a></li>
+										    <li ><a>Limpopo</a></li>
+										    <li ><a>Mpumalanga</a></li>
+										    <li ><a>Kwazulu Natal</a></li>
+										    <li ><a>North West</a></li>
+										    <li ><a>Eastern Cape</a></li>
+										    <li ><a>Northen Cape</a></li>
+										    <li ><a>Free State</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>    
+
 							
 						</div><!--/category- products-->
                 
@@ -163,110 +185,18 @@ aunthenticate();
 
                 <div class="col-sm-10">
                    <div class="ui-142">
-			        <div >
-				        <div class="row">
-					        <div class="col-sm-4">
-						        <!-- Item -->
-						        <div class="ui-item">
-							        <!-- Image -->
-							        <img src="img/pnp.jpg" alt="" class="img-responsive">
-							        <a href="" class="ui-circle bg-red">12</a>
-							        <!-- Details -->
-							        <div class="ui-details">
-								        <!-- Heading -->
-								        <h3>Pick n Pay</h3>
-								        <!-- Paragraph -->
-								        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut </p>
-								        <!-- Button -->
-								        <a href="" class="btn btn-red btn-xs">+follow</a>
-							        </div>
-						        </div>
-					        </div>
-					        <div class="col-sm-4">
-						        <!-- Item -->
-						        <div class="ui-item">
-							        <!-- Image -->
-							        <img src="img/vodacom.jpg" alt="" class="img-responsive">
-							        <a href="" class="ui-circle bg-lblue">32</a>
-							        <!-- Details -->
-							        <div class="ui-details">
-								        <!-- Heading -->
-								        <h3>Vodacom</h3>
-								        <!-- Paragraph -->
-								        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut .</p>
-								        <!-- Button -->
-								        <a href="" class="btn btn-lblue btn-xs">+follow</a>
-							        </div>
-						        </div>
-					        </div>
-					        <div class="col-sm-4">
-						        <!-- Item -->
-						        <div class="ui-item">
-							        <!-- Image -->
-							        <img src="img/standard.jpg" alt="" class="img-responsive">
-							        <a href="" class="ui-circle bg-green">10</a>
-							        <!-- Details -->
-							        <div class="ui-details">
-								        <!-- Heading -->
-								        <h3>Standard bank</h3>
-								        <!-- Paragraph -->
-								        <p>Nemo enim ipsam voluptatem quia voluptas fugit ratione voluptatem.</p>
-								        <!-- Button -->
-								        <a href="" class="btn btn-green btn-xs">+follow</a>
-							        </div>
-						        </div>
-					        </div>
-					        <div class="col-sm-4">
-						        <!-- Item -->
-						        <div class="ui-item">
-							        <!-- Image -->
-							        <img src="img/mrp.jpg" alt="" class="img-responsive">
-							        <a href="" class="ui-circle bg-yellow">89</a>
-							        <!-- Details -->
-							        <div class="ui-details">
-								        <!-- Heading -->
-								        <h3>Mr Price</h3>
-								        <!-- Paragraph -->
-								        <p>Nemo enim ipsam voluptatem quia voluptas sit ratione voluptatem .</p>
-								        <!-- Button -->
-								        <a href="" class="btn btn-yellow btn-xs">+follow</a>
-							        </div>
-						        </div>
-					        </div>
-					        <div class="col-sm-4">
-						        <!-- Item -->
-						        <div class="ui-item">
-							        <!-- Image -->
-							        <img src="img/absa.jpg" alt="" class="img-responsive">
-							        <a href="" class="ui-circle bg-purple">52</a>
-							        <!-- Details -->
-							        <div class="ui-details">
-								        <!-- Heading -->
-								        <h3>Absa</h3>
-								        <!-- Paragraph -->
-								        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut.</p>
-								        <!-- Button -->
-								        <a href="" class="btn btn-purple btn-xs">+follow</a>
-							        </div>
-						        </div>
-					        </div>
-					        <div class="col-sm-4">
-						        <!-- Item -->
-						        <div class="ui-item">
-							        <!-- Image -->
-							        <img src="img/edgars.jpg" alt="" class="img-responsive">
-							        <a href="" class="ui-circle bg-orange">67</a>
-							        <!-- Details -->
-							        <div class="ui-details">
-								        <!-- Heading -->
-								        <h3>Edgars</h3>
-								        <!-- Paragraph -->
-								        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
-								        <!-- Button -->
-								        <a href="" class="btn btn-orange btn-xs">+follow</a>
-							        </div>
-						        </div>
-					        </div>
+			        <div class="tab-content" >
+				        <div class="row tab-pane fade in active" id="recommend">
+					        
+				        </div>
+                        <div class="row tab-pane fade" id="following">
+					        <h3>loading....</h3>
+				        </div>
+                        <div class="row tab-pane fade" id="category">
+					        <h3>loading....</h3>
+				        </div>
+                        <div class="row tab-pane fade" id="location">
+					        <h3>loading....</h3>
 				        </div>
 			        </div>	
 		        </div>

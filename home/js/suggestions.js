@@ -43,12 +43,11 @@ function displaySuggestions(suggestionArr, locationID){
 //tested
 function buildSuggestion(sug_data){
 	//sug_data instances  name: shop_name , shop_profile_picture , shop_wall_picture,  shop_id , num_followers;
-		var shop_profile=sug_data["shop_profile_picture"], shop_name=sug_data["shop_name"],followers=sug_data["num_followers"], ID=sug_data["shop_id"];
-		var template='<div id="'+ID+'" class="row">'+
-				'<img class="col-sm-4 " src="'+shop_profile+'" height="53px" width="50px" border="2" />'+
+		var template='<div id="'+sug_data.ID+'" class="row">'+
+				'<img class="col-sm-4 "  src="'+sug_data.profile_pic.url+'" id="'+sug_data.profile_pic.id+'"height="53px" width="50px" border="2" />'+
 				'<div class="col-sm-7 btn-xs">'+
-					'<p><b>'+shop_name+'</b></p>'+
-					'<button data-suggestion-id="'+ID+'" class="btn btn-info btn-xs suggestionBtn" style="background-color:white;color:#004A6E">+'+followers+'&nbsp;followers</button>'+
+					'<p><b>'+sug_data.name+'</b></p>'+
+					'<button data-suggestion-id="'+sug_data.ID+'" class="btn btn-info btn-xs suggestionBtn" style="background-color:white;color:#004A6E">+'+sug_data.number_of_followers+'&nbsp;followers</button>'+
 				'</div>'+
 				'</div>';
 			
@@ -79,13 +78,13 @@ function pull_suggestions(num){
 		          }
 		          else {
 		              var sug = suggestions.pop();
-		              sug.html(buildSuggestion(data[randomIntFromInterval(0, 2)]));
+		              sug.html(buildSuggestion(data[0]));
 		              //buildSuggestion(data[2]);
 		              bind_follow_suggestions();
 		              sug.removeClass("bounceOut");
                       sug.removeClass("row");
 		              sud.addClass("fadeIn");
-
+                      
 		          }
 
 		      }
@@ -96,22 +95,51 @@ function pull_suggestions(num){
 		  
 }
 
+function follow_company(company_id){
+    var xmlHttp;
+    if(window.XMLHttpRequest){
+        xmlHttp = new XMLHttpRequest();
+    }
+    else{
+        xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+            change_sug(company_id);
+        }
+        else if (xmlHttp.readyState == 4 && xmlHttp.status != 200) {
+            notify_failure("unexpected error occured :(");
+        }
+    }
+
+    xmlHttp.open("PUT", URI + "customer/follow-company?id=" + company_id, true);
+    xmlHttp.send();
+}
 function bind_follow_suggestions(){
     $(document).ready(function () {
 
         $(".suggestionBtn").click(function () {
             var btn = $(this);
             var id = btn.attr("data-suggestion-id");
-            $("#" + id).addClass("animated");
-            $("#" + id).addClass("bounceOut");
-            var sug = $("#" + id);
-            sug.removeAttr("id");
-            suggestions.push(sug);
-            setTimeout(function () { pull_suggestions(1); }, 1000);
+            // follow a company
+            follow_company(id);
 
         });
 
     });
+}
+
+
+// animated
+function change_sug(id){
+  $(document).ready(function () {
+      $("#" + id).addClass("animated");
+            $("#" + id).addClass("bounceOut");
+            var sug = $("#" + id);
+            suggestions.push(sug);
+            setTimeout(function () { pull_suggestions(1); }, 1000);
+    });  
 }
 
 function randomIntFromInterval(min,max)

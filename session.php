@@ -56,10 +56,10 @@ SESSION data email, username, timestamp, token, token-exp
          return;
      }
      else if($_SESSION["type"]!="customer"){
-			        header("Location: home.php");
+			        header("Location: login.php");
                     exit();
 	  }
-      
+     
  }
 
  function company_restricted(){
@@ -67,10 +67,10 @@ SESSION data email, username, timestamp, token, token-exp
          return;
      }
      else if($_SESSION["type"]!="company"){
-			        header("Location: index.php");
+			        header("Location: login.php");
                     exit();
 	  }
-      
+    
  }
 
  function is_session_valid(){

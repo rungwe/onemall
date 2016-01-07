@@ -8,9 +8,9 @@
 	 );
 	 
 	 $suggestions = array(
-	  array("shop_name"=>"Identity Stores" , "shop_profile_picture"=>"img/edprof.png",  "shop_id"=>uniqid() , "num_followers"=>"118"),
-	  array("shop_name"=>"Trueworths" , "shop_profile_picture"=>"img/trulog.jpg",  "shop_id"=>uniqid() , "num_followers"=>"267"),
-	  array("shop_name"=>"Game Stores", "shop_profile_picture"=>"img/glog.jpg",  "shop_id"=>uniqid() , "num_followers"=>"473")
+	  array("name"=>"Identity Stores" , "profile_pic"=>array("url"=>"img/edprof.png", "id"=>32324),  "ID"=>uniqid() , "number_of_followers"=>"118"),
+	  array("name"=>"Trueworths" ,"profile_pic"=>array("url"=>"img/trulog.jpg", "id"=>32325),  "ID"=>uniqid() , "number_of_followers"=>"267"),
+	  array("name"=>"Game Stores","profile_pic"=>array("url"=>"img/glog.jpg", "id"=>32326),  "ID"=>uniqid() , "number_of_followers"=>"473")
 	 );
 	 //SEND => name: postID , name: pull_comments = 'true'
 	//RECEIVE => commenter_name , commenter_picture , comment_txt , comment_time ;
@@ -18,14 +18,14 @@
 	  array("commenter_name" => "Sarah", "commenter_picture" => "img/babe.jpg", "comment_txt"=>"hello are there shoes in this special, I wanted to buy as soon as possibly","comment_time"=>"11min")
 	 );
 	//var id= shop_data["shop_id"], shop_pic = shop_data["shop_wall_picture"], shop_name=shop_data["shop_name"], followers=shop_data["num_followers"];
-	 $popular =array(
-		array("ID"=>"1234r5", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
-		array("ID"=>"123w45", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
-		array("ID"=>"123f45", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
-		array("ID"=>"123iebf45", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
+	 $recommended =array(
+		array("ID"=>123456, "profile_pic"=>array("url"=>"img/pnp.jpg"),"wallpaper"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","number_of_followers"=>"1780"),
+		array("ID"=>123457, "profile_pic"=>array("url"=>"img/pnp.jpg"),"wallpaper"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","number_of_followers"=>"1780"),
+		array("ID"=>123458, "profile_pic"=>array("url"=>"img/pnp.jpg"),"wallpaper"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","number_of_followers"=>"1780"),
+		array("ID"=>123459, "profile_pic"=>array("url"=>"img/pnp.jpg"),"wallpaper"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","number_of_followers"=>"1780"),
 	 );
 	
-	$recommended =array(
+	$popular =array(
 		array("ID"=>"1234goeg5", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
 		array("ID"=>"12opmn345", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
 		array("ID"=>"1emge2345", "profile_pic"=>array("url"=>"img/pnp.jpg"),"name"=>"Pick n Pay","num_of_followers"=>"1780"),
