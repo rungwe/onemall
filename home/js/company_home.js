@@ -80,7 +80,6 @@ function company_profile(){
 }  
 
 
-//data: '{"name":"'+$("#name").html()+'"}',
 function set_edit(){
     $(document).ready(function () {
         

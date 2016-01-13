@@ -55,7 +55,13 @@
 				
 				if ($response[0]=="200"){
 				    //echo $response[0]."<br>".$response[1]."<br> registration login testing";
-					header("Location: index.php");
+                    if($response[2]=="customer"){
+				    header("Location: index.php");
+				    }
+                    else if($response[2]=="company"){
+                        header("Location: home.php");
+                    }
+					
 				}
 				else{
 					

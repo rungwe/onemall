@@ -15,7 +15,7 @@ Shops are arranged in order of retrieval
 
 status: in progress
 **/
-followers_counter = 0;
+followers_counter = 1;
 
 
 function displayCompany(compArr,locationID){
@@ -31,9 +31,12 @@ function displayCompany(compArr,locationID){
 }
 
 function buildCompany(company){
-    var url =company.wallpaper.url;
+    var url = company.wallpaper;
     if(url==null){
-        url = "img/companybg.jpg"
+        url = "img/business-wall.jpg"
+    }
+    else{
+        url = company.wallpaper.url;
     }
 
     var template = '<div class="col-sm-4">' +
@@ -47,9 +50,9 @@ function buildCompany(company){
 								        '<!-- Heading -->' +
 								        '<h3>'+company.name+'</h3>' +
 								        '<!-- Paragraph -->' +
-								        '<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut </p>' +
+								        '<p>Emerging small start up company in Zimbabwe, check us out</p>' +
 								        '<!-- Button -->' +
-								        '<a class="btn btn-lblue btn-xs fllwBtn" data-companyID="'+company.ID+'">+follow</a>' +
+								        '<a style="" class="btn btn-lblue btn-xs fllwBtn" data-companyID="'+company.ID+'">+follow</a>' +
 							        '</div>' +
 						        '</div>' +
 					        '</div>';
@@ -65,15 +68,6 @@ function buildCompanyPage(){
 	
 }
 
-function header(title){
-		var template = '<div style="margin-left:2%;background-color:#F0F1F1;width:25%;margin-bottom:1%;height:5%;border-radius: 25px;"><h4 style="margin-left:5%;">'+title+'</h4></div>';
-		return template;
-}
-function footer(){
-    var template = '<button class="btn btn-default" style="margin-left:90%;border: 1px solid #004A6E;color:#004A6E;">view more</button>';
-				  
-	return template;
-}
 
 
 function pull_recommended(num){
@@ -173,15 +167,14 @@ function pull_companies_followed(){
 				var info =xmlhttp.responseText;
 				alert(info);
 				var data =JSON.parse(info);
-				document.getElementById("loader").style.display="none"
-				if(info!=""){
-					displayCompany(data,"companies_followed");
+				
+				if(data.length>0){
+					displayCompany(data,"location");
 				}
 			}
 	}
 		
-	//SEND => name: pull_followers
-	//RECEIVE => name: shop_name , shop_profile_picture , shop_wall_picture, shopID , num_followers;
+	
 	xmlhttp.open("GET",URI+"customer/get-following-companies?page="+page+"&amount=20",true);	  
 	xmlhttp.setRequestHeader("Authorization",'Bearer ' + token);
 	xmlhttp.send();

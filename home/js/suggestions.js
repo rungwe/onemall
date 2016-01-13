@@ -42,9 +42,19 @@ function displaySuggestions(suggestionArr, locationID){
 
 //tested
 function buildSuggestion(sug_data){
-	//sug_data instances  name: shop_name , shop_profile_picture , shop_wall_picture,  shop_id , num_followers;
+        var pic = "";
+        var pic_id = "";
+	    if(sug_data.profile_pic==null){
+	        pic = "img/companyprof.png";
+	        pic_id = 0;
+	    }
+        else{
+            pic = sug_data.profile_pic.url;
+	        pic_id = sug_data.profile_pic.id;
+        }
+
 		var template='<div id="'+sug_data.ID+'" class="row">'+
-				'<img class="col-sm-4 "  src="'+sug_data.profile_pic.url+'" id="'+sug_data.profile_pic.id+'"height="53px" width="50px" border="2" />'+
+				'<img class="col-sm-4 "  src="'+pic+'" id="'+pic_id+'"height="53px" width="50px" border="2" />'+
 				'<div class="col-sm-7 btn-xs">'+
 					'<p><b>'+sug_data.name+'</b></p>'+
 					'<button data-suggestion-id="'+sug_data.ID+'" class="btn btn-info btn-xs suggestionBtn" style="background-color:white;color:#004A6E">+'+sug_data.number_of_followers+'&nbsp;followers</button>'+
@@ -90,7 +100,7 @@ function pull_suggestions(num){
 		      }
 		  }
 		  
-	xmlhttp_sug.open("POST",url+"?request_suggestions=true&number_suggestions="+num,true);
+	xmlhttp_sug.open("GET",URI+"customer/get-company-suggestions?page=1&amount="+num,true);
 	xmlhttp_sug.send();
 		  
 }
@@ -105,10 +115,10 @@ function follow_company(company_id){
     }
 
     xmlHttp.onreadystatechange = function () {
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 201) {
             change_sug(company_id);
         }
-        else if (xmlHttp.readyState == 4 && xmlHttp.status != 200) {
+        else if (xmlHttp.readyState == 4 && xmlHttp.status != 201) {
             notify_failure("unexpected error occured :(");
         }
     }
