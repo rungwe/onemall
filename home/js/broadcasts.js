@@ -124,7 +124,7 @@ function pull_broadcasts(count){
 		      }
 		  } 	
     //xmlhttp_br.open("GET","Client.php?pull_broadcasts=true",true);
-	xmlhttp_br.open("GET",URI+"customer/get-broadcasts?page="+1+"&amount=10&time=2016-01-13",true);
+	xmlhttp_br.open("GET",URI+"customer/get-broadcasts?page="+1+"&amount=10&time=2016-01-14",true);
 	xmlhttp_br.setRequestHeader("Authorization",'Bearer ' + token);
 	xmlhttp_br.send();
 	
