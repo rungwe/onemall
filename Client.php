@@ -2,8 +2,11 @@
 	header('Access-Control-Allow-Origin: *');
 	
 	$broadcasts = array(
-	 array("company"=>array("name"=>"Mr Price","profile_pic"=>array("url"=>"img/mrlog.jpg")),"images"=>array(array("url"=>"img/mrpost.jpg")),"details"=>"hurry for the summer specials","number_of_likes"=>"12", "liked"=>"liked", "number_of_comments"=>"18","number_of_views"=>"12", "minutes"=>"30" , "ID"=>uniqid()),
-     array("company"=>array("name"=>"Edgars","profile_pic"=>array("url"=>"img/edprof.png")),"images"=>array(array("url"=>"img/edpost.jpg")),"details"=>"Red Hanger sale","number_of_likes"=>"10", "liked"=>"liked", "number_of_comments"=>"9", "minutes"=>"45","number_of_views"=>"18", "ID"=>uniqid()),
+	 array("company"=>array("name"=>"ABC Fashion","profile_pic"=>"img/clogo1.png"),"images"=>array("url"=>"img/br1.jpg"),"details"=>"get ready for the winter, come check out our winter stock","number_of_likes"=>"12", "liked"=>"liked", "number_of_comments"=>"18","number_of_views"=>"12", "minutes"=>"5" , "ID"=>uniqid()),
+     array("company"=>array("name"=>"Xtreme","profile_pic"=>"img/clogo2.png"),"images"=>array("url"=>"img/br3.jpg"),"details"=>"Remember the kids, great toys at lower prices","number_of_likes"=>"12", "liked"=>"liked", "number_of_comments"=>"18","number_of_views"=>"12", "minutes"=>"5" , "ID"=>uniqid()),
+     array("company"=>array("name"=>"Chicken Spiced Onion","profile_pic"=>"img/clogo3.png"),"images"=>array("url"=>"img/br2.jpg"),"details"=>"Dont forget our wednesday special, get one plate for free","number_of_likes"=>"12", "liked"=>"liked", "number_of_comments"=>"18","number_of_views"=>"12", "minutes"=>"5" , "ID"=>uniqid()),
+     array("company"=>array("name"=>"My Paint","profile_pic"=>"img/clogo4.png"),"images"=>array("url"=>"img/br4.jpg"),"details"=>"We continue delivering state of the art paint, meeting your needs is our priority","number_of_likes"=>"12", "liked"=>"liked", "number_of_comments"=>"18","number_of_views"=>"12", "minutes"=>"5" , "ID"=>uniqid()),
+     array("company"=>array("name"=>"Infinity","profile_pic"=>"img/clogo5.png"),"images"=>array("url"=>"img/br5.jpg"),"details"=>"Always bringing you high quality shoes","number_of_likes"=>"12", "liked"=>"liked", "number_of_comments"=>"18","number_of_views"=>"12", "minutes"=>"5" , "ID"=>uniqid()),
 	 
 	 );
 	 

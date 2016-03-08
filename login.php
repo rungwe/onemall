@@ -150,8 +150,9 @@
 	                		<span aria-hidden="true" class="glyphicon glyphicon-shopping-cart"></span>
 	                	</div>
 	                    <h3>Access to Products</h3>
-	                    <p>Get access to a massive and gigantic market which is made up by Individuals like you selling their products, Large enterprise merchants and Small startup merchants.</p>
-                    </div>
+	                    <p>Get access to products from a very diverse market made up of different companies as well as self-employed start-ups on one platform</p>
+                        <br><br>
+                     </div>
                     <div class="col-sm-4 features-box wow fadeInDown" style="visibility: hidden; animation-name: none;">
 	                	<div class="features-box-icon">
 	                		<span aria-hidden="true" class="glyphicon glyphicon-usd"></span>
@@ -164,7 +165,7 @@
 	                		<span aria-hidden="true" class="glyphicon glyphicon-retweet"></span>
 	                	</div>
 	                    <h3>Get connected</h3>
-	                    <p>Do not be left behind, Stay connected to the market, we keep you updated to your favourite companies. Be the first one to know when they make specials. Get access to all the companies</p>
+	                    <p>Do not be left behind, get updated with the market most recent information, we keep you updated to companies you are interested in. Be the first one to know when they make specials. Get access to all the companies</p>
                     </div>
 					 
                    
@@ -175,21 +176,21 @@
 	                		<span aria-hidden="true" class="glyphicon glyphicon-credit-card"></span>
 	                	</div>
 	                    <h3>Sell online</h3>
-	                    <p>Are you a startup merchant? or A large Enterprise? either way growth is not a bad idea. Lets get you started by putting your store and your products online with no worries about the IT infrastructure and capabilities to archive this. We carry that burden </p>
+	                    <p>Are you a startup company? or A large Enterprise? either way growth is not a bad idea. Lets get you started by putting your store and your products online with no worries about the IT infrastructure and capabilities to archive this. We have got your back </p>
                     </div>
                     <div class="col-sm-4 features-box features-box-gray wow fadeInDown" style="visibility: hidden; animation-name: none;">
 	                	<div class="features-box-icon">
 	                		<span aria-hidden="true" class="glyphicon glyphicon-blackboard"></span>
 	                	</div>
 	                    <h3>Create a Page</h3>
-	                    <p>Its time to get your business known. Easily create a profile page where everyone is able to get to know about you more as well as your products and services. Interact with the community and know what they think, improve the Business</p>
+	                    <p>Its time to get your business known. Easily create a profile page where everyone is able to get to know about you more, as well as your products and services. Interact with the community and know what they think and improve the Business</p>
                     </div>
                     <div class="col-sm-4 features-box features-box wow fadeInUp" style="visibility: hidden; animation-name: none;">
 	                	<div class="features-box-icon">
 	                		<span aria-hidden="true" class="glyphicon glyphicon-globe"></span>
 	                	</div>
 	                    <h3>Connect to your customers</h3>
-	                    <p>Are you a company? Lets get you connected to your customers in real time. We give you a platform to interact with your customers, know how they think and what they want.</p>
+	                    <p>You own a company? Lets get you connected to your customers in real time. We give you a platform to interact with your customers, know how they think and what they want.</p>
                     </div>
 	            </div>
 	            <div class="row">
@@ -211,7 +212,7 @@
 	            </div>
 	            <div class="row">
 	            	<div class="col-sm-5 more-features-box wow fadeInLeft" style="visibility: hidden; animation-name: none;">
-	                    <img src="img/pc.png" alt="">
+	                    <img src="img/business1.jpg" alt="">
 	                </div>
 	                <div class="col-sm-7 more-features-box wow fadeInUp" style="visibility: hidden; animation-name: none;">
 	                    <div class="more-features-box-text">
@@ -229,7 +230,7 @@
 	                    	</div>
 	                    	<h3>Commercial Ads</h3>
 	                    	<div class="more-features-box-text-description">
-	                    		Lets get your business boosted, we have variety of packages for commercial adverts, whether you are a Large enterprise or startup, we will suit your needs. 
+	                    		Lets get your business boosted, we have variety of packages for commercial digital adverts, whether you are a Large enterprise or startup, we will meet your needs. 
 	                    	</div>
 	                    </div>
 	                </div>
@@ -251,21 +252,20 @@
 	                    <div class="always-beautiful-box-text always-beautiful-box-text-left">
 	                    	<h3>First things first</h3>
 	                    	<p class="medium-paragraph">
-	                    		We work to provide social and commerce internet products which run smoothly and efficiently 
-	                    		to make companies as well as individual startups get connected together to their customers and strengthen that bond.
+	                    		We do provide a commerce network and community with a common goal to grow companies, bring awareness and enhance customer experience.
 	                    	</p>
 	                    	<p>
-	                    		We offer you a live community where individuals are able to know more in detail about the companies around them and help them
-								access their services and products easily. An online platform where people are able to buy all sorts of physical products instantly and 
-								get them delivered through available courier companies of their choice at very very cheaper rates due to economies of scale> Yes we have integrated courier service companies 
+	                    		We offer you a live community where individuals are able to know more about the companies in their surroundings and help them
+								access their services and products easily. An online platform where people are able to buy all sorts of products from different companies on one platform and 
+								get them delivered through available courier services of their choice at very competitive rates, Yes we have integrated courier service companies 
 								within our system as well.
-								We are also up to providing marketing to all companies, get them known better than before. Helping the startups and individual to get started and integrate them into global commerce
-								without much difficulties, we carry them through our shoulder. 
+								We are als providing marketing and advertising to all companies. Helping the startups and self employed to get started and integrate them into global commerce
+								without them worrying about the necessary technology, we carry them on our shoulders. 
 	                    	</p>
 	                    </div>
 	                </div>
 	                <div class="col-sm-5 always-beautiful-box wow fadeInUp" style="visibility: hidden; animation-name: none;">
-	                    <img src="img/pc2.png" alt="">
+	                    <img src="img/business.jpg" alt="">
 	                </div>
 	            </div>
 	        </div>
@@ -287,7 +287,7 @@
 	                		<span aria-hidden="true" class="how-it-works-step">1</span>
 	                	</div>
 	                    <h3><strong>Sign up</strong></h3>
-	                    <p><b><i>Yes its free and easy, we will not take much of your time to get you registered</i></b></p>
+	                    <p style="color: black;"><b><i>Yes its free and easy, we will not take much of your time to get you registered</i></b></p>
                     </div>
                     <div class="col-sm-4 col-sm-offset-2 how-it-works-box wow fadeInDown" style="visibility: hidden; animation-name: none;">
 	                	<div class="how-it-works-box-icon">
@@ -295,7 +295,7 @@
 	                		<span aria-hidden="true" class="how-it-works-step">2</span>
 	                	</div>
 	                    <h3><strong>Create your profile</strong></h3>
-	                    <p><b>How about knowing each other a little bit more? Lets also get you verified</b></p>
+	                    <p style="color: black;"><b>How about knowing each other a little bit more? Lets also get you verified</b></p>
                     </div>
                 </div>
                 <div class="row">
@@ -305,7 +305,7 @@
 	                		<span aria-hidden="true" class="how-it-works-step">3</span>
 	                	</div>
 	                    <h3><strong>Log in</strong></h3>
-	                    <p><b><i>Have you signed up? Bingo, put your login credentials and you are good to go. Just remember to keep them safe</i></b></p>
+	                    <p style="color: black;"><b><i>Have you signed up? Bingo, put your login credentials and you are good to go. Just remember to keep them safe</i></b></p>
                     </div>
                     <div class="col-sm-4 col-sm-offset-2 how-it-works-box wow fadeInDown" style="visibility: hidden; animation-name: none;">
 	                	<div class="how-it-works-box-icon">
@@ -313,7 +313,7 @@
 	                		<span aria-hidden="true" class="how-it-works-step">4</span>
 	                	</div>
 	                    <h3><strong>Get started</strong> </h3>
-	                    <p><b><i>Are you an individual? its time to buy products, and maybe sell. Are you an individual merchant? this is prime time, get known. Oh you are a company? do what you got to do.</i></b></p>
+	                    <p style="color: black;"><b><i>Are you an individual? its time to buy products, and maybe sell. Are you an individual merchant? this is prime time, get known. Oh you are a company? do what you got to do.</i></b></p>
                     </div>
 	            </div>
 	            <div class="row">

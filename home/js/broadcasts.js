@@ -29,7 +29,7 @@ function displayBroadcasts(feedsArr,locationID){
 		var feed =feedsArr[i];
 		var broadcast = buildBroadcast(feed);
 		num_broadcasts+=1
-		document.getElementById(locationID).innerHTML=broadcast+document.getElementById(locationID).innerHTML;
+		document.getElementById(locationID).innerHTML+=broadcast;
 		
 	}
 	
@@ -66,6 +66,10 @@ function buildBroadcast(feed){
        var post_img = feed.images;
        if (feed.images==null){
            post_img = "img/no_post.jpg";
+       }
+       else{
+           post_img = feed.images.url;
+           //alert(post_img);
        }
        	
 
@@ -123,8 +127,8 @@ function pull_broadcasts(count){
 		          displayBroadcasts(data, mainID);
 		      }
 		  } 	
-    //xmlhttp_br.open("GET","Client.php?pull_broadcasts=true",true);
-	xmlhttp_br.open("GET",URI+"customer/get-broadcasts?page="+1+"&amount=10&time=2016-01-14",true);
+    xmlhttp_br.open("GET","Client.php?pull_broadcasts=true",true);
+	//xmlhttp_br.open("GET",URI+"customer/get-broadcasts?page="+1+"&amount=10&time=2016-01-22",true);
 	xmlhttp_br.setRequestHeader("Authorization",'Bearer ' + token);
 	xmlhttp_br.send();
 	
@@ -217,7 +221,7 @@ $(document).ready(function () {
         if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
             //alert("bottom of the page reached!");
             if (count <= 8) {
-                pull_broadcasts(count);
+               // pull_broadcasts(count);
             }
         }
     });

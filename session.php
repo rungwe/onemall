@@ -202,6 +202,10 @@ function init(){
     custom_handler_init();
     session_start();
 }
-
+/**
+Authorization: OAuth oauth_callback="http%3A%2F%2Ftariro.com", oauth_consumer_key="SIaKQTGJhdcSkZ5zzfJMtSPYz", oauth_nonce="NjM1ODg2MzgwMDAwNjc3NDUz", oauth_signature="YEkp%2FBl5Wf%2BeujlOFQYuM2iOJO4%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1453034000", oauth_version="1.0"
+ Authorization: OAuth oauth_nonce="NjM1ODg0MTc3Nzg1MjczMTg4", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1452813779", oauth_consumer_key="SIaKQTGJhdcSkZ5zzfJMtSPYz", oauth_callback="http%3A%2F%2Ftariro.com", oauth_signature="e8rHIQRaF%2B7Pv2NwnP7fK3xvsp4%3D", oauth_version="1.0"
  
+  OAuth oauth_callback="http%3A%2F%2Flocalhost%2Fsign‐in‐with‐twitter%2F",               oauth_consumer_key="cChZNFj6T5R0TigYB9yd1w",                oauth_nonce="ea9ec8429b68d6b77cd5600adbbb0456",                oauth_signature="F1Li3tvehgcraF8DMJ7OyxO4w9Y%3D",                oauth_signature_method="HMAC‐SHA1",                oauth_timestamp="1318467427",                oauth_version="1.0"
+  */
 ?>

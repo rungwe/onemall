@@ -7,6 +7,8 @@ Content: Library for client side scripts for My Shops
 **/
 //****************Globals**********************************************
 var suggestions = Array();
+var sug_page = 1;
+var sug_count = 1;
 //***************end of globals***************************************
 
 /*
@@ -93,15 +95,16 @@ function pull_suggestions(num){
 		              bind_follow_suggestions();
 		              sug.removeClass("bounceOut");
                       sug.removeClass("row");
-		              sud.addClass("fadeIn");
+		              sug.addClass("fadeIn");
                       
 		          }
 
 		      }
 		  }
-		  
-	xmlhttp_sug.open("GET",URI+"customer/get-company-suggestions?page=1&amount="+num,true);
+    
+	xmlhttp_sug.open("GET",URI+"customer/get-company-suggestions?page="+sug_page+"&amount="+num,true);
 	xmlhttp_sug.send();
+    sug_page++;
 		  
 }
 
