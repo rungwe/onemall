@@ -50,7 +50,7 @@ function buildCompany(company){
 								        '<!-- Heading -->' +
 								        '<h3>'+company.name+'</h3>' +
 								        '<!-- Paragraph -->' +
-								        '<p>Emerging small start up company in Zimbabwe, check us out</p>' +
+								        '<p></p>' +
 								        '<!-- Button -->' +
 								        '<a style="" class="btn btn-lblue btn-xs fllwBtn" data-companyID="'+company.ID+'">+follow</a>' +
 							        '</div>' +
