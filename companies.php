@@ -24,12 +24,14 @@ aunthenticate();
 		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/loader.css">
         <link href="home/css/main.css" rel="stylesheet">
         <link href="./companies_files/style-142.css" rel="stylesheet">
+        <link href="home/css/animate.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
 		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="home/js/constants.js"></script>
 		<script type="text/javascript" src="home/js/navigation-drawer.js"></script>
 		<script type="text/javascript" src="home/js/companies.js"></script>
+        <script type="text/javascript" src="home/js/suggestions.js"></script>
 		
 	</head>
 	

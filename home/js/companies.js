@@ -61,10 +61,8 @@ function buildCompany(company){
 }
 // pull_companies(num,category,header,footer)
 function buildCompanyPage(){
+	companies_init();
 	
-	pull_recommended(6,"recommend");
-	drawer_init();
-	close_drawer_onload(1500);
 	
 }
 
@@ -94,6 +92,7 @@ function pull_recommended(num,location_id){
     }
     
     xmlHttp.open("GET",URI+"customer/get-company-suggestions?page=1&amount=10",true);
+    xmlHttp.setRequestHeader("Authorization",'Bearer ' + token);
     xmlHttp.send();
 			
     
@@ -181,10 +180,42 @@ function pull_companies_followed(){
 	
 }
 
-function followed_setup(){
-	pull_companies_followed();
-	drawer_init();
-	close_drawer_onload(1500);
+function companies_init(){
+    //document.getElementById("side-drawer").click();
+	var xmlhttp_br;
+	
+	if (window.XMLHttpRequest)
+		  {// code for IE7+, Firefox, Chrome, Opera, Safari
+		  xmlhttp_br=new XMLHttpRequest();
+		 
+		  }
+		else
+		  {// code for IE6, IE5
+		  xmlhttp_br=new ActiveXObject("Microsoft.XMLHTTP");
+		  
+		  }
+		  xmlhttp_br.onreadystatechange = function () {
+		      if (xmlhttp_br.readyState == 4 && xmlhttp_br.status == 200) {
+
+		          var access = xmlhttp_br.responseText;
+		          token = access.trim();
+		          
+		          if (token == "invalid") {
+		              window.location.href = "login.php";
+		          }
+		          else {
+
+		              pull_recommended(6,"recommend");
+	                  drawer_init();
+	                  close_drawer_onload(1500);
+
+		          }
+
+
+		      }
+		  } 	
+	xmlhttp_br.open("POST","access.php?request=true",true);
+	xmlhttp_br.send();
 	
 }
 
