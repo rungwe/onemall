@@ -33,7 +33,7 @@ customer_restricted();
         
         <script type="text/javascript" src="home/js/googlemaps.js"></script>
         <script type="text/javascript" src="home/js/jquery.min.js"></script>
-		<<script type="text/javascript" src="home/js/constants.js"></script>
+		<script type="text/javascript" src="home/js/constants.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
         <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
         <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
@@ -174,7 +174,7 @@ customer_restricted();
 								
 							</div>
 						    <br>
-							<div id="dashboard" class="row" style="margin-top:200px;font-style:oblique;background-image:url();background-color:white;margin-left:-50px;width:280px;">
+							<div id="dashboard" class="row" style="margin-top:200px;font-style:oblique;background-color:white;margin-left:-50px;width:280px;border-radius: 5px;">
 						
 								<div class="col-sm-offset-2 col-sm-8 " style="margin-top:5px;font-weight:400;color:black;" >
 									
@@ -231,7 +231,7 @@ customer_restricted();
 					
 					<div id="right" class="col-sm-3" >
 						
-						<div class="panel panel-info" >
+						<div class="panel panel-info" style="border-color:white;">
 							<div class="panel-heading" style="background-color:white;color:#004A6E;"><h5>Suggested companies to follow</h5></div>
 							<div id="suggestions" class="panel-body">
 								

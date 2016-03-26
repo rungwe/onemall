@@ -1,5 +1,33 @@
 <?php
 
+function post_broadcast(){
+    $modal = '<!-- Modal -->
+    <div class="modal fade" id="post_broadcast_modal" tabindex="-1" role="dialog" aria-labelledby="broadcast_modal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="broadcast_modal">Post Broadcast</h4>
+          </div>
+          <div class="modal-body">
+            <center>
+                <textarea readonly id="broadcast-post2" class="form-control" rows="4" cols="50" placeholder="" style="width:100%;resize:none;"></textarea>
+                <br>
+                <img  data-toggle="tooltip" title="click to upload image poster" id="broadcast_img" class="pictures" src="img/upload_broadcast.png" style="max-height:300px;min-height:200;max-width:100%;cursor:pointer;" accept="image/gif, image/jpeg, image/png" />
+                <input class="filechooser" type="file" id="broadcast_upload" name="pic1" style="display:none" onchange=readURL(this,"broadcast_img") accept="image/*" />
+            </center>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button id="post_my_broadcast" type="button" class="btn btn-primary">Post</button>
+          </div>
+        </div>
+      </div>
+    </div>';
+
+    return $modal;
+}
+
 function generate_category(){
     $html_result="";
     $file = fopen("categories.json","r");
@@ -570,7 +598,7 @@ function post_interface(){
                                 <div class="row" style="margin-top:4px;">
                                    
                                     <div class=" col-sm-1">
-                                        <i class="fa fa-camera"" style="font-size:25px;color:grey;"></i>
+                                        <i class="fa fa-camera" onclick="broadcast_proceed()"  style="font-size:25px;color:grey;cursor:pointer;"></i>
                                     </div>
                                     <div class="col-sm-1">
                                         <i class="fa fa-video-camera" style="font-size:25px;color:grey;"></i>

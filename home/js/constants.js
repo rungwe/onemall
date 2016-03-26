@@ -78,7 +78,7 @@ function notify_success(mssg){
 						// options
 						message: mssg,
                         icon: 'glyphicon glyphicon glyphicon-ok',
-                        title: "successfull operation"
+                        title: "successful operation,"
 					},{
 						// settings
 						type: "success",
@@ -96,7 +96,7 @@ function notify_failure(mssg){
 						// options
 						message: mssg,
                         icon: 'glyphicon glyphicon-remove',
-                        title: "operation failed"
+                        title: "operation failed,"
 					},{
 						// settings
 						type: "danger",
@@ -140,6 +140,7 @@ $(document).ready(function(){
 	  $(".pictures").click(function(){
 		  $(this).next().click();  
 	  });
+      
   });
 
 function change_wall(input,id) {
@@ -147,10 +148,47 @@ function change_wall(input,id) {
             var reader = new FileReader();
 
             reader.onload = function (e) {
-                $('#'+id)
-                    .css('background-image','url('+e.target.result+')')
+                $('#' + id)
+                    .css('background-image', 'url(' + e.target.result + ')');
+                upload_wallpaper();
             };
 
             reader.readAsDataURL(input.files[0]);
         }
-    }
+ }
+
+ function upload_wallpaper(){
+	   // btnUploadFile is the id of the button that will trigger uploads
+          notify_success("wall paper upload started");
+		  var data = new FormData();
+
+		  // fileUpload is the id of the file upload html input
+		  var files = $("#wall-pic").get(0).files;
+
+		  // Add the uploaded image content to the form data collection
+		  // Do not change this
+		  if (files.length > 0) {
+			   data.append("UploadedImage", files[0]);
+		  }
+
+		  // Make Ajax request with the contentType = false, and procesDate = false
+		  var ajaxRequest = $.ajax({
+			   type: "POST",
+			   url: URI+"upload-company-wallpaper",    // put the url here of where you want to post 
+			   contentType: false,
+			   processData: false,
+			   beforeSend: function (xhr) {
+			   
+		xhr.setRequestHeader('Authorization', 'bearer '+token);
+	},
+			   data: data
+			   
+			   });
+
+			   ajaxRequest.done(function (xhr, textStatus, data) {
+
+			       notify_success("wall paper uploaded");
+
+			   });
+	   
+	}

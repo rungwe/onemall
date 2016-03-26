@@ -5,7 +5,8 @@ Date: 30 June 2015
 Description: Creates adverts and post them to the server side
 
 **/
-
+var lat;
+var longi;
 function post_ad(){
 	var title = document.getElementById("ad_title").value.trim();
     var category=document.getElementById("ad_category").value;
@@ -51,7 +52,16 @@ function post_ad(){
 	//var form = document.getElementById("ad_form");
 	//var formData = new FormData(form);
 	//formData.append("create_ad","true");
-	
+    
+    var position;
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(getPosition);
+
+        
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+	//alert(lat);
 	var xmlhttp;
 	if (window.XMLHttpRequest)
 		  {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -83,7 +93,7 @@ function post_ad(){
 		  }
 		  
 	//name: create_ad, name: pic1, name:pic2, name:pic3, name:title, name:category, name:product_info
-	xmlhttp.open("POST",URI+"customer/create-advert",true);
+	xmlhttp.open("POST",URI+"customer/create-advert?longitude=18.472756099999998&latitude=-33.9548292",true);
     xmlhttp.setRequestHeader("Authorization",'Bearer ' + token);
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 	xmlhttp.send(ad_jason);
@@ -220,6 +230,11 @@ function upload_ad_pic(img_file,ad_id){
 
 }
 
+function getPosition(position){
+
+    lat = position.coords.latitude;
+    longi = position.coords.longitude;
+}
 
     
 

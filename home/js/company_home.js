@@ -29,9 +29,22 @@ function init_company(){
 		              pull_company_broadcasts(1);
 		              social_media_init();
 		              set_edit();
-		              header = {};
-		              header.Authorization = 'Bearer ' + token;
 		              company_profile();
+		              var cropperOptions = {
+		                  modal: true,
+		                  imgEyecandyOpacity: 0.4,
+		                  onBeforeImgUpload: function () { console.log('onBeforeImgUpload') },
+		                  onAfterImgUpload: function () { console.log('onAfterImgUpload') },
+		                  onImgDrag: function () { console.log('onImgDrag') },
+		                  onImgZoom: function () { console.log('onImgZoom') },
+		                  onBeforeImgCrop: function () { console.log('onBeforeImgCrop') },
+		                  onAfterImgCrop: function () { console.log('onAfterImgCrop') },
+		                  onReset: function () { console.log('onReset') },
+		                  onError: function (errormessage) { console.log('onError:' + errormessage) }
+		              };
+
+		              var cropperHeader = new Croppic('broadcastPost', cropperOptions);
+
 
 		          }
 
@@ -60,12 +73,17 @@ function company_profile(){
 		      if (xmlhttp_br.readyState == 4 && xmlhttp_br.status == 200) {
 
 		          var data = xmlhttp_br.responseText;
-
+		          //alert(data);
 		          var company = JSON.parse(data);
 		          company = company[0];
-		          document.getElementById("name").innerHTML = company.name;
+		          document.getElementById("company_name").innerHTML = company.name;
+		          document.getElementById("website").innerHTML = company.website;
+		          document.getElementById("num_followers").innerHTML = company.number_of_followers;
+		          sessionStorage.type = "company";
+		          sessionStorage.company_name = company.name;
+
 		          for (var i in company.categories) {
-		              document.getElementById("categories").innerHTML += i + " ";
+		              document.getElementById("categories").innerHTML += i.category + " ";
 		          }
 
 
@@ -82,117 +100,109 @@ function company_profile(){
 
 function set_edit(){
     $(document).ready(function () {
-        
-        $('#name').editable({
-            url: URI+'company/edit-profile',
+
+        $('#company_name').editable({
+
+            url: URI + 'company/edit-profile',
             pk: 1,
             emptytext: "",
-            params: function(params) {  //params already contain name, value and pk
-                            var data = {};
-                            
-                            data["name"] = params.value;
-                            return JSON.stringify(data);
-                          },
-            ajaxOptions: {
+            params: function (params) {  //params already contain name, value and pk
+                var data = {};
+                data["name"] = params.value;
                 
-                beforeSend: function (request)
-                {
+                return JSON.stringify(data);
+            },
+            ajaxOptions: {
+
+                beforeSend: function (request) {
                     request.withCredentials = true;
-                    request.setRequestHeader("Authorization", "Bearer "+token);
+                    request.setRequestHeader("Authorization", "Bearer " + token);
+                    
                 },
                 type: 'put',
-                contentType: 'application/json; charset=utf-8',
-                headers: header
-                
-            }     
+                contentType: 'application/json; charset=utf-8'
+
+            }
         });
         $('#website').editable({
-            url: URI+'company/edit-profile',
+            url: URI + 'company/edit-profile',
             pk: 1,
-            params: function(params) {  //params already contain name, value and pk
-                            var data = {};
-                            
-                            data["website"] = params.value;
-                            return JSON.stringify(data);
-                          },
+            params: function (params) {  //params already contain name, value and pk
+                var data = {};
+
+                data["website"] = params.value;
+                return JSON.stringify(data);
+            },
             ajaxOptions: {
-                
-                beforeSend: function (request)
-                {
+
+                beforeSend: function (request) {
                     request.withCredentials = true;
-                    request.setRequestHeader("Authorization", "Bearer "+token);
+                    request.setRequestHeader("Authorization", "Bearer " + token);
                 },
                 type: 'put',
-                contentType: 'application/json; charset=utf-8',
-                headers: header
-                
-            }     
+                contentType: 'application/json; charset=utf-8'
+
+            }
         });
         $('#email').editable({
-            url: URI+'company/edit-profile',
+            url: URI + 'company/edit-profile',
             pk: 1,
-            params: function(params) {  //params already contain name, value and pk
-                            var data = {};
-                            
-                            data["email"] = params.value;
-                            return JSON.stringify(data);
-                          },
+            params: function (params) {  //params already contain name, value and pk
+                var data = {};
+
+                data["email"] = params.value;
+                return JSON.stringify(data);
+            },
             ajaxOptions: {
-                
-                beforeSend: function (request)
-                {
+
+                beforeSend: function (request) {
                     request.withCredentials = true;
-                    request.setRequestHeader("Authorization", "Bearer "+token);
+                    request.setRequestHeader("Authorization", "Bearer " + token);
                 },
                 type: 'put',
-                contentType: 'application/json; charset=utf-8',
-                headers: header
-                
-            }     
+                contentType: 'application/json; charset=utf-8'
+
+            }
         });
         $('#contact').editable({
-            url: URI+'company/edit-profile',
+            url: URI + 'company/edit-profile',
             pk: 1,
-            params: function(params) {  //params already contain name, value and pk
-                            var data = {};
-                            
-                            data["contact"] = params.value;
-                            return JSON.stringify(data);
-                          },
+            params: function (params) {  //params already contain name, value and pk
+                var data = {};
+
+                data["contact"] = params.value;
+                return JSON.stringify(data);
+            },
             ajaxOptions: {
-                
-                beforeSend: function (request)
-                {
+
+                beforeSend: function (request) {
                     request.withCredentials = true;
-                    request.setRequestHeader("Authorization", "Bearer "+token);
+                    request.setRequestHeader("Authorization", "Bearer " + token);
                 },
                 type: 'put',
-                contentType: 'application/json; charset=utf-8',
-                headers: header
-                
-            }     
+                contentType: 'application/json; charset=utf-8'
+
+            }
         });
         $('#categories').editable({
-            url: URI+'company/edit-profile',
+            url: URI + 'company/edit-profile',
             pk: 1,
-            params: function(params) {  //params already contain name, value and pk
-                            var data = {};
-                            
-                            data["name"] = params.value;
-                            return JSON.stringify(data);
-                          },
+            params: function (params) {  //params already contain name, value and pk
+                var data = {};
+
+                data["name"] = params.value;
+                return JSON.stringify(data);
+            },
             ajaxOptions: {
-                
-                beforeSend: function (request)
-                {
+
+                beforeSend: function (request) {
                     request.withCredentials = true;
-                    request.setRequestHeader("Authorization", "Bearer "+token);
+                    request.setRequestHeader("Authorization", "Bearer " + token);
                 },
                 type: 'put',
-                contentType: 'application/json; charset=utf-8',
-                headers: header
-                
-            }     
+                contentType: 'application/json; charset=utf-8'
+
+            }
         });
     });
 }

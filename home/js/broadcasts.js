@@ -29,7 +29,7 @@ function displayBroadcasts(feedsArr,locationID){
 		var feed =feedsArr[i];
 		var broadcast = buildBroadcast(feed);
 		num_broadcasts+=1
-		document.getElementById(locationID).innerHTML+=broadcast;
+		document.getElementById(locationID).innerHTML=broadcast+document.getElementById(locationID).innerHTML;
 		
 	}
 	
@@ -63,17 +63,23 @@ function buildBroadcast(feed){
           profile_img_url="img/company.png" 
        }
 
-       var post_img = feed.images;
-       if (feed.images==null){
-           post_img = "img/no_post.jpg";
+       var post_img="https://s3-us-west-2.amazonaws.com/" ;
+       if (feed.images.length>0){
+           //console.log(feed.images);
+           post_img += feed.images[0].url;
+           //
        }
        else{
-           post_img = feed.images.url;
-           //alert(post_img);
+           
+           post_img = "img/no_post.jpg";
        }
-       	
-
-		var template= '<div id="'+feed.ID+'" class="panel panel-info">'+
+       
+       var liked="";
+       if(feed.liked==true){
+           liked = "liked";
+       }
+  
+		var template= '<div id="'+feed.ID+'" class="panel panel-info" style="border-color:white;"> '+
 			  '				<div class="panel-heading" style="background-color:white;">'+
 			  ' 					<div class="row">'+
 			  ' 						<a href="profile_page.php?company='+feed.company.ID+'"><img class="col-sm-2" src="'+profile_img_url+'" height="53px" width="50px" style="border-radius:2px;"/></a>'+
@@ -92,7 +98,7 @@ function buildBroadcast(feed){
 			  '				<div class="panel-footer">'+
 			  ' 				<div class="row" style="margin-left:15px;">'+
 			  '						<div class="col-sm-3" style="cursor:pointer;">  <span data-type="broadcasts" data-id=" '+feed.ID+'" class="glyphicon glyphicon-eye-open">'+feed.number_of_views+'</span></div>'+
-			  '  					<div class="col-sm-3" style="cursor:pointer;">  <span data-type="broadcasts" data-id=" '+feed.ID+'" class="glyphicon glyphicon-thumbs-up likes">'+feed.number_of_likes+'</span> </div>'+
+			  '  					<div class="col-sm-3" style="cursor:pointer;">  <span data-type="broadcasts" data-id=" '+feed.ID+'" class="glyphicon glyphicon-thumbs-up likes '+liked+'">'+feed.number_of_likes+'</span> </div>'+
 			  '						<div class="col-sm-3" style="cursor:pointer;"> <span  data-type="broadcasts" data-id=" '+feed.ID+'" class="glyphicon glyphicon-comment comment">'+ feed.number_of_comments+'</span></div>'+
 			  '						<div class="col-sm-3" style="cursor:pointer;">  <span data-type="broadcasts" data-id=" '+feed.ID+'" class="glyphicon glyphicon-share-alt"></span></div>'+
 			  '					</div>'+
@@ -117,18 +123,18 @@ function pull_broadcasts(count){
 		  
 		  }
 		  xmlhttp_br.onreadystatechange = function () {
-		      if (xmlhttp_br.readyState == 4) {
+		      if (xmlhttp_br.readyState == 4 && xmlhttp_br.status==200){
 
 		          document.getElementById("loader").style.display = "none";
 
 		          var info = xmlhttp_br.responseText;
-		          //alert(xmlhttp_br.status+"   "+info);
+		          
 		          var data = JSON.parse(info);
 		          displayBroadcasts(data, mainID);
 		      }
 		  } 	
-    xmlhttp_br.open("GET","Client.php?pull_broadcasts=true",true);
-	//xmlhttp_br.open("GET",URI+"customer/get-broadcasts?page="+1+"&amount=10&time=2016-01-22",true);
+    //xmlhttp_br.open("GET","Client.php?pull_broadcasts=true",true);
+	xmlhttp_br.open("GET",URI+"customer/get-broadcasts?page="+1+"&amount=10&time",true);
 	xmlhttp_br.setRequestHeader("Authorization",'Bearer ' + token);
 	xmlhttp_br.send();
 	
@@ -141,21 +147,24 @@ function pull_company_broadcasts(count){
 	var xmlhttp_br;
 	var page = count++;
 	if (window.XMLHttpRequest)
-		  {// code for IE7+, Firefox, Chrome, Opera, Safari
+		  {
+              // code for IE7+, Firefox, Chrome, Opera, Safari
 		  xmlhttp_br=new XMLHttpRequest();
 		 
 		  }
 		else
-		  {// code for IE6, IE5
+		  {
+              // code for IE6, IE5
 		  xmlhttp_br=new ActiveXObject("Microsoft.XMLHTTP");
 		  
 		  }
 		  xmlhttp_br.onreadystatechange = function () {
-		      if (xmlhttp_br.readyState == 4) {
+		      if (xmlhttp_br.readyState == 4 && xmlhttp_br.status==200) {
 
 		          //document.getElementById("loader").style.display = "none";
-
+                  
 		          var info = xmlhttp_br.responseText;
+                  //alert(info);
 		          //alert(xmlhttp_br.status+"   "+info);
 		          var data = JSON.parse(info);
 		          displayBroadcasts(data, mainID);
@@ -197,16 +206,19 @@ function post_broadcast(){
 		  
 		  }
 		  xmlhttp_br.onreadystatechange = function () {
-		      if (xmlhttp_br.readyState == 4 && xmlhttp_br.status==200) {
+		      if (xmlhttp_br.readyState == 4 && xmlhttp_br.status == 200) {
 
 		          var info = xmlhttp_br.responseText;
-		          //alert(xmlhttp_br.status+"   "+info);
-                  notify_success("posted successfully")
-		          
+		          notify_success("post initiated, processing image upload ");
+		          $('#post_broadcast_modal').modal('toggle');
+                  upload_broadcast_img(info.trim())
+
+
+
 		      }
-              else if(xmlhttp_br.readyState == 4 && xmlhttp_br.status!=200){
-                  notify_failure("error failed to post, error code" + xmlhttp_br.status)
-              }
+		      else if (xmlhttp_br.readyState == 4 && xmlhttp_br.status != 200) {
+		          notify_failure("error failed to post, error code" + xmlhttp_br.status)
+		      }
 		  } 	
     xmlhttp_br.open("POST",URI+"company/create-broadcast",true);
 	//xmlhttp_br.open("GET",URI+"customer/get-broadcasts?page="+page+"&amount=10&time=2015-11-08",true);
@@ -221,13 +233,64 @@ $(document).ready(function () {
         if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
             //alert("bottom of the page reached!");
             if (count <= 8) {
-               // pull_broadcasts(count);
+                // pull_broadcasts(count);
             }
         }
     });
 
     $("#share").click(function () {
+        //post_broadcast();
+        broadcast_proceed();
+    });
+
+    $("#post_my_broadcast").click(function () {
         post_broadcast();
     });
 
-});
+})
+
+function broadcast_proceed(){
+    if (document.getElementById("broadcast-post").value != "") {
+        document.getElementById("broadcast-post2").value = document.getElementById("broadcast-post").value;
+        $('#post_broadcast_modal').modal('toggle');
+    }
+    else{
+        notify_failure("You are required to enter broadcast message first")
+    }
+}
+
+
+function upload_broadcast_img(id){
+	   // btnUploadFile is the id of the button that will trigger uploads
+		  var data = new FormData();
+
+		  // fileUpload is the id of the file upload html input
+		  var files = $("#broadcast_upload").get(0).files;
+
+		  // Add the uploaded image content to the form data collection
+		  // Do not change this
+		  if (files.length > 0) {
+			   data.append("UploadedImage", files[0]);
+		  }
+
+		  // Make Ajax request with the contentType = false, and procesDate = false
+		  var ajaxRequest = $.ajax({
+			   type: "POST",
+			   url: URI+"upload-broadcast-pictures?id="+id,    // put the url here of where you want to post 
+			   contentType: false,
+			   processData: false,
+			   beforeSend: function (xhr) {
+			   
+		xhr.setRequestHeader('Authorization', 'bearer '+token);
+	},
+			   data: data
+			   
+			   });
+
+			   ajaxRequest.done(function (xhr, textStatus, data) {
+
+			       notify_success("image uploaded");
+
+			   });
+	   
+	}

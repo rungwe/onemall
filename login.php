@@ -265,7 +265,7 @@
 	                    </div>
 	                </div>
 	                <div class="col-sm-5 always-beautiful-box wow fadeInUp" style="visibility: hidden; animation-name: none;">
-	                    <img src="img/business.jpg" alt="">
+	                    <img src="img/test3.png" alt="">
 	                </div>
 	            </div>
 	        </div>

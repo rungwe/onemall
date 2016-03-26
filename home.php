@@ -20,9 +20,9 @@ aunthenticate();
 		<link href="home/css/myshops.css" rel="stylesheet">
         <link href="./menu_files/style-24.css" rel="stylesheet">
         <link href="bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
-        <link href="home/css/main.cs" rel="stylesheet">
+        
         <link href="home/css/animate.css" rel="stylesheet">
-		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+		<script src="home/js/jquery-2.1.3.min.js" type="text/javascript"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="home/js/constants.js"></script>
         <script type="text/javascript" src="home/js/navigation-drawer.js"></script>
@@ -35,6 +35,7 @@ aunthenticate();
 		<script type="text/javascript" src="home/js/main_init.js"></script>	
         <script src="bootstrap3-editable/js/bootstrap-editable.js"></script>
         <script type="text/javascript" src="home/js/bootstrap-notify.min.js"></script>
+        <script type="text/javascript" src="home/js/croppic.js"></script>
 	</head>
 	
 	<!-- <body onload="main_init()" style="background-image:url(https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/cloud.png);background-size:cover;background-repeat:no-repeat;background-attachment:fixed;">> -->
@@ -108,11 +109,11 @@ aunthenticate();
 			<input class="filechooser" type="file" id="prof-pic" name="pic1" style="display:none" onchange="readURL(this,'profile-pic');" accept="image/*" />
 		</div>
         <div style="margin-top:155px;position:absolute;margin-left:350px;z-index:2;">
-			<h3 id="name" data-type="text" data-pk="1" data-title="Enter Company Name" style="color: #F2F2F2 "></h3>
-            <h5 id="categories" data-type="text" data-pk="1" data-title="Enter Categories" style="color: #F2F2F2 " ><span class="glyphicon glyphicon-tag"></span>Categories</h5>
-            <h5 id="email" data-type="text" data-pk="1" data-title="Enter email address" style="color: #F2F2F2 " ><span class="glyphicon glyphicon-envelope"></span>info@example.com</h5>
-            <h5 id="contact" data-type="text" data-pk="1" data-title="Enter telephone number" style="color: #F2F2F2 "><span class="glyphicon glyphicon-earphone"></span>+277 123 456</h5>
-            <h5 id="website" data-type="text" data-pk="1" data-title="Enter website url" style="color: #F2F2F2 "><span class=" glyphicon glyphicon-link"></span>ww.example.com</h5>
+			<h3 id="company_name" data-type="text" data-pk="1" data-title="Enter Company Name" style="color: #F2F2F2 "></h3>
+            <h5 id="categories" data-type="text" data-pk="1" data-title="Enter Categories" style="color: #F2F2F2 " ><span class="glyphicon glyphicon-tag"></span></h5>
+            <h5 id="email" data-type="text" data-pk="1" data-title="Enter email address" style="color: #F2F2F2 " ><span class="glyphicon glyphicon-envelope"></span></h5>
+            <h5 id="contact" data-type="text" data-pk="1" data-title="Enter telephone number" style="color: #F2F2F2 "><span class="glyphicon glyphicon-earphone"></span></h5>
+            <h5 id="website" data-type="text" data-pk="1" data-title="Enter website url" style="color: #F2F2F2 "><span class=" glyphicon glyphicon-link"></span></h5>
 		</div>
 		<div  id="header" style="height:50px;width:100%;position:absolute;z-index:1;margin-top:320px;background-color:white;">
 			<div >
@@ -129,7 +130,7 @@ aunthenticate();
 					<center class="tab"><h4>Online Shop</h4> </center>
 				</div>
 				<div class="col-sm-2">
-					<center><button class="btn  btn-md" style="margin-top:3px;background-color: #004A6E;color:white;">following</button></center>
+					<center><button class="btn  btn-md" style="margin-top:3px;background-color: #004A6E;color:white;width: 60%"><span id="num_followers" style="margin-top:19px;margin-right:10px; background-color:white;color: #000" class="badge"></span>Following</button></center>
 				</div>
 			
 			</div>
@@ -140,6 +141,7 @@ aunthenticate();
 		    echo create_ad();
 		    echo edit_account_modal();
 	        echo ad_detail();
+            echo post_broadcast();
         ?>	
         <div class="tab-content">
 		    <div id="about" class="tab-pane fade" style="margin-top:350px;">
@@ -148,12 +150,12 @@ aunthenticate();
                     <div class="panel-group category-products" id="accordian" style="margin-top: 7px;"><!--category-productsr-->
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a >Branche 1</a></h4>
+									<h4 class="panel-title"><a >Branch 1</a></h4>
 								</div>
 							</div>
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a >Branche 2</a></h4>
+									<h4 class="panel-title"><a >Branch 2</a></h4>
 								</div>
 							</div>
 							

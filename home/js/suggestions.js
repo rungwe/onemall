@@ -120,13 +120,15 @@ function follow_company(company_id){
     xmlHttp.onreadystatechange = function () {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 201) {
             change_sug(company_id);
+            
         }
         else if (xmlHttp.readyState == 4 && xmlHttp.status != 201) {
             notify_failure("unexpected error occured :(");
         }
     }
-
+    //alert(company_id);
     xmlHttp.open("PUT", URI + "customer/follow-company?id=" + company_id, true);
+    xmlHttp.setRequestHeader("Authorization",'Bearer ' + token);
     xmlHttp.send();
 }
 function bind_follow_suggestions(){

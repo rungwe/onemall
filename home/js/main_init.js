@@ -76,7 +76,9 @@ function get_profile(){
 		          document.getElementById("firstname").value = profileInfo.fname;
 		          document.getElementById("surname").value = profileInfo.lname;
 		          document.getElementById("dob").value = profileInfo.date_of_birth;
-                   notify("Welcome back "+profileInfo.fname, "info");
+		          sessionStorage.type = "customer";
+		          sessionStorage.name = profileInfo.fname + " " + profileInfo.lname;
+		          notify("Welcome back " + profileInfo.fname, "info");
 		      }
 		  } 	
 	xmlhttp_br.open("GET",URI+"customer/get-user-profile",true);

@@ -56,7 +56,13 @@ function like(postID, likedObject, type){
 	    xmlHttp.open("PUT",URI+"customer/like-advert?adId="+postID,true);
 	}
     else if(type=="broadcasts"){
-        xmlHttp.open("PUT",URI+"company/like-broadcast?broadcastId="+postID,true);
+        if(sessionStorage.type=="customer"){
+            xmlHttp.open("PUT",URI+"customer/like-broadcast?id="+postID,true);
+        }
+        else if(sessionStorage.type=="company"){
+             xmlHttp.open("PUT",URI+"company/like-broadcast?id="+postID,true);
+        }
+        
     }	  
 	
     xmlHttp.setRequestHeader("Authorization",'Bearer ' + token);
@@ -91,9 +97,9 @@ function unlike(postID, unlikedObject, type){
 	
 	xmlHttp.onreadystatechange=function()
 		  {
-		  if (xmlHttp.readyState==4 )
+		  if (xmlHttp.readyState==4 && xmlHttp.status==204)
 			{
-			alert(xmlHttp.status)
+			
 			//var info =xmlHttp.responseText;
 			//window.clearTimeout(notifyUnlike);
 			unlikedObject.removeClass("liked");
@@ -106,7 +112,7 @@ function unlike(postID, unlikedObject, type){
 	}	
     
     else if(type=="broadcasts"){
-        xmlHttp.open("DELETE",URI+"company/unlike-broadcast?id="+postID,true);
+        xmlHttp.open("DELETE",URI+"customer/unlike-broadcast?id="+postID,true);
     }  
 	
     xmlHttp.setRequestHeader("Authorization",'Bearer ' + token);
@@ -126,16 +132,15 @@ function bindBroadcastLikeEvents(){
 
         var obj = $(this);
         var id = obj.data("id");
-        alert(id);
         var type = obj.data("type");
-
-        // only execute if no like or unlike is being processed already, atomic process.
+        var value = parseInt($(this).html());
+        
         if (!$(this).hasClass("liked") && !$(this).hasClass("cursorLoad")) {
             $(this).addClass("cursorLoad");
             like(id, $(this), type);
         }
         else if ($(this).hasClass("liked") && !$(this).hasClass("cursorLoad")) {
-            //notifyUnlike=setTimeout(function(){$(this).removeClass("cursorLoad");}, 5000);
+
             $(this).addClass("cursorLoad");
             unlike(id, $(this), type);
         }
