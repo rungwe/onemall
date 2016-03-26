@@ -30,7 +30,7 @@ customer_restricted();
 		<link href="home/css/googlemaps.css" rel="stylesheet">
         <link href="./menu_files/style-24.css" rel="stylesheet">
         <link href="home/css/animate.css" rel="stylesheet">
-        
+   
         <script type="text/javascript" src="home/js/googlemaps.js"></script>
         <script type="text/javascript" src="home/js/jquery.min.js"></script>
 		<script type="text/javascript" src="home/js/constants.js"></script>
@@ -135,6 +135,7 @@ customer_restricted();
 		        echo edit_account_modal();
 	            echo ad_detail(); 
                 echo shopping_cart();
+                echo company_recommender();
             ?>
             <div id="content">
 					

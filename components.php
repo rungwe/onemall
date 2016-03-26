@@ -1,5 +1,27 @@
 <?php
 
+function company_recommender(){
+    $modal='<div class="modal fade" data-backdrop="static" id="company_reommender" tabindex="-1" role="dialog" aria-labelledby="companies">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    
+                    <h4 class="modal-title" id="companies">Choose at least 1 recommended company</h4>
+                  </div>
+                  <div class="modal-body">
+                        <div class="row" id="recommend_modal"></div>  
+                  </div>
+                  <div class="modal-footer">
+                    
+                    <button id="done_recommend" type="button" class="btn btn-primary" >Proceed</button>
+                  </div>
+                </div>
+              </div>
+            </div>';
+
+    echo $modal;
+}
+
 function post_broadcast(){
     $modal = '<!-- Modal -->
     <div class="modal fade" id="post_broadcast_modal" tabindex="-1" role="dialog" aria-labelledby="broadcast_modal">

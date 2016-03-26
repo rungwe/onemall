@@ -27,7 +27,7 @@ function displayCompany(compArr,locationID){
 		document.getElementById(locationID).innerHTML=document.getElementById(locationID).innerHTML+company;
 		
 	}
-	
+	bind_follow_suggestions(false);
 }
 
 function buildCompany(company){
@@ -52,7 +52,7 @@ function buildCompany(company){
 								        '<!-- Paragraph -->' +
 								        '<p></p>' +
 								        '<!-- Button -->' +
-								        '<a style="" class="btn btn-lblue btn-xs fllwBtn" data-companyID="'+company.ID+'">+follow</a>' +
+								        '<a style="" class="btn btn-lblue btn-xs fllwBtn suggestionBtn" data-companyID="'+company.ID+'" data-suggestion-id="'+company.ID+'" >+follow</a>' +
 							        '</div>' +
 						        '</div>' +
 					        '</div>';
@@ -62,7 +62,7 @@ function buildCompany(company){
 // pull_companies(num,category,header,footer)
 function buildCompanyPage(){
 	
-	pull_recommended(6);
+	pull_recommended(6,"recommend");
 	drawer_init();
 	close_drawer_onload(1500);
 	
@@ -70,7 +70,7 @@ function buildCompanyPage(){
 
 
 
-function pull_recommended(num){
+function pull_recommended(num,location_id){
     var xmlHttp;
 
     if (window.XMLHttpRequest){
@@ -88,7 +88,7 @@ function pull_recommended(num){
             var info = xmlHttp.responseText;
             //alert(info);
             var data = JSON.parse(info);
-            displayCompany(data, "recommend");
+            displayCompany(data, location_id);
 
         }
     }

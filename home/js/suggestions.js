@@ -37,7 +37,7 @@ function displaySuggestions(suggestionArr, locationID){
 	}
 
 
-	bind_follow_suggestions();	
+	bind_follow_suggestions(true);	
 	
 		
 }
@@ -108,7 +108,7 @@ function pull_suggestions(num){
 		  
 }
 
-function follow_company(company_id){
+function follow_company(company_id, replace){
     var xmlHttp;
     if(window.XMLHttpRequest){
         xmlHttp = new XMLHttpRequest();
@@ -119,8 +119,11 @@ function follow_company(company_id){
 
     xmlHttp.onreadystatechange = function () {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 201) {
-            change_sug(company_id);
-            
+            change_sug(company_id, replace);
+            if (sessionStorage.getItem("recommeded") != null) {
+                sessionStorage.recommeded = 1+parseInt(sessionStorage.recommeded);
+            }
+
         }
         else if (xmlHttp.readyState == 4 && xmlHttp.status != 201) {
             notify_failure("unexpected error occured :(");
@@ -131,14 +134,14 @@ function follow_company(company_id){
     xmlHttp.setRequestHeader("Authorization",'Bearer ' + token);
     xmlHttp.send();
 }
-function bind_follow_suggestions(){
+function bind_follow_suggestions(replace){
     $(document).ready(function () {
 
         $(".suggestionBtn").click(function () {
             var btn = $(this);
             var id = btn.attr("data-suggestion-id");
             // follow a company
-            follow_company(id);
+            follow_company(id,replace);
 
         });
 
@@ -147,15 +150,32 @@ function bind_follow_suggestions(){
 
 
 // animated
-function change_sug(id){
-  $(document).ready(function () {
-      $("#" + id).addClass("animated");
-            $("#" + id).addClass("bounceOut");
+function change_sug(id,replace){
+    $(document).ready(function () {
+        $("#" + id).addClass("animated");
+        $("#" + id).addClass("bounceOut");
+        if (replace == true) {
             var sug = $("#" + id);
             suggestions.push(sug);
             setTimeout(function () { pull_suggestions(1); }, 1000);
+        }
     });  
 }
+
+
+$(document).ready(function () {
+    $("#done_recommend").click(function () {
+        var num = parseInt(sessionStorage.recommeded);
+        if (num>= 3) {
+            pull_broadcasts(10);
+            $('#company_reommender').modal('toggle');
+        }
+
+        else {
+            notify_failure("follow at least 3 company");
+        }
+    });
+});
 
 function randomIntFromInterval(min,max)
 {
