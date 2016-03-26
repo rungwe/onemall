@@ -6,7 +6,7 @@ function company_recommender(){
                 <div class="modal-content">
                   <div class="modal-header">
                     
-                    <h4 class="modal-title" id="companies">Choose at least 1 recommended company</h4>
+                    <h4 class="modal-title" id="companies">Choose at least 3 recommended company</h4>
                   </div>
                   <div class="modal-body">
                         <div class="row" id="recommend_modal"></div>  

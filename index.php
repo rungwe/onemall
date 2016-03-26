@@ -30,7 +30,7 @@ customer_restricted();
 		<link href="home/css/googlemaps.css" rel="stylesheet">
         <link href="./menu_files/style-24.css" rel="stylesheet">
         <link href="home/css/animate.css" rel="stylesheet">
-   
+        <link href="./companies_files/style-142.css" rel="stylesheet">
         <script type="text/javascript" src="home/js/googlemaps.js"></script>
         <script type="text/javascript" src="home/js/jquery.min.js"></script>
 		<script type="text/javascript" src="home/js/constants.js"></script>
