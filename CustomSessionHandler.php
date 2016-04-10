@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors',true);
-define('HOST','p:sessions.chujykwc6ihz.us-west-2.rds.amazonaws.com');
+define('HOST','p:sessiondb.chujykwc6ihz.us-west-2.rds.amazonaws.com');
 define('USER','root');
 define('DBNAME','sessionDB');
 define('PSWD','project123');
