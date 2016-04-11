@@ -1,3 +1,8 @@
+<?php
+    
+session_start();
+    
+?>
 <!DOCTYPE html>
 
 <html lang="en"><head>
@@ -19,7 +24,7 @@
 		<link rel="stylesheet" href="css/form-elements.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/media-query.css">
-
+        <script type="text/javascript" src="home/js/jquery.min.js"></script>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesnt work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -33,7 +38,11 @@
 		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"> </script>
     </head>
 
-    <body >
+    <body onload="<?php 
+                        if(!empty($_REQUEST["error"])){
+                            echo "reg_error('".$_SESSION["error"]."')";
+                         }
+                    ?>">
     
         <!-- Loader -->
     	<div class="loader" style="display: none;">
@@ -101,7 +110,8 @@
                         		</div>
                             </div>
                             <div class="form-bottom" style="background-color: rgba(5,4,2,0.1);">
-								<h3 style="color:red;" id="error"><?php 
+								<h3 style="color:red;" id="error">
+                                    <?php 
                                         if(!empty($_REQUEST["error"])){
                                             echo $_REQUEST["error"];
                                         }
@@ -461,23 +471,34 @@
 									<input type="hidden"  name="signup" value="true">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-first-name">First name</label>
-			                        	<input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name" value="">
+			                        	<input type="text" name="form-first-name" value="<?php if(!empty($_REQUEST["error"])){
+                                                                                                echo $_SESSION["details"]["form-first-name"];
+                                                                                            }?>" 
+                                        placeholder="First name..." class="form-first-name form-control" id="form-first-name">
 			                        </div>
 			                        <div class="form-group">
-			                        	<label class="sr-only" for="form-last-name">Last name</label>
-			                        	<input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name" value="">
+			                        	<label class="sr-only" for="form-last-name" >Last name</label>
+			                        	<input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name" value="<?php if(!empty($_REQUEST["error"])){
+                                                                                                echo $_SESSION["details"]["form-last-name"];
+                                                                                            }?>">
 			                        </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-email-reg">Email</label>
-			                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email-reg" value="">
+			                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email-reg" value="<?php if(!empty($_REQUEST["error"])){
+                                                                                                echo $_SESSION["details"]["form-email"];
+                                                                                            }?>">
 			                        </div>
 									 <div class="form-group">
 			                        	<label class="sr-only" for="pswd-reg">Password</label>
-			                        	<input type="password" name="pswd" placeholder="Enter password" class="form-email form-control" id="pswd-reg" value="">
+			                        	<input type="password" name="pswd" placeholder="Enter password" class="form-email form-control" id="pswd-reg" value="<?php if(!empty($_REQUEST["error"])){
+                                                                                                echo $_SESSION["details"]["pswd"];
+                                                                                            }?>">
 			                        </div>
 									 <div class="form-group">
 			                        	<label class="sr-only" for="pswd1-reg">confirm password</label>
-			                        	<input type="password" name="pswd1" placeholder="Confirm password" class="form-email form-control" id="pswd1-reg" value="">
+			                        	<input type="password" name="pswd1" placeholder="Confirm password" class="form-email form-control" id="pswd1-reg" value="<?php if(!empty($_REQUEST["error"])){
+                                                                                                echo $_SESSION["details"]["pswd1"];
+                                                                                            }?>">
 			                        </div>
                                     <style>
                                         .type{
@@ -511,13 +532,15 @@
         </div>
 
         <!-- Javascript -->
-        <script src="js/jquery-1.11.1.min.js"></script>
+        
         <script src="js/jquery.backstretch.min.js"></script>
         <script src="js/wow.min.js"></script>
         <script src="js/retina-1.1.0.min.js"></script>
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/script.js"></script>
+        <script type="text/javascript" src="home/js/bootstrap-notify.min.js"></script>
 		<script src="js/login.js"></script>
+        <script type="text/javascript" src="home/js/constants.js"></script>
         <script src ="js/registration.js"></script>
         
         <!--[if lt IE 10]>

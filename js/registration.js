@@ -11,33 +11,33 @@ function validate_reg_form(){
 	document.getElementById("form-last-name").value = lastname;
 	
 	if (validateEmail(email)==false){
-		document.getElementById("error_reg").innerHTML="Invalid email, put a valid email address";
+		notify_failure("Invalid email, put a valid email address");
 		return false;
 		
 	}
 	
 	else if(passwd.length<6){
-		document.getElementById("error_reg").innerHTML="Error, password too short, must be at least 6 characters";
+		notify_failure("Error, password too short, must be at least 6 characters");
 		return false;
 	}
 	
 	else if (confirm==""){
-		document.getElementById("error_reg").innerHTML="Error, please confirm your password";
+		notify_failure("Error, please confirm your password");
 		return false;
 	}
 	
 	else if (passwd!=confirm){
-		document.getElementById("error_reg").innerHTML="Error, password not matching";
+		notify_failure("Error, password not matching");
 		return false;
 	}
 	
 	else if(firstname==""){
-		document.getElementById("error_reg").innerHTML="Error, first name required";
+		notify_failure("Error, first name required");
 		return false;
 	}
 	
 	else if(lastname==""){
-		document.getElementById("error_reg").innerHTML="Error, last name required";
+		notify_failure("Error, last name required");
 		return false;
 	}
 	
@@ -54,6 +54,10 @@ function validate_reg_form(){
 	
 }
 
+function reg_error(error){
+    $('#signup').modal('toggle');
+    notify_failure(error);
+}
 
 function validateEmail(email) 
 {

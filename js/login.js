@@ -5,13 +5,15 @@ function validate_login_form(){
 	document.getElementById("pswd").value = passwd;
 	
 	if (validateEmail(email)==false){
-		document.getElementById("error").innerHTML="Invalid email, put a valid email address";
+	    notify_failure("Invalid email, put a valid email address");
+		//document.getElementById("error").innerHTML="Invalid email, put a valid email address";
 		return false;
 		
 	}
 	
 	else if(passwd.length<6){
-		document.getElementById("error").innerHTML="Error, password too short, must be greater than 6 characters";
+	    notify_failure("Error, password too short, must be greater than 6 characters");
+		//document.getElementById("error").innerHTML="Error, password too short, must be greater than 6 characters";
 		return false;
 	}
 	

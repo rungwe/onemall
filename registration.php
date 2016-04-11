@@ -79,8 +79,10 @@
 				foreach( $msg->ModelState as $key => $val ){
 					 $error.=$val[0]." <br>";
 				}
-				
-				echo signup_page($error);
+                session_start();
+                $_SESSION["error"]=$error;
+				$_SESSION["details"]=$_POST;
+				header("Location: login.php?error=true");
                 //echo "Error code: \t".$code."<br> Error message: \t".$error."<br> error json: \t".$result;
 			}
 			
