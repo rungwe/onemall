@@ -111,11 +111,7 @@ session_start();
                             </div>
                             <div class="form-bottom" style="background-color: rgba(5,4,2,0.1);">
 								<h3 style="color:red;" id="error">
-                                    <?php 
-                                        if(!empty($_REQUEST["error"])){
-                                            echo $_REQUEST["error"];
-                                        }
-                                    ?>
+                                   
                                 </h3>
 			                    <form role="form" action="signin.php" method="post" id="log-form">
 			                    	<input type="hidden"  name="login" value="true">
