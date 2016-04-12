@@ -130,7 +130,7 @@ aunthenticate();
 					<center class="tab"><h4>Online Shop</h4> </center>
 				</div>
 				<div class="col-sm-2">
-					<center><button class="btn  btn-md" style="margin-top:3px;background-color: #004A6E;color:white;width: 60%"><span id="num_followers" style="margin-top:19px;margin-right:10px; background-color:white;color: #000" class="badge"></span>Following</button></center>
+					<button class="btn  btn-md" style="margin-top:3px;background-color: #004A6E;color:white;width: 60%"><span id="num_followers" style="margin-top:19px;margin-right:10px; background-color:white;color: #000" class="badge"></span>Following</button>
 				</div>
 			
 			</div>

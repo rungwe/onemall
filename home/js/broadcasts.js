@@ -301,6 +301,7 @@ function upload_broadcast_img(id){
 			   ajaxRequest.done(function (xhr, textStatus, data) {
 
 			       notify_success("image uploaded");
+			       pull_company_broadcasts(20);
 
 			   });
 	   

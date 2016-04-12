@@ -138,17 +138,19 @@ function comment_broadcast(postID,comment,obj, type){
 		  
 		  }
 		  xmlhttp.onreadystatechange = function () {
-		      if (xmlhttp.readyState == 4  && xmlhttp.status==200) {
+		      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 		          //window.clearInterval(reloadbr);
-		            //alert(xmlhttp.status);
-                    var info = xmlhttp.responseText;
-		            alert(info);
-		            var arr = [{ comment_txt: comment, commenter_name: "Chaddy", comment_time: info, commenter_picture: "img/Koala.jpg"}];
-		            obj.html((parseInt(obj.html()) + 1) + "");
-		            obj.addClass("commented");
-		            var commContainer = obj.next().find(".comment_list");
-		            commContainer.html(displayComments(arr) + commContainer.html());
-		          
+		          //alert(xmlhttp.status);
+		          var info = xmlhttp.responseText;
+		          pull_comments(postID, obj, type);
+		          //alert(info);
+		          /**var arr = [{ comment_txt: comment, commenter_name: "Chaddy", comment_time: info, commenter_picture: "img/Koala.jpg"}];
+		          obj.html((parseInt(obj.html()) + 1) + "");
+		          obj.addClass("commented");
+		          var commContainer = obj.next().find(".comment_list");
+		          commContainer.html(displayComments(arr) + commContainer.html());
+                  */
+
 
 		      }
 		  } 
