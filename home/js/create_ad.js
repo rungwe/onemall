@@ -46,7 +46,7 @@ function post_ad(){
     }
 	
 	
-    var ad_array={title:title,details:product_info,price:price, currency:"en-ZA",categories:[category]}
+    var ad_array={title:title,details:product_info,price:parseFloat(price), currency:"en-ZA",categories:[category]}
     var ad_jason = JSON.stringify(ad_array);
     //alert(ad_jason);
 	//var form = document.getElementById("ad_form");
@@ -77,10 +77,8 @@ function post_ad(){
 		          //window.clearInterval(reloadbr)
 		          var info = xmlhttp.responseText;
 		          //alert("ad received " + info);
-		          //process_uploads(info);
-		          //alert("ad received " + info);
-		          //ad_success();
-		          //clear 
+		          process_uploads(info.trim());
+		          
 		          notify_success("advert posted");
 		          reset_form();
 		          //alert(xmlhttp.responseText);
@@ -190,15 +188,15 @@ function readURL(input,id) {
 
 function process_uploads(id){
     if (document.getElementById("ad_pic1").value!=""){
-        alert(document.getElementById("ad_pic1").value)
-        upload_ad_pic(document.getElementById("pic1"), id);
+        //alert(document.getElementById("ad_pic1").value)
+        upload_ad_img(id,"ad_pic1");
     }
    if (document.getElementById("pic2").value!=""){
-        upload_ad_pic(document.getElementById("pic2"), id);
+       upload_ad_img(id,"ad_pic2");
     }
 
     if (document.getElementById("pic3").value!=""){
-        upload_ad_pic(document.getElementById("pic3"), id);
+        upload_ad_img(id,"ad_pic3");
     }
 }
 
@@ -225,7 +223,7 @@ function upload_ad_pic(img_file,ad_id){
 		    }
 		} 	
 	xmlhttp_br.open("POST",URI+"upload-advert-pictures?id="+ad_id,true);
-    xmlhttp_br.setRequestHeader("Authorization",'Bearer ' + token);
+    xmlhttp_br.setRequestHeader("Authorization",'Bearer '+token);
 	xmlhttp_br.send(img_upload);
 
 }
@@ -236,5 +234,38 @@ function getPosition(position){
     longi = position.coords.longitude;
 }
 
-    
+function upload_ad_img(id,location){
+	   // btnUploadFile is the id of the button that will trigger uploads
+		  var data = new FormData();
 
+		  // fileUpload is the id of the file upload html input
+		  var files = $("#"+location).get(0).files;
+
+		  // Add the uploaded image content to the form data collection
+		  // Do not change this
+		  if (files.length > 0) {
+			   data.append("UploadedImage", files[0]);
+		  }
+
+		  // Make Ajax request with the contentType = false, and procesDate = false
+		  var ajaxRequest = $.ajax({
+			   type: "POST",
+			   url: URI+"upload-advert-pictures?id="+id,    // put the url here of where you want to post 
+			   contentType: false,
+			   processData: false,
+			   beforeSend: function (xhr) {
+			   
+		xhr.setRequestHeader('Authorization', 'bearer '+token);
+	},
+			   data: data
+			   
+			   });
+
+			   ajaxRequest.done(function (xhr, textStatus, data) {
+
+			       notify_success("image uploaded");
+			       
+
+			   });
+	   
+	}

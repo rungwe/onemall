@@ -102,7 +102,8 @@ function pull_suggestions(num){
 		      }
 		  }
     
-	xmlhttp_sug.open("GET",URI+"customer/get-company-suggestions?page="+sug_page+"&amount="+num,true);
+	xmlhttp_sug.open("GET",URI+"customer/get-company-suggestions?page="+sug_count+"&amount="+num,true);
+	sug_count = sug_count + 1;
     xmlhttp_sug.setRequestHeader("Authorization",'Bearer ' + token);
 	xmlhttp_sug.send();
     sug_page++;

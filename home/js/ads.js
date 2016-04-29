@@ -147,7 +147,7 @@ function pull_ads(category){
 		  }
     if (category==""){
         //alert("features");
-        xmlhttp.open("GET",URI+"customer/get-featured-adverts?page=1&amount=5&longitude=-33.9393375&latitude=18.4668566",true);
+        xmlhttp.open("GET",URI+"customer/get-featured-adverts?page=1&amount=20&longitude=-33.9393375&latitude=18.4668566",true);
     } 	
     else{
         //alert("category");

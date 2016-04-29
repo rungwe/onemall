@@ -33,11 +33,14 @@ function main_init(){
 		          else {
 
 		              pull_broadcasts(6);
-		              pull_suggestions(3);
+		              for (var i = 0; i < 3;i++ ){
+		                  pull_suggestions(1);
+		              }
+		                  
 		              //alert("loading profile.....");
 		              get_profile();
 		              social_media_init();
-		             
+
 		          }
 
 
