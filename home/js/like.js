@@ -53,7 +53,7 @@ function like(postID, likedObject, type){
 			}
 		  }
 	if(type=="ads"){
-	    xmlHttp.open("PUT",URI+"customer/like-advert?adId="+postID,true);
+	    xmlHttp.open("PUT",URI+"customer/like-advert?id="+postID,true);
 	}
     else if(type=="broadcasts"){
         if(sessionStorage.type=="customer"){

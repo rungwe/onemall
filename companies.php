@@ -32,6 +32,7 @@ aunthenticate();
 		<script type="text/javascript" src="home/js/navigation-drawer.js"></script>
 		<script type="text/javascript" src="home/js/companies.js"></script>
         <script type="text/javascript" src="home/js/suggestions.js"></script>
+        <script type="text/javascript" src="home/js/bootstrap-notify.min.js"></script>
 		
 	</head>
 	
@@ -192,13 +193,13 @@ aunthenticate();
 					        
 				        </div>
                         <div class="row tab-pane fade" id="following">
-					        <h3>loading....</h3>
+					        
 				        </div>
                         <div class="row tab-pane fade" id="category">
-					        <h3>loading....</h3>
+					       
 				        </div>
                         <div class="row tab-pane fade" id="location">
-					        <h3>loading....</h3>
+					        
 				        </div>
 			        </div>	
 		        </div>

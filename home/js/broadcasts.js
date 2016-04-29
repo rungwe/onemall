@@ -133,9 +133,7 @@ function pull_broadcasts(count){
 		          var data = JSON.parse(info);
 		          if (data.length == 0) {
 		              
-		              sessionStorage.recommeded = 0;
-		              pull_recommended(10, "recommend_modal");
-		              $('#company_reommender').modal('toggle');
+		             //code no broadcasts
 
 		          }
 		          else {

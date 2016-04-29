@@ -59,6 +59,18 @@ function buildAd(ad){
    if(ad.seller.profile_pic==null){
       profile_img_url="home/img/noimage.png" 
    }
+
+   var liked = "";
+   if (ad.liked!=false){
+       liked = "liked";
+   }
+
+   var ad_string = "";
+   if (ad.images.length>0){
+       var ad_image =ad.images[0]["url"]
+       ad_string='<img src="https://s3-us-west-2.amazonaws.com/'+ad_image+'" height="248" width="370"/>' 
+   }
+  
     
     var advert = '<div id="'+ad.ID+'" class="row" style="margin:0px;">' +
 								'<div class="col-sm-2">' +
@@ -86,7 +98,7 @@ function buildAd(ad){
 											'<p>' +
 											ad.details +
 											'</p>' +
-											'<!-- <img src="img/benz.jpg" height="248" width="370"/> -->' +
+											ad_string +
 											'<p style="color:gray;"> category: </p>' +
 											'<div class="row">' +
 												'<p class="col-sm-8" style="color:gray;"> tags: benz, C200, Mercedes</p>' +
@@ -97,7 +109,7 @@ function buildAd(ad){
 										'<div class="panel-footer">' +
 											'<div class="row" style="margin-left:10px;">' +
 												'<div class="col-sm-3" style="cursor:pointer;">  <span data-type="ads" data-id=" '+ad.ID+'" class="glyphicon glyphicon-eye-open">'+ad.number_of_views+'</span></div>' +
-												'<div class="col-sm-3" style="cursor:pointer;">  <span data-type="ads" data-id=" '+ad.ID+'" class="glyphicon glyphicon-thumbs-up likes">'+ad.number_of_likes+'</span> </div>' +
+												'<div class="col-sm-3" style="cursor:pointer;">  <span data-type="ads" data-id=" '+ad.ID+'" class="glyphicon glyphicon-thumbs-up likes '+liked+'">'+ad.number_of_likes+'</span> </div>' +
 												'<div class="col-sm-3" style="cursor:pointer;"> <span  data-type="ads" data-id=" '+ad.ID+'" class="glyphicon glyphicon-comment comment">'+ad.number_of_comments+'</span></div>' +
 												'<div class="col-sm-3" style="cursor:pointer;">  <span data-type="ads" data-id=" '+ad.ID+'" class="glyphicon glyphicon-share-alt"></span></div>' +
 											'</div>' +
@@ -135,11 +147,11 @@ function pull_ads(category){
 		  }
     if (category==""){
         //alert("features");
-        xmlhttp.open("GET",URI+"customer/get-adverts",true);
+        xmlhttp.open("GET",URI+"customer/get-featured-adverts?page=1&amount=5&longitude=-33.9393375&latitude=18.4668566",true);
     } 	
     else{
         //alert("category");
-        xmlhttp.open("GET",URI+"customer/get-adverts-in-category?category="+category+"&page=1&amount=10",true);
+        xmlhttp.open("GET",URI+"customer/get-adverts-in-category?category="+category+"&page=1",true);
     }
 	
     xmlhttp.setRequestHeader("Authorization",'Bearer ' + token);

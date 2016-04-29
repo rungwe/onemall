@@ -69,6 +69,12 @@ function get_profile(){
 		          //alert(profile_data);
 		          var profileInfo = JSON.parse(profile_data)[0];
 		          document.getElementById("num_followers").innerHTML = profileInfo.num_of_followigs;
+                  var following=parseInt(profileInfo.num_of_followigs);
+                  if(following==0){
+                      sessionStorage.recommeded = 0;
+		              pull_recommended(10, "recommend_modal");
+		              $('#company_reommender').modal('toggle');
+                  }
 		          document.getElementById("num_buddies").innerHTML = profileInfo.num_friends;
 		          document.getElementById("num_ads").innerHTML = profileInfo.active_ads;
 		          document.getElementById("user-name").innerHTML = profileInfo.fname + "&nbsp;&nbsp;" + profileInfo.lname;

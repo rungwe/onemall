@@ -15,7 +15,7 @@ Shops are arranged in order of retrieval
 
 status: in progress
 **/
-followers_counter = 1;
+//followers_counter = 1;
 
 
 function displayCompany(compArr,locationID){
@@ -145,7 +145,7 @@ function pull_companies(num,category,header,footer){
 function pull_companies_followed(){
 	
 	var xmlhttp;
-	var page = followers_counter++;
+	var page = 1;
 	if (window.XMLHttpRequest)
 		  {// code for IE7+, Firefox, Chrome, Opera, Safari
 		  
@@ -156,22 +156,22 @@ function pull_companies_followed(){
 		 
 		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 		  }
-	
-	xmlhttp.onreadystatechange=function()
-		  {
-		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-			{
-				//SEND => name: request_companies = 'true'  , name:category, name:number_companies;
-				
-				var info =xmlhttp.responseText;
-				alert(info);
-				var data =JSON.parse(info);
-				
-				if(data.length>0){
-					displayCompany(data,"location");
-				}
-			}
-	}
+
+		  xmlhttp.onreadystatechange = function () {
+		      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+		          //SEND => name: request_companies = 'true'  , name:category, name:number_companies;
+
+		          var info = xmlhttp.responseText;
+
+		          var data = JSON.parse(info);
+
+		          if (data.length > 0) {
+		              //alert(info);
+		              document.getElementById("following").innerHTML = "";
+		              displayCompany(data, "following");
+		          }
+		      }
+		  }
 		
 	
 	xmlhttp.open("GET",URI+"customer/get-following-companies?page="+page+"&amount=20",true);	  

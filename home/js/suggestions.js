@@ -103,6 +103,7 @@ function pull_suggestions(num){
 		  }
     
 	xmlhttp_sug.open("GET",URI+"customer/get-company-suggestions?page="+sug_page+"&amount="+num,true);
+    xmlhttp_sug.setRequestHeader("Authorization",'Bearer ' + token);
 	xmlhttp_sug.send();
     sug_page++;
 		  
