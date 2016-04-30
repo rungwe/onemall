@@ -68,7 +68,7 @@ function buildAd(ad){
    var ad_string = "";
    if (ad.images.length>0){
        var ad_image =ad.images[0]["url"]
-       ad_string='<img src="https://s3-us-west-2.amazonaws.com/'+ad_image+'" height="248" width="370"/>' 
+       ad_string='<img src="https://s3-us-west-2.amazonaws.com/'+ad_image+'" style="max-width:370px;max-height:248px;"/>' 
    }
   
     
@@ -186,7 +186,9 @@ function ads_init(category){
 		        }
 		        else {
 		            pull_ads(category);
-		            pull_suggestions(3);
+		             for (var i = 0; i < 3;i++ ){
+		                  pull_suggestions(1);
+		              }
                     drawer_init();
 		            close_drawer_onload(1500);
 		        }

@@ -2,7 +2,7 @@
 
 function company_recommender(){
     $modal='<div class="modal fade" data-backdrop="static" id="company_reommender" tabindex="-1" role="dialog" aria-labelledby="companies">
-              <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-dialog modal-xl" role="document" style="width:60%;">
                 <div class="modal-content">
                   <div class="modal-header">
                     

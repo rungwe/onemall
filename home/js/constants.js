@@ -159,7 +159,7 @@ function change_wall(input,id) {
 
  function upload_wallpaper(){
 	   // btnUploadFile is the id of the button that will trigger uploads
-          notify_success("wall paper upload started");
+          //notify_success("wall paper upload started");
 		  var data = new FormData();
 
 		  // fileUpload is the id of the file upload html input
@@ -177,6 +177,12 @@ function change_wall(input,id) {
 			   url: URI+"upload-company-wallpaper",    // put the url here of where you want to post 
 			   contentType: false,
 			   processData: false,
+               success: function(){
+                   notify_success("wall paper uploaded successfully");
+               },
+               error: function(){
+                   notify_failure("wall paper upload failed");
+               },
 			   beforeSend: function (xhr) {
 			   
 		xhr.setRequestHeader('Authorization', 'bearer '+token);
@@ -187,7 +193,7 @@ function change_wall(input,id) {
 
 			   ajaxRequest.done(function (xhr, textStatus, data) {
 
-			       notify_success("wall paper uploaded");
+			       
 
 			   });
 	   

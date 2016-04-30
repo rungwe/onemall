@@ -10,7 +10,7 @@ aunthenticate();
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="icon" href="img/log3.png"/>
+    <link rel="icon" href="img/fav2.png"/>
 	<meta name="viewport" content="width=1024">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -49,7 +49,7 @@ aunthenticate();
 					
 					<div class="col-sm-2">
 						<div class="col-sm-2">
-							<a href="index.php"><img src="img/log3.png" height="50" width="50"/></a>
+							<a href="index.php"><img src="img/log3.png" height="50" /></a>
 						</div>
 					</div>
 					

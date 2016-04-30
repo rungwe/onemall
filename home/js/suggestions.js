@@ -26,7 +26,7 @@ function displaySuggestions(suggestionArr, locationID){
 		if(i==(suggestionArr.length)-1){
 			var suggestion_data = suggestionArr[i];
 			var sug = buildSuggestion(suggestion_data);
-			document.getElementById(locationID).innerHTML=document.getElementById(locationID).innerHTML+sug;
+			document.getElementById(locationID).innerHTML=document.getElementById(locationID).innerHTML+sug+line;
 		}
 		else{
 			var suggestion_data = suggestionArr[i];

@@ -12,7 +12,7 @@ aunthenticate();
 
 	<head>
 		<title> companies</title>
-		<link rel="icon" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/img/log3.png"/>
+		<link rel="icon" href="img/fav2.png"/>
 		<meta name="viewport" content="width=1024">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +44,7 @@ aunthenticate();
 					
 					<div class="col-sm-2">
 						<div class="col-sm-2">
-							<a href="index.php"><img src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/log3.png" height="50" width="50"/></a>
+							<a href="index.php"><img src="img/log3.png" height="50"/></a>
 						</div>
 					</div>
 					

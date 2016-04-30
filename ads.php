@@ -37,7 +37,7 @@ aunthenticate();
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="img/log3.png">
+    <link rel="icon" href="img/fav2.png"/>
    
 </head><!--/head-->
 
@@ -59,7 +59,7 @@ aunthenticate();
 					
 					<div class="col-sm-2">
 						<div class="col-sm-2">
-							<a href="index.php"><img src="img/log3.png" height="50" width="50"/></a>
+							<a href="index.php"><img src="img/log3.png" height="50" /></a>
 						</div>
 					</div>
 					

@@ -18,11 +18,7 @@ Designed by : http://responsivewebinc.com
 	overflow:hidden;
 	border:1px solid #ddd;
 }
-@media(max-width: 400px){
-	.ui-142 .ui-item{
-		border:1px solid #ddd;
-	}
-}
+
 /* Image */
 .ui-142 .ui-item img {
 	width:100%;
@@ -49,14 +45,7 @@ Designed by : http://responsivewebinc.com
 	padding:18px 20px;
 	box-shadow:0px 0px 25px rgba(0,0,0,0.5);
 }
-@media(max-width: 400px){
-	.ui-142 .ui-item .ui-details{
-		position:static;
-		width:100%;
-		border:0px;
-		padding-bottom:22px;
-	}
-}
+
 /* Heading */
 .ui-142 .ui-details h3{
 	font-size:14px;

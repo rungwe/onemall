@@ -80,7 +80,7 @@ function buildBroadcast(feed){
            liked = "liked";
        }
   
-		var template= '<div id="'+feed.ID+'" class="panel panel-info" style="border-color:white;"> '+
+		var template= '<div id="'+feed.ID+'" class="panel" style="border-color:white;"> '+
 			  '				<div class="panel-heading" style="background-color:white;">'+
 			  ' 					<div class="row">'+
 			  ' 						<a href="profile_page.php?company='+feed.company.ID+'"><img class="col-sm-2" src="'+profile_img_url+'" height="53px" width="50px" style="border-radius:2px;"/></a>'+
@@ -91,7 +91,7 @@ function buildBroadcast(feed){
 			  '					</div>'+
 			  '				</div>'+
 			  '				<div class="panel-body">'+
-			  '					'+feed.details+	
+			  '					'+feed.details+	' <br> <br>'+
 			  '					<div class="row">'+
 			  '						<div> <center><img  class="img-border" src="'+post_img+'" style="max-height:300px;min-height:200;max-width:100%;"></center></div>'+
 			  '					</div>'+

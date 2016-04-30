@@ -13,14 +13,16 @@ customer_restricted();
 
 	<head>
 		<title> Home</title>
-		<link rel="icon" href="img/log3.png"/>
+		<link rel="icon" href="img/fav2.png"/>
 		<meta name="viewport" content="width=1024">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/loader.css">
+        
         <link rel="stylesheet" href="home/css/friends.css">
 		<link href="home/css/myshops.css" rel="stylesheet">
+        <link href="./companies_files/style-142.css" rel="stylesheet">
         <link rel="stylesheet" href="home/css/friends.css">
         <link rel="stylesheet" href="home/css/profile.css">
 		<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
@@ -30,7 +32,7 @@ customer_restricted();
 		<link href="home/css/googlemaps.css" rel="stylesheet">
         <link href="./menu_files/style-24.css" rel="stylesheet">
         <link href="home/css/animate.css" rel="stylesheet">
-        <link href="./companies_files/style-142.css" rel="stylesheet">
+        
         <script type="text/javascript" src="home/js/googlemaps.js"></script>
         <script type="text/javascript" src="home/js/jquery.min.js"></script>
 		<script type="text/javascript" src="home/js/constants.js"></script>
@@ -61,7 +63,7 @@ customer_restricted();
 					
 					<div class="col-sm-2">
 						<div class="col-sm-2">
-							<a href="index.php"><img src="img/log3.png" alt="one mall" height="50" width="50"></a>
+							<a href="index.php"><img src="img/log3.png" alt="one mall" height="50" width="150"></a>
 						</div>
 					</div>
 					
@@ -232,7 +234,7 @@ customer_restricted();
 					
 					<div id="right" class="col-sm-3" >
 						
-						<div class="panel panel-info" style="border-color:white;">
+						<div class="panel" style="border-color:white;">
 							<div class="panel-heading" style="background-color:white;color:#004A6E;"><h5>Suggested companies to follow</h5></div>
 							<div id="suggestions" class="panel-body">
 								

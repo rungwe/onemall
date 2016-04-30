@@ -77,10 +77,11 @@ function post_ad(){
 		          //window.clearInterval(reloadbr)
 		          var info = xmlhttp.responseText;
 		          //alert("ad received " + info);
-		          process_uploads(info.trim());
+                  //notify_success("advert posted");
 		          
-		          notify_success("advert posted");
+		          process_uploads(info.trim());
 		          reset_form();
+		          notify_success("advert posted");
 		          //alert(xmlhttp.responseText);
 
 
@@ -201,32 +202,6 @@ function process_uploads(id){
 }
 
 
-function upload_ad_pic(img_file,ad_id){
-    var img_upload = new FormData();
-    img_upload.append("img", img_file.files[0]);
-    var xmlhttp_br;
-	
-	if (window.XMLHttpRequest)
-		  {// code for IE7+, Firefox, Chrome, Opera, Safari
-		  xmlhttp_br=new XMLHttpRequest();
-		 
-		  }
-	else
-		{// code for IE6, IE5
-		xmlhttp_br=new ActiveXObject("Microsoft.XMLHTTP");
-		  
-		}
-		xmlhttp_br.onreadystatechange = function () {
-		    if (xmlhttp_br.readyState == 4 && xmlhttp_br.status == 200) {
-		        var response = xmlhttp_br.responseText;
-		        alert("uploaded");
-		    }
-		} 	
-	xmlhttp_br.open("POST",URI+"upload-advert-pictures?id="+ad_id,true);
-    xmlhttp_br.setRequestHeader("Authorization",'Bearer '+token);
-	xmlhttp_br.send(img_upload);
-
-}
 
 function getPosition(position){
 
@@ -236,6 +211,7 @@ function getPosition(position){
 
 function upload_ad_img(id,location){
 	   // btnUploadFile is the id of the button that will trigger uploads
+       try{
 		  var data = new FormData();
 
 		  // fileUpload is the id of the file upload html input
@@ -267,5 +243,9 @@ function upload_ad_img(id,location){
 			       
 
 			   });
-	   
+	   }
+
+       catch(err){
+           return;
+       }
 	}
