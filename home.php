@@ -9,7 +9,7 @@ aunthenticate();
 
 	<head>
 		<title>Home</title>
-		<link rel="icon" href="/img/log3.png"/>
+		<link rel="icon" href="img/fav2.png"/>
 		<meta name="viewport" content="width=1024">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +46,7 @@ aunthenticate();
 					
 					<div class="col-sm-2">
 						<div class="col-sm-2">
-							<a href="home.php"><img src="https://s3.eu-central-1.amazonaws.com/userinterface-scripts/Scripts/img/log3.png" height="50" width="50"/></a>
+							<a href="home.php"><img src="img/fav2.png" height="50" width="50"/></a>
 						</div>
 					</div>
 					

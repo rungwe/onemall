@@ -157,7 +157,8 @@ function create_session($access){
 			$code = curl_getinfo($ch,CURLINFO_HTTP_CODE);
 			curl_close($ch);
 			
-			
+			//echo $result;
+            //exit();
 			$msg = json_decode($result);
 			
 			//login the user
@@ -165,8 +166,8 @@ function create_session($access){
 				$response =  Array($code,$result,$msg->accountType);
                 custom_handler_init();
                 //return $status;
+                session_start();
                 session_set_cookie_params (3600*24*365);
-	            session_start();
 				create_session($msg);
 				return $response;
 				
