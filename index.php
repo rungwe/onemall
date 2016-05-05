@@ -153,7 +153,7 @@ customer_restricted();
 								<div style="background-color:#004A6E;height:80px;width:80px;border-radius:2px;position:absolute;margin-top:60px;margin-left:40px;border-color:white;border-width:5px;border-style:solid;z-index:2;">
 									<img  id="profile-pic" class="pictures" data-toggle="tooltip" title="change profile picture"  src="img/camera3.png"alt="profile picture"  style="height: 100%;width: 100%;cursor: pointer;">
                                     
-			                        <input class="filechooser" type="file" id="prof-pic" name="pic1" style="display:none" onchange="readURL(this,'profile-pic');" accept="image/*" />
+			                        <input class="filechooser" type="file" id="prof-pic" name="pic1" style="display:none" onchange="readURL2(this,'profile-pic');" accept="image/*" />
 								</div>
 								<div style="background-color:white;width:279px;border-radius:2px;z-index:1;position:absolute;margin-top:100px;">
 									<label style="margin-left:50%;font-size:100%;"><b id="user-name"></b></label>

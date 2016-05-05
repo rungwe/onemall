@@ -51,7 +51,7 @@ function buildSuggestion(sug_data){
 	        pic_id = 0;
 	    }
         else{
-            pic = sug_data.profile_pic.url;
+            pic = img_url+sug_data.profile_pic.url;
 	        pic_id = sug_data.profile_pic.id;
         }
 

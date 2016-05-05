@@ -4,6 +4,7 @@ drawer="off"
 //url = "http://localhost:8080/Client.php";
 url ="Client.php"
 URI = "http://ec2-52-32-82-172.us-west-2.compute.amazonaws.com/";
+img_url = "https://s3-us-west-2.amazonaws.com/";
 token="";
 function get_access(){
 	
@@ -124,6 +125,20 @@ function notify_validation(mssg){
 			});
 }
 
+function readURL2(input,id) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#'+id)
+                    .attr('src', e.target.result);
+                    upload_profile_pic();
+            };
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
 function readURL(input,id) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
@@ -131,8 +146,9 @@ function readURL(input,id) {
             reader.onload = function (e) {
                 $('#'+id)
                     .attr('src', e.target.result);
+                    
             };
-
+            
             reader.readAsDataURL(input.files[0]);
         }
     }
@@ -150,6 +166,7 @@ function change_wall(input,id) {
             reader.onload = function (e) {
                 $('#' + id)
                     .css('background-image', 'url(' + e.target.result + ')');
+                
                 upload_wallpaper();
             };
 
@@ -170,11 +187,18 @@ function change_wall(input,id) {
 		  if (files.length > 0) {
 			   data.append("UploadedImage", files[0]);
 		  }
-
+          var end_point="";
+         
+          if(sessionStorage.type=="customer"){
+              end_point = "upload-customer-profile-picture";
+          }
+          else{
+               end_point = "upload-company-wallpaper";
+          }
 		  // Make Ajax request with the contentType = false, and procesDate = false
 		  var ajaxRequest = $.ajax({
 			   type: "POST",
-			   url: URI+"upload-company-wallpaper",    // put the url here of where you want to post 
+			   url: URI+end_point,    // put the url here of where you want to post 
 			   contentType: false,
 			   processData: false,
                success: function(){
@@ -182,6 +206,56 @@ function change_wall(input,id) {
                },
                error: function(){
                    notify_failure("wall paper upload failed");
+               },
+			   beforeSend: function (xhr) {
+			   
+		xhr.setRequestHeader('Authorization', 'bearer '+token);
+	},
+			   data: data
+			   
+			   });
+
+			   ajaxRequest.done(function (xhr, textStatus, data) {
+
+			       
+
+			   });
+	   
+	}
+
+
+    function upload_profile_pic(){
+	   // btnUploadFile is the id of the button that will trigger uploads
+          //notify_success("wall paper upload started");
+		  var data = new FormData();
+          //alert("testing")
+		  // fileUpload is the id of the file upload html input
+		  var files = $("#prof-pic").get(0).files;
+
+		  // Add the uploaded image content to the form data collection
+		  // Do not change this
+		  if (files.length > 0) {
+			   data.append("UploadedImage", files[0]);
+		  }
+          var end_point="";
+         
+          if(sessionStorage.type=="customer"){
+              end_point = "upload-customer-profile-picture";
+          }
+          else{
+               end_point = "upload-company-profile-picture";
+          }
+		  // Make Ajax request with the contentType = false, and procesDate = false
+		  var ajaxRequest = $.ajax({
+			   type: "POST",
+			   url: URI+end_point,    // put the url here of where you want to post 
+			   contentType: false,
+			   processData: false,
+               success: function(){
+                   notify_success("profile pic uploaded successfully");
+               },
+               error: function(){
+                   notify_failure("profile pic upload failed");
                },
 			   beforeSend: function (xhr) {
 			   

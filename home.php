@@ -106,7 +106,7 @@ aunthenticate();
 		
         <div style="cursor:pointer; background-color:white;height:170px;width:170px;border-radius:4px;margin-top:180px;position:absolute;margin-left:100px;border-color:white;border-width:5px;border-style:solid;z-index:2;">
             <img data-toggle="tooltip" title="change profile picture" id="profile-pic" class="pictures" src="img/companyprof.png" height="160" width="160" accept="image/gif, image/jpeg, image/png" />
-			<input class="filechooser" type="file" id="prof-pic" name="pic1" style="display:none" onchange="readURL(this,'profile-pic');" accept="image/*" />
+			<input class="filechooser" type="file" id="prof-pic" name="pic1" style="display:none" onchange="readURL2(this,'profile-pic');" accept="image/*" />
 		</div>
         <div style="margin-top:155px;position:absolute;margin-left:350px;z-index:2;">
 			<h3 id="company_name" data-type="text" data-pk="1" data-title="Enter Company Name" style="color: #F2F2F2 "></h3>

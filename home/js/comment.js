@@ -88,7 +88,7 @@ function buildComment(data){
            profile_img_url = "home/img/noimage.png";
        }
        else{
-           profile_img_url=data.customer.profile_pic.url;
+           profile_img_url=img_url+data.customer.profile_pic.url;
        }
     }
     else if(data.company!=null){

@@ -11,7 +11,7 @@ SESSION data email, username, timestamp, token, token-exp
  define('SESSION_DURATION',3); // number of days
  define('TOKEN_DURATION', 13);
  require 'pages.php';
- require 'CustomSessionHandler.php';
+ //require 'CustomSessionHandler.php';
  
  
  
@@ -164,7 +164,7 @@ function create_session($access){
 			//login the user
 			if ($code=="200"){
 				$response =  Array($code,$result,$msg->accountType);
-                custom_handler_init();
+                 //custom_handler_init();
                 //return $status;
                 session_start();
                 session_set_cookie_params (3600*24*365);
@@ -182,7 +182,7 @@ function create_session($access){
 			}
 }
 
-function custom_handler_init(){
+/*function custom_handler_init(){
     $handler = new CustomSessionHandler();
     $status = session_set_save_handler(
     array($handler, "open"),
@@ -196,11 +196,11 @@ function custom_handler_init(){
     register_shutdown_function('session_write_close');
     return $status;
 }
-
+*/
 function init(){
     ini_set('display_errors',true);
     require 'components.php';
-    custom_handler_init();
+    //custom_handler_init();
     session_start();
 }
 /**

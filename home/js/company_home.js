@@ -81,6 +81,20 @@ function company_profile(){
 		          document.getElementById("num_followers").innerHTML = company.number_of_followers;
 		          sessionStorage.type = "company";
 		          sessionStorage.company_name = company.name;
+		          var imageUrl = "https://s3-us-west-2.amazonaws.com/";
+
+		          if (company.wallpaper.url != null) {
+		              $('#wall').css('background-image', 'url("' + imageUrl + company.wallpaper.url + '")');
+		          }
+
+		          var profile_url = "https://s3-us-west-2.amazonaws.com/";
+
+		          if (company.profile_pic.url != null) {
+		              document.getElementById("profile-pic").src = profile_url + company.profile_pic.url;
+		          }
+
+		          sessionStorage.type = "company";
+		          sessionStorage.company_name = company.name;
 
 		          for (var i in company.categories) {
 		              document.getElementById("categories").innerHTML += i.category + " ";

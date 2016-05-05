@@ -59,6 +59,9 @@ function buildAd(ad){
    if(ad.seller.profile_pic==null){
       profile_img_url="home/img/noimage.png" 
    }
+   else{
+        profile_img_url=img_url+ad.seller.profile_pic;
+   }
 
    var liked = "";
    if (ad.liked!=false){

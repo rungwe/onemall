@@ -208,7 +208,7 @@ function nav_drawer_company(){
 							<!-- UI Item -->
 							<div class="ui-item">
 								<!-- Image -->
-								<a href="index.php"><img src="img/icons/Home.png" class="img-responsive" alt=""></a>
+								<a href="home.php"><img src="img/icons/Home.png" class="img-responsive" alt=""></a>
 							</div>
 							<!-- Heading -->
 							<h5><a href="index.php">Home</a></h5>

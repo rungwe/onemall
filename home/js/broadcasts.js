@@ -59,9 +59,12 @@ function buildBroadcast(feed){
         else if (feed.minutes==0 && feed.hours==0){
             time = feed.date.substring(0, 10);
         }
-        var profile_img_url = feed.company.profile_pic;
+        var profile_img_url = "";
        if(feed.company.profile_pic==null){
           profile_img_url="img/company.png" 
+       }
+       else{
+           profile_img_url = img_url+feed.company.profile_pic.url;
        }
 
        var post_img="https://s3-us-west-2.amazonaws.com/" ;

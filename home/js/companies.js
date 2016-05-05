@@ -36,7 +36,7 @@ function buildCompany(company){
         url = "img/business-wall.jpg"
     }
     else{
-        url = company.wallpaper.url;
+        url =img_url+ company.wallpaper.url;
     }
 
     var template = '<div class="col-sm-4">' +
