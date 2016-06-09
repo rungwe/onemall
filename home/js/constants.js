@@ -1,9 +1,9 @@
 //Global constants
-
+//683275835893 
 drawer="off"
 //url = "http://localhost:8080/Client.php";
 url ="Client.php"
-URI = "http://ec2-52-32-82-172.us-west-2.compute.amazonaws.com/";
+URI = "http://ec2-52-32-172-4.us-west-2.compute.amazonaws.com/";
 img_url = "https://s3-us-west-2.amazonaws.com/";
 token="";
 function get_access(){
