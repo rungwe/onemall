@@ -133,7 +133,7 @@ function create_session($access){
  
  function login(){
 	//login
-			$url="http://ec2-52-32-82-172.us-west-2.compute.amazonaws.com/Token";
+			$url="http://ec2-52-32-172-4.us-west-2.compute.amazonaws.com/Token";
 			
 			 $fields = array(
 								'grant_type'=>"password",
@@ -176,7 +176,8 @@ function create_session($access){
 			//throw error message 
 			else{
 				$response =  Array($code,$msg->error_description);
-				//echo $msg->error_description."  ".$code;
+				echo $msg->error_description."  ".$code;
+                //exit;
                 header("Location: login.php?error=".urlencode($msg->error_description."  Error code".$code));
 				
 			}
