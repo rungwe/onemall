@@ -83,13 +83,13 @@ function company_profile(){
 		          sessionStorage.company_name = company.name;
 		          var imageUrl = "https://s3-us-west-2.amazonaws.com/";
 
-		          if (company.wallpaper.url != null) {
+		          if (company.wallpaper != null) {
 		              $('#wall').css('background-image', 'url("' + imageUrl + company.wallpaper.url + '")');
 		          }
 
 		          var profile_url = "https://s3-us-west-2.amazonaws.com/";
 
-		          if (company.profile_pic.url != null) {
+		          if (company.profile_pic != null) {
 		              document.getElementById("profile-pic").src = profile_url + company.profile_pic.url;
 		          }
 

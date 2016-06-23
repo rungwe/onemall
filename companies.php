@@ -16,18 +16,18 @@ aunthenticate();
 		<meta name="viewport" content="width=1024">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/font-awesome.min.css">
+		<link rel="stylesheet" href="home/css/font-awesome.min.css">
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="http://css-spinners.com/css/spinners.css" type="text/css">
 		<link href="home/css/myshops.css" rel="stylesheet">
         <link href="./menu_files/style-24.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://d2zpmorlxdsejy.cloudfront.net/Scripts/css/loader.css">
+		<link rel="stylesheet" href="home/css/loader.css">
         <link href="home/css/main.css" rel="stylesheet">
         <link href="./companies_files/style-142.css" rel="stylesheet">
         <link href="home/css/animate.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
-		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="home/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="home/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="home/js/constants.js"></script>
 		<script type="text/javascript" src="home/js/navigation-drawer.js"></script>
 		<script type="text/javascript" src="home/js/companies.js"></script>

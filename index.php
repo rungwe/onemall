@@ -13,7 +13,7 @@ customer_restricted();
 
 	<head>
 		<title> Home</title>
-		<link rel="icon" href="img/fav2.png"/>
+		<link rel="icon" href="img/log3.png"/>
 		<meta name="viewport" content="width=1024">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -63,7 +63,7 @@ customer_restricted();
 					
 					<div class="col-sm-2">
 						<div class="col-sm-2">
-							<a href="index.php"><img src="img/log3.png" alt="one mall" height="50" width="150"></a>
+							<a href="index.php"><img src="img/log3.png" alt="one mall" height="50" width="50"></a>
 						</div>
 					</div>
 					

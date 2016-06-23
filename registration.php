@@ -13,7 +13,7 @@
 	else{
 	
 			//register
-			$url="http://ec2-52-32-82-172.us-west-2.compute.amazonaws.com/account/Register";
+			$url="http://ec2-52-32-172-4.us-west-2.compute.amazonaws.com/account/Register";
 			//$url="testreg.php";
 			$fields = array(
                                 'lname' => $_POST["form-last-name"],
@@ -79,12 +79,14 @@
 				
 				$msg = json_decode($result);
 				$error = "";
-				foreach( $msg->ModelState as $key => $val ){
+				/*foreach( $msg->ModelState as $key => $val ){
 					 $error.=$val[0]." <br>";
-				}
+				}*/
                 session_start();
                 $_SESSION["error"]=$error;
 				$_SESSION["details"]=$_POST;
+                //var_dump($msg);
+                //exit;
 				header("Location: login.php?error=true");
                 //echo "Error code: \t".$code."<br> Error message: \t".$error."<br> error json: \t".$result;
 			}

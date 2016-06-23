@@ -88,7 +88,10 @@ function get_profile(){
 		          sessionStorage.type = "customer";
 		          sessionStorage.name = profileInfo.fname + " " + profileInfo.lname;
 		          //alert(profileInfo.profile_pic.url);
-		          document.getElementById("profile-pic").src = "https://s3-us-west-2.amazonaws.com/"+profileInfo.profile_pic.url;
+                  if(profileInfo.profile_pic!=null){
+                      document.getElementById("profile-pic").src = "https://s3-us-west-2.amazonaws.com/"+profileInfo.profile_pic.url;
+                  }
+		          
 		          notify("Welcome back " + profileInfo.fname, "info");
 		      }
 		  } 	
