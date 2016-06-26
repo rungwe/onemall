@@ -13,20 +13,39 @@
 	else{
 	
 			//register
-			$url="http://ec2-52-32-172-4.us-west-2.compute.amazonaws.com/account/Register";
-			//$url="testreg.php";
-			$fields = array(
-                                'lname' => $_POST["form-last-name"],
-	                            'fname' => $_POST["form-first-name"],
-                                'type'=> $_POST["options"],
-								'Email' => $_POST["form-email"],
-								'Password' => $_POST["pswd"],
-								'ConfirmPassword' => $_POST["pswd1"]
-						);
+            $url="";
+            $data="";
+            if($_POST["options"]=="customer"){
+			    $url="http://ec2-52-32-172-4.us-west-2.compute.amazonaws.com/account/Register/Customer";
+			    //$url="testreg.php";
+			    $fields = array(
+                                    'lname' => $_POST["form-last-name"],
+	                                'fname' => $_POST["form-first-name"],
+                                    'type'=> $_POST["options"],
+								    'Email' => $_POST["form-email"],
+								    'Password' => $_POST["pswd"],
+								    'ConfirmPassword' => $_POST["pswd1"]
+						    );
           
 
 			
-			$data = json_encode($fields);
+			    $data = json_encode($fields);
+            }
+            else if($_POST["options"]=="company"){
+                 $url="http://ec2-52-32-172-4.us-west-2.compute.amazonaws.com/account/Register/Company";
+			    //$url="testreg.php";
+			    $fields = array(
+                                    'name' => $_POST["form-first-name"],
+                                    'type'=> $_POST["options"],
+								    'Email' => $_POST["form-email"],
+								    'Password' => $_POST["pswd"],
+								    'ConfirmPassword' => $_POST["pswd1"]
+						    );
+          
+
+			
+			    $data = json_encode($fields);
+            }
 			//$data ='{"Email":"test@admin.com","Password":"12345678","PasswordConfirm":"12345678"}';
 			//echo $data;
 			$ch = curl_init($url);
@@ -87,7 +106,7 @@
 				$_SESSION["details"]=$_POST;
                 //var_dump($msg);
                 //exit;
-				header("Location: login.php?error=true");
+				header("Location: login.php?error=".urlencode($msg->error_description."  Error code".$code));
                 //echo "Error code: \t".$code."<br> Error message: \t".$error."<br> error json: \t".$result;
 			}
 			
