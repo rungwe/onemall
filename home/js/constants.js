@@ -190,7 +190,7 @@ function change_wall(input,id) {
           var end_point="";
          
           if(sessionStorage.type=="customer"){
-              end_point = "upload-customer-profile-picture";
+              end_point = "upload-customer-wallpaper";
           }
           else{
                end_point = "upload-company-wallpaper";

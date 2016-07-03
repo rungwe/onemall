@@ -54,8 +54,11 @@ function validate_reg_form(){
 	
 }
 
-function reg_error(error){
-    $('#signup').modal('toggle');
+function reg_error(error,login){
+    if(!login){
+        $('#signup').modal('toggle');
+    }
+    
     notify_failure(error);
 }
 

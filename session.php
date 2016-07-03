@@ -178,7 +178,7 @@ function create_session($access){
 				$response =  Array($code,$msg->error_description);
 				echo $msg->error_description."  ".$code;
                 //exit;
-                header("Location: login.php?error=".urlencode($msg->error_description."  Error code".$code));
+                header("Location: login.php?login=true&error=".urlencode($msg->error_description."  Error code".$code));
 				
 			}
 }

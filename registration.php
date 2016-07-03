@@ -98,15 +98,15 @@
 				
 				$msg = json_decode($result);
 				$error = "";
-				/*foreach( $msg->ModelState as $key => $val ){
+				foreach( $msg->ModelState as $key => $val ){
 					 $error.=$val[0]." <br>";
-				}*/
+				}
                 session_start();
                 $_SESSION["error"]=$error;
 				$_SESSION["details"]=$_POST;
                 //var_dump($msg);
                 //exit;
-				header("Location: login.php?error=".urlencode($msg->error_description."  Error code".$code));
+				header("Location: login.php?login=false&error=".urlencode($error."  Error code".$code));
                 //echo "Error code: \t".$code."<br> Error message: \t".$error."<br> error json: \t".$result;
 			}
 			

@@ -40,7 +40,7 @@ session_start();
 
     <body onload="<?php 
                         if(!empty($_REQUEST["error"])){
-                            echo "reg_error('".$_SESSION["error"]."')";
+                            echo "reg_error('".$_REQUEST["error"]."',".$_REQUEST["login"].")";
                          }
                     ?>">
     
@@ -503,11 +503,38 @@ session_start();
                                         }
                                     </style>
 			                        <div class="btn-group col-sm-9" data-toggle="buttons">
-                                        <label class="btn btn-primary type active">
-                                        <input type="radio" name="options" id="option1" autocomplete="off" value="customer" checked> Personal
+                                        <label class="btn btn-primary type <?php if(!empty($_REQUEST["error"])){
+                                                                                                if($_SESSION["details"]["options"]=="customer"){
+                                                                                                    echo "active";
+                                                                                                }
+
+                                                                                            }
+                                                                                            else{
+                                                                                                echo "active";
+                                                                                            }
+                                                                                            ?>">
+                                        <input type="radio" name="options" id="option1" autocomplete="off" value="customer" <?php if(!empty($_REQUEST["error"])){
+                                                                                                if($_SESSION["details"]["options"]=="customer"){
+                                                                                                    echo "checked";
+                                                                                                }
+                                                                                              }
+                                                                                              else{
+                                                                                                  echo "checked";
+                                                                                              }
+                                                                                              ?>> Personal
                                         </label>
-                                        <label class="btn btn-primary type">
-                                        <input type="radio" name="options" id="option2" autocomplete="off" value="company">Business
+                                        <label class="btn btn-primary type <?php if(!empty($_REQUEST["error"])){
+                                                                                                if($_SESSION["details"]["options"]=="company"){
+                                                                                                    echo "active";
+                                                                                                }
+
+                                                                                            }?>">
+                                        <input type="radio" name="options" id="option2" autocomplete="off" value="company" <?php if(!empty($_REQUEST["error"])){
+                                                                                                if($_SESSION["details"]["options"]=="company"){
+                                                                                                    echo "checked";
+                                                                                                }
+
+                                                                                            }?>>Business
                                         </label>
                                         
                                     </div>
