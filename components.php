@@ -163,7 +163,7 @@ function nav_drawer(){
 								<!-- Image -->
 								<a href="#"><img src="img/icons/Desktop.png" class="img-responsive" alt=""></a>
 							</div>
-							<h5><a href="#">Create Pages</a></h5>
+							<h5><a href="#">Edit Profile</a></h5>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-4">
 							<!-- UI Item -->
@@ -226,7 +226,7 @@ function nav_drawer_company(){
 							<!-- UI Item -->
 							<div class="ui-item">
 								<!-- Image -->
-								<a href="#"><img src="img/icons/social.png" class="img-responsive" alt=""></a>
+								<a href="#"><img src="img/icons/social3.gif" class="img-responsive" alt=""></a>
 							</div>
 							<h5><a href="#">Social Integration</a></h5>
 						</div>
@@ -244,9 +244,9 @@ function nav_drawer_company(){
 							<!-- UI Item -->
 							<div class="ui-item">
 								<!-- Image -->
-								<a href="#"><img src="img/icons/Briefcase.png" class="img-responsive" alt=""></a>
+								<a href="shop-admin.php"><img src="img/icons/dashboard.png" class="img-responsive" alt=""></a>
 							</div>
-							<h5><a href="#">Manage Pages</a></h5>
+							<h5><a href="#">Shop Admin</a></h5>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-4">
 							<!-- UI Item -->

@@ -394,8 +394,13 @@ aunthenticate();
 			    </div>
 
 		    </div>
-
-
+        <?php 
+            echo nav_drawer_company();
+		    echo create_ad();
+		    echo edit_account_modal();
+	        echo ad_detail();
+            echo post_broadcast();
+        ?>
 
          </body>
 	
