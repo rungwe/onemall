@@ -25,6 +25,13 @@ aunthenticate();
 
     <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+	<link href="css/myshops.css" rel="stylesheet">
+    <link href="home/css/main.css" rel="stylesheet">
+    <link href="./menu_files/style-24.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,167 +47,74 @@ aunthenticate();
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0;background-color: #fff;">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="home.php"><img src="img/log3.png" alt="one mall" height="50" width="50"></a>
-            </div>
-            <!-- /.navbar-header -->
-
-            <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>Chaddy Rungwe</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>Chaddy Rungwe</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>Chaddy Rungwe</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-messages -->
-                </li>
-                <!-- /.dropdown -->
-                
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-alerts">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                    <span class="pull-right text-muted small">12 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-tasks fa-fw"></i> New Task
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Alerts</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-alerts -->
-                </li>
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
-            <!-- /.navbar-top-links -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0;background-color: #fff;">
+            <div class="container-fluid">
+				<div class="row">
+					
+					<div class="col-sm-2">
+						<div class="col-sm-2">
+							<a href="home.php"><img src="img/log3.png" height="50px" width="50px"/></a>
+						</div>
+					</div>
+					
+						
+						<div class="col-sm-offset-1 col-sm-4">
+							
+								<div class="input-group" style="margin-top:3%;width:150%;">
+								  <input type="text" class="form-control" placeholder="Search ">
+								  <span class="input-group-btn">
+									
+									<button class="btn btn-default" type="button">search</button>
+			
+								  </span>
+								  
+								  
+								</div><!-- /input-group -->
+							
+						</div>
+						
+						<div id="nav_content" style="margin-right:3%;">
+						  <ul class="nav navbar-nav navbar-right style_font" >
+								
+							<li class="home" style="color:white;font-weight:900;font-size:150%;margin-top:10px;"><i class="icon ion-ios-home-outline" style="font-size:30px;color:#004A6E"><label style="font-size:13px;font-weight:400;">&nbsp;Home&nbsp;&nbsp;</label></i></li>
+							<!-- <li style="color:white;font-weight:900;font-size:150%;margin-top:15px;"><span class="glyphicon glyphicon-bell" ><label style="font-size:13px;">&nbsp;Notifications&nbsp;</label></span></li> -->
+							
+							<li style="cursor:pointer;"><span class="input-group" style="color:white;font-weight:900;font-size:150%;margin-top:10px;">
+																												<i class="icon ion-ios-locked-outline dropdown-toggle" id="account" data-toggle="dropdown" aria-expanded="true" style="font-size:30px;color:#004A6E"><label style="font-size:13px;font-weight:400;">&nbsp;Account</label></i>
+																													<ul class="dropdown-menu" role="menu" aria-labelledby="account">
+																														<li role="presentation" class="dropdown-header"><center>Chaddy</center></li>
+																														 <li role="presentation" class="divider"></li>
+																														<li role="presentation" data-toggle="modal" data-target="#edit_ac"><a role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;settings</a></li>
+																														<li role="presentation"><a href="logout.php" role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;logout</a></li>
+																														<li role="presentation"><a role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;about us</a></li>
+																														<li role="presentation"><a role="menuitem" tabindex="-1" style="text-align:left;"><span class="glyphicon glyphicon-question-sign"></span>&nbsp;&nbsp;help</a></li>
+																													 </ul>
+																												</span>
+																												
+																												</li> 
+						  </ul>
+						</div>
+					
+							
+					
+				</div>
+			  
+			</div>
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            </div>
-                            <!-- /input-group -->
-                        </li>
                         <li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Admin Home</a>
+                            <a data-toggle="tab" class="tab" href="#page-wrapper"><i class="fa fa-dashboard fa-fw"></i>Shop Dashboard</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-shopping-cart"></i> Products<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">Active Products</a>
+                                    <a data-toggle="tab" class="tab" href="#active_products">Active Products</a>
                                 </li>
                                 <li>
-                                    <a href="#">Expired Products</a>
+                                    <a data-toggle="tab" class="tab" href="#expired_products">Expired Products</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -209,7 +123,7 @@ aunthenticate();
                             <a href="#"><i class="fa fa-list-alt"></i> Orders<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">New orders</a>
+                                    <a href="#new_orders" data-toggle="tab" class="tab">New orders</a>
                                 </li>
                                 <li>
                                     <a href="#">In Progress</a>
@@ -236,36 +150,7 @@ aunthenticate();
                             <a href="home.php"><i class="fa fa-edit fa-fw"></i> Profile page</a>
                         </li>
                         
-                        <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="#">Second Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Second Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level <span class="fa arrow"></span></a>
-                                    <ul class="nav nav-third-level">
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                    </ul>
-                                    <!-- /.nav-third-level -->
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
+                       
                         <li>
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -285,7 +170,9 @@ aunthenticate();
             <!-- /.navbar-static-side -->
         </nav>
 
-        <div id="page-wrapper">
+        <div class="tab-content">
+            <br>
+           <div id="page-wrapper" class="page-wrapper tab-pane fade in active">
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">XPERIENCE</h1>
@@ -307,7 +194,7 @@ aunthenticate();
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="#new_orders" data-toggle="tab">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -388,7 +275,7 @@ aunthenticate();
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Sales Report
                             <div class="pull-right">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
@@ -423,6 +310,256 @@ aunthenticate();
             </div>
             <!-- /.row -->
         </div>
+
+           <div id="active_products" class="page-wrapper tab-pane fade" style="background-color: #fff">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header" style="color: #000">Active Products</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+
+                    <div class="padding-right">
+					<div class="features_items"><!--features_items-->
+						
+						
+						<div class="col-sm-3">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="img/products/clock.jpg" class="item-img" alt="" />
+										<h2>R650</h2>
+										<p>Bedding set</p>
+										<a href="#" class="btn btn-default add-to-cart">View</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>R650</h2>
+											<p>Full bedding set</p>
+											<a href="#" class="btn btn-default add-to-cart">View</a>
+										</div>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Product Details</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Purchase</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="img/products/bedding.jpg" class="item-img" alt="" />
+										<h2>R650</h2>
+										<p>Bedding set</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>R650</h2>
+											<p>Full bedding set</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										</div>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Product Details</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Purchase</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="img/products/Microwave.jpg" alt="" />
+										<h2>R2650</h2>
+										<p>Microwave </p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>R2650</h2>
+											<p>Silver Philips</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										</div>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Product Details</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Purchase</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="img/products/jackets.jpg" alt="" />
+										<h2>R790</h2>
+										<p>Jackets</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>R790</h2>
+											<p>Mens winter jackets</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										</div>
+									</div>
+									
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Product Details</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Purchase</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="img/products/makeup.jpg" alt="" />
+										<h2>R1095</h2>
+										<p>Make up kit</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>R1095</h2>
+											<p>Ladies Make up kit</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										</div>
+									</div>
+									
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Product Details</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Purchase</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="img/products/macbook.jpg" alt="" />
+										<h2>R15380</h2>
+										<p>Macbook</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>R15380</h2>
+											<p>Brand new Macbook</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										</div>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Product Details</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Purchase</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+					</div><!--features_items-->
+					
+					
+					
+				</div>
+
+                </div>
+           </div>
+
+           <div id="expired_products" class="page-wrapper tab-pane fade">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header" style="color: #000">Expired Products</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+           </div>
+
+           <div id="new_orders" class="page-wrapper tab-pane fade in">
+            <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header" style="color: #000">New Orders</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+              </div>
+
+             <table class="table table-striped">
+				<thead>
+				  <tr>
+					<th>Order ID</th>
+					<th>Date</th>
+					<th>Product Title</th>
+					<th>Price</th>
+					<th>Status</th>
+					<th>View</th>
+                    <th>Accept</th>
+                    <th>Reject</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>1233</td>
+					<td>12-03-2016</td>
+					<td>Hisense 40 inch tv</td>
+					<td>R3000</td>
+					<td> 
+						pending
+					</td>
+					<td><button type="button" class="btn btn-info">View Item</button></td>
+                    <td><button type="button" class="btn btn-success">Accept</button></td>
+                    <td><button type="button" class="btn btn-danger">Reject</button></td>
+				  </tr>
+				  <tr>
+					<td>1335</td>
+					<td>16-03-2016</td>
+					<td>Samsung Iron</td>
+					<td>R4000</td>
+					<td> 
+						pending
+					</td>
+                    <td><button type="button" class="btn btn-info">View Item</button></td>
+                    <td><button type="button" class="btn btn-success">Accept</button></td>
+                    <td><button type="button" class="btn btn-danger">Reject</button></td>
+				  </tr>
+				  <tr>
+					<td>1279</td>
+					<td>12-03-2016</td>
+					<td>Philips Microwave</td>
+					<td>R4500</td>
+					<td> 
+						pending
+					</td>
+					<td><button type="button" class="btn btn-info">View Item</button></td>
+                    <td><button type="button" class="btn btn-success">Accept</button></td>
+                    <td><button type="button" class="btn btn-danger">Reject</button></td>
+				  </tr>
+				</tbody>
+			  </table>
+
+           </div>
+        
+      </div>
+        
         <!-- /#page-wrapper -->
 
     </div>
@@ -437,6 +574,9 @@ aunthenticate();
     <script src="js/metisMenu.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/sb-admin-2.js"></script>
+
+    <script src="js/price-range.js"></script>
+    <script src="js/price.js"></script>
 
 </body>
 

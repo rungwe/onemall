@@ -19,8 +19,8 @@ aunthenticate();
         <link rel ="stylesheet" href="home/css/services.css" type="text/css">
 		<link href="home/css/myshops.css" rel="stylesheet">
         <link href="./menu_files/style-24.css" rel="stylesheet">
-		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="https://d2zpmorlxdsejy.cloudfront.net/Scripts/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="home/js/constants.js"></script>
         <script type="text/javascript" src="home/js/navigation-drawer.js"></script>
         <script type="text/javascript" src="home/js/profile_page.js"></script>
